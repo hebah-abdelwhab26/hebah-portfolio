@@ -1,59 +1,304 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Hebah Portfolio — Digital Studio & Education Platform
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <strong>A full-stack Laravel portfolio platform combining Digital Solutions, Web Development, and Quran & Arabic Education.</strong>
 </p>
 
-## About Laravel
+<p align="center">
+  <a href="https://hebahgift.com">Live Website</a>
+  &nbsp;•&nbsp;
+  <a href="https://github.com/hebah-abdelwhab26">GitHub Profile</a>
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Overview
 
-## Learning Laravel
+**Hebah Portfolio** is a custom Laravel web platform designed to present two professional areas within one unified digital experience:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+* **Digital Studio** — Web development, digital solutions, UI/UX, and project showcase.
+* **Quran & Arabic Education** — An educational platform for Quran and Arabic learning.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+The project was designed and developed as a real-world application rather than a simple portfolio template, with a focus on scalable architecture, authentication, administration, localization, responsive interfaces, and content management.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
+## Main Sections
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 💻 Digital Studio
 
-## Contributing
+The Digital Studio presents my work and services in web development and digital solutions.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Features include:
 
-## Code of Conduct
+* Personal professional profile
+* Services and capabilities
+* Project portfolio
+* Project details and galleries
+* Live project links
+* GitHub and Figma references
+* Contact system
+* Comments and communication features
+* Arabic / English localization
+* Administrative dashboard
+* Project and content management
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 📖 Quran & Arabic Education Platform
+
+The education section provides a dedicated environment for Quran and Arabic learning.
+
+Features include:
+
+* Student accounts
+* Student dashboard
+* Quran and Arabic lessons
+* Assignments
+* Quizzes and assessments
+* Lesson progress tracking
+* Private educational sessions
+* Booking management
+* Session duration and scheduling
+* Payment-related workflow
+* Notifications
+* Student/teacher communication
+* Comments and educational interaction
+* Arabic / English localization
+* Administrative management
+
+
+
+## Admin Dashboard
+
+The project includes a dedicated administration system for managing the platform and its content.
+
+Administrative functionality includes:
+
+* Dashboard and statistics
+* Project management
+* Education content management
+* Student management
+* Lessons and assignments
+* Bookings
+* Notifications
+* Comments
+* Conversations
+* Contact messages
+* Content activation and ordering
+* Multilingual content management
+
+
+
+## Authentication
+
+The application includes separate authentication flows for different areas of the platform, including:
+
+* Administrative users
+* Education students
+* Protected dashboards
+* Session management
+* Role-based access control
+* Email verification where applicable
+
+
+
+## Localization
+
+The platform supports both:
+
+* 🇸🇦 Arabic
+* 🇬🇧 English
+
+The interfaces are designed to support both **RTL** and **LTR** layouts depending on the selected language.
+
+## Technology Stack
+
+### Backend
+
+* PHP
+* Laravel
+* Laravel Eloquent ORM
+* Laravel Blade
+* Laravel Middleware
+* Laravel Authentication
+* Laravel Migrations
+* Laravel Artisan
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript
+* Blade Templates
+* Font Awesome
+* Responsive Design
+* RTL / LTR interfaces
+
+### Database
+
+* MySQL / MariaDB
+
+### Development Tools
+
+* Git
+* GitHub
+* Composer
+* NPM
+* Vite
+* VS Code
+
+### Deployment
+
+* Hostinger
+* Linux hosting environment
+* Production Laravel configuration
+
+
+
+## Project Architecture
+
+The application is organized into separate areas to keep the platform maintainable and scalable.
+
+
+Hebah Portfolio
+│
+├── Digital Studio
+│   ├── Portfolio
+│   ├── Services
+│   ├── Contact
+│   └── Project Management
+│
+├── Quran & Arabic Education
+│   ├── Students
+│   ├── Lessons
+│   ├── Assignments
+│   ├── Quizzes
+│   ├── Bookings
+│   ├── Notifications
+│   └── Communication
+│
+└── Administration
+    ├── Dashboard
+    ├── Content Management
+    ├── Students
+    ├── Projects
+    ├── Bookings
+    └── Messages
+
+
+
+## Live Website
+
+The production version of the platform is available at:
+
+**https://hebahgift.com**
+
+The website contains the public Digital Studio and Quran & Arabic Education sections.
+
+
+
+## Security & Environment
+
+Sensitive configuration and user-generated private files are intentionally excluded from this repository.
+
+The project uses environment variables for configuration such as:
+
+* Database credentials
+* Application keys
+* Mail configuration
+* Production environment settings
+
+Private uploaded files and sensitive user-related directories are also excluded from version control.
+
+
+## Installation
+
+Clone the repository:
+
+
+git clone https://github.com/hebah-abdelwhab26/hebah-portfolio.git
+
+cd hebah-portfolio
+
+
+Install PHP dependencies:
+
+
+composer install
+
+
+Install frontend dependencies:
+
+
+npm install
+
+
+Create the environment file:
+
+
+cp .env.example .env
+
+
+Generate the application key:
+
+
+php artisan key:generate
+
+
+Configure the database and other environment variables in `.env`.
+
+Run migrations:
+
+
+php artisan migrate
+
+
+Build frontend assets:
+
+
+npm run build
+
+
+Start the local development server:
+
+
+php artisan serve
+
+
+
+
+## Development
+
+For local development with Vite:
+
+
+npm run dev
+
+
+For Laravel development:
+
+
+php artisan serve
+
+
+
+## Author
+
+**Hebah Abdelwahab**
+
+Web Developer & Digital Solutions Specialist
+Quran & Arabic Education
+
+GitHub:
+https://github.com/hebah-abdelwhab26
+
+Portfolio:
+https://hebahgift.com
+
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is primarily a personal portfolio and educational platform.
+
+The source code is publicly available for demonstration and professional portfolio purposes. Please respect the project's original design, content, branding, and assets.
