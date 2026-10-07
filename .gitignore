@@ -1,0 +1,42 @@
+*.log
+.DS_Store
+
+# Environment files
+.env
+.env.backup
+.env.production
+
+# PHP / IDE
+.phpactor.json
+.phpunit.result.cache
+/.fleet
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+/auth.json
+
+# Dependencies / Build
+/node_modules
+/vendor
+/public/build
+/public/hot
+/public/storage
+
+# Laravel
+/storage/*.key
+/storage/pail
+
+# OS
+Homestead.json
+Homestead.yaml
+Thumbs.db
+
+# Private education uploads
+/public/images/education/lessons
+/public/images/education/student-lessons
+/public/images/education/payments
+
+# User uploaded images
+/public/images/users

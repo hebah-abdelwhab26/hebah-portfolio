@@ -1,0 +1,3413 @@
+/* ============================================================
+   HEBAH EDUCATION ADMIN
+   Dashboard Design
+   RTL / Arabic
+   Cream / Olive Green / Soft Gold Identity
+============================================================ */
+
+
+/* ============================================================
+   ROOT
+============================================================ */
+
+:root {
+
+    /* --------------------------------------------------------
+       MAIN BRAND
+    -------------------------------------------------------- */
+
+    --edu-primary: #c59b55;
+    --edu-primary-dark: #a9803f;
+    --edu-primary-light: #d6b36d;
+    --edu-primary-soft: #f5eddd;
+
+
+    /* --------------------------------------------------------
+       OLIVE GREEN
+    -------------------------------------------------------- */
+
+    --edu-olive: #59634d;
+    --edu-olive-dark: #454e3c;
+    --edu-olive-deep: #343b2f;
+    --edu-olive-soft: #eef0e9;
+
+
+    /* --------------------------------------------------------
+       BLUE / INFORMATION
+       Kept muted to avoid breaking identity
+    -------------------------------------------------------- */
+
+    --edu-blue: #71829a;
+    --edu-blue-soft: #eef1f5;
+
+
+    /* --------------------------------------------------------
+       GREEN / SUCCESS
+    -------------------------------------------------------- */
+
+    --edu-green: #4f9b72;
+    --edu-green-soft: #e8f4ed;
+
+
+    /* --------------------------------------------------------
+       ORANGE / WARNING
+    -------------------------------------------------------- */
+
+    --edu-orange: #c5903d;
+    --edu-orange-soft: #faf0dc;
+
+
+    /* --------------------------------------------------------
+       RED / DANGER
+    -------------------------------------------------------- */
+
+    --edu-red: #c76f68;
+    --edu-red-soft: #faece9;
+
+
+    /* --------------------------------------------------------
+       DARK COLORS
+    -------------------------------------------------------- */
+
+    --edu-dark: #343a30;
+    --edu-dark-2: #3d4635;
+    --edu-dark-3: #2f3629;
+
+
+    /* --------------------------------------------------------
+       TEXT
+    -------------------------------------------------------- */
+
+    --edu-text: #3c4238;
+    --edu-text-light: #73796f;
+    --edu-text-muted: #9a9e94;
+
+
+    /* --------------------------------------------------------
+       BACKGROUND
+    -------------------------------------------------------- */
+
+    --edu-border: #e7e3d9;
+    --edu-bg: #f7f4ec;
+    --edu-white: #ffffff;
+    --edu-cream: #fbf9f3;
+
+
+    /* --------------------------------------------------------
+       RADIUS
+    -------------------------------------------------------- */
+
+    --edu-radius-sm: 12px;
+    --edu-radius-md: 18px;
+    --edu-radius-lg: 24px;
+
+
+    /* --------------------------------------------------------
+       SHADOW
+    -------------------------------------------------------- */
+
+    --edu-shadow:
+        0 10px 35px
+        rgba(
+            52,
+            59,
+            47,
+            .055
+        );
+
+
+    --edu-shadow-hover:
+        0 18px 45px
+        rgba(
+            52,
+            59,
+            47,
+            .10
+        );
+
+
+    /* --------------------------------------------------------
+       TRANSITION
+    -------------------------------------------------------- */
+
+    --edu-transition:
+        all .25s ease;
+
+}
+
+
+/* ============================================================
+   GLOBAL ADMIN
+============================================================ */
+
+.education-admin {
+
+    direction: rtl;
+
+    min-height: 100vh;
+
+    background:
+        var(--edu-bg);
+
+    color:
+        var(--edu-text);
+
+    font-family:
+        "Cairo",
+        "Tajawal",
+        Arial,
+        sans-serif;
+
+}
+
+
+/* ============================================================
+   LAYOUT
+============================================================ */
+
+.education-admin-layout {
+
+    min-height: 100vh;
+
+    display:
+        flex;
+
+    flex-direction:
+        row;
+
+    direction:
+        rtl;
+
+}
+
+
+/* ============================================================
+   MAIN CONTENT
+============================================================ */
+
+.education-admin-main {
+
+    flex:
+        1;
+
+    min-width:
+        0;
+
+    margin-right:
+        290px;
+
+    background:
+        var(--edu-bg);
+
+}
+
+
+/* ============================================================
+   CONTENT AREA
+============================================================ */
+
+.education-admin-content {
+
+    padding:
+        34px 38px 50px;
+
+}
+
+
+/* ============================================================
+   TOP HEADER
+============================================================ */
+
+.education-admin-header {
+
+    height:
+        105px;
+
+    background:
+        var(--edu-white);
+
+    border-bottom:
+        1px solid
+        var(--edu-border);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding:
+        0 38px;
+
+}
+
+
+/* ============================================================
+   HEADER TITLE
+============================================================ */
+
+.education-admin-header-title {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        4px;
+
+}
+
+
+.education-admin-header-title span {
+
+    color:
+        var(--edu-primary-dark);
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+}
+
+
+.education-admin-header-title h1 {
+
+    margin:
+        0;
+
+    color:
+        var(--edu-dark);
+
+    font-size:
+        27px;
+
+    font-weight:
+        800;
+
+}
+
+
+/* ============================================================
+   HEADER ACTIONS
+============================================================ */
+
+.education-admin-header-actions {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+}
+
+
+/* ============================================================
+   WEBSITE BUTTON
+============================================================ */
+
+.education-admin-header-actions a {
+
+    height:
+        46px;
+
+    padding:
+        0 18px;
+
+    border:
+        1px solid
+        var(--edu-border);
+
+    border-radius:
+        12px;
+
+    background:
+        #fff;
+
+    color:
+        var(--edu-text-light);
+
+    text-decoration:
+        none;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    transition:
+        var(--edu-transition);
+
+}
+
+
+.education-admin-header-actions a:hover {
+
+    color:
+        var(--edu-primary-dark);
+
+    border-color:
+        #dccba9;
+
+    background:
+        #fcfaf5;
+
+}
+
+
+/* ============================================================
+   NOTIFICATION
+============================================================ */
+
+.education-admin-header-notification {
+
+    width:
+        46px;
+
+    height:
+        46px;
+
+    border-radius:
+        12px;
+
+    background:
+        #fff;
+
+    border:
+        1px solid
+        var(--edu-border);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        var(--edu-text-light);
+
+    position:
+        relative;
+
+}
+
+
+.education-admin-header-notification::after {
+
+    content:
+        "";
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--edu-red);
+
+    position:
+        absolute;
+
+    top:
+        8px;
+
+    right:
+        9px;
+
+}
+
+
+/* ============================================================
+   SIDEBAR
+============================================================ */
+
+.education-admin-sidebar {
+
+    position:
+        fixed;
+
+    top:
+        0;
+
+    right:
+        0;
+
+    bottom:
+        0;
+
+    width:
+        290px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #454e3c 0%,
+            #3d4635 48%,
+            #343b2f 100%
+        );
+
+    color:
+        #fffaf0;
+
+    z-index:
+        1000;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    box-shadow:
+        -10px 0 35px
+        rgba(
+            47,
+            54,
+            41,
+            .13
+        );
+
+}
+
+
+/* ============================================================
+   SIDEBAR HEADER
+============================================================ */
+
+.education-admin-sidebar-header {
+
+    height:
+        106px;
+
+    padding:
+        0 24px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    border-bottom:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .075
+        );
+
+}
+
+
+.education-admin-brand {
+
+    width:
+        100%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        14px;
+
+    color:
+        #fffaf0;
+
+    text-decoration:
+        none;
+
+}
+
+
+/* ============================================================
+   BRAND ICON
+============================================================ */
+
+.education-admin-brand-icon {
+
+    width:
+        54px;
+
+    height:
+        54px;
+
+    border-radius:
+        16px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--edu-primary-light),
+            var(--edu-primary)
+        );
+
+    color:
+        var(--edu-dark-3);
+
+    box-shadow:
+        0 10px 25px
+        rgba(
+            197,
+            155,
+            85,
+            .22
+        );
+
+    font-size:
+        22px;
+
+}
+
+
+/* ============================================================
+   BRAND TEXT
+============================================================ */
+
+.education-admin-brand-text {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    line-height:
+        1.3;
+
+}
+
+
+.education-admin-brand-text strong {
+
+    color:
+        #fffaf0;
+
+    font-family:
+        "Amiri",
+        "Cairo",
+        serif;
+
+    font-size:
+        21px;
+
+    font-weight:
+        800;
+
+}
+
+
+.education-admin-brand-text span {
+
+    color:
+        rgba(
+            247,
+            243,
+            233,
+            .58
+        );
+
+    font-size:
+        11px;
+
+    margin-top:
+        4px;
+
+}
+
+
+/* ============================================================
+   SIDEBAR CLOSE
+============================================================ */
+
+.education-admin-sidebar-close {
+
+    display:
+        none;
+
+}
+
+
+/* ============================================================
+   SIDEBAR USER
+============================================================ */
+
+.education-admin-sidebar-user {
+
+    margin:
+        20px 18px;
+
+    padding:
+        14px;
+
+    border-radius:
+        18px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .055
+        );
+
+    border:
+        1px solid
+        rgba(
+            214,
+            179,
+            109,
+            .12
+        );
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+}
+
+
+/* ============================================================
+   USER AVATAR
+============================================================ */
+
+.education-admin-sidebar-avatar {
+
+    width:
+        46px;
+
+    height:
+        46px;
+
+    border-radius:
+        14px;
+
+    flex-shrink:
+        0;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--edu-primary-light),
+            var(--edu-primary-dark)
+        );
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        #fffaf0;
+
+    font-weight:
+        800;
+
+    position:
+        relative;
+
+}
+
+
+/* ============================================================
+   ONLINE
+============================================================ */
+
+.education-admin-online {
+
+    position:
+        absolute;
+
+    bottom:
+        0;
+
+    left:
+        -2px;
+
+    width:
+        10px;
+
+    height:
+        10px;
+
+    color:
+        var(--edu-green);
+
+    background:
+        var(--edu-green);
+
+    font-size:
+        0;
+
+    border:
+        2px solid
+        var(--edu-dark-2);
+
+    border-radius:
+        50%;
+
+}
+
+
+/* ============================================================
+   USER INFO
+============================================================ */
+
+.education-admin-sidebar-user-info {
+
+    min-width:
+        0;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+}
+
+
+.education-admin-sidebar-user-info strong {
+
+    color:
+        #fffaf0;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    white-space:
+        nowrap;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+}
+
+
+.education-admin-sidebar-user-info span {
+
+    color:
+        rgba(
+            247,
+            243,
+            233,
+            .52
+        );
+
+    font-size:
+        10px;
+
+    margin-top:
+        4px;
+
+    direction:
+        ltr;
+
+    text-align:
+        right;
+
+}
+
+
+/* ============================================================
+   SIDEBAR NAVIGATION
+============================================================ */
+
+.education-admin-navigation {
+
+    flex:
+        1;
+
+    overflow-y:
+        auto;
+
+    padding:
+        4px 18px 20px;
+
+}
+
+
+.education-admin-navigation::-webkit-scrollbar {
+
+    width:
+        4px;
+
+}
+
+
+.education-admin-navigation::-webkit-scrollbar-track {
+
+    background:
+        transparent;
+
+}
+
+
+.education-admin-navigation::-webkit-scrollbar-thumb {
+
+    background:
+        rgba(
+            214,
+            179,
+            109,
+            .25
+        );
+
+    border-radius:
+        10px;
+
+}
+
+
+.education-admin-navigation::-webkit-scrollbar-thumb:hover {
+
+    background:
+        rgba(
+            214,
+            179,
+            109,
+            .40
+        );
+
+}
+
+
+/* ============================================================
+   NAV SECTION
+============================================================ */
+
+.education-admin-nav-section {
+
+    margin-bottom:
+        24px;
+
+}
+
+
+/* ============================================================
+   NAV TITLE
+============================================================ */
+
+.education-admin-nav-title {
+
+    display:
+        block;
+
+    padding:
+        0 12px 9px;
+
+    color:
+        rgba(
+            235,
+            224,
+            197,
+            .48
+        );
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+}
+
+
+/* ============================================================
+   NAV LINK
+============================================================ */
+
+.education-admin-nav-link {
+
+    min-height:
+        52px;
+
+    padding:
+        0 13px;
+
+    margin-bottom:
+        5px;
+
+    border-radius:
+        14px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    color:
+        rgba(
+            247,
+            243,
+            233,
+            .68
+        );
+
+    text-decoration:
+        none;
+
+    transition:
+        var(--edu-transition);
+
+    position:
+        relative;
+
+}
+
+
+/* ============================================================
+   NAV HOVER
+============================================================ */
+
+.education-admin-nav-link:hover {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .065
+        );
+
+    color:
+        #fffaf0;
+
+}
+
+
+/* ============================================================
+   ACTIVE NAV
+============================================================ */
+
+.education-admin-nav-link.active {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(
+                197,
+                155,
+                85,
+                .22
+            ),
+            rgba(
+                197,
+                155,
+                85,
+                .065
+            )
+        );
+
+    color:
+        #fffaf0;
+
+    border:
+        1px solid
+        rgba(
+            214,
+            179,
+            109,
+            .10
+        );
+
+}
+
+
+/* ============================================================
+   ACTIVE INDICATOR
+============================================================ */
+
+.education-admin-nav-link.active::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    right:
+        0;
+
+    top:
+        10px;
+
+    bottom:
+        10px;
+
+    width:
+        3px;
+
+    border-radius:
+        5px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--edu-primary-light),
+            var(--edu-primary)
+        );
+
+    box-shadow:
+        0 0 10px
+        rgba(
+            214,
+            179,
+            109,
+            .22
+        );
+
+}
+
+
+/* ============================================================
+   NAV ICON
+============================================================ */
+
+.education-admin-nav-icon {
+
+    width:
+        34px;
+
+    height:
+        34px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        10px;
+
+    color:
+        rgba(
+            247,
+            243,
+            233,
+            .50
+        );
+
+    font-size:
+        15px;
+
+    transition:
+        var(--edu-transition);
+
+}
+
+
+/* ============================================================
+   HOVER ICON
+============================================================ */
+
+.education-admin-nav-link:hover
+.education-admin-nav-icon {
+
+    color:
+        var(--edu-primary-light);
+
+    background:
+        rgba(
+            214,
+            179,
+            109,
+            .075
+        );
+
+}
+
+
+/* ============================================================
+   ACTIVE ICON
+============================================================ */
+
+.education-admin-nav-link.active
+.education-admin-nav-icon {
+
+    background:
+        rgba(
+            214,
+            179,
+            109,
+            .13
+        );
+
+    color:
+        var(--edu-primary-light);
+
+}
+
+
+/* ============================================================
+   NAV LABEL
+============================================================ */
+
+.education-admin-nav-label {
+
+    flex:
+        1;
+
+    font-size:
+        13px;
+
+    font-weight:
+        600;
+
+}
+
+
+/* ============================================================
+   NAV BADGE
+============================================================ */
+
+.education-admin-nav-badge {
+
+    color:
+        rgba(
+            247,
+            243,
+            233,
+            .42
+        );
+
+    font-size:
+        10px;
+
+}
+
+
+.education-admin-nav-link.active
+.education-admin-nav-badge {
+
+    color:
+        var(--edu-primary-light);
+
+}
+
+
+/* ============================================================
+   SIDEBAR FOOTER
+============================================================ */
+
+.education-admin-sidebar-footer {
+
+    padding:
+        18px;
+
+    border-top:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            .075
+        );
+
+}
+
+
+/* ============================================================
+   FOOTER LINK
+============================================================ */
+
+.education-admin-sidebar-footer-link {
+
+    min-height:
+        46px;
+
+    padding:
+        0 13px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    color:
+        rgba(
+            247,
+            243,
+            233,
+            .55
+        );
+
+    text-decoration:
+        none;
+
+    font-size:
+        12px;
+
+    border-radius:
+        12px;
+
+    transition:
+        var(--edu-transition);
+
+}
+
+
+.education-admin-sidebar-footer-link:hover {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            .055
+        );
+
+    color:
+        #fffaf0;
+
+}
+
+
+.education-admin-sidebar-footer-link span {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+}
+
+
+/* ============================================================
+   LOGOUT
+============================================================ */
+
+.education-admin-sidebar-logout {
+
+    width:
+        100%;
+
+    border:
+        0;
+
+    background:
+        transparent;
+
+    color:
+        rgba(
+            247,
+            243,
+            233,
+            .50
+        );
+
+    cursor:
+        pointer;
+
+    min-height:
+        46px;
+
+    padding:
+        0 13px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    font-family:
+        inherit;
+
+    font-size:
+        12px;
+
+    border-radius:
+        12px;
+
+    transition:
+        var(--edu-transition);
+
+}
+
+
+.education-admin-sidebar-logout:hover {
+
+    color:
+        #e5a29a;
+
+    background:
+        rgba(
+            199,
+            111,
+            104,
+            .07
+        );
+
+}
+
+
+.education-admin-sidebar-logout span {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        9px;
+
+}
+
+
+/* ============================================================
+   DASHBOARD
+============================================================ */
+
+.education-admin-dashboard {
+
+    direction:
+        rtl;
+
+    color:
+        var(--edu-text);
+
+}
+
+
+/* ============================================================
+   DASHBOARD HEADER
+============================================================ */
+
+.education-admin-dashboard-header {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        30px;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.education-admin-dashboard-heading {
+
+    flex:
+        1;
+
+}
+
+
+/* ============================================================
+   PAGE BADGE
+============================================================ */
+
+.education-admin-page-badge {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    padding:
+        7px 13px;
+
+    border:
+        1px solid
+        #e4d5b6;
+
+    border-radius:
+        30px;
+
+    background:
+        #fbf7ed;
+
+    color:
+        var(--edu-primary-dark);
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    margin-bottom:
+        12px;
+
+}
+
+
+/* ============================================================
+   DASHBOARD HEADING
+============================================================ */
+
+.education-admin-dashboard-heading h1 {
+
+    margin:
+        0;
+
+    color:
+        var(--edu-dark);
+
+    font-size:
+        31px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -.5px;
+
+}
+
+
+.education-admin-dashboard-heading p {
+
+    margin:
+        8px 0 0;
+
+    color:
+        var(--edu-text-light);
+
+    font-size:
+        14px;
+
+}
+
+
+/* ============================================================
+   DATE
+============================================================ */
+
+.education-admin-dashboard-date {
+
+    min-width:
+        250px;
+
+    padding:
+        16px 18px;
+
+    background:
+        #fff;
+
+    border:
+        1px solid
+        var(--edu-border);
+
+    border-radius:
+        18px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        13px;
+
+    box-shadow:
+        var(--edu-shadow);
+
+}
+
+
+.education-admin-dashboard-date-icon {
+
+    width:
+        46px;
+
+    height:
+        46px;
+
+    border-radius:
+        14px;
+
+    background:
+        var(--edu-primary-soft);
+
+    color:
+        var(--edu-primary-dark);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    font-size:
+        18px;
+
+}
+
+
+.education-admin-dashboard-date div:last-child {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+}
+
+
+.education-admin-dashboard-date span {
+
+    color:
+        var(--edu-text-muted);
+
+    font-size:
+        11px;
+
+}
+
+
+.education-admin-dashboard-date strong {
+
+    margin-top:
+        3px;
+
+    color:
+        var(--edu-text);
+
+    font-size:
+        12px;
+
+}
+
+
+/* ============================================================
+   STATISTICS GRID
+============================================================ */
+
+.education-admin-stats-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(
+                0,
+                1fr
+            )
+        );
+
+    gap:
+        18px;
+
+    margin-bottom:
+        24px;
+
+}
+
+
+/* ============================================================
+   STAT CARD
+============================================================ */
+
+.education-admin-stat-card {
+
+    min-height:
+        190px;
+
+    background:
+        #fff;
+
+    border:
+        1px solid
+        var(--edu-border);
+
+    border-radius:
+        22px;
+
+    padding:
+        22px;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        var(--edu-shadow);
+
+    transition:
+        var(--edu-transition);
+
+}
+
+
+.education-admin-stat-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        120px;
+
+    height:
+        120px;
+
+    border-radius:
+        50%;
+
+    top:
+        -55px;
+
+    left:
+        -55px;
+
+    background:
+        rgba(
+            197,
+            155,
+            85,
+            .045
+        );
+
+}
+
+
+.education-admin-stat-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        var(--edu-shadow-hover);
+
+}
+
+
+.education-admin-stat-top {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+}
+
+
+/* ============================================================
+   STAT ICON
+============================================================ */
+
+.education-admin-stat-icon {
+
+    width:
+        52px;
+
+    height:
+        52px;
+
+    border-radius:
+        16px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    font-size:
+        20px;
+
+}
+
+
+/* Students */
+
+.education-admin-stat-icon.students {
+
+    background:
+        var(--edu-olive-soft);
+
+    color:
+        var(--edu-olive);
+
+}
+
+
+/* Bookings */
+
+.education-admin-stat-icon.bookings {
+
+    background:
+        var(--edu-green-soft);
+
+    color:
+        var(--edu-green);
+
+}
+
+
+/* Pending */
+
+.education-admin-stat-icon.pending {
+
+    background:
+        var(--edu-orange-soft);
+
+    color:
+        var(--edu-orange);
+
+}
+
+
+/* Lessons */
+
+.education-admin-stat-icon.lessons {
+
+    background:
+        var(--edu-primary-soft);
+
+    color:
+        var(--edu-primary-dark);
+
+}
+
+
+/* ============================================================
+   STAT LABEL
+============================================================ */
+
+.education-admin-stat-label {
+
+    color:
+        var(--edu-text-light);
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+}
+
+
+/* ============================================================
+   STAT BOTTOM
+============================================================ */
+
+.education-admin-stat-bottom {
+
+    margin-top:
+        30px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+}
+
+
+.education-admin-stat-bottom strong {
+
+    color:
+        var(--edu-dark);
+
+    font-size:
+        38px;
+
+    line-height:
+        1;
+
+    font-weight:
+        800;
+
+}
+
+
+.education-admin-stat-bottom span {
+
+    margin-top:
+        10px;
+
+    color:
+        var(--edu-text-light);
+
+    font-size:
+        12px;
+
+}
+
+
+/* ============================================================
+   MAIN GRID
+============================================================ */
+
+.education-admin-dashboard-main-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(
+            0,
+            1.65fr
+        )
+        minmax(
+            300px,
+            .85fr
+        );
+
+    gap:
+        20px;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+/* ============================================================
+   PANELS
+============================================================ */
+
+.education-admin-panel {
+
+    background:
+        #fff;
+
+    border:
+        1px solid
+        var(--edu-border);
+
+    border-radius:
+        22px;
+
+    box-shadow:
+        var(--edu-shadow);
+
+    overflow:
+        hidden;
+
+}
+
+
+/* ============================================================
+   PANEL HEADER
+============================================================ */
+
+.education-admin-panel-header {
+
+    min-height:
+        82px;
+
+    padding:
+        20px 23px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        15px;
+
+    border-bottom:
+        1px solid
+        #eeeae1;
+
+}
+
+
+.education-admin-panel-heading {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+}
+
+
+.education-admin-panel-eyebrow {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    color:
+        var(--edu-primary-dark);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+}
+
+
+.education-admin-panel-heading h2 {
+
+    margin:
+        5px 0 0;
+
+    color:
+        var(--edu-dark);
+
+    font-size:
+        18px;
+
+    font-weight:
+        800;
+
+}
+
+
+/* ============================================================
+   PANEL LINK
+============================================================ */
+
+.education-admin-panel-link {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    color:
+        var(--edu-primary-dark);
+
+    text-decoration:
+        none;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+}
+
+
+.education-admin-panel-link:hover {
+
+    color:
+        var(--edu-primary);
+
+}
+
+
+/* ============================================================
+   RECENT BOOKINGS
+============================================================ */
+
+.education-admin-recent-bookings {
+
+    padding:
+        5px 22px 12px;
+
+}
+
+
+.education-admin-booking-row {
+
+    min-height:
+        76px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        48px
+        minmax(
+            0,
+            1fr
+        )
+        155px
+        auto;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    border-bottom:
+        1px solid
+        #f0ede6;
+
+}
+
+
+.education-admin-booking-row:last-child {
+
+    border-bottom:
+        0;
+
+}
+
+
+/* ============================================================
+   BOOKING AVATAR
+============================================================ */
+
+.education-admin-booking-avatar {
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    border-radius:
+        50%;
+
+    overflow:
+        hidden;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        var(--edu-primary-soft);
+
+    color:
+        var(--edu-primary-dark);
+
+    font-weight:
+        800;
+
+}
+
+
+.education-admin-booking-avatar img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+}
+
+
+/* ============================================================
+   BOOKING INFO
+============================================================ */
+
+.education-admin-booking-info {
+
+    min-width:
+        0;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+}
+
+
+.education-admin-booking-info strong {
+
+    color:
+        var(--edu-text);
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+
+    white-space:
+        nowrap;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+}
+
+
+.education-admin-booking-info span {
+
+    margin-top:
+        4px;
+
+    color:
+        var(--edu-text-light);
+
+    font-size:
+        11px;
+
+    white-space:
+        nowrap;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+}
+
+
+/* ============================================================
+   BOOKING DATE
+============================================================ */
+
+.education-admin-booking-date {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        4px;
+
+}
+
+
+.education-admin-booking-date strong {
+
+    color:
+        var(--edu-text);
+
+    font-size:
+        11px;
+
+}
+
+
+.education-admin-booking-date span {
+
+    color:
+        var(--edu-text-muted);
+
+    font-size:
+        10px;
+
+    direction:
+        ltr;
+
+    text-align:
+        right;
+
+}
+
+
+.education-admin-booking-status {
+
+    display:
+        flex;
+
+    justify-content:
+        flex-start;
+
+}
+
+
+/* ============================================================
+   STATUS
+============================================================ */
+
+.education-admin-status {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-width:
+        82px;
+
+    min-height:
+        29px;
+
+    padding:
+        4px 10px;
+
+    border-radius:
+        30px;
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+}
+
+
+/* Warning */
+
+.education-admin-status.warning {
+
+    color:
+        #a76d12;
+
+    background:
+        var(--edu-orange-soft);
+
+}
+
+
+/* Success */
+
+.education-admin-status.success {
+
+    color:
+        #37805b;
+
+    background:
+        var(--edu-green-soft);
+
+}
+
+
+/* Info */
+
+.education-admin-status.info {
+
+    color:
+        #63748a;
+
+    background:
+        var(--edu-blue-soft);
+
+}
+
+
+/* Danger */
+
+.education-admin-status.danger {
+
+    color:
+        #b45f59;
+
+    background:
+        var(--edu-red-soft);
+
+}
+
+
+/* Muted */
+
+.education-admin-status.muted {
+
+    color:
+        #747a70;
+
+    background:
+        #f0f0eb;
+
+}
+
+
+/* ============================================================
+   QUICK ACTIONS
+============================================================ */
+
+.education-admin-quick-actions {
+
+    padding:
+        15px 18px 20px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        9px;
+
+}
+
+
+.education-admin-quick-action {
+
+    min-height:
+        70px;
+
+    padding:
+        10px 12px;
+
+    border-radius:
+        15px;
+
+    background:
+        #faf9f5;
+
+    border:
+        1px solid
+        #ece9e0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    color:
+        var(--edu-text);
+
+    text-decoration:
+        none;
+
+    transition:
+        var(--edu-transition);
+
+}
+
+
+.education-admin-quick-action:hover {
+
+    background:
+        #fff;
+
+    border-color:
+        #ddcfb0;
+
+    transform:
+        translateX(-3px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(
+            197,
+            155,
+            85,
+            .08
+        );
+
+}
+
+
+/* ============================================================
+   QUICK ICON
+============================================================ */
+
+.education-admin-quick-icon {
+
+    width:
+        43px;
+
+    height:
+        43px;
+
+    border-radius:
+        13px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-shrink:
+        0;
+
+}
+
+
+/* Bookings */
+
+.education-admin-quick-icon.bookings {
+
+    color:
+        var(--edu-green);
+
+    background:
+        var(--edu-green-soft);
+
+}
+
+
+/* Lessons */
+
+.education-admin-quick-icon.lessons {
+
+    color:
+        var(--edu-primary-dark);
+
+    background:
+        var(--edu-primary-soft);
+
+}
+
+
+/* Website */
+
+.education-admin-quick-icon.website {
+
+    color:
+        var(--edu-olive);
+
+    background:
+        var(--edu-olive-soft);
+
+}
+
+
+/* ============================================================
+   QUICK CONTENT
+============================================================ */
+
+.education-admin-quick-content {
+
+    flex:
+        1;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+}
+
+
+.education-admin-quick-content strong {
+
+    color:
+        var(--edu-text);
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+}
+
+
+.education-admin-quick-content small {
+
+    margin-top:
+        4px;
+
+    color:
+        var(--edu-text-muted);
+
+    font-size:
+        10px;
+
+}
+
+
+.education-admin-quick-arrow {
+
+    color:
+        #969b91;
+
+    font-size:
+        11px;
+
+}
+
+
+/* ============================================================
+   UPCOMING BOOKINGS
+============================================================ */
+
+.education-admin-upcoming-panel {
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.education-admin-upcoming-count {
+
+    padding:
+        7px 12px;
+
+    border-radius:
+        30px;
+
+    background:
+        var(--edu-primary-soft);
+
+    color:
+        var(--edu-primary-dark);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+}
+
+
+.education-admin-upcoming-list {
+
+    padding:
+        7px 22px 14px;
+
+}
+
+
+.education-admin-upcoming-card {
+
+    min-height:
+        76px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        70px
+        minmax(
+            0,
+            1fr
+        )
+        145px
+        auto;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+
+    border-bottom:
+        1px solid
+        #f0ede6;
+
+}
+
+
+.education-admin-upcoming-card:last-child {
+
+    border-bottom:
+        0;
+
+}
+
+
+/* ============================================================
+   UPCOMING DATE
+============================================================ */
+
+.education-admin-upcoming-date {
+
+    width:
+        58px;
+
+    min-height:
+        62px;
+
+    padding:
+        6px;
+
+    border-radius:
+        14px;
+
+    background:
+        var(--edu-primary-soft);
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+}
+
+
+.education-admin-upcoming-date span {
+
+    color:
+        var(--edu-primary-dark);
+
+    font-size:
+        9px;
+
+    font-weight:
+        800;
+
+}
+
+
+.education-admin-upcoming-date strong {
+
+    color:
+        var(--edu-dark);
+
+    font-size:
+        21px;
+
+    line-height:
+        1.2;
+
+    font-weight:
+        800;
+
+}
+
+
+.education-admin-upcoming-date small {
+
+    color:
+        var(--edu-text-muted);
+
+    font-size:
+        8px;
+
+}
+
+
+/* ============================================================
+   UPCOMING INFO
+============================================================ */
+
+.education-admin-upcoming-info {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    min-width:
+        0;
+
+}
+
+
+.education-admin-upcoming-info strong {
+
+    color:
+        var(--edu-text);
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+
+    white-space:
+        nowrap;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+}
+
+
+.education-admin-upcoming-info span {
+
+    margin-top:
+        5px;
+
+    color:
+        var(--edu-text-light);
+
+    font-size:
+        11px;
+
+}
+
+
+.education-admin-upcoming-info span i {
+
+    margin-left:
+        4px;
+
+    color:
+        var(--edu-primary);
+
+}
+
+
+/* ============================================================
+   UPCOMING TIME
+============================================================ */
+
+.education-admin-upcoming-time {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        6px;
+
+    color:
+        var(--edu-text-light);
+
+    font-size:
+        11px;
+
+    direction:
+        ltr;
+
+}
+
+
+.education-admin-upcoming-time i {
+
+    color:
+        var(--edu-primary);
+
+}
+
+
+.education-admin-upcoming-time b {
+
+    color:
+        #c8c7bf;
+
+}
+
+
+/* ============================================================
+   EMPTY STATE
+============================================================ */
+
+.education-admin-empty {
+
+    min-height:
+        230px;
+
+    padding:
+        35px 20px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+}
+
+
+/* ============================================================
+   EMPTY ICON
+============================================================ */
+
+.education-admin-empty-icon {
+
+    width:
+        62px;
+
+    height:
+        62px;
+
+    border-radius:
+        20px;
+
+    background:
+        var(--edu-primary-soft);
+
+    color:
+        var(--edu-primary-dark);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    font-size:
+        24px;
+
+    margin-bottom:
+        14px;
+
+}
+
+
+/* ============================================================
+   EMPTY TEXT
+============================================================ */
+
+.education-admin-empty h3 {
+
+    margin:
+        0;
+
+    color:
+        var(--edu-text);
+
+    font-size:
+        15px;
+
+    font-weight:
+        800;
+
+}
+
+
+.education-admin-empty p {
+
+    margin:
+        7px 0 0;
+
+    color:
+        var(--edu-text-muted);
+
+    font-size:
+        11px;
+
+}
+
+
+/* ============================================================
+   MOBILE SIDEBAR TOGGLE
+============================================================ */
+
+.education-admin-sidebar-toggle {
+
+    display:
+        none;
+
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 1200px) {
+
+    .education-admin-main {
+
+        margin-right:
+            250px;
+
+    }
+
+
+    .education-admin-sidebar {
+
+        width:
+            250px;
+
+    }
+
+
+    .education-admin-content {
+
+        padding:
+            28px;
+
+    }
+
+
+    .education-admin-stats-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(
+                    0,
+                    1fr
+                )
+            );
+
+    }
+
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 900px) {
+
+    .education-admin-main {
+
+        margin-right:
+            0;
+
+    }
+
+
+    .education-admin-sidebar {
+
+        transform:
+            translateX(100%);
+
+        transition:
+            transform .3s ease;
+
+    }
+
+
+    .education-admin-sidebar.open {
+
+        transform:
+            translateX(0);
+
+    }
+
+
+    .education-admin-sidebar-toggle {
+
+        display:
+            flex;
+
+        width:
+            44px;
+
+        height:
+            44px;
+
+        border-radius:
+            12px;
+
+        border:
+            1px solid
+            var(--edu-border);
+
+        background:
+            #fff;
+
+        color:
+            var(--edu-dark);
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        cursor:
+            pointer;
+
+    }
+
+
+    .education-admin-sidebar-close {
+
+        display:
+            flex;
+
+        margin-right:
+            auto;
+
+        width:
+            36px;
+
+        height:
+            36px;
+
+        border:
+            0;
+
+        border-radius:
+            10px;
+
+        background:
+            rgba(
+                255,
+                255,
+                255,
+                .07
+            );
+
+        color:
+            #fffaf0;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+        cursor:
+            pointer;
+
+    }
+
+
+    .education-admin-dashboard-main-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 700px) {
+
+    .education-admin-content {
+
+        padding:
+            20px 15px 35px;
+
+    }
+
+
+    .education-admin-header {
+
+        height:
+            80px;
+
+        padding:
+            0 15px;
+
+    }
+
+
+    .education-admin-header-title h1 {
+
+        font-size:
+            21px;
+
+    }
+
+
+    .education-admin-header-title span {
+
+        display:
+            none;
+
+    }
+
+
+    .education-admin-header-actions a {
+
+        display:
+            none;
+
+    }
+
+
+    .education-admin-dashboard-header {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+    }
+
+
+    .education-admin-dashboard-heading h1 {
+
+        font-size:
+            25px;
+
+    }
+
+
+    .education-admin-dashboard-date {
+
+        min-width:
+            0;
+
+        width:
+            100%;
+
+    }
+
+
+    .education-admin-stats-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .education-admin-stat-card {
+
+        min-height:
+            160px;
+
+    }
+
+
+    .education-admin-booking-row {
+
+        grid-template-columns:
+            45px
+            minmax(
+                0,
+                1fr
+            )
+            auto;
+
+    }
+
+
+    .education-admin-booking-date {
+
+        display:
+            none;
+
+    }
+
+
+    .education-admin-upcoming-card {
+
+        grid-template-columns:
+            60px
+            minmax(
+                0,
+                1fr
+            );
+
+        gap:
+            12px;
+
+        padding:
+            10px 0;
+
+    }
+
+
+    .education-admin-upcoming-time {
+
+        grid-column:
+            2;
+
+    }
+
+
+    .education-admin-upcoming-card
+    > .education-admin-status {
+
+        grid-column:
+            2;
+
+        justify-self:
+            start;
+
+    }
+
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media (max-width: 450px) {
+
+    .education-admin-dashboard-heading h1 {
+
+        font-size:
+            22px;
+
+    }
+
+
+    .education-admin-dashboard-heading p {
+
+        font-size:
+            12px;
+
+    }
+
+
+    .education-admin-stat-card {
+
+        padding:
+            18px;
+
+    }
+
+
+    .education-admin-stat-bottom strong {
+
+        font-size:
+            32px;
+
+    }
+
+
+    .education-admin-panel-header {
+
+        padding:
+            17px;
+
+    }
+
+
+    .education-admin-recent-bookings {
+
+        padding-left:
+            15px;
+
+        padding-right:
+            15px;
+
+    }
+
+
+    .education-admin-booking-row {
+
+        gap:
+            10px;
+
+    }
+
+}

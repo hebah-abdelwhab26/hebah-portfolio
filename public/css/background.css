@@ -1,0 +1,815 @@
+/*==================================================*
+* BACKGROUND
+*==================================================*/
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    background:
+
+        radial-gradient(
+            circle at 12% 15%,
+            rgba(59, 130, 246, 0.18) 0%,
+            transparent 38%
+        ),
+
+        radial-gradient(
+            circle at 88% 82%,
+            rgba(212, 160, 23, 0.15) 0%,
+            transparent 40%
+        ),
+
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(30, 64, 175, 0.08) 0%,
+            transparent 50%
+        ),
+
+        linear-gradient(
+            135deg,
+            #0b1830 0%,
+            #102442 45%,
+            #0c1b32 75%,
+            #0a1629 100%
+        );
+
+    /*
+     * Keep the entire background on its own rendering layer.
+     * This is important because the content pages use
+     * transforms, blur and backdrop-filter.
+     */
+    transform: translate3d(0, 0, 0);
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+    contain: paint;
+
+}
+
+
+/*==================================================*
+* GRADIENT OVERLAY
+*==================================================*/
+
+.gradient-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    transform: translate3d(0, 0, 0);
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+}
+
+
+/*==================================================*
+* BLUE GLOW
+*==================================================*/
+
+.blue-glow {
+
+    position: absolute;
+
+    width: 700px;
+
+    height: 700px;
+
+    left: -250px;
+
+    top: -180px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    filter: blur(180px);
+
+    opacity: .18;
+
+    /*
+     * Only transform is animated.
+     * Keeping this layer isolated prevents the animation
+     * from forcing the page content to repaint.
+     */
+    will-change: transform;
+
+    transform: translate3d(0, 0, 0) scale(1);
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+    animation: blueMove 14s ease-in-out infinite;
+
+}
+
+
+/*==================================================*
+* GOLD GLOW
+*==================================================*/
+
+.gold-glow {
+
+    position: absolute;
+
+    width: 650px;
+
+    height: 650px;
+
+    right: -220px;
+
+    bottom: -220px;
+
+    border-radius: 50%;
+
+    background: #d4a017;
+
+    filter: blur(180px);
+
+    opacity: .14;
+
+    will-change: transform;
+
+    transform: translate3d(0, 0, 0) scale(1);
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+    animation: goldMove 18s ease-in-out infinite;
+
+}
+
+
+/*==================================================*
+* ISLAMIC PATTERN
+*==================================================*/
+
+.islamic-pattern {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .035;
+
+    pointer-events: none;
+
+    background-image:
+
+        radial-gradient(
+            circle,
+            rgba(212, 160, 23, .65) 2px,
+            transparent 2.8px
+        );
+
+    background-size: 110px 110px;
+
+    will-change: background-position;
+
+    animation: patternMove 60s linear infinite;
+
+}
+
+
+/*==================================================*
+* LIGHT RAYS
+*==================================================*/
+
+.light-rays {
+
+    position: absolute;
+
+    /*
+     * Keep the rays large enough to cover the viewport,
+     * but avoid unnecessary enlargement.
+     */
+    inset: -30%;
+
+    pointer-events: none;
+
+    background:
+
+        repeating-linear-gradient(
+
+            115deg,
+
+            transparent 0,
+
+            transparent 220px,
+
+            rgba(255, 255, 255, .022) 223px,
+
+            transparent 226px
+
+        );
+
+    will-change: transform;
+
+    transform: translate3d(0, 0, 0);
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+    animation: raysMove 60s linear infinite;
+
+}
+
+
+/*==================================================*
+* STARS LAYER
+*==================================================*/
+
+.stars {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    transform: translate3d(0, 0, 0);
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+}
+
+
+/*==================================================*
+* INDIVIDUAL STAR
+*==================================================*/
+
+.star {
+
+    position: absolute;
+
+    display: block;
+
+    border-radius: 50%;
+
+    box-shadow:
+
+        0 0 8px currentColor,
+
+        0 0 18px currentColor;
+
+    /*
+     * Stars only animate transform and opacity.
+     * No layout property is animated.
+     */
+    will-change: transform, opacity;
+
+    transform: translate3d(0, 0, 0);
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+    animation:
+
+        twinkle infinite ease-in-out,
+
+        floating infinite ease-in-out;
+
+}
+
+
+/*==================================================*
+* SHOOTING STARS
+*==================================================*/
+
+.shooting-stars {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 3;
+
+    transform: translate3d(0, 0, 0);
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+}
+
+
+/*==================================================*
+* SHOOTING STAR
+*==================================================*/
+
+.shooting-star {
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 2px;
+
+    border-radius: 999px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(255, 255, 255, 0),
+
+            rgba(255, 255, 255, .9),
+
+            rgba(96, 165, 250, .9),
+
+            rgba(255, 255, 255, 0)
+
+        );
+
+    filter: blur(.3px);
+
+    transform:
+
+        translate3d(0, 0, 0)
+        rotate(-25deg);
+
+    will-change: transform, opacity;
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+    animation: shootingStar linear forwards;
+
+}
+
+
+/*==================================================*
+* SHOOTING STAR HEAD
+*==================================================*/
+
+.shooting-star::before {
+
+    content: "";
+
+    position: absolute;
+
+    right: -3px;
+
+    top: 50%;
+
+    transform:
+
+        translate3d(0, -50%, 0);
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+
+        0 0 18px #60a5fa,
+
+        0 0 35px white;
+
+}
+
+
+/*==================================================*
+* CONSTELLATION
+*==================================================*/
+
+.constellation {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    transform: translate3d(0, 0, 0);
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+}
+
+
+/*==================================================*
+* CONSTELLATION LINE
+*==================================================*/
+
+.constellation-line {
+
+    position: absolute;
+
+    height: 1px;
+
+    border-radius: 999px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(255, 255, 255, .10),
+
+            rgba(96, 165, 250, .18),
+
+            transparent
+
+        );
+
+    will-change: opacity;
+
+    animation:
+
+        constellationGlow 9s ease-in-out infinite;
+
+}
+
+
+/*==================================================*
+* CARD GLOW EFFECTS
+*==================================================*/
+
+.tech-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -45%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(37, 99, 235, .24),
+
+            transparent 72%
+
+        );
+
+    filter: blur(75px);
+
+    z-index: -1;
+
+    opacity: .85;
+
+}
+
+
+.education-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -45%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(212, 160, 23, .26),
+
+            transparent 72%
+
+        );
+
+    filter: blur(75px);
+
+    z-index: -1;
+
+    opacity: .85;
+
+}
+
+
+/*==================================================*
+* BACKGROUND ANIMATIONS
+*==================================================*/
+
+@keyframes blueMove {
+
+    0% {
+
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(80px, 50px, 0)
+            scale(1.08);
+
+    }
+
+    100% {
+
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes goldMove {
+
+    0% {
+
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(-70px, -40px, 0)
+            scale(1.06);
+
+    }
+
+    100% {
+
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes patternMove {
+
+    from {
+
+        background-position:
+            0 0;
+
+    }
+
+    to {
+
+        background-position:
+            220px 220px;
+
+    }
+
+}
+
+
+@keyframes raysMove {
+
+    from {
+
+        transform:
+            translate3d(0, 0, 0);
+
+    }
+
+    to {
+
+        transform:
+            translate3d(-220px, 0, 0);
+
+    }
+
+}
+
+
+@keyframes gridMove {
+
+    from {
+
+        background-position:
+            0 0;
+
+    }
+
+    to {
+
+        background-position:
+            90px 90px;
+
+    }
+
+}
+
+
+/*==================================================*
+* STAR ANIMATIONS
+*==================================================*/
+
+@keyframes twinkle {
+
+    0% {
+
+        opacity: .25;
+
+    }
+
+    25% {
+
+        opacity: .8;
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+    }
+
+    75% {
+
+        opacity: .55;
+
+    }
+
+    100% {
+
+        opacity: .25;
+
+    }
+
+}
+
+
+@keyframes floating {
+
+    0% {
+
+        transform:
+            translate3d(0, 0, 0);
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(
+                0,
+                calc(var(--float) * -1),
+                0
+            );
+
+    }
+
+    100% {
+
+        transform:
+            translate3d(0, 0, 0);
+
+    }
+
+}
+
+
+/*==================================================*
+* SHOOTING STAR
+*==================================================*/
+
+@keyframes shootingStar {
+
+    from {
+
+        transform:
+            translate3d(-250px, 0, 0)
+            rotate(-25deg);
+
+        opacity: 0;
+
+    }
+
+    10% {
+
+        opacity: 1;
+
+    }
+
+    90% {
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        transform:
+            translate3d(1800px, 550px, 0)
+            rotate(-25deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/*==================================================*
+* CONSTELLATION GLOW
+*==================================================*/
+
+@keyframes constellationGlow {
+
+    0% {
+
+        opacity: .04;
+
+    }
+
+    50% {
+
+        opacity: .22;
+
+    }
+
+    100% {
+
+        opacity: .04;
+
+    }
+
+}
+
+
+/*==================================================*
+* CONTENT LAYERS
+*==================================================*/
+
+.portal-wrapper {
+
+    position: relative;
+
+    z-index: 10;
+
+    /*
+     * Keep page content independent from the
+     * fixed animated background.
+     */
+    isolation: isolate;
+
+}
+
+
+main {
+
+    position: relative;
+
+    z-index: 10;
+
+}

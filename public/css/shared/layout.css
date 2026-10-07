@@ -1,0 +1,150 @@
+/*==================================================
+                HEBAH DESIGN SYSTEM
+                    LAYOUT
+==================================================*/
+
+/*==================================================
+                CONTAINER
+==================================================*/
+
+.container{
+
+    width:min(
+        100% - 40px,
+        var(--container-width)
+    );
+
+    margin-inline:auto;
+
+}
+
+/*==================================================
+                SECTIONS
+==================================================*/
+
+section{
+
+    position:relative;
+
+    padding-block:var(--section-padding);
+
+}
+
+.section-sm{
+
+    padding-block:80px;
+
+}
+
+.section-lg{
+
+    padding-block:160px;
+
+}
+
+/*==================================================
+                DISPLAY
+==================================================*/
+
+.flex{
+
+    display:flex;
+
+}
+
+.inline-flex{
+
+    display:inline-flex;
+
+}
+
+.grid{
+
+    display:grid;
+
+}
+
+.block{
+
+    display:block;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+/*==================================================
+                FLEX
+==================================================*/
+
+.flex-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.flex-between{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.flex-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.flex-wrap{
+
+    flex-wrap:wrap;
+
+}
+
+/*==================================================
+                GRID
+==================================================*/
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+}
+
+.grid-3{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:32px;
+
+}
+
+.grid-4{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+}
+

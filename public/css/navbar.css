@@ -1,0 +1,2012 @@
+/* =========================================================
+   HEBAH NAVBAR
+   ========================================================= */
+
+/* =========================================================
+   1. NAVBAR ROOT
+   ========================================================= */
+
+/*==================================================*
+|              NAVBAR ROOT                          |
+*==================================================*/
+
+.navbar-wrapper {
+
+    position: fixed;
+
+    top: 20px;
+
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    z-index: 99999;
+
+    pointer-events: none;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translate3d(0, 0, 0);
+
+    transition:
+        transform 0.4s ease,
+        opacity 0.35s ease,
+        visibility 0.35s ease,
+        top 0.35s ease;
+
+    will-change:
+        transform,
+        opacity;
+}
+
+
+/* =========================================================
+   2. NAVBAR SCROLL BEHAVIOR
+   ========================================================= */
+
+/*==================================================*
+|              NAVBAR VISIBLE                       |
+*==================================================*/
+
+.navbar-wrapper.navbar-visible {
+
+    transform: translate3d(0, 0, 0);
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/*==================================================*
+|              NAVBAR HIDDEN                        |
+*==================================================*/
+
+.navbar-wrapper.navbar-hidden {
+
+    transform: translate3d(0, -130%, 0);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+/* Scrolled state */
+.navbar-wrapper.scrolled {
+    top: 12px;
+}
+
+
+/* =========================================================
+   3. NAVBAR GLASS
+   ========================================================= */
+
+.navbar-glass {
+    position: relative;
+
+    width: min(1380px, 95%);
+    height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    border-radius: 22px;
+
+    background: rgba(15, 23, 42, 0.78);
+
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 20px 70px rgba(2, 6, 23, 0.45);
+
+    pointer-events: auto;
+
+    z-index: 100000;
+
+    overflow: visible;
+
+    isolation: isolate;
+
+    transition:
+        background 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* =========================================================
+   4. LOGO
+   ========================================================= */
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+
+/* Logo Box */
+.logo-box {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #111c33;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.logo-box:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 15px rgba(255, 255, 255, 0.45);
+}
+
+.logo-box img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* Logo Text */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-name {
+    color: #ffffff;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+.logo-subtitle {
+    margin-top: 3px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   5. DESKTOP MENU
+   ========================================================= */
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+
+    gap: 2px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 18px;
+
+    border-radius: 12px;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.nav-link:hover {
+    color: #60a5fa;
+
+    background: rgba(37, 99, 235, 0.18);
+}
+
+.nav-link.active {
+    color: #60a5fa;
+
+    background: rgba(37, 99, 235, 0.18);
+
+    box-shadow:
+        inset 0 0 0 1px rgba(96, 165, 250, 0.18);
+}
+
+.nav-link.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 4px;
+
+    width: 18px;
+    height: 3px;
+
+    border-radius: 999px;
+
+    transform: translateX(-50%);
+
+    background: #60a5fa;
+
+    box-shadow:
+        0 0 12px rgba(96, 165, 250, 0.7);
+}
+
+
+/* =========================================================
+   6. NAVBAR ACTIONS
+   ========================================================= */
+
+.navbar-actions {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    flex-shrink: 0;
+
+    z-index: 100001;
+}
+
+
+/* =========================================================
+   7. LOGIN / REGISTER
+   ========================================================= */
+
+.navbar-login,
+.navbar-register {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 18px;
+
+    border-radius: 12px;
+
+    background-color: #cbd5e1;
+
+    color: #070747;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+.navbar-login:hover,
+.navbar-register:hover {
+    color: #070747;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px rgba(99, 102, 241, 0.4);
+}
+
+
+/* =========================================================
+   8. LANGUAGE DROPDOWN
+   ========================================================= */
+
+.language-dropdown {
+    position: relative;
+
+    z-index: 100002;
+}
+
+.language-btn {
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    color: #e2e8f0;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        background 0.35s ease,
+        border-color 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.language-btn:hover {
+    background: rgba(37, 99, 235, 0.15);
+
+    border-color: rgba(96, 165, 250, 0.25);
+
+    color: #60a5fa;
+}
+
+.language-btn i {
+    transition:
+        transform 0.35s ease;
+}
+
+.language-btn.active .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+
+/* Language Menu */
+.language-menu {
+    position: absolute;
+
+    top: 60px;
+    right: 0;
+
+    width: 200px;
+
+    overflow: hidden;
+
+    background: #0f172a;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform: translateY(15px);
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease,
+        transform 0.35s ease;
+
+    z-index: 100004;
+}
+
+.language-menu.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+}
+
+.language-menu a {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 18px;
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.language-menu a:hover {
+    background: rgba(37, 99, 235, 0.15);
+
+    color: #60a5fa;
+}
+
+
+/* =========================================================
+   9. USER NOTIFICATIONS
+   ========================================================= */
+
+.user-notifications {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    z-index: 100002;
+}
+
+
+/* Notification Button */
+.user-notifications-btn {
+    position: relative;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    color: #e2e8f0;
+
+    cursor: pointer;
+
+    z-index: 100003;
+
+    transition:
+        background 0.35s ease,
+        border-color 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.user-notifications-btn:hover {
+    background: rgba(37, 99, 235, 0.15);
+
+    border-color: rgba(96, 165, 250, 0.25);
+
+    color: #60a5fa;
+
+    transform: translateY(-2px);
+}
+
+.user-notifications-btn.active {
+    background: rgba(37, 99, 235, 0.18);
+
+    border-color: rgba(96, 165, 250, 0.30);
+
+    color: #60a5fa;
+}
+
+.user-notifications-btn > i {
+    font-size: 18px;
+
+    line-height: 1;
+}
+
+
+/* Notification Count */
+.user-notifications-count {
+    position: absolute;
+
+    top: -5px;
+    right: -5px;
+
+    min-width: 20px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 5px;
+
+    box-sizing: border-box;
+
+    border: 2px solid #0f172a;
+
+    border-radius: 999px;
+
+    background: #ef4444;
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+.user-notifications-count.d-none {
+    display: none !important;
+}
+
+
+/* Notification Menu */
+.user-notifications-menu {
+    position: absolute;
+
+    top: calc(100% + 14px);
+    right: 0;
+
+    width: 360px;
+    max-width: calc(100vw - 30px);
+
+    overflow: hidden;
+
+    background: rgba(15, 23, 42, 0.97);
+
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 70px rgba(2, 6, 23, 0.55),
+        0 0 0 1px rgba(255, 255, 255, 0.02);
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform:
+        translateY(12px)
+        scale(0.98);
+
+    transform-origin: top right;
+
+    z-index: 100004;
+
+    isolation: isolate;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+}
+
+.user-notifications-menu.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* Notification Header */
+.user-notifications-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 17px 18px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.user-notifications-header > div {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.user-notifications-header strong {
+    color: #f8fafc;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+.user-notifications-header span:not(.user-notifications-total) {
+    margin-top: 3px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+
+/* Notification Total */
+.user-notifications-total {
+    min-width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 8px;
+
+    flex-shrink: 0;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #7c3aed
+        );
+
+    color: #ffffff !important;
+
+    font-size: 11px !important;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* Notification Body */
+.user-notifications-body {
+    max-height: 330px;
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        rgba(96, 165, 250, 0.30)
+        transparent;
+}
+
+.user-notifications-body::-webkit-scrollbar {
+    width: 5px;
+}
+
+.user-notifications-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.user-notifications-body::-webkit-scrollbar-thumb {
+    background: rgba(96, 165, 250, 0.25);
+
+    border-radius: 999px;
+}
+
+.user-notifications-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(96, 165, 250, 0.45);
+}
+
+
+/* Notification Item */
+.user-notification-item {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 16px;
+
+    box-sizing: border-box;
+
+    background: transparent;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+
+    color: inherit;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.user-notification-item:last-child {
+    border-bottom: none;
+}
+
+.user-notification-item:hover {
+    background: rgba(37, 99, 235, 0.10);
+}
+
+
+/* Notification Icon */
+.user-notification-icon {
+    width: 40px;
+    height: 40px;
+
+    flex: 0 0 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(37, 99, 235, 0.18),
+            rgba(124, 58, 237, 0.18)
+        );
+
+    border: 1px solid rgba(96, 165, 250, 0.12);
+
+    color: #60a5fa;
+}
+
+.user-notification-icon i {
+    font-size: 15px;
+}
+
+
+/* Notification Content */
+.user-notification-content {
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.user-notification-content strong {
+    display: block;
+
+    margin: 0 0 3px;
+
+    color: #f1f5f9;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.user-notification-content span {
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.user-notification-content small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    line-height: 1.3;
+}
+
+
+/* Notification Arrow */
+.user-notification-arrow {
+    flex: 0 0 auto;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.user-notification-item:hover .user-notification-arrow {
+    color: #60a5fa;
+
+    transform: translateX(3px);
+}
+
+
+/* Notification Empty */
+.user-notifications-empty {
+    min-height: 175px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    padding: 25px 20px;
+
+    text-align: center;
+}
+
+.user-notifications-empty-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 12px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    color: #64748b;
+}
+
+.user-notifications-empty-icon i {
+    font-size: 18px;
+}
+
+.user-notifications-empty strong {
+    color: #f1f5f9;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.user-notifications-empty span {
+    margin-top: 5px;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+
+/* Notification Footer */
+.user-notifications-footer {
+    padding: 12px 16px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.user-notifications-footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    color: #60a5fa;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition:
+        color 0.25s ease;
+}
+
+.user-notifications-footer a:hover {
+    color: #93c5fd;
+}
+
+.user-notifications-footer a i {
+    font-size: 10px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.user-notifications-footer a:hover i {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   10. USER
+   ========================================================= */
+
+.navbar-user {
+    position: relative;
+
+    z-index: 100002;
+}
+
+.user-btn {
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 16px;
+
+    border: 1px solid rgba(148, 163, 184, 0.18);
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 28px rgba(15, 23, 42, 0.06);
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+}
+
+.user-btn:hover {
+    transform: translateY(-2px);
+
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #7c3aed
+        );
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+.user-btn i {
+    color: #64748b;
+
+    font-size: 12px;
+
+    transition:
+        transform 0.35s ease;
+}
+
+.user-btn.active i {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   11. USER MENU
+   ========================================================= */
+
+.user-menu {
+    position: absolute;
+
+    top: 66px;
+    right: 0;
+
+    width: 240px;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    border: 1px solid rgba(226, 232, 240, 0.8);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 60px rgba(15, 23, 42, 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform: translateY(14px);
+
+    z-index: 100004;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease,
+        transform 0.35s ease;
+}
+
+.user-menu.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+}
+
+.user-menu a,
+.user-menu button {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 16px 20px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #334155;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.user-menu a:hover,
+.user-menu button:hover {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(59, 130, 246, 0.08),
+            rgba(124, 58, 237, 0.08)
+        );
+
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   12. USER MESSAGES
+   ========================================================= */
+
+.user-messages {
+    position: relative;
+
+    z-index: 100002;
+}
+
+
+/* Messages Button */
+.user-messages-btn {
+    position: relative;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    transition:
+        background 0.35s ease,
+        border-color 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.user-messages-btn:hover {
+    background: rgba(37, 99, 235, 0.15);
+
+    border-color: rgba(96, 165, 250, 0.30);
+
+    color: #60a5fa;
+
+    transform: translateY(-2px);
+}
+
+.user-messages-btn i {
+    font-size: 18px;
+}
+
+
+/* Message Badge */
+.user-messages-count {
+    position: absolute;
+
+    top: -5px;
+    right: -5px;
+
+    min-width: 19px;
+    height: 19px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 5px;
+
+    border: 2px solid #0f172a;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #7c3aed
+        );
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    box-shadow:
+        0 5px 15px rgba(37, 99, 235, 0.35);
+}
+
+
+/* =========================================================
+   13. DESKTOP MORE
+   ========================================================= */
+
+.navbar-more {
+    position: relative;
+
+    z-index: 100002;
+}
+
+.navbar-more-toggle {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    border: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    cursor: pointer;
+
+    font: inherit;
+}
+
+.navbar-more-toggle i {
+    font-size: 10px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.navbar-more-menu {
+    position: absolute;
+
+    top: calc(100% + 18px);
+    left: 50%;
+
+    min-width: 190px;
+
+    padding: 8px;
+
+    background: rgba(15, 23, 42, 0.96);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.25);
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform:
+        translateX(-50%)
+        translateY(10px);
+
+    z-index: 100004;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+}
+
+.navbar-more:hover .navbar-more-toggle i {
+    transform: rotate(180deg);
+}
+
+.navbar-more:hover .navbar-more-menu {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+.navbar-more-menu a {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 13px;
+
+    border-radius: 10px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.navbar-more-menu a i {
+    width: 18px;
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 14px;
+
+    transition:
+        color 0.25s ease;
+}
+
+.navbar-more-menu a:hover {
+    background: rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+.navbar-more-menu a:hover i {
+    color: #ffffff;
+}
+
+.navbar-more-menu a.active {
+    background: rgba(255, 255, 255, 0.10);
+
+    color: #ffffff;
+}
+
+.navbar-more-menu a.active i {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   14. MOBILE TOGGLE
+   ========================================================= */
+
+.navbar-toggle {
+    width: 48px;
+    height: 48px;
+
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    cursor: pointer;
+
+    transition:
+        background 0.35s ease,
+        transform 0.35s ease;
+}
+
+.navbar-toggle:hover {
+    background: rgba(37, 99, 235, 0.15);
+
+    transform: translateY(-2px);
+}
+
+.navbar-toggle span {
+    width: 24px;
+    height: 2px;
+
+    border-radius: 999px;
+
+    background: #ffffff;
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+.navbar-toggle.active span:nth-child(1) {
+    transform:
+        translateY(8px)
+        rotate(45deg);
+}
+
+.navbar-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggle.active span:nth-child(3) {
+    transform:
+        translateY(-8px)
+        rotate(-45deg);
+}
+
+
+/* =========================================================
+   15. MOBILE MENU
+   ========================================================= */
+
+.mobile-menu {
+    position: fixed;
+
+    top: 95px;
+    left: 50%;
+
+    width: min(95%, 420px);
+
+    max-height: calc(100vh - 115px);
+
+    overflow-y: auto;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    background: rgba(15, 23, 42, 0.96);
+
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 70px rgba(2, 6, 23, 0.45);
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform:
+        translateX(-50%)
+        translateY(-20px);
+
+    z-index: 9998;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease,
+        transform 0.35s ease;
+}
+
+.mobile-menu.show {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+/* =========================================================
+   16. MOBILE LINKS
+   ========================================================= */
+
+.mobile-link {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 15px 18px;
+
+    margin-bottom: 8px;
+
+    box-sizing: border-box;
+
+    border-radius: 14px;
+
+    color: #e2e8f0;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.mobile-link:hover {
+    background: rgba(37, 99, 235, 0.18);
+
+    color: #60a5fa;
+}
+
+.mobile-link i {
+    width: 24px;
+
+    flex-shrink: 0;
+
+    text-align: center;
+
+    color: #60a5fa;
+
+    font-size: 18px;
+}
+
+.mobile-divider {
+    width: 100%;
+    height: 1px;
+
+    margin: 18px 0;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   17. MOBILE LANGUAGE
+   ========================================================= */
+
+.mobile-language {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.mobile-language a {
+    padding: 12px 16px;
+
+    border-radius: 12px;
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.mobile-language a:hover {
+    background: rgba(37, 99, 235, 0.18);
+
+    color: #60a5fa;
+}
+
+
+/* =========================================================
+   18. MOBILE LOGOUT
+   ========================================================= */
+
+.mobile-logout {
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    color: inherit;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font: inherit;
+
+    font-size: inherit;
+}
+
+
+/* =========================================================
+   19. MOBILE CTA
+   ========================================================= */
+
+.mobile-cta {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 18px;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #3b82f6
+        );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 15px 35px rgba(37, 99, 235, 0.30);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.mobile-cta:hover {
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   20. MOBILE MORE
+   ========================================================= */
+
+.mobile-more {
+    width: 100%;
+}
+
+.mobile-more-toggle {
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    color: #e2e8f0;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font: inherit;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.mobile-more-toggle:hover {
+    background: rgba(37, 99, 235, 0.18);
+
+    color: #60a5fa;
+}
+
+.mobile-more-toggle .mobile-more-arrow {
+    width: auto;
+
+    margin-left: auto;
+
+    color: #60a5fa;
+
+    font-size: 11px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.mobile-more-menu {
+    display: none;
+
+    width: 100%;
+
+    padding-left: 15px;
+
+    margin-top: 4px;
+    margin-bottom: 8px;
+
+    box-sizing: border-box;
+
+    border-left:
+        1px solid rgba(96, 165, 250, 0.20);
+}
+
+.mobile-more.active > .mobile-more-menu {
+    display: block;
+}
+
+.mobile-more.active
+.mobile-more-toggle
+.mobile-more-arrow {
+    transform: rotate(180deg);
+}
+
+.mobile-more-menu .mobile-link {
+    padding: 13px 15px;
+
+    margin-bottom: 5px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    font-size: 14px;
+}
+
+.mobile-more-menu .mobile-link:hover {
+    background: rgba(37, 99, 235, 0.18);
+}
+
+
+/* =========================================================
+   21. MOBILE SCROLLBAR
+   ========================================================= */
+
+.mobile-menu::-webkit-scrollbar {
+    width: 5px;
+}
+
+.mobile-menu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.mobile-menu::-webkit-scrollbar-thumb {
+    background: rgba(96, 165, 250, 0.25);
+
+    border-radius: 999px;
+}
+
+.mobile-menu::-webkit-scrollbar-thumb:hover {
+    background: rgba(96, 165, 250, 0.45);
+}
+
+
+/* =========================================================
+   22. HERO LAYER SAFETY
+   ========================================================= */
+
+.tech-hero,
+.hero-section,
+.hero,
+.tech-hero-section {
+    position: relative;
+
+    z-index: 1;
+}
+
+.tech-hero::before,
+.tech-hero::after,
+.hero-section::before,
+.hero-section::after,
+.hero::before,
+.hero::after,
+.tech-hero-section::before,
+.tech-hero-section::after {
+    z-index: 0;
+}
+
+
+/* =========================================================
+   23. DESKTOP / TABLET BREAKPOINT
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-login,
+    .navbar-register,
+    .navbar-user {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+}
+
+
+/* =========================================================
+   24. TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar-wrapper {
+        top: 10px;
+    }
+
+    .navbar-wrapper.scrolled {
+        top: 8px;
+    }
+
+    .navbar-glass {
+        width: 95%;
+
+        height: 70px;
+
+        padding: 0 18px;
+
+        border-radius: 18px;
+    }
+
+    .logo-box {
+        width: 48px;
+        height: 48px;
+    }
+
+    .logo-name {
+        font-size: 15px;
+    }
+
+    .logo-subtitle {
+        display: none;
+    }
+
+    .language-btn {
+        height: 42px;
+
+        padding: 0 14px;
+    }
+
+    .mobile-menu {
+        top: 88px;
+    }
+
+    .user-notifications-menu {
+        top: calc(100% + 12px);
+
+        right: -8px;
+
+        width: 340px;
+    }
+}
+
+
+/* =========================================================
+   25. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .navbar-glass {
+        width: 96%;
+
+        padding: 0 14px;
+    }
+
+    .logo-text {
+        display: none;
+    }
+
+    .navbar-actions {
+        gap: 8px;
+    }
+
+    .language-btn {
+        width: 44px;
+        height: 44px;
+
+        padding: 0;
+
+        justify-content: center;
+    }
+
+    .language-btn span {
+        display: none;
+    }
+
+    .language-btn .fa-chevron-down {
+        display: none;
+    }
+
+    .user-notifications-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .user-notifications-menu {
+        position: fixed;
+
+        top: 82px;
+
+        left: 12px;
+        right: 12px;
+
+        width: auto;
+
+        max-width: none;
+
+        border-radius: 18px;
+    }
+
+    .mobile-menu {
+        width: 96%;
+
+        max-height: calc(100vh - 105px);
+
+        padding: 18px;
+
+        border-radius: 20px;
+    }
+
+    .mobile-link {
+        padding: 14px 15px;
+    }
+}
+
+
+/* =========================================================
+   26. VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .navbar-glass {
+        padding: 0 10px;
+    }
+
+    .logo-box {
+        width: 44px;
+        height: 44px;
+    }
+    .navbar-toggle {
+        width: 44px;
+        height: 44px;
+    }
+
+    .navbar-toggle span {
+        width: 21px;
+    }
+
+    .user-notifications-btn {
+        width: 42px;
+        height: 42px;
+    }
+}

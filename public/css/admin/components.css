@@ -1,0 +1,253 @@
+@import url("variables.css");
+
+@import url("layout.css");
+
+@import url("sidebar.css");
+
+@import url("navbar.css");
+
+@import url("dashboard.css");
+
+@import url("cards.css");
+
+@import url("buttons.css");
+
+@import url("tables.css");
+
+@import url("forms.css");
+
+@import url("components.css");
+
+@import url("responsive.css");
+/*==================================================
+                GLOBAL CARD
+==================================================*/
+
+.admin-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    transition:.35s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.admin-card:hover{
+
+    transform:translateY(-6px);
+
+    background:var(--card-hover);
+
+    border-color:rgba(59,130,246,.30);
+
+}
+
+/*==================================================
+                TITLE
+==================================================*/
+
+.card-title{
+
+    color:var(--text);
+
+    font-size:24px;
+
+    font-weight:800;
+
+    margin-bottom:6px;
+
+}
+
+.card-title + small{
+
+    color:var(--text-muted);
+
+}
+
+/*==================================================
+                BUTTON
+==================================================*/
+
+.btn-admin{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:13px 22px;
+
+    border-radius:14px;
+
+    border:1px solid transparent;
+
+    background:#2563EB;
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.btn-admin:hover{
+
+    background:#1D4ED8;
+
+    color:#fff;
+
+    transform:translateY(-3px);
+
+}
+
+.btn-outline{
+
+    background:transparent;
+
+    border-color:rgba(59,130,246,.30);
+
+    color:#60A5FA;
+
+}
+
+.btn-outline:hover{
+
+    background:#2563EB;
+
+    color:#fff;
+
+}
+
+/*==================================================
+                BADGES
+==================================================*/
+
+.badge-admin{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 16px;
+
+    border-radius:50px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+.badge-primary{
+
+    background:rgba(37,99,235,.14);
+
+    color:#60A5FA;
+
+}
+
+.badge-success{
+
+    background:rgba(16,185,129,.15);
+
+    color:#10B981;
+
+}
+
+.badge-warning{
+
+    background:rgba(245,158,11,.14);
+
+    color:#F59E0B;
+
+}
+
+.badge-danger{
+
+    background:rgba(239,68,68,.14);
+
+    color:#EF4444;
+
+}
+
+/*==================================================
+                EMPTY
+==================================================*/
+
+.empty-state{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:70px 30px;
+
+}
+
+.empty-state i{
+
+    width:90px;
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:rgba(37,99,235,.10);
+
+    color:#60A5FA;
+
+    font-size:36px;
+
+    margin-bottom:25px;
+
+}
+
+.empty-state h4{
+
+    color:#fff;
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+.empty-state p{
+
+    color:var(--text-muted);
+
+    max-width:350px;
+
+    line-height:1.8;
+
+}
+

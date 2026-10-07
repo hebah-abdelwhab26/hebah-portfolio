@@ -1,0 +1,304 @@
+/*==================================================
+                STATISTICS SECTION
+==================================================*/
+
+.academy-statistics{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:var(--page-bg);
+
+}
+
+.academy-statistics::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+
+            circle at top right,
+
+            rgba(212,175,55,.05),
+
+            transparent 40%
+
+        ),
+
+        radial-gradient(
+
+            circle at bottom left,
+
+            rgba(31,111,92,.05),
+
+            transparent 45%
+
+        );
+
+    pointer-events:none;
+
+}
+
+.academy-statistics .container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*==================================================
+                HEADER
+==================================================*/
+
+.academy-statistics__header{
+
+    max-width:760px;
+
+    margin:0 auto 80px;
+
+    text-align:center;
+
+}
+
+
+.academy-statistics__header h2{
+
+    margin-bottom:22px;
+
+}
+
+.academy-statistics__header h2 span{
+
+    color:var(--primary);
+
+}
+
+.academy-statistics__header p{
+
+    color:var(--body-color);
+
+    line-height:2;
+
+}
+/*==================================================
+                GRID
+==================================================*/
+
+.academy-statistics__grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+/*==================================================
+                CARD
+==================================================*/
+
+.stat-card{
+
+    position:relative;
+
+    padding:38px 30px;
+
+    text-align:center;
+
+    border-radius:var(--radius-2xl);
+
+    background:var(--card-bg);
+
+    border:1px solid var(--card-border);
+
+    backdrop-filter:blur(var(--glass-card-blur));
+
+    -webkit-backdrop-filter:blur(var(--glass-card-blur));
+
+    box-shadow:var(--card-shadow);
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--card-border-hover);
+
+    box-shadow:var(--card-shadow-hover);
+
+}
+
+.stat-card .icon-box{
+
+    width:78px;
+
+    height:78px;
+
+    margin:0 auto 24px;
+
+    font-size:1.7rem;
+
+}
+
+.stat-card h3{
+
+    margin-bottom:12px;
+
+    color:var(--primary);
+
+    font-size:2.6rem;
+
+    font-weight:800;
+
+}
+
+.stat-card h4{
+
+    margin-bottom:12px;
+
+    color:var(--heading-color);
+
+    font-size:1.2rem;
+
+}
+
+.stat-card p{
+
+    color:var(--muted-color);
+
+    line-height:1.8;
+
+}
+/*==================================================
+                HOVER EFFECTS
+==================================================*/
+
+.stat-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        145deg,
+
+        rgba(255,255,255,.05),
+
+        transparent 60%
+
+    );
+
+    opacity:0;
+
+    transition:opacity var(--transition);
+
+    pointer-events:none;
+
+}
+
+.stat-card:hover::before{
+
+    opacity:1;
+
+}
+
+.stat-card:hover .icon-box{
+
+    transform:rotate(-8deg) scale(1.08);
+
+}
+
+.stat-card .icon-box{
+
+    transition:
+
+        transform .4s ease;
+
+}
+
+.stat-card h3{
+
+    letter-spacing:1px;
+
+}
+
+.stat-card h3 span{
+
+    color:var(--primary-light);
+
+}
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:1200px){
+
+    .academy-statistics__grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .academy-statistics__header{
+
+        margin-bottom:60px;
+
+    }
+
+    .academy-statistics__grid{
+
+        grid-template-columns:1fr;
+
+        gap:24px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .stat-card{
+
+        padding:30px 22px;
+
+    }
+
+    .stat-card h3{
+
+        font-size:2.2rem;
+
+    }
+
+    .stat-card .icon-box{
+
+        width:68px;
+
+        height:68px;
+
+        font-size:1.45rem;
+
+    }
+
+}

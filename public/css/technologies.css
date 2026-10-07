@@ -1,0 +1,903 @@
+/*==================================================
+                TECHNOLOGIES SECTION
+==================================================*/
+
+.services-section{
+
+    position:relative;
+
+    padding:120px 0;
+
+    overflow:hidden;
+
+}
+
+.services-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(37,99,235,.10),
+            transparent 45%
+        );
+
+    pointer-events:none;
+
+}
+
+/*==================================================
+                HEADER
+==================================================*/
+
+.section-header{
+
+    max-width:720px;
+
+    margin:0 auto 65px;
+
+    text-align:center;
+
+}
+
+.section-header h2{
+
+    color:#fff;
+
+    font-size:clamp(2.4rem,5vw,3.5rem);
+
+    font-weight:800;
+
+    margin:18px 0;
+
+    line-height:1.2;
+
+}
+
+.section-header h2 span{
+
+    color:#3b82f6;
+
+}
+
+.section-header p{
+
+    color:#94a3b8;
+
+    line-height:1.9;
+
+    font-size:1rem;
+
+    max-width:620px;
+
+    margin:auto;
+
+}
+
+/*==================================================
+                SWIPER
+==================================================*/
+
+.technologiesSwiper{
+
+    overflow:visible;
+
+    padding:20px 0 70px;
+
+}
+
+.technologiesSwiper .swiper-wrapper{
+
+    align-items:stretch;
+
+}
+
+.technologiesSwiper .swiper-slide{
+
+    width:330px;
+
+    height:auto;
+
+}
+
+/*==================================================
+                CARD
+==================================================*/
+
+.tech-card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+    min-height:390px;
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    background:linear-gradient(
+        180deg,
+        #162133,
+        #0f172a
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:28px;
+
+    transition:.4s;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.20);
+
+}
+
+.tech-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#2563eb;
+
+    box-shadow:
+        0 25px 55px rgba(37,99,235,.18);
+
+}
+/*==================================================
+                CARD HEADER
+==================================================*/
+
+.tech-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:22px;
+
+}
+
+/*==================================================
+                TECHNOLOGY ICON
+==================================================*/
+
+.tech-icon{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+    font-size:1.3rem;
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+/*==================================================
+                ICON HOVER
+==================================================*/
+
+.tech-card:hover .tech-icon{
+
+    transform:scale(1.12) rotate(-6deg);
+
+}
+
+/*==================================================
+                ICON COLORS
+==================================================*/
+
+.tech-icon.laravel{
+
+    color:#FF2D20;
+
+}
+
+.tech-icon.react{
+
+    color:#61DAFB;
+
+}
+
+.tech-icon.php{
+
+    color:#777BB4;
+
+}
+
+.tech-icon.mysql{
+
+    color:#00758F;
+
+}
+
+.tech-icon.javascript{
+
+    color:#F7DF1E;
+
+}
+
+.tech-icon.typescript{
+
+    color:#3178C6;
+
+}
+
+.tech-icon.html{
+
+    color:#E34F26;
+
+}
+
+.tech-icon.css{
+
+    color:#1572B6;
+
+}
+
+.tech-icon.bootstrap{
+
+    color:#7952B3;
+
+}
+
+.tech-icon.tailwind{
+
+    color:#38BDF8;
+
+}
+
+.tech-icon.figma{
+
+    color:#A259FF;
+
+}
+
+.tech-icon.git{
+
+    color:#F05032;
+
+}
+
+.tech-icon.api{
+
+    color:#10B981;
+
+}
+
+.tech-icon.default-tech{
+
+    color:#3B82F6;
+
+}
+
+/*==================================================
+                TECHNOLOGY INFO
+==================================================*/
+
+.tech-info{
+
+    flex:1;
+
+}
+
+.tech-info h3{
+
+    margin:0;
+
+    color:#fff;
+
+    font-size:1.22rem;
+
+    font-weight:700;
+
+    line-height:1.3;
+
+}
+
+.tech-info span{
+
+    display:block;
+
+    margin-top:6px;
+
+    color:#94a3b8;
+
+    font-size:.88rem;
+
+}
+/*==================================================
+                TECHNOLOGY LIST
+==================================================*/
+
+.tech-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    justify-content:flex-start;
+
+    align-content:flex-start;
+
+    flex:1;
+
+}
+
+/*==================================================
+                TECHNOLOGY PILL
+==================================================*/
+
+.tech-pill{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 14px;
+
+    border-radius:16px;
+
+    background:#131d34;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+    min-width:auto;
+
+    max-width:100%;
+
+}
+
+.tech-pill:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#3b82f6;
+
+    background:#182645;
+
+    box-shadow:
+        0 10px 25px rgba(37,99,235,.18);
+
+}
+
+/*==================================================
+                PILL ICON
+==================================================*/
+
+.tech-pill i{
+
+    font-size:1rem;
+
+}
+
+/*==================================================
+                PILL NAME
+==================================================*/
+
+.tech-pill span{
+
+    color:#e2e8f0;
+
+    font-size:.88rem;
+
+    font-weight:600;
+
+    white-space:nowrap;
+
+}
+
+/*==================================================
+                EMPTY
+==================================================*/
+
+.tech-empty{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex:1;
+
+    color:#64748b;
+
+    font-size:.95rem;
+
+    text-align:center;
+
+    padding:25px;
+
+}
+/*==================================================
+                FOOTER
+==================================================*/
+
+.tech-footer{
+
+    margin-top:22px;
+
+    padding-top:18px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.tech-count{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#94a3b8;
+
+    font-size:.88rem;
+
+}
+
+.tech-count i{
+
+    color:#3b82f6;
+
+}
+
+.tech-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 18px;
+
+    border-radius:14px;
+
+    background:#2563eb;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.tech-link:hover{
+
+    background:#1d4ed8;
+
+    color:#fff;
+
+    transform:translateX(5px);
+
+}
+
+.tech-link i{
+
+    transition:.35s;
+
+}
+
+.tech-link:hover i{
+
+    transform:translateX(4px);
+
+}
+
+/*==================================================
+                SWIPER NAVIGATION
+==================================================*/
+
+.tech-prev,
+.tech-next{
+
+    width:52px !important;
+
+    height:52px !important;
+
+    border-radius:50%;
+
+    background:rgba(15,23,42,.92);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#fff;
+
+    backdrop-filter:blur(20px);
+
+    transition:.35s;
+
+}
+
+.tech-prev::after,
+.tech-next::after{
+
+    display:none;
+
+}
+
+.tech-prev:hover,
+.tech-next:hover{
+
+    background:#2563eb;
+
+    border-color:#2563eb;
+
+    transform:scale(1.08);
+
+}
+
+/*==================================================
+                PAGINATION
+==================================================*/
+
+.tech-pagination{
+
+    margin-top:45px;
+
+}
+
+.tech-pagination .swiper-pagination-bullet{
+
+    width:10px;
+
+    height:10px;
+
+    background:#475569;
+
+    opacity:1;
+
+    transition:.35s;
+
+}
+
+.tech-pagination .swiper-pagination-bullet-active{
+
+    width:34px;
+
+    border-radius:20px;
+
+    background:#2563eb;
+
+}
+
+/*==================================================
+                ACTIVE SLIDE
+==================================================*/
+
+.technologiesSwiper .swiper-slide{
+
+    opacity:.6;
+
+    transform:scale(.93);
+
+    transition:.35s;
+
+}
+
+.technologiesSwiper .swiper-slide-active{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+.technologiesSwiper .swiper-slide-prev,
+.technologiesSwiper .swiper-slide-next{
+
+    opacity:.85;
+
+    transform:scale(.96);
+
+}
+
+/*==================================================
+                ACTIVE CARD
+==================================================*/
+
+.swiper-slide-active .tech-card{
+
+    border-color:rgba(59,130,246,.35);
+
+    box-shadow:
+        0 25px 60px rgba(37,99,235,.18);
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+
+    .technologiesSwiper .swiper-slide{
+
+        width:300px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .services-section{
+
+        padding:90px 0;
+
+    }
+
+    .technologiesSwiper{
+
+        padding-bottom:60px;
+
+    }
+
+    .technologiesSwiper .swiper-slide{
+
+        width:92%;
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+    .tech-card{
+
+        min-height:auto;
+
+        padding:24px;
+
+    }
+
+    .tech-prev,
+    .tech-next{
+
+        display:none;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .tech-header{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+    }
+
+    .tech-list{
+
+        justify-content:center;
+
+    }
+
+    .tech-footer{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+}
+/*==================================================
+            TECHNOLOGY ICON COLORS
+==================================================*/
+
+.item-icon{
+
+    transition:.35s;
+
+}
+
+/* Laravel */
+
+.item-icon.laravel{
+
+    background:rgba(255,45,32,.12);
+
+    color:#FF2D20;
+
+}
+
+/* React */
+
+.item-icon.react{
+
+    background:rgba(97,218,251,.12);
+
+    color:#61DAFB;
+
+}
+
+/* PHP */
+
+.item-icon.php{
+
+    background:rgba(119,123,180,.15);
+
+    color:#777BB4;
+
+}
+
+/* MySQL */
+
+.item-icon.mysql{
+
+    background:rgba(0,117,143,.12);
+
+    color:#00758F;
+
+}
+
+/* JavaScript */
+
+.item-icon.javascript{
+
+    background:rgba(247,223,30,.12);
+
+    color:#F7DF1E;
+
+}
+
+/* TypeScript */
+
+.item-icon.typescript{
+
+    background:rgba(49,120,198,.12);
+
+    color:#3178C6;
+
+}
+
+/* HTML */
+
+.item-icon.html{
+
+    background:rgba(227,79,38,.12);
+
+    color:#E34F26;
+
+}
+
+/* CSS */
+
+.item-icon.css{
+
+    background:rgba(21,114,182,.12);
+
+    color:#1572B6;
+
+}
+
+/* Bootstrap */
+
+.item-icon.bootstrap{
+
+    background:rgba(121,82,179,.12);
+
+    color:#7952B3;
+
+}
+
+/* Tailwind */
+
+.item-icon.tailwind{
+
+    background:rgba(56,189,248,.12);
+
+    color:#38BDF8;
+
+}
+
+/* Figma */
+
+.item-icon.figma{
+
+    background:rgba(162,89,255,.12);
+
+    color:#A259FF;
+
+}
+
+/* Git */
+
+.item-icon.git{
+
+    background:rgba(240,80,50,.12);
+
+    color:#F05032;
+
+}
+
+/* GitHub */
+
+.item-icon.github{
+
+    background:rgba(255,255,255,.08);
+
+    color:#ffffff;
+
+}
+
+/* API */
+
+.item-icon.api{
+
+    background:rgba(16,185,129,.12);
+
+    color:#10B981;
+
+}
+
+/* Default */
+
+.item-icon.default-tech{
+
+    background:rgba(59,130,246,.12);
+
+    color:#3B82F6;
+
+}
+
+/* Hover */
+
+.tech-item:hover .item-icon{
+
+    transform:scale(1.12) rotate(-8deg);
+
+}

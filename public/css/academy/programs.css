@@ -1,0 +1,181 @@
+/*==================================================
+                    PROGRAMS
+==================================================*/
+
+.academy-programs{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:40px 0;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #101d1b 0%,
+            #0b1413 100%
+        );
+
+}
+
+/*==================================================
+                PROGRAMS GRID
+==================================================*/
+
+.programs-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(3,1fr);
+
+    gap:35px;
+
+    margin-top:70px;
+
+}
+/*==================================================
+                PROGRAM CARD
+==================================================*/
+
+.program-card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:35px;
+
+    border-radius:28px;
+
+    background:
+
+        rgba(255,255,255,.05);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+    transition:
+
+        .4s ease;
+
+    overflow:hidden;
+
+}
+
+.program-card:hover{
+
+    transform:
+
+        translateY(-10px);
+
+    border-color:
+
+        rgba(212,175,55,.35);
+
+    box-shadow:
+
+        0 30px 70px
+
+        rgba(0,0,0,.25);
+
+}
+/*==================================================
+                PROGRAM ICON
+==================================================*/
+
+.program-icon{
+
+    width:78px;
+
+    height:78px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:22px;
+
+    margin-bottom:25px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--primary),
+            #C89920
+        );
+
+    color:#fff;
+
+    font-size:2rem;
+
+}
+
+.program-card h3{
+
+    color:#fff;
+
+    margin-bottom:18px;
+
+    font-size:1.5rem;
+
+}
+
+.program-card p{
+
+    color:
+
+        rgba(255,255,255,.72);
+
+    line-height:1.9;
+
+    margin-bottom:28px;
+
+}
+/*==================================================
+                TAGS
+==================================================*/
+
+.program-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:30px;
+
+}
+
+.program-tags span{
+
+    padding:10px 16px;
+
+    border-radius:999px;
+
+    background:
+
+        rgba(212,175,55,.12);
+
+    color:var(--primary);
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+}
+

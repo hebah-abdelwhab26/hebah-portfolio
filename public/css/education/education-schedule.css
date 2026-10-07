@@ -1,0 +1,1024 @@
+/*==================================================
+    EDUCATION SCHEDULE
+==================================================*/
+
+.education-schedule-section {
+
+    position: relative;
+
+    padding: 110px 0 100px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #faf8f2 0%,
+            #f5f1e7 100%
+        );
+
+    overflow: visible;
+
+}
+
+
+.education-schedule-container {
+
+    width: min(
+        1180px,
+        calc(100% - 40px)
+    );
+
+    margin: 0 auto;
+
+}
+
+
+/*==================================================
+    HEADER
+==================================================*/
+
+.education-schedule-header {
+
+    max-width: 720px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+
+}
+
+
+.education-schedule-header
+.education-section-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 16px;
+
+    border-radius: 999px;
+
+    background: rgba(191, 148, 70, 0.12);
+
+    color: #9a7434;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+
+}
+
+
+.education-schedule-header
+.education-section-badge::before {
+
+    content: "";
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #c49a52;
+
+}
+
+
+.education-schedule-header h2 {
+
+    margin: 0;
+
+    color: #292a24;
+
+    font-size: clamp(
+        32px,
+        4vw,
+        48px
+    );
+
+    line-height: 1.25;
+
+    font-weight: 800;
+
+}
+
+
+.education-schedule-header h2 span {
+
+    color: #b88a3d;
+
+}
+
+
+.education-schedule-header p {
+
+    max-width: 650px;
+
+    margin: 18px auto 0;
+
+    color: #77766f;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+}
+
+
+/*==================================================
+    DAYS GRID
+==================================================*/
+
+.education-schedule-days {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 22px;
+
+    align-items: start;
+
+}
+
+
+/*==================================================
+    DAY CARD
+==================================================*/
+
+.education-day-card {
+
+    position: relative;
+
+    min-height: 190px;
+
+    cursor: pointer;
+
+    z-index: 1;
+
+
+}
+
+
+.education-day-card-inner {
+
+    position: relative;
+
+    min-height: 120px;
+
+    padding: 24px;
+
+    border: 1px solid
+        rgba(52, 54, 43, 0.10);
+
+    border-radius: 30px;
+
+    background:
+       rgba(255, 255, 255, 0.82);
+
+
+    box-shadow:
+        0 12px 35px
+        rgba(40, 40, 30, 0.07);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease,
+        background .35s ease;
+
+}
+
+
+.education-day-card:hover {
+
+    z-index: 20;
+
+}
+
+
+.education-day-card:hover
+.education-day-card-inner {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(191, 148, 70, 0.45);
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 24px 55px
+        rgba(39, 39, 30, 0.14);
+
+}
+
+
+/*==================================================
+    FEATURED
+==================================================*/
+
+.education-day-card.featured
+.education-day-card-inner {
+
+    background:
+        linear-gradient(
+            145deg,
+            #34352c 0%,
+            #292a24 100%
+        );
+
+    border-color:
+        rgba(196, 154, 82, 0.30);
+
+    box-shadow:
+        0 18px 45px
+        rgba(39, 39, 30, 0.18);
+
+}
+
+
+.education-day-card.featured
+.education-day-name {
+
+    color: #f8f3e8;
+
+}
+
+
+.education-day-card.featured
+.education-day-icon {
+
+    background:
+        rgba(196, 154, 82, 0.16);
+
+    color: #d8b56e;
+
+}
+
+
+.education-day-card.featured
+.education-day-slots {
+
+    background:
+        #f9f6ee;
+
+}
+
+
+/*==================================================
+    TOP
+==================================================*/
+
+.education-day-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.education-day-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 44px;
+
+    height: 44px;
+
+    border-radius: 14px;
+
+    background:
+        rgba(52, 54, 43, 0.07);
+
+    color: #8d6a32;
+
+    font-size: 18px;
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+.education-day-card:hover
+.education-day-icon {
+
+    transform:
+        rotate(-5deg)
+        scale(1.05);
+
+}
+
+
+.education-day-status {
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #7d7c74;
+
+}
+
+
+.education-day-card.featured
+.education-day-status {
+
+    color: #d9b875;
+
+}
+
+
+/*==================================================
+    DAY NAME
+==================================================*/
+
+.education-day-name {
+
+    margin-top: 24px;
+
+    color: #292a24;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+}
+
+
+/*==================================================
+    INDICATOR
+==================================================*/
+
+.education-day-indicator {
+
+    display: flex;
+
+    margin-top: 12px;
+
+}
+
+
+.education-day-indicator span {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #c49a52;
+
+    box-shadow:
+        0 0 0 5px
+        rgba(196, 154, 82, 0.12);
+
+}
+
+
+.education-day-card.unavailable
+.education-day-indicator span {
+
+    background: #b8b7b0;
+
+    box-shadow:
+        0 0 0 5px
+        rgba(100, 100, 90, 0.08);
+
+}
+
+
+/*==================================================
+    TIME PANEL
+==================================================*/
+
+.education-day-slots {
+
+    position: absolute;
+
+    right: 0;
+
+    left: 0;
+
+    top: calc(100% + 12px);
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background:
+        #ffffff;
+
+    border: 1px solid
+        rgba(196, 154, 82, 0.25);
+
+    box-shadow:
+        0 24px 60px
+        rgba(30, 31, 25, 0.18);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(-8px)
+        scale(.97);
+
+    transform-origin:
+        top center;
+
+    transition:
+        opacity .25s ease,
+        visibility .25s ease,
+        transform .25s ease;
+
+    pointer-events: none;
+
+}
+
+
+/*
+    مساحة صغيرة حتى لا يختفي الـ popup
+    عند الانتقال من البطاقة إليه
+*/
+
+.education-day-slots::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -13px;
+
+    right: 0;
+
+    left: 0;
+
+    height: 14px;
+
+}
+
+
+/*==================================================
+    SHOW ON HOVER
+==================================================*/
+
+.education-day-card:hover
+.education-day-slots {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    pointer-events: auto;
+
+}
+
+
+/*==================================================
+    SLOTS HEADER
+==================================================*/
+
+.education-day-slots-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+    color: #34352c;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+}
+
+
+.education-day-slots-header i {
+
+    color: #b88a3d;
+
+}
+
+
+/*==================================================
+    TIME LIST
+==================================================*/
+
+.education-time-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+}
+
+
+.education-time-slot {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 11px 12px;
+
+    border-radius: 12px;
+
+    background:
+        #f6f3eb;
+
+    color: #44443d;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+.education-time-slot i {
+
+    color: #b88a3d;
+
+}
+
+
+/*==================================================
+    BOOK BUTTON
+==================================================*/
+
+.education-day-book {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 14px;
+
+    padding: 11px 14px;
+
+    border-radius: 12px;
+
+    background:
+        #34352c;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition:
+        background .25s ease,
+        transform .25s ease;
+
+}
+
+
+.education-day-book:hover {
+
+    background:
+        #b88a3d;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/*==================================================
+    UNAVAILABLE
+==================================================*/
+
+.education-day-card.unavailable {
+
+    cursor: default;
+
+}
+
+
+.education-day-card.unavailable
+.education-day-card-inner {
+
+    opacity: .68;
+
+    background:
+        rgba(245, 243, 237, .75);
+
+}
+
+
+.education-day-card.unavailable:hover
+.education-day-card-inner {
+
+    transform: none;
+
+    box-shadow:
+        0 12px 35px
+        rgba(40, 40, 30, 0.07);
+
+    border-color:
+        rgba(52, 54, 43, 0.10);
+
+}
+
+
+.education-day-unavailable-message {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    background: #f3f1eb;
+
+    color: #8b8a83;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+.education-day-unavailable-message i {
+
+    color: #aaa79c;
+
+}
+
+
+/*==================================================
+    BOTTOM NOTE
+==================================================*/
+
+.education-schedule-note {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 55px;
+
+    padding: 22px 26px;
+
+    border-radius: 20px;
+
+    background:
+        #34352c;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 18px 45px
+        rgba(40, 40, 30, 0.14);
+
+}
+
+
+.education-schedule-note-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 46px;
+
+    height: 46px;
+
+    border-radius: 14px;
+
+    background:
+        rgba(196, 154, 82, 0.16);
+
+    color: #d8b56e;
+
+}
+
+
+.education-schedule-note div:nth-child(2) {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    flex: 1;
+
+}
+
+
+.education-schedule-note strong {
+
+    color: #f5f1e7;
+
+    font-size: 15px;
+
+}
+
+
+.education-schedule-note span {
+
+    color: rgba(
+        255,
+        255,
+        255,
+        .62
+    );
+
+    font-size: 13px;
+
+}
+
+
+.education-schedule-note a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 12px 18px;
+
+    border-radius: 12px;
+
+    background:
+        #c49a52;
+
+    color: #292a24;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+
+}
+
+
+.education-schedule-note a:hover {
+
+    transform:
+        translateY(-2px);
+
+    background:
+        #d6b46e;
+
+}
+
+
+/*==================================================
+    TABLET
+==================================================*/
+
+@media (max-width: 1000px) {
+
+    .education-schedule-days {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/*==================================================
+    MOBILE
+==================================================*/
+
+@media (max-width: 700px) {
+
+    .education-schedule-section {
+
+        padding:
+            80px 0;
+
+    }
+
+
+    .education-schedule-container {
+
+        width:
+            min(
+                100% - 28px,
+                560px
+            );
+
+    }
+
+
+    .education-schedule-header {
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .education-schedule-header p {
+
+        font-size: 14px;
+
+    }
+
+
+    .education-schedule-days {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 14px;
+
+    }
+
+
+    .education-day-card,
+    .education-day-card-inner {
+
+        min-height: 165px;
+
+    }
+
+
+    .education-day-card-inner {
+
+        padding: 18px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .education-day-name {
+
+        margin-top: 18px;
+
+        font-size: 21px;
+
+    }
+
+
+    /*
+        في الهاتف لا نعتمد على hover
+        والـ JS سيضيف active
+    */
+
+    .education-day-card.active
+    .education-day-slots {
+
+        opacity: 1;
+
+        visibility: visible;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        pointer-events: auto;
+
+    }
+
+
+    .education-day-slots {
+
+        position: relative;
+
+        top: auto;
+
+        right: auto;
+
+        left: auto;
+
+        margin-top: 15px;
+
+        transform:
+            translateY(-5px)
+            scale(.98);
+
+    }
+
+
+    .education-day-card.active {
+
+        z-index: 30;
+
+    }
+
+
+    .education-schedule-note {
+
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+
+        margin-top: 35px;
+
+        padding: 20px;
+
+    }
+
+
+    .education-schedule-note
+    div:nth-child(2) {
+
+        min-width:
+            calc(100% - 65px);
+
+    }
+
+
+    .education-schedule-note a {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+}
+
+
+/*==================================================
+    SMALL MOBILE
+==================================================*/
+
+@media (max-width: 450px) {
+
+    .education-schedule-days {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .education-day-card,
+    .education-day-card-inner {
+
+        min-height: 145px;
+
+    }
+
+
+    .education-day-slots {
+
+        margin-top: 14px;
+
+    }
+
+}

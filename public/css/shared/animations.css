@@ -1,0 +1,230 @@
+/*==================================================
+                    ANIMATIONS
+==================================================*/
+
+/*----------------------------------
+            Base Animation
+----------------------------------*/
+
+.fade-up,
+.fade-left,
+.fade-right,
+.zoom-in,
+.fade-down,
+.rotate-in{
+
+    opacity:0;
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+    will-change:transform,opacity;
+
+}
+
+/*----------------------------------
+            Fade Up
+----------------------------------*/
+
+.fade-up{
+
+    transform:translateY(70px);
+
+}
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*----------------------------------
+            Fade Down
+----------------------------------*/
+
+.fade-down{
+
+    transform:translateY(-70px);
+
+}
+
+.fade-down.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*----------------------------------
+            Fade Left
+----------------------------------*/
+
+.fade-left{
+
+    transform:translateX(-70px);
+
+}
+
+.fade-left.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+/*----------------------------------
+            Fade Right
+----------------------------------*/
+
+.fade-right{
+
+    transform:translateX(70px);
+
+}
+
+.fade-right.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+/*----------------------------------
+            Zoom In
+----------------------------------*/
+
+.zoom-in{
+
+    transform:scale(.85);
+
+}
+
+.zoom-in.show{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+/*----------------------------------
+            Rotate
+----------------------------------*/
+
+.rotate-in{
+
+    transform:
+
+        rotate(-8deg)
+
+        scale(.9);
+
+}
+
+.rotate-in.show{
+
+    opacity:1;
+
+    transform:
+
+        rotate(0)
+
+        scale(1);
+
+}
+
+/*----------------------------------
+        Floating Animation
+----------------------------------*/
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.floating{
+
+    animation:
+
+        floating
+
+        4s ease-in-out infinite;
+
+}
+
+/*----------------------------------
+            Pulse
+----------------------------------*/
+
+@keyframes pulseGlow{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+.pulse{
+
+    animation:
+
+        pulseGlow
+
+        2.5s infinite;
+
+}
+
+/*----------------------------------
+        Reduced Motion
+----------------------------------*/
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto;
+
+    }
+
+}

@@ -1,0 +1,1135 @@
+/*==================================================
+    TOP NAVBAR
+==================================================*/
+
+.top-navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: var(--sidebar-width);
+
+    width: calc(100% - var(--sidebar-width));
+
+    height: var(--navbar-height);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 35px;
+
+    background: rgba(17, 24, 39, .88);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, .06);
+
+    z-index: 999;
+
+    transition: var(--transition);
+}
+
+
+/*==================================================
+    NAVBAR LEFT
+==================================================*/
+
+.navbar-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    min-width: 0;
+}
+
+
+/*==================================================
+    SIDEBAR TOGGLE
+==================================================*/
+
+.sidebar-toggle {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    color: var(--text);
+
+    transition: var(--transition);
+
+    flex-shrink: 0;
+}
+
+
+.sidebar-toggle:hover {
+
+    background: var(--primary);
+
+    border-color: var(--primary);
+
+    color: #fff;
+
+    transform: translateY(-2px);
+}
+
+
+/*==================================================
+    SEARCH
+==================================================*/
+
+.navbar-search {
+
+    position: relative;
+
+    width: 340px;
+
+    max-width: 100%;
+}
+
+
+.navbar-search input {
+
+    width: 100%;
+
+    height: 48px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 16px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    color: var(--text);
+
+    padding: 0 18px 0 50px;
+
+    transition: var(--transition);
+
+    font-family: inherit;
+}
+
+
+.navbar-search input::placeholder {
+
+    color: var(--text-muted);
+}
+
+
+.navbar-search input:focus {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 4px rgba(59, 130, 246, .15);
+}
+
+
+.navbar-search i {
+
+    position: absolute;
+
+    left: 18px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--text-muted);
+
+    pointer-events: none;
+}
+
+
+/*==================================================
+    NAVBAR RIGHT
+==================================================*/
+
+.navbar-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    flex-shrink: 0;
+}
+
+
+/*==================================================
+    NAV ICON
+==================================================*/
+
+.nav-icon {
+
+    position: relative;
+
+    width: 48px;
+
+    height: 48px;
+
+    padding: 0;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+}
+
+
+.nav-icon:hover {
+
+    background: var(--primary);
+
+    color: #fff;
+
+    border-color: var(--primary);
+
+    transform: translateY(-2px);
+}
+
+
+.nav-icon i {
+
+    font-size: 17px;
+
+    line-height: 1;
+}
+
+
+/*==================================================
+    NOTIFICATION COUNT
+==================================================*/
+
+.notification-count {
+
+    position: absolute;
+
+    top: -5px;
+
+    right: -5px;
+
+    min-width: 20px;
+
+    height: 20px;
+
+    padding: 0 5px;
+
+    border-radius: 50%;
+
+    background: var(--danger);
+
+    color: #fff;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: 2px solid #111827;
+
+    line-height: 1;
+
+    z-index: 5;
+}
+
+
+.notification-count.d-none {
+
+    display: none !important;
+}
+
+
+/*==================================================
+    ADMIN NOTIFICATIONS WRAPPER
+==================================================*/
+
+.admin-notifications {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/*==================================================
+    NOTIFICATION DROPDOWN
+==================================================*/
+
+.admin-notifications-dropdown {
+
+    position: absolute;
+
+    top: calc(100% + 14px);
+
+    right: 0;
+
+    width: 360px;
+
+    background: #111827;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, .35);
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform:
+        translateY(12px)
+        scale(.97);
+
+    transform-origin: top right;
+
+    transition:
+        opacity .25s ease,
+        visibility .25s ease,
+        transform .25s ease;
+
+    z-index: 9999;
+}
+
+
+/*==================================================
+    NOTIFICATION DROPDOWN OPEN
+==================================================*/
+
+.admin-notifications-dropdown.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/*==================================================
+    NOTIFICATIONS HEADER
+==================================================*/
+
+.notifications-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 18px 20px;
+
+    background: rgba(255, 255, 255, .025);
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.notifications-header h3 {
+
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+.notifications-header > div > span {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+
+    line-height: 1.3;
+}
+
+
+/*==================================================
+    NOTIFICATIONS TOTAL
+==================================================*/
+
+.notifications-total {
+
+    min-width: 30px;
+
+    height: 30px;
+
+    padding: 0 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50px;
+
+    background: var(--primary);
+
+    color: #fff !important;
+
+    font-size: 12px !important;
+
+    font-weight: 700;
+
+    margin: 0 !important;
+}
+
+
+/*==================================================
+    NOTIFICATIONS BODY
+==================================================*/
+
+.notifications-body {
+
+    max-height: 330px;
+
+    overflow-y: auto;
+}
+
+
+/*==================================================
+    NOTIFICATION ITEM
+==================================================*/
+
+.notification-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 15px 18px;
+
+    text-decoration: none;
+
+    background: transparent;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
+
+    transition: var(--transition);
+}
+
+
+.notification-item:last-child {
+
+    border-bottom: none;
+}
+
+
+.notification-item:hover {
+
+    background: rgba(59, 130, 246, .08);
+
+    text-decoration: none;
+}
+
+
+/*==================================================
+    NOTIFICATION ITEM ICON
+==================================================*/
+
+.notification-item-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    flex: 0 0 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    transition: var(--transition);
+}
+
+
+/* COMMENTS */
+
+.comments-icon {
+
+    background: rgba(245, 158, 11, .13);
+
+    color: #FBBF24;
+}
+
+
+/* MESSAGES */
+
+.messages-icon {
+
+    background: rgba(59, 130, 246, .13);
+
+    color: #60A5FA;
+}
+
+
+/* USERS */
+
+.users-icon {
+
+    background: rgba(34, 197, 94, .13);
+
+    color: #4ADE80;
+}
+
+
+/*==================================================
+    NOTIFICATION CONTENT
+==================================================*/
+
+.notification-item-content {
+
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+.notification-item-content strong {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+
+.notification-item-content > span {
+
+    display: block;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+.notification-item-content span span {
+
+    font-weight: 700;
+
+    color: var(--text);
+}
+
+
+/*==================================================
+    NOTIFICATION ARROW
+==================================================*/
+
+.notification-arrow {
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+    transition: var(--transition);
+
+    flex-shrink: 0;
+}
+
+
+.notification-item:hover .notification-arrow {
+
+    color: var(--primary);
+
+    transform: translateX(3px);
+}
+
+
+/*==================================================
+    NOTIFICATION FOOTER
+==================================================*/
+
+.notifications-footer {
+
+    padding: 13px 18px;
+
+    background: rgba(255, 255, 255, .025);
+
+    border-top: 1px solid var(--border);
+}
+
+
+.notifications-footer a {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    color: var(--text-muted);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+
+.notifications-footer a:hover {
+
+    color: var(--primary);
+
+    text-decoration: none;
+}
+
+
+.notifications-footer a i {
+
+    font-size: 11px;
+
+    transition: var(--transition);
+}
+
+
+.notifications-footer a:hover i {
+
+    transform: translateX(3px);
+}
+
+
+/*==================================================
+    NOTIFICATIONS SCROLLBAR
+==================================================*/
+
+.notifications-body::-webkit-scrollbar {
+
+    width: 5px;
+}
+
+
+.notifications-body::-webkit-scrollbar-track {
+
+    background: transparent;
+}
+
+
+.notifications-body::-webkit-scrollbar-thumb {
+
+    background: rgba(148, 163, 184, .25);
+
+    border-radius: 10px;
+}
+
+
+.notifications-body::-webkit-scrollbar-thumb:hover {
+
+    background: rgba(148, 163, 184, .4);
+}
+
+
+/*==================================================
+    USER DROPDOWN
+==================================================*/
+
+.user-dropdown {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 6px 10px;
+
+    border-radius: 18px;
+
+    background: var(--card);
+
+    border: 1px solid var(--border);
+
+    transition: var(--transition);
+
+    flex-shrink: 0;
+}
+
+
+.user-dropdown:hover {
+
+    border-color: var(--primary);
+
+    background: var(--card-hover);
+}
+
+
+/*==================================================
+    USER DROPDOWN TOGGLE
+==================================================*/
+
+.user-dropdown-toggle {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 5px 6px;
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 14px;
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+
+.user-dropdown-toggle:hover {
+
+    background: rgba(255, 255, 255, .06);
+}
+
+
+/*==================================================
+    USER AVATAR
+==================================================*/
+
+.user-avatar {
+
+    width: 46px;
+
+    height: 46px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        #60A5FA
+    );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #fff;
+
+    font-weight: 700;
+
+    font-size: 17px;
+
+    flex-shrink: 0;
+}
+
+
+/*==================================================
+    USER INFO
+==================================================*/
+
+.user-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: left;
+}
+
+
+.user-info strong {
+
+    color: var(--text);
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+.user-info small {
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+}
+
+
+/*==================================================
+    USER ARROW
+==================================================*/
+
+.user-dropdown-toggle i.fa-chevron-down {
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+
+    transition: var(--transition);
+}
+
+
+.user-dropdown.active .fa-chevron-down {
+
+    transform: rotate(180deg);
+
+    color: var(--primary);
+}
+
+
+/*==================================================
+    USER DROPDOWN MENU
+==================================================*/
+
+.user-dropdown-menu {
+
+    position: absolute;
+
+    top: calc(100% + 14px);
+
+    right: 0;
+
+    width: 260px;
+
+    background: #111827;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, .35);
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform: translateY(15px);
+
+    transition: var(--transition);
+
+    z-index: 9999;
+}
+
+
+.user-dropdown.active .user-dropdown-menu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+}
+
+
+/*==================================================
+    USER MENU ITEMS
+==================================================*/
+
+.user-dropdown-menu a,
+
+.user-dropdown-menu button {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 15px 20px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #E2E8F0;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+
+    font-size: 14px;
+
+    font-family: inherit;
+
+    text-align: left;
+}
+
+
+.user-dropdown-menu a:hover,
+
+.user-dropdown-menu button:hover {
+
+    background: rgba(59, 130, 246, .12);
+
+    color: #60A5FA;
+
+    text-decoration: none;
+}
+
+
+.user-dropdown-menu i {
+
+    width: 20px;
+
+    text-align: center;
+
+    flex-shrink: 0;
+}
+
+
+.user-dropdown-menu form {
+
+    margin: 0;
+}
+
+
+/*==================================================
+    DROPDOWN DIVIDER
+==================================================*/
+
+.dropdown-divider {
+
+    height: 1px;
+
+    background: rgba(255, 255, 255, .08);
+
+    margin: 8px 0;
+}
+
+
+/*==================================================
+    RESPONSIVE
+==================================================*/
+
+@media (max-width: 1200px) {
+
+    .top-navbar {
+
+        padding: 0 25px;
+    }
+
+
+    .navbar-right {
+
+        gap: 10px;
+    }
+
+
+    .navbar-search {
+
+        width: 280px;
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    .top-navbar {
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 0 20px;
+    }
+
+
+    .navbar-search {
+
+        display: none;
+    }
+
+
+    .navbar-right {
+
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .user-dropdown {
+
+        padding: 5px 7px;
+    }
+
+
+    .user-dropdown-toggle {
+
+        padding: 4px;
+    }
+
+
+    .user-info {
+
+        display: none;
+    }
+
+
+    .admin-notifications-dropdown {
+
+        width: 330px;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .top-navbar {
+
+        padding: 0 12px;
+    }
+
+
+    .navbar-right {
+
+        gap: 7px;
+    }
+
+
+    .nav-icon {
+
+        width: 44px;
+
+        height: 44px;
+    }
+
+
+    .user-avatar {
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 15px;
+    }
+
+
+    .user-dropdown {
+
+        border-radius: 14px;
+    }
+
+
+    .admin-notifications-dropdown {
+
+        position: fixed;
+
+        top: calc(var(--navbar-height) + 10px);
+
+        left: 12px;
+
+        right: 12px;
+
+        width: auto;
+
+        max-width: none;
+
+        transform-origin: top center;
+    }
+}

@@ -1,0 +1,2818 @@
+/* =========================================================
+   EDUCATION STUDENT BOOKING SHOW
+   ========================================================= */
+
+.education-booking-show {
+
+    --education-gold: #b99352;
+    --education-gold-light: #d5b878;
+    --education-gold-soft: rgba(185, 147, 82, .10);
+
+    --education-green: #59634e;
+    --education-green-dark: #34372e;
+    --education-green-soft: rgba(89, 99, 78, .08);
+
+    --education-cream: #f8f5ed;
+    --education-white: #ffffff;
+
+    --education-text: #3c3c35;
+    --education-text-soft: #626158;
+    --education-muted: #96948a;
+
+    --education-border: #e9e5da;
+
+    min-height: 100vh;
+
+    direction: rtl;
+
+    background:
+        radial-gradient(
+            circle at 5% 5%,
+            rgba(185, 147, 82, .08),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 95% 35%,
+            rgba(89, 99, 78, .07),
+            transparent 30%
+        ),
+        var(--education-cream);
+
+    color: var(--education-text);
+
+    font-family:
+        "Cairo",
+        "Tajawal",
+        sans-serif;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   DECORATIVE BACKGROUND
+   ========================================================= */
+
+.education-booking-show::before {
+
+    content: "";
+
+    position: fixed;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    top: -250px;
+    right: -180px;
+
+    border:
+        1px solid rgba(185, 147, 82, .10);
+
+    pointer-events: none;
+
+}
+
+
+.education-booking-show::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 320px;
+    height: 320px;
+
+    border-radius: 50%;
+
+    bottom: -180px;
+    left: -130px;
+
+    border:
+        1px solid rgba(89, 99, 78, .08);
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.education-booking-show-container {
+
+    width:
+        min(
+            1100px,
+            calc(100% - 48px)
+        );
+
+    margin:
+        0 auto;
+
+    padding:
+        38px 0 70px;
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+}
+
+
+/* =========================================================
+   TOP NAVIGATION
+   ========================================================= */
+
+.education-booking-show-topbar {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.education-booking-show-back {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    color:
+        var(--education-green);
+
+    text-decoration:
+        none;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    transition:
+        color .25s ease,
+        transform .25s ease;
+
+}
+
+
+.education-booking-show-back:hover {
+
+    color:
+        var(--education-gold);
+
+    transform:
+        translateX(4px);
+
+}
+
+
+.education-booking-show-back i {
+
+    font-size:
+        9px;
+
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.education-booking-show-header {
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.education-booking-show-eyebrow {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    color:
+        var(--education-gold);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    margin-bottom:
+        7px;
+
+}
+
+
+.education-booking-show-eyebrow::before {
+
+    content:
+        "";
+
+    width:
+        22px;
+
+    height:
+        1px;
+
+    background:
+        var(--education-gold);
+
+}
+
+
+.education-booking-show-header h1 {
+
+    margin:
+        0;
+
+    color:
+        var(--education-text);
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size:
+        clamp(28px, 4vw, 40px);
+
+    line-height:
+        1.3;
+
+}
+
+
+.education-booking-show-header p {
+
+    margin:
+        6px 0 0;
+
+    color:
+        var(--education-muted);
+
+    font-size:
+        11px;
+
+    line-height:
+        1.9;
+
+}
+
+
+/* =========================================================
+   MAIN STATUS HERO
+   ========================================================= */
+
+.education-booking-show-hero {
+
+    padding:
+        30px 34px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        25px;
+
+    border-radius:
+        23px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #3d4035,
+            #59634e
+        );
+
+    box-shadow:
+        0 18px 45px rgba(52,55,46,.13);
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+.education-booking-show-hero::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        300px;
+
+    height:
+        300px;
+
+    border-radius:
+        50%;
+
+    left:
+        -150px;
+
+    top:
+        -170px;
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+}
+
+
+.education-booking-show-hero::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        180px;
+
+    height:
+        180px;
+
+    border-radius:
+        50%;
+
+    right:
+        35%;
+
+    bottom:
+        -145px;
+
+    background:
+        rgba(213,184,120,.05);
+
+}
+
+
+.education-booking-show-hero-content {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    min-width:
+        0;
+
+}
+
+
+.education-booking-show-hero-label {
+
+    color:
+        #d8bd82;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+}
+
+
+.education-booking-show-hero h2 {
+
+    margin:
+        6px 0 7px;
+
+    color:
+        white;
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size:
+        clamp(24px, 3vw, 32px);
+
+    line-height:
+        1.35;
+
+}
+
+
+.education-booking-show-hero p {
+
+    margin:
+        0;
+
+    max-width:
+        650px;
+
+    color:
+        rgba(255,255,255,.60);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.9;
+
+}
+
+
+/* =========================================================
+   HERO ICON
+   ========================================================= */
+
+.education-booking-show-hero-icon {
+
+    width:
+        82px;
+
+    height:
+        82px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        25px;
+
+    color:
+        var(--education-gold-light);
+
+    background:
+        rgba(255,255,255,.06);
+
+    border:
+        1px solid rgba(213,184,120,.20);
+
+    font-size:
+        31px;
+
+    transform:
+        rotate(-5deg);
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+}
+
+
+/* =========================================================
+   CONTENT GRID
+   ========================================================= */
+
+.education-booking-show-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(290px, .8fr);
+
+    gap:
+        18px;
+
+}
+
+
+/* =========================================================
+   GENERAL CARD
+   ========================================================= */
+
+.education-booking-show-card {
+
+    min-width:
+        0;
+
+    padding:
+        27px;
+
+    border:
+        1px solid rgba(233,229,218,.95);
+
+    border-radius:
+        21px;
+
+    background:
+        rgba(255,255,255,.82);
+
+    box-shadow:
+        0 8px 28px rgba(55,57,48,.045);
+
+    backdrop-filter:
+        blur(10px);
+
+    animation:
+        educationBookingFadeUp .55s ease both;
+
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.education-booking-show-card-header {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    margin-bottom:
+        22px;
+
+}
+
+
+.education-booking-show-card-header-label {
+
+    display:
+        block;
+
+    color:
+        var(--education-gold);
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+
+    margin-bottom:
+        3px;
+
+}
+
+
+.education-booking-show-card-header h3 {
+
+    margin:
+        0;
+
+    color:
+        var(--education-text);
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size:
+        23px;
+
+    line-height:
+        1.3;
+
+}
+
+
+.education-booking-show-card-icon {
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        11px;
+
+    color:
+        var(--education-gold);
+
+    background:
+        var(--education-gold-soft);
+
+}
+
+
+/* =========================================================
+   BOOKING STATUS
+   ========================================================= */
+
+.education-booking-show-status {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        7px;
+
+    padding:
+        8px 13px;
+
+    border-radius:
+        10px;
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+
+    white-space:
+        nowrap;
+
+}
+
+
+.education-booking-show-status.confirmed {
+
+    color:
+        #587354;
+
+    background:
+        rgba(88,115,84,.09);
+
+    border:
+        1px solid rgba(88,115,84,.13);
+
+}
+
+
+.education-booking-show-status.pending {
+
+    color:
+        #9b783e;
+
+    background:
+        rgba(185,147,82,.10);
+
+    border:
+        1px solid rgba(185,147,82,.15);
+
+}
+
+
+.education-booking-show-status.cancelled {
+
+    color:
+        #9d665c;
+
+    background:
+        rgba(157,102,92,.08);
+
+    border:
+        1px solid rgba(157,102,92,.12);
+
+}
+
+
+.education-booking-show-status.completed {
+
+    color:
+        #59634e;
+
+    background:
+        rgba(89,99,78,.09);
+
+    border:
+        1px solid rgba(89,99,78,.13);
+
+}
+
+
+.education-booking-show-status.rejected {
+
+    color:
+        #9d665c;
+
+    background:
+        rgba(157,102,92,.08);
+
+    border:
+        1px solid rgba(157,102,92,.12);
+
+}
+
+
+/* =========================================================
+   LESSON INFO
+   ========================================================= */
+
+.education-booking-show-lesson {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        15px;
+
+    padding:
+        18px;
+
+    border:
+        1px solid #eeeae1;
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(252,251,248,.72);
+
+}
+
+
+.education-booking-show-lesson-icon {
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        14px;
+
+    color:
+        var(--education-green);
+
+    background:
+        var(--education-green-soft);
+
+    font-size:
+        19px;
+
+}
+
+
+.education-booking-show-lesson-content {
+
+    min-width:
+        0;
+
+}
+
+
+.education-booking-show-lesson-category {
+
+    display:
+        block;
+
+    color:
+        var(--education-gold);
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+
+    margin-bottom:
+        3px;
+
+}
+
+
+.education-booking-show-lesson-content h4 {
+
+    margin:
+        0 0 5px;
+
+    color:
+        var(--education-text);
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size:
+        20px;
+
+}
+
+
+.education-booking-show-lesson-content p {
+
+    margin:
+        0;
+
+    color:
+        var(--education-muted);
+
+    font-size:
+        9px;
+
+    line-height:
+        1.9;
+
+}
+
+
+/* =========================================================
+   DATE / TIME DETAILS
+   ========================================================= */
+
+.education-booking-show-details {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        11px;
+
+    margin-top:
+        16px;
+
+}
+
+
+.education-booking-show-detail {
+
+    min-height:
+        75px;
+
+    padding:
+        13px 14px;
+
+    border:
+        1px solid #eeeae1;
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(252,251,248,.65);
+
+}
+
+
+.education-booking-show-detail-label {
+
+    display:
+        block;
+
+    color:
+        var(--education-muted);
+
+    font-size:
+        8px;
+
+    margin-bottom:
+        6px;
+
+}
+
+
+.education-booking-show-detail-value {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    color:
+        var(--education-text);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+}
+
+
+.education-booking-show-detail-value i {
+
+    color:
+        var(--education-gold);
+
+    font-size:
+        11px;
+
+}
+
+
+/* =========================================================
+   PRICE
+   ========================================================= */
+
+.education-booking-show-price {
+
+    margin-top:
+        16px;
+
+    padding:
+        18px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        15px;
+
+    border-radius:
+        15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(185,147,82,.09),
+            rgba(185,147,82,.035)
+        );
+
+    border:
+        1px solid rgba(185,147,82,.14);
+
+}
+
+
+.education-booking-show-price-label {
+
+    color:
+        var(--education-text-soft);
+
+    font-size:
+        9px;
+
+}
+
+
+.education-booking-show-price-value {
+
+    color:
+        var(--education-green-dark);
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size:
+        25px;
+
+    font-weight:
+        700;
+
+}
+
+
+.education-booking-show-price-currency {
+
+    color:
+        var(--education-muted);
+
+    font-family:
+        "Cairo",
+        sans-serif;
+
+    font-size:
+        9px;
+
+    margin-right:
+        4px;
+
+}
+
+
+/* =========================================================
+   PAYMENT CARD
+   ========================================================= */
+
+.education-booking-show-payment {
+
+    margin-top:
+        18px;
+
+}
+
+
+.education-booking-show-payment-status {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        15px;
+
+    padding:
+        15px;
+
+    border:
+        1px solid #eeeae1;
+
+    border-radius:
+        14px;
+
+    background:
+        rgba(252,251,248,.72);
+
+}
+
+
+.education-booking-show-payment-label {
+
+    display:
+        block;
+
+    color:
+        var(--education-muted);
+
+    font-size:
+        8px;
+
+    margin-bottom:
+        4px;
+
+}
+
+
+.education-booking-show-payment-value {
+
+    color:
+        var(--education-text);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+}
+
+
+.education-booking-show-payment-badge {
+
+    padding:
+        6px 10px;
+
+    border-radius:
+        8px;
+
+    color:
+        #9b783e;
+
+    background:
+        rgba(185,147,82,.10);
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+
+}
+
+
+/* =========================================================
+   NOTES
+   ========================================================= */
+
+.education-booking-show-note {
+
+    margin-top:
+        18px;
+
+    padding:
+        17px;
+
+    border-radius:
+        14px;
+
+    border:
+        1px solid #eeeae1;
+
+    background:
+        rgba(252,251,248,.72);
+
+}
+
+
+.education-booking-show-note-header {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.education-booking-show-note-header i {
+
+    color:
+        var(--education-gold);
+
+    font-size:
+        12px;
+
+}
+
+
+.education-booking-show-note-header span {
+
+    color:
+        var(--education-text);
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+
+}
+
+
+.education-booking-show-note p {
+
+    margin:
+        0;
+
+    color:
+        var(--education-text-soft);
+
+    font-size:
+        9px;
+
+    line-height:
+        2;
+
+}
+
+
+/* =========================================================
+   SIDE SUMMARY
+   ========================================================= */
+
+.education-booking-show-summary {
+
+    position:
+        relative;
+
+}
+
+
+.education-booking-show-summary-list {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        1px;
+
+}
+
+
+.education-booking-show-summary-item {
+
+    min-height:
+        66px;
+
+    padding:
+        10px 0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    border-bottom:
+        1px solid #eeeae1;
+
+}
+
+
+.education-booking-show-summary-item:last-child {
+
+    border-bottom:
+        0;
+
+}
+
+
+.education-booking-show-summary-icon {
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        11px;
+
+    color:
+        var(--education-green);
+
+    background:
+        var(--education-green-soft);
+
+    font-size:
+        13px;
+
+}
+
+
+.education-booking-show-summary-text {
+
+    min-width:
+        0;
+
+}
+
+
+.education-booking-show-summary-text span {
+
+    display:
+        block;
+
+    color:
+        var(--education-muted);
+
+    font-size:
+        8px;
+
+    margin-bottom:
+        3px;
+
+}
+
+
+.education-booking-show-summary-text strong {
+
+    display:
+        block;
+
+    overflow:
+        hidden;
+
+    color:
+        var(--education-text);
+
+    font-size:
+        10px;
+
+    white-space:
+        nowrap;
+
+    text-overflow:
+        ellipsis;
+
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.education-booking-show-actions {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        9px;
+
+    margin-top:
+        22px;
+
+}
+
+
+.education-booking-show-action {
+
+    min-height:
+        43px;
+
+    padding:
+        0 15px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        8px;
+
+    border-radius:
+        11px;
+
+    text-decoration:
+        none;
+
+    font-family:
+        inherit;
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+
+}
+
+
+.education-booking-show-action.primary {
+
+    color:
+        white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b99352,
+            #a27d42
+        );
+
+    box-shadow:
+        0 8px 18px rgba(162,125,66,.16);
+
+}
+
+
+.education-booking-show-action.primary:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 24px rgba(162,125,66,.25);
+
+}
+
+
+.education-booking-show-action.secondary {
+
+    color:
+        var(--education-green);
+
+    background:
+        rgba(89,99,78,.07);
+
+    border:
+        1px solid rgba(89,99,78,.12);
+
+}
+
+
+.education-booking-show-action.secondary:hover {
+
+    color:
+        white;
+
+    background:
+        var(--education-green);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =========================================================
+   DANGER / CANCEL
+   ========================================================= */
+
+.education-booking-show-cancel {
+
+    margin-top:
+        8px;
+
+    width:
+        100%;
+
+    min-height:
+        40px;
+
+    border:
+        1px solid rgba(157,102,92,.14);
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(157,102,92,.04);
+
+    color:
+        #9d665c;
+
+    font-family:
+        inherit;
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    transition:
+        .25s ease;
+
+}
+
+
+.education-booking-show-cancel:hover {
+
+    background:
+        rgba(157,102,92,.08);
+
+    border-color:
+        rgba(157,102,92,.25);
+
+}
+
+
+/* =========================================================
+   TIMELINE / BOOKING HISTORY
+   ========================================================= */
+
+.education-booking-show-timeline {
+
+    margin-top:
+        18px;
+
+}
+
+
+.education-booking-show-timeline-item {
+
+    position:
+        relative;
+
+    padding:
+        0 28px 20px 0;
+
+}
+
+
+.education-booking-show-timeline-item:last-child {
+
+    padding-bottom:
+        0;
+
+}
+
+
+.education-booking-show-timeline-item::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    right:
+        7px;
+
+    top:
+        17px;
+
+    bottom:
+        -4px;
+
+    width:
+        1px;
+
+    background:
+        var(--education-border);
+
+}
+
+
+.education-booking-show-timeline-item:last-child::before {
+
+    display:
+        none;
+
+}
+
+
+.education-booking-show-timeline-dot {
+
+    position:
+        absolute;
+
+    right:
+        0;
+
+    top:
+        8px;
+
+    width:
+        15px;
+
+    height:
+        15px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--education-gold);
+
+    border:
+        3px solid var(--education-cream);
+
+    box-shadow:
+        0 0 0 1px rgba(185,147,82,.25);
+
+}
+
+
+.education-booking-show-timeline-content strong {
+
+    display:
+        block;
+
+    color:
+        var(--education-text);
+
+    font-size:
+        10px;
+
+    margin-bottom:
+        3px;
+
+}
+
+
+.education-booking-show-timeline-content span {
+
+    display:
+        block;
+
+    color:
+        var(--education-muted);
+
+    font-size:
+        8px;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   SUCCESS MESSAGE
+   ========================================================= */
+
+.education-booking-show-alert {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    padding:
+        13px 16px;
+
+    margin-bottom:
+        18px;
+
+    border-radius:
+        13px;
+
+    color:
+        #587354;
+
+    background:
+        rgba(88,115,84,.08);
+
+    border:
+        1px solid rgba(88,115,84,.14);
+
+    font-size:
+        9px;
+
+    font-weight:
+        700;
+
+}
+
+
+.education-booking-show-alert i {
+
+    font-size:
+        14px;
+
+}
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes educationBookingFadeUp {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(14px);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .education-booking-show-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .education-booking-show-container {
+
+        width:
+            min(
+                100% - 30px,
+                620px
+            );
+
+        padding-top:
+            25px;
+
+    }
+
+
+    .education-booking-show-topbar {
+
+        margin-bottom:
+            16px;
+
+    }
+
+
+    .education-booking-show-hero {
+
+        padding:
+            25px;
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .education-booking-show-hero-icon {
+
+        width:
+            68px;
+
+        height:
+            68px;
+
+        font-size:
+            25px;
+
+    }
+
+
+    .education-booking-show-card {
+
+        padding:
+            22px;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    .education-booking-show-details {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .education-booking-show-container {
+
+        width:
+            calc(100% - 22px);
+
+    }
+
+
+    .education-booking-show-header h1 {
+
+        font-size:
+            29px;
+
+    }
+
+
+    .education-booking-show-header p {
+
+        font-size:
+            9px;
+
+    }
+
+
+    .education-booking-show-hero {
+
+        padding:
+            22px;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    .education-booking-show-hero-icon {
+
+        display:
+            none;
+
+    }
+
+
+    .education-booking-show-hero h2 {
+
+        font-size:
+            26px;
+
+    }
+
+
+    .education-booking-show-card {
+
+        padding:
+            19px;
+
+    }
+
+
+    .education-booking-show-card-header h3 {
+
+        font-size:
+            21px;
+
+    }
+
+
+    .education-booking-show-lesson {
+
+        padding:
+            14px;
+
+    }
+
+
+    .education-booking-show-lesson-icon {
+
+        width:
+            43px;
+
+        height:
+            43px;
+
+        font-size:
+            17px;
+
+    }
+
+
+    .education-booking-show-lesson-content h4 {
+
+        font-size:
+            18px;
+
+    }
+
+
+    .education-booking-show-price {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .education-booking-show-payment-status {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .education-booking-show-container {
+
+        width:
+            calc(100% - 16px);
+
+    }
+
+
+    .education-booking-show-topbar {
+
+        align-items:
+            flex-start;
+
+    }
+
+
+    .education-booking-show-back {
+
+        font-size:
+            9px;
+
+    }
+
+
+    .education-booking-show-card {
+
+        padding:
+            16px;
+
+    }
+
+}
+
+
+
+
+
+
+/* ==========================================================
+   BANK TRANSFER PAYMENT CARD
+   FRONT = ACCOUNT HOLDER NAME ONLY
+   HOVER / FOCUS = FULL PAYMENT DETAILS
+========================================================== */
+
+.education-bank-payment-card {
+    position: relative;
+    margin-top: 24px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(184, 143, 69, 0.20);
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.035);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* ==========================================================
+   FRONT
+   يظهر الاسم فقط
+========================================================== */
+
+.education-bank-payment-front {
+    min-height: 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 16px;
+
+    padding: 26px 30px;
+
+    text-align: center;
+
+    position: relative;
+}
+
+
+/* ==========================================================
+   ICON
+========================================================== */
+
+.education-bank-payment-icon {
+    width: 50px;
+    height: 50px;
+
+    flex: 0 0 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(184, 143, 69, 0.15),
+            rgba(184, 143, 69, 0.06)
+        );
+
+    color: #b88f45;
+
+    font-size: 20px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* ==========================================================
+   FRONT CONTENT
+========================================================== */
+
+.education-bank-payment-front-content {
+    min-width: 0;
+
+    flex: 0 1 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* إخفاء العنوان الصغير */
+
+.education-bank-payment-eyebrow {
+    display: none;
+}
+
+
+/* ==========================================================
+   ACCOUNT HOLDER NAME
+========================================================== */
+
+.education-bank-payment-front-content h3 {
+    margin: 0;
+
+    color: #29251f;
+
+    font-family: "Amiri", serif;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* إخفاء الوصف من الواجهة الأمامية */
+
+.education-bank-payment-front-content p {
+    display: none;
+}
+
+
+/* ==========================================================
+   ARROW
+========================================================== */
+
+.education-bank-payment-arrow {
+    width: 34px;
+    height: 34px;
+
+    flex: 0 0 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f8f5ef;
+
+    color: #9b783d;
+
+    transition:
+        transform 0.35s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.education-bank-payment-arrow i {
+    transition:
+        transform 0.35s ease;
+}
+
+
+/* ==========================================================
+   DETAILS
+========================================================== */
+
+.education-bank-payment-details {
+    display: grid;
+
+    grid-template-rows: 0fr;
+
+    transition:
+        grid-template-rows 0.45s ease;
+}
+
+
+.education-bank-payment-details-inner {
+    min-height: 0;
+
+    overflow: hidden;
+
+    padding: 0 30px;
+
+    opacity: 0;
+
+    transform: translateY(-12px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.4s ease,
+        padding 0.4s ease;
+}
+
+
+/* ==========================================================
+   HOVER / FOCUS / OPEN
+========================================================== */
+
+.education-bank-payment-card:hover,
+.education-bank-payment-card:focus,
+.education-bank-payment-card.is-open {
+    border-color:
+        rgba(184, 143, 69, 0.45);
+
+    box-shadow:
+        0 20px 50px rgba(40, 35, 25, 0.09);
+
+    transform: translateY(-2px);
+}
+
+
+/* فتح التفاصيل */
+
+.education-bank-payment-card:hover
+.education-bank-payment-details,
+
+.education-bank-payment-card:focus
+.education-bank-payment-details,
+
+.education-bank-payment-card.is-open
+.education-bank-payment-details {
+    grid-template-rows: 1fr;
+}
+
+
+/* محتوى التفاصيل */
+
+.education-bank-payment-card:hover
+.education-bank-payment-details-inner,
+
+.education-bank-payment-card:focus
+.education-bank-payment-details-inner,
+
+.education-bank-payment-card.is-open
+.education-bank-payment-details-inner {
+    padding-top: 4px;
+
+    padding-bottom: 28px;
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* حركة الاسم */
+
+.education-bank-payment-card:hover
+.education-bank-payment-front-content h3,
+
+.education-bank-payment-card:focus
+.education-bank-payment-front-content h3,
+
+.education-bank-payment-card.is-open
+.education-bank-payment-front-content h3 {
+    color: #b88f45;
+
+    transform: translateY(-2px);
+}
+
+
+/* حركة الأيقونة */
+
+.education-bank-payment-card:hover
+.education-bank-payment-icon,
+
+.education-bank-payment-card:focus
+.education-bank-payment-icon,
+
+.education-bank-payment-card.is-open
+.education-bank-payment-icon {
+    background: #b88f45;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* حركة السهم */
+
+.education-bank-payment-card:hover
+.education-bank-payment-arrow,
+
+.education-bank-payment-card:focus
+.education-bank-payment-arrow,
+
+.education-bank-payment-card.is-open
+.education-bank-payment-arrow {
+    background: #b88f45;
+
+    color: #ffffff;
+}
+
+
+.education-bank-payment-card:hover
+.education-bank-payment-arrow i,
+
+.education-bank-payment-card:focus
+.education-bank-payment-arrow i,
+
+.education-bank-payment-card.is-open
+.education-bank-payment-arrow i {
+    transform: rotate(180deg);
+}
+
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.education-bank-payment-description {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    padding: 15px 16px;
+
+    border-radius: 14px;
+
+    background: #faf8f3;
+
+    color: #686158;
+}
+
+
+.education-bank-payment-description i {
+    margin-top: 3px;
+
+    color: #b88f45;
+
+    flex: 0 0 auto;
+}
+
+
+.education-bank-payment-description p {
+    margin: 0;
+
+    color: #686158;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+/* ==========================================================
+   FIELDS
+========================================================== */
+
+.education-bank-payment-field {
+    padding: 16px 0;
+
+    border-bottom: 1px solid #eeeae3;
+}
+
+
+.education-bank-payment-field > span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #928b81;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.education-bank-payment-field strong {
+    color: #302d28;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    word-break: break-word;
+}
+
+
+/* ==========================================================
+   COPY ROW
+========================================================== */
+
+.education-bank-payment-copy-row {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 14px;
+}
+
+
+.education-bank-payment-copy-row strong {
+    direction: ltr;
+
+    text-align: left;
+
+    letter-spacing: 0.5px;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ==========================================================
+   COPY BUTTON
+========================================================== */
+
+.education-bank-payment-copy {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    flex: 0 0 auto;
+
+    padding: 8px 14px;
+
+    border: 1px solid rgba(184, 143, 69, 0.25);
+
+    border-radius: 10px;
+
+    background: #fffaf1;
+
+    color: #a17b3b;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.2s ease;
+}
+
+
+.education-bank-payment-copy:hover {
+    background: #b88f45;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+.education-bank-payment-copy:active {
+    transform: scale(0.96);
+}
+
+
+/* ==========================================================
+   IBAN
+========================================================== */
+
+.education-bank-payment-iban {
+    font-family: Arial, sans-serif !important;
+
+    font-size: 15px !important;
+
+    letter-spacing: 0.5px;
+
+    direction: ltr;
+
+    text-align: left;
+}
+
+
+/* ==========================================================
+   AMOUNT
+========================================================== */
+
+.education-bank-payment-amount {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-top: 18px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(184, 143, 69, 0.12),
+            rgba(184, 143, 69, 0.04)
+        );
+}
+
+
+.education-bank-payment-amount span {
+    display: block;
+
+    color: #6e665b;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.education-bank-payment-amount small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #a19a91;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 11px;
+}
+
+
+.education-bank-payment-amount strong {
+    direction: ltr;
+
+    color: #a17b3b;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================================
+   INSTRUCTIONS
+========================================================== */
+
+.education-bank-payment-instructions {
+    margin-top: 18px;
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+    background: #f8f7f4;
+}
+
+
+.education-bank-payment-instructions-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 8px;
+
+    color: #4b463f;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+.education-bank-payment-instructions-title i {
+    color: #b88f45;
+}
+
+
+.education-bank-payment-instructions p {
+    margin: 0;
+
+    color: #777067;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+/* ==========================================================
+   COPY SUCCESS
+========================================================== */
+
+.education-bank-payment-copy-success {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    color: #3c8a61;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition:
+        max-height 0.3s ease,
+        opacity 0.3s ease,
+        margin-top 0.3s ease;
+}
+
+
+.education-bank-payment-copy-success.show {
+    max-height: 30px;
+
+    margin-top: 14px;
+
+    opacity: 1;
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 700px) {
+
+    .education-bank-payment-front {
+        min-height: 100px;
+
+        padding: 20px 18px;
+
+        gap: 12px;
+    }
+
+
+    .education-bank-payment-icon {
+        width: 46px;
+        height: 46px;
+
+        flex-basis: 46px;
+
+        border-radius: 14px;
+
+        font-size: 18px;
+    }
+
+
+    .education-bank-payment-front-content h3 {
+        font-size: 24px;
+    }
+
+
+    .education-bank-payment-arrow {
+        width: 30px;
+        height: 30px;
+
+        flex-basis: 30px;
+    }
+
+
+    .education-bank-payment-details-inner {
+        padding-left: 18px;
+
+        padding-right: 18px;
+    }
+
+
+    .education-bank-payment-copy-row {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .education-bank-payment-copy {
+        width: 100%;
+    }
+
+
+    .education-bank-payment-amount {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .education-bank-payment-amount strong {
+        font-size: 18px;
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 420px) {
+
+    .education-bank-payment-front {
+        padding: 18px 14px;
+    }
+
+
+    .education-bank-payment-front-content h3 {
+        font-size: 21px;
+    }
+
+
+    .education-bank-payment-icon {
+        width: 42px;
+        height: 42px;
+
+        flex-basis: 42px;
+
+        font-size: 17px;
+    }
+
+}

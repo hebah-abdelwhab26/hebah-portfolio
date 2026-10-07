@@ -1,0 +1,4716 @@
+/* ============================================================
+   HEBAH EDUCATION ADMIN
+   STUDENTS PAGE
+   RTL / Arabic
+   Cream / Olive Green / Soft Gold
+============================================================ */
+
+
+/* ============================================================
+   PAGE
+============================================================ */
+
+.education-students-page {
+
+    direction: rtl;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    color: var(--edu-text);
+
+    font-family:
+        "Cairo",
+        "Tajawal",
+        Arial,
+        sans-serif;
+
+}
+
+
+/* ============================================================
+   PAGE HEADER
+============================================================ */
+
+.education-students-page-header {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.education-students-heading {
+
+    min-width: 0;
+
+    flex: 1;
+
+}
+
+
+.education-students-eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 8px;
+
+    color: var(--edu-primary-dark);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.education-students-eyebrow i {
+
+    font-size: 13px;
+
+}
+
+
+.education-students-heading h1 {
+
+    margin: 0;
+
+    color: var(--edu-dark);
+
+    font-size: 32px;
+
+    line-height: 1.25;
+
+    font-weight: 800;
+
+}
+
+
+.education-students-heading p {
+
+    margin: 8px 0 0;
+
+    color: var(--edu-text-light);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+/* ============================================================
+   HEADER ACTIONS
+============================================================ */
+
+.education-students-header-actions {
+
+    flex-shrink: 0;
+
+}
+
+
+.education-students-add-btn {
+
+    min-height: 48px;
+
+    padding: 0 19px;
+
+    border-radius: 13px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--edu-primary-light),
+            var(--edu-primary)
+        );
+
+    color: #fffdf7;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 8px 20px
+        rgba(197, 155, 85, .18);
+
+    transition: var(--edu-transition);
+
+}
+
+
+.education-students-add-btn:hover {
+
+    transform: translateY(-2px);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--edu-primary),
+            var(--edu-primary-dark)
+        );
+
+    box-shadow:
+        0 12px 26px
+        rgba(197, 155, 85, .25);
+
+}
+
+
+.education-students-add-btn i {
+
+    font-size: 13px;
+
+}
+
+
+/* ============================================================
+   STATISTICS
+============================================================ */
+
+.education-students-stats {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 16px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.education-student-stat-card {
+
+    min-width: 0;
+
+    min-height: 126px;
+
+    padding: 19px;
+
+    background: #fff;
+
+    border: 1px solid var(--edu-border);
+
+    border-radius: 19px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    box-shadow: var(--edu-shadow);
+
+    transition: var(--edu-transition);
+
+}
+
+
+.education-student-stat-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--edu-shadow-hover);
+
+}
+
+
+/* ============================================================
+   STAT ICON
+============================================================ */
+
+.education-student-stat-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    flex-shrink: 0;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+
+}
+
+
+.education-student-stat-icon.total {
+
+    color: var(--edu-olive);
+
+    background: var(--edu-olive-soft);
+
+}
+
+
+.education-student-stat-icon.active {
+
+    color: var(--edu-green);
+
+    background: var(--edu-green-soft);
+
+}
+
+
+.education-student-stat-icon.pending {
+
+    color: var(--edu-orange);
+
+    background: var(--edu-orange-soft);
+
+}
+
+
+.education-student-stat-icon.inactive {
+
+    color: var(--edu-red);
+
+    background: var(--edu-red-soft);
+
+}
+
+
+/* ============================================================
+   STAT CONTENT
+============================================================ */
+
+.education-student-stat-content {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.education-student-stat-content span {
+
+    color: var(--edu-text-light);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+.education-student-stat-content strong {
+
+    margin-top: 5px;
+
+    color: var(--edu-dark);
+
+    font-size: 27px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+}
+
+
+.education-student-stat-content small {
+
+    margin-top: 6px;
+
+    color: var(--edu-text-muted);
+
+    font-size: 9px;
+
+}
+
+
+/* ============================================================
+   FILTER PANEL
+============================================================ */
+
+.education-students-filter-panel {
+
+    width: 100%;
+
+    margin-bottom: 22px;
+
+    background: #fff;
+
+    border: 1px solid var(--edu-border);
+
+    border-radius: 21px;
+
+    box-shadow: var(--edu-shadow);
+
+    overflow: hidden;
+
+}
+
+
+/* ============================================================
+   FILTER HEADER
+============================================================ */
+
+.education-students-filter-header {
+
+    min-height: 76px;
+
+    padding: 17px 21px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #eeeae1;
+
+}
+
+
+.education-students-filter-eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--edu-primary-dark);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+.education-students-filter-header h2 {
+
+    margin: 4px 0 0;
+
+    color: var(--edu-dark);
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+}
+
+
+.education-students-reset {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: var(--edu-text-light);
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+}
+
+
+.education-students-reset:hover {
+
+    color: var(--edu-primary-dark);
+
+}
+
+
+/* ============================================================
+   FILTER FORM
+============================================================ */
+
+.education-students-filters {
+
+    width: 100%;
+
+    padding: 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 1.8fr)
+        minmax(150px, 1fr)
+        minmax(150px, 1fr)
+        minmax(150px, 1fr)
+        auto;
+
+    align-items: end;
+
+    gap: 14px;
+
+}
+
+
+/* ============================================================
+   FIELD
+============================================================ */
+
+.education-students-field {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.education-students-field label {
+
+    color: var(--edu-text);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+/* ============================================================
+   INPUT
+============================================================ */
+
+.education-students-input-wrapper,
+.education-students-select-wrapper {
+
+    width: 100%;
+
+    height: 45px;
+
+    position: relative;
+
+}
+
+
+.education-students-input-wrapper i,
+.education-students-select-wrapper i {
+
+    position: absolute;
+
+    top: 50%;
+
+    right: 13px;
+
+    transform: translateY(-50%);
+
+    z-index: 2;
+
+    color: var(--edu-text-muted);
+
+    font-size: 12px;
+
+    pointer-events: none;
+
+}
+
+
+.education-students-input-wrapper input,
+.education-students-select-wrapper select {
+
+    width: 100%;
+
+    height: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e4e1d8;
+
+    border-radius: 11px;
+
+    outline: none;
+
+    background: #fcfbf7;
+
+    color: var(--edu-text);
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    transition: var(--edu-transition);
+
+}
+
+
+.education-students-input-wrapper input {
+
+    padding:
+        0 39px
+        0 13px;
+
+}
+
+
+.education-students-select-wrapper select {
+
+    padding:
+        0 38px
+        0 30px;
+
+    cursor: pointer;
+
+    appearance: auto;
+
+}
+
+
+.education-students-input-wrapper input::placeholder {
+
+    color: #aaa99f;
+
+}
+
+
+.education-students-input-wrapper input:focus,
+.education-students-select-wrapper select:focus {
+
+    border-color: #d6b36d;
+
+    background: #fff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(197, 155, 85, .08);
+
+}
+
+
+/* ============================================================
+   FILTER BUTTON
+============================================================ */
+
+.education-students-filter-action {
+
+    display: flex;
+
+    align-items: flex-end;
+
+}
+
+
+.education-students-filter-btn {
+
+    height: 45px;
+
+    min-width: 88px;
+
+    padding: 0 16px;
+
+    border: 0;
+
+    border-radius: 11px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    background: var(--edu-olive);
+
+    color: #fff;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: var(--edu-transition);
+
+}
+
+
+.education-students-filter-btn:hover {
+
+    background: var(--edu-olive-dark);
+
+    transform: translateY(-1px);
+
+}
+
+
+/* ============================================================
+   TABLE PANEL
+============================================================ */
+
+.education-students-table-panel {
+
+    width: 100%;
+
+    background: #fff;
+
+    border: 1px solid var(--edu-border);
+
+    border-radius: 21px;
+
+    box-shadow: var(--edu-shadow);
+
+    overflow: hidden;
+
+}
+
+
+/* ============================================================
+   TABLE HEADER
+============================================================ */
+
+.education-students-table-header {
+
+    min-height: 80px;
+
+    padding: 18px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #eeeae1;
+
+}
+
+
+.education-students-table-eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--edu-primary-dark);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+.education-students-table-header h2 {
+
+    margin: 4px 0 0;
+
+    color: var(--edu-dark);
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+}
+
+
+.education-students-count {
+
+    min-height: 32px;
+
+    padding: 0 11px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    border-radius: 30px;
+
+    background: var(--edu-primary-soft);
+
+    color: var(--edu-primary-dark);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+/* ============================================================
+   TABLE WRAPPER
+============================================================ */
+
+.education-students-table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+}
+
+
+.education-students-table {
+
+    width: 100%;
+
+    min-width: 930px;
+
+    border-collapse: collapse;
+
+    border-spacing: 0;
+
+    direction: rtl;
+
+}
+
+
+/* ============================================================
+   TABLE HEAD
+============================================================ */
+
+.education-students-table thead {
+
+    background: #faf9f5;
+
+}
+
+
+.education-students-table th {
+
+    height: 50px;
+
+    padding: 0 16px;
+
+    color: var(--edu-text-light);
+
+    border-bottom: 1px solid #eeeae1;
+
+    text-align: right;
+
+    white-space: nowrap;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+.education-students-table th:first-child {
+
+    padding-right: 22px;
+
+}
+
+
+/* ============================================================
+   TABLE BODY
+============================================================ */
+
+.education-students-table tbody tr {
+
+    transition: background .2s ease;
+
+}
+
+
+.education-students-table tbody tr:hover {
+
+    background: #fcfbf7;
+
+}
+
+
+.education-students-table td {
+
+    height: 76px;
+
+    padding: 8px 16px;
+
+    color: var(--edu-text);
+
+    border-bottom: 1px solid #f0ede6;
+
+    text-align: right;
+
+    vertical-align: middle;
+
+    font-size: 11px;
+
+}
+
+
+.education-students-table td:first-child {
+
+    padding-right: 22px;
+
+}
+
+
+.education-students-table tbody tr:last-child td {
+
+    border-bottom: 0;
+
+}
+
+
+/* ============================================================
+   STUDENT USER
+============================================================ */
+
+.education-student-user {
+
+    min-width: 180px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+}
+
+
+.education-student-avatar {
+
+    width: 43px;
+
+    height: 43px;
+
+    flex-shrink: 0;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--edu-primary-light),
+            var(--edu-primary)
+        );
+
+    color: #fff;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+}
+
+
+.education-student-avatar img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.education-student-user-info {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.education-student-user-info strong {
+
+    max-width: 180px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: var(--edu-dark);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+}
+
+
+.education-student-user-info span {
+
+    margin-top: 3px;
+
+    color: var(--edu-text-muted);
+
+    font-size: 9px;
+
+}
+
+
+/* ============================================================
+   EMAIL
+============================================================ */
+
+.education-student-email {
+
+    direction: ltr;
+
+    display: inline-block;
+
+    color: var(--edu-text-light);
+
+    font-size: 10px;
+
+    white-space: nowrap;
+
+}
+
+
+/* ============================================================
+   PHONE
+============================================================ */
+
+.education-student-phone {
+
+    direction: ltr;
+
+    display: inline-block;
+
+    color: var(--edu-text-light);
+
+    font-size: 10px;
+
+    white-space: nowrap;
+
+}
+
+
+/* ============================================================
+   LEVEL
+============================================================ */
+
+.education-student-level {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 6px 9px;
+
+    border-radius: 9px;
+
+    background: var(--edu-olive-soft);
+
+    color: var(--edu-olive);
+
+    white-space: nowrap;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+}
+
+
+.education-student-level i {
+
+    font-size: 9px;
+
+}
+
+
+/* ============================================================
+   EMPTY VALUE
+============================================================ */
+
+.education-student-empty-value {
+
+    color: var(--edu-text-muted);
+
+}
+
+
+/* ============================================================
+   STATUS
+============================================================ */
+
+.education-student-status {
+
+    min-height: 27px;
+
+    padding: 4px 9px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    border-radius: 30px;
+
+    white-space: nowrap;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+}
+
+
+.education-student-status.success {
+
+    color: #37805b;
+
+    background: var(--edu-green-soft);
+
+}
+
+
+.education-student-status.warning {
+
+    color: #a76d12;
+
+    background: var(--edu-orange-soft);
+
+}
+
+
+.education-student-status.muted {
+
+    color: #747a70;
+
+    background: #f0f0eb;
+
+}
+
+
+.education-student-status i {
+
+    font-size: 8px;
+
+}
+
+
+/* ============================================================
+   DATE
+============================================================ */
+
+.education-student-date {
+
+    direction: ltr;
+
+    display: inline-block;
+
+    color: var(--edu-text-light);
+
+    font-size: 10px;
+
+    white-space: nowrap;
+
+}
+
+
+/* ============================================================
+   ACTIONS
+============================================================ */
+
+.education-student-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+}
+
+
+.education-student-actions form {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+.education-student-action {
+
+    width: 32px;
+
+    height: 32px;
+
+    padding: 0;
+
+    border: 1px solid #e8e5dc;
+
+    border-radius: 9px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #fff;
+
+    color: var(--edu-text-light);
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    transition: var(--edu-transition);
+
+}
+
+
+.education-student-action.view:hover {
+
+    color: var(--edu-blue);
+
+    border-color: #cbd4df;
+
+    background: var(--edu-blue-soft);
+
+}
+
+
+.education-student-action.edit:hover {
+
+    color: var(--edu-primary-dark);
+
+    border-color: #ddc89e;
+
+    background: var(--edu-primary-soft);
+
+}
+
+
+.education-student-action.delete:hover {
+
+    color: var(--edu-red);
+
+    border-color: #e7c5c1;
+
+    background: var(--edu-red-soft);
+
+}
+
+
+/* ============================================================
+   EMPTY
+============================================================ */
+
+.education-students-no-results {
+
+    height: 300px !important;
+
+    padding: 0 !important;
+
+}
+
+
+.education-students-empty {
+
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.education-students-empty-icon {
+
+    width: 62px;
+
+    height: 62px;
+
+    border-radius: 19px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--edu-primary-soft);
+
+    color: var(--edu-primary-dark);
+
+    font-size: 23px;
+
+    margin-bottom: 13px;
+
+}
+
+
+.education-students-empty h3 {
+
+    margin: 0;
+
+    color: var(--edu-dark);
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+}
+
+
+.education-students-empty p {
+
+    margin: 6px 0 15px;
+
+    color: var(--edu-text-muted);
+
+    font-size: 10px;
+
+}
+
+
+.education-students-empty-btn {
+
+    min-height: 36px;
+
+    padding: 0 13px;
+
+    border-radius: 10px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    background: var(--edu-olive-soft);
+
+    color: var(--edu-olive);
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+/* ============================================================
+   PAGINATION
+============================================================ */
+
+.education-students-pagination {
+
+    min-height: 70px;
+
+    padding: 12px 22px;
+
+    border-top: 1px solid #eeeae1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.education-students-pagination-info {
+
+    color: var(--edu-text-muted);
+
+    font-size: 10px;
+
+}
+
+
+.education-students-pagination-info strong {
+
+    color: var(--edu-text);
+
+    font-weight: 800;
+
+}
+
+
+.education-students-pagination-links {
+
+    direction: ltr;
+
+}
+
+
+.education-students-pagination-links nav {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+/* Laravel Tailwind pagination */
+
+.education-students-pagination-links svg {
+
+    width: 16px;
+
+    height: 16px;
+
+}
+
+
+.education-students-pagination-links a,
+.education-students-pagination-links span {
+
+    min-width: 30px;
+
+    height: 30px;
+
+    padding: 0 8px;
+
+    margin: 0 2px;
+
+    border-radius: 8px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 1250px) {
+
+    .education-students-stats {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+
+    .education-students-filters {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+
+    .education-students-field.search-field {
+
+        grid-column: 1 / -1;
+
+    }
+
+
+    .education-students-filter-action {
+
+        grid-column: 1 / -1;
+
+    }
+
+
+    .education-students-filter-btn {
+
+        width: 100%;
+
+    }
+
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 900px) {
+
+    .education-students-page-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .education-students-header-actions {
+
+        width: 100%;
+
+    }
+
+
+    .education-students-add-btn {
+
+        width: 100%;
+
+    }
+
+
+    .education-students-table-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .education-students-count {
+
+        align-self: flex-start;
+
+    }
+
+
+    .education-students-pagination {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 600px) {
+
+    .education-students-heading h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .education-students-heading p {
+
+        font-size: 11px;
+
+    }
+
+
+    .education-students-stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .education-students-filters {
+
+        grid-template-columns: 1fr;
+
+        padding: 15px;
+
+    }
+
+
+    .education-students-field.search-field {
+
+        grid-column: auto;
+
+    }
+
+
+    .education-students-filter-action {
+
+        grid-column: auto;
+
+    }
+
+
+    .education-students-filter-header {
+
+        padding: 15px;
+
+    }
+
+
+    .education-students-table-header {
+
+        padding: 15px;
+
+    }
+
+
+    .education-students-pagination {
+
+        padding: 13px 15px;
+
+    }
+
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media (max-width: 400px) {
+
+    .education-student-stat-card {
+
+        padding: 15px;
+
+    }
+
+
+    .education-student-stat-icon {
+
+        width: 44px;
+
+        height: 44px;
+
+    }
+
+
+    .education-student-stat-content strong {
+
+        font-size: 24px;
+
+    }
+
+}
+
+
+
+/* ============================================================
+   HEBAH EDUCATION ADMIN
+   STUDENT SHOW
+   RTL / Cream / Olive Green / Soft Gold
+============================================================ */
+
+.education-admin-student-show-page {
+    direction: rtl;
+    color: var(--edu-text);
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.education-admin-student-show-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 28px;
+}
+
+.education-admin-student-show-heading {
+    min-width: 0;
+}
+
+.education-admin-student-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    color: var(--edu-text-light);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: var(--edu-transition);
+}
+
+.education-admin-student-back:hover {
+    color: var(--edu-primary-dark);
+}
+
+.education-admin-student-show-heading
+.education-admin-page-header-label {
+    display: block;
+    color: var(--edu-primary-dark);
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.education-admin-student-show-heading h2 {
+    margin: 0;
+    color: var(--edu-dark);
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.education-admin-student-show-heading p {
+    margin: 8px 0 0;
+    color: var(--edu-text-light);
+    font-size: 13px;
+}
+
+.education-admin-student-show-actions {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.education-admin-student-show-edit {
+    min-height: 46px;
+    padding: 0 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border-radius: 13px;
+    background: var(--edu-olive);
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: var(--edu-transition);
+}
+
+.education-admin-student-show-edit:hover {
+    background: var(--edu-olive-dark);
+    transform: translateY(-2px);
+}
+
+
+/* ============================================================
+   MAIN GRID
+============================================================ */
+
+.education-admin-student-show-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(270px, .8fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* ============================================================
+   PROFILE CARD
+============================================================ */
+
+.education-admin-student-profile-card,
+.education-admin-student-details-card,
+.education-admin-student-goal-card,
+.education-admin-student-bookings-card {
+    background: #fff;
+    border: 1px solid var(--edu-border);
+    border-radius: 22px;
+    box-shadow: var(--edu-shadow);
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   PROFILE TOP
+============================================================ */
+
+.education-admin-student-profile-top {
+    min-height: 150px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    position: relative;
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf8 0%,
+            #fbf8ef 100%
+        );
+    border-bottom: 1px solid #eeeae1;
+}
+
+.education-admin-student-profile-avatar {
+    width: 78px;
+    height: 78px;
+    flex-shrink: 0;
+    border-radius: 22px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        linear-gradient(
+            135deg,
+            var(--edu-primary-light),
+            var(--edu-primary-dark)
+        );
+    color: #fff;
+    font-size: 27px;
+    font-weight: 800;
+    box-shadow:
+        0 10px 25px
+        rgba(197,155,85,.18);
+}
+
+.education-admin-student-profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.education-admin-student-profile-main {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.education-admin-student-profile-main > span {
+    color: var(--edu-primary-dark);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.education-admin-student-profile-main h3 {
+    margin: 4px 0 0;
+    color: var(--edu-dark);
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.education-admin-student-profile-main small {
+    margin-top: 4px;
+    color: var(--edu-text-muted);
+    font-size: 10px;
+    direction: ltr;
+    text-align: right;
+}
+
+.education-admin-student-profile-status {
+    margin-right: auto;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 11px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.education-admin-student-profile-status i {
+    font-size: 6px;
+}
+
+.education-admin-student-profile-status.active {
+    background: var(--edu-green-soft);
+    color: #39805b;
+}
+
+.education-admin-student-profile-status.inactive {
+    background: var(--edu-red-soft);
+    color: #b45f59;
+}
+
+
+/* ============================================================
+   PROFILE INFO
+============================================================ */
+
+.education-admin-student-profile-info {
+    padding: 8px 24px 18px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 25px;
+}
+
+.education-admin-student-profile-info-item {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #f0ede6;
+}
+
+.education-admin-student-profile-info-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--edu-primary-soft);
+    color: var(--edu-primary-dark);
+}
+
+.education-admin-student-profile-info-icon.whatsapp {
+    background: var(--edu-green-soft);
+    color: var(--edu-green);
+}
+
+.education-admin-student-profile-info-icon.education {
+    background: var(--edu-olive-soft);
+    color: var(--edu-olive);
+}
+
+.education-admin-student-profile-info-icon.date {
+    background: var(--edu-blue-soft);
+    color: var(--edu-blue);
+}
+
+.education-admin-student-profile-info-item > div:last-child {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.education-admin-student-profile-info-item span {
+    color: var(--edu-text-muted);
+    font-size: 10px;
+}
+
+.education-admin-student-profile-info-item strong {
+    margin-top: 4px;
+    color: var(--edu-text);
+    font-size: 11px;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* ============================================================
+   SIDE STATISTICS
+============================================================ */
+
+.education-admin-student-show-side {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.education-admin-student-show-stat {
+    min-height: 96px;
+    padding: 17px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    background: #fff;
+    border: 1px solid var(--edu-border);
+    border-radius: 18px;
+    box-shadow: var(--edu-shadow);
+}
+
+.education-admin-student-show-stat-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.education-admin-student-show-stat-icon.bookings {
+    color: var(--edu-green);
+    background: var(--edu-green-soft);
+}
+
+.education-admin-student-show-stat-icon.level {
+    color: var(--edu-olive);
+    background: var(--edu-olive-soft);
+}
+
+.education-admin-student-show-stat-icon.status {
+    color: var(--edu-primary-dark);
+    background: var(--edu-primary-soft);
+}
+
+.education-admin-student-show-stat > div:last-child {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.education-admin-student-show-stat span {
+    color: var(--edu-text-muted);
+    font-size: 10px;
+}
+
+.education-admin-student-show-stat strong {
+    margin-top: 5px;
+    color: var(--edu-dark);
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.education-admin-student-show-stat strong.text-value {
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   DETAILS
+============================================================ */
+
+.education-admin-student-details-card {
+    margin-bottom: 20px;
+}
+
+.education-admin-student-details-header,
+.education-admin-student-bookings-header {
+    min-height: 78px;
+    padding: 18px 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-bottom: 1px solid #eeeae1;
+}
+
+.education-admin-student-details-header span,
+.education-admin-student-bookings-header span {
+    color: var(--edu-primary-dark);
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.education-admin-student-details-header h3,
+.education-admin-student-bookings-header h3 {
+    margin: 4px 0 0;
+    color: var(--edu-dark);
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.education-admin-student-details-header > i {
+    width: 43px;
+    height: 43px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--edu-primary-soft);
+    color: var(--edu-primary-dark);
+}
+
+.education-admin-student-details-grid {
+    padding: 8px 23px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0 22px;
+}
+
+.education-admin-student-detail-item {
+    min-height: 78px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid #f0ede6;
+}
+
+.education-admin-student-detail-item span {
+    color: var(--edu-text-muted);
+    font-size: 10px;
+}
+
+.education-admin-student-detail-item strong {
+    margin-top: 5px;
+    color: var(--edu-text);
+    font-size: 12px;
+    font-weight: 700;
+    word-break: break-word;
+}
+
+.education-admin-student-detail-item strong.detail-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.education-admin-student-detail-item strong.detail-status i {
+    font-size: 6px;
+}
+
+.education-admin-student-detail-item strong.detail-status.active {
+    color: #39805b;
+}
+
+.education-admin-student-detail-item strong.detail-status.inactive {
+    color: #b45f59;
+}
+
+
+/* ============================================================
+   LEARNING GOAL
+============================================================ */
+
+.education-admin-student-goal-card {
+    margin-bottom: 20px;
+}
+
+.education-admin-student-goal-header {
+    padding: 20px 23px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border-bottom: 1px solid #eeeae1;
+}
+
+.education-admin-student-goal-icon {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--edu-orange-soft);
+    color: var(--edu-orange);
+}
+
+.education-admin-student-goal-header span {
+    color: var(--edu-primary-dark);
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.education-admin-student-goal-header h3 {
+    margin: 4px 0 0;
+    color: var(--edu-dark);
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.education-admin-student-goal-content {
+    padding: 20px 23px 24px;
+}
+
+.education-admin-student-goal-content p {
+    margin: 0;
+    color: var(--edu-text);
+    font-size: 13px;
+    line-height: 2;
+    white-space: pre-line;
+}
+
+.education-admin-student-goal-content p.empty {
+    color: var(--edu-text-muted);
+}
+
+
+/* ============================================================
+   BOOKINGS
+============================================================ */
+
+.education-admin-student-bookings-card {
+    margin-bottom: 20px;
+}
+
+.education-admin-student-bookings-total {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 12px;
+    border-radius: 30px;
+    background: var(--edu-primary-soft);
+    color: var(--edu-primary-dark);
+    font-size: 10px;
+}
+
+.education-admin-student-bookings-total strong {
+    font-size: 13px;
+}
+
+.education-admin-student-bookings-list {
+    padding: 5px 23px 10px;
+}
+
+.education-admin-student-booking-row {
+    min-height: 74px;
+    display: grid;
+    grid-template-columns: 45px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 13px;
+    border-bottom: 1px solid #f0ede6;
+}
+
+.education-admin-student-booking-row:last-child {
+    border-bottom: 0;
+}
+
+.education-admin-student-booking-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--edu-olive-soft);
+    color: var(--edu-olive);
+}
+
+.education-admin-student-booking-info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.education-admin-student-booking-info strong {
+    color: var(--edu-text);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.education-admin-student-booking-info span {
+    margin-top: 4px;
+    color: var(--edu-text-muted);
+    font-size: 10px;
+}
+
+.education-admin-student-bookings-footer {
+    padding: 15px 23px;
+    border-top: 1px solid #eeeae1;
+}
+
+.education-admin-student-bookings-footer a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--edu-primary-dark);
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.education-admin-student-bookings-footer a:hover {
+    color: var(--edu-primary);
+}
+
+
+/* ============================================================
+   EMPTY BOOKINGS
+============================================================ */
+
+.education-admin-student-bookings-empty {
+    min-height: 190px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.education-admin-student-bookings-empty > div {
+    width: 54px;
+    height: 54px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--edu-primary-soft);
+    color: var(--edu-primary-dark);
+    font-size: 21px;
+}
+
+.education-admin-student-bookings-empty h4 {
+    margin: 12px 0 0;
+    color: var(--edu-text);
+    font-size: 14px;
+}
+
+.education-admin-student-bookings-empty p {
+    margin: 6px 0 0;
+    color: var(--edu-text-muted);
+    font-size: 11px;
+}
+
+
+/* ============================================================
+   FOOTER ACTIONS
+============================================================ */
+
+.education-admin-student-show-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.education-admin-student-show-back-button,
+.education-admin-student-show-edit-button {
+    min-height: 45px;
+    padding: 0 17px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    transition: var(--edu-transition);
+}
+
+.education-admin-student-show-back-button {
+    background: #fff;
+    border: 1px solid var(--edu-border);
+    color: var(--edu-text-light);
+}
+
+.education-admin-student-show-back-button:hover {
+    color: var(--edu-primary-dark);
+    border-color: #dccba9;
+}
+
+.education-admin-student-show-edit-button {
+    background: var(--edu-olive);
+    color: #fff;
+}
+
+.education-admin-student-show-edit-button:hover {
+    background: var(--edu-olive-dark);
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 1100px) {
+
+    .education-admin-student-show-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-admin-student-show-side {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .education-admin-student-details-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .education-admin-student-show-header {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .education-admin-student-show-actions {
+        justify-content: flex-start;
+    }
+
+    .education-admin-student-show-side {
+        grid-template-columns: 1fr;
+    }
+
+    .education-admin-student-profile-info {
+        grid-template-columns: 1fr;
+    }
+
+    .education-admin-student-details-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .education-admin-student-show-heading h2 {
+        font-size: 24px;
+    }
+
+    .education-admin-student-show-heading p {
+        font-size: 11px;
+    }
+
+    .education-admin-student-profile-top {
+        padding: 19px;
+        flex-wrap: wrap;
+    }
+
+    .education-admin-student-profile-avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 18px;
+        font-size: 22px;
+    }
+
+    .education-admin-student-profile-main h3 {
+        font-size: 17px;
+    }
+
+    .education-admin-student-profile-status {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 5px;
+    }
+
+    .education-admin-student-profile-info {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .education-admin-student-details-header,
+    .education-admin-student-bookings-header {
+        padding: 17px;
+    }
+
+    .education-admin-student-details-grid {
+        grid-template-columns: 1fr;
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+
+    .education-admin-student-goal-header,
+    .education-admin-student-goal-content {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+
+    .education-admin-student-bookings-list {
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+
+    .education-admin-student-booking-row {
+        grid-template-columns: 42px minmax(0, 1fr);
+    }
+
+    .education-admin-student-booking-row > div:last-child {
+        grid-column: 2;
+        justify-self: start;
+        padding-bottom: 10px;
+    }
+
+    .education-admin-student-show-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .education-admin-student-show-back-button,
+    .education-admin-student-show-edit-button {
+        width: 100%;
+    }
+}
+
+
+
+
+/* ==========================================================
+   EDUCATION ADMIN
+   STUDENT CREATE PAGE
+   LIGHT THEME
+   ========================================================== */
+
+.education-admin-student-create-page {
+    width: 100%;
+    direction: rtl;
+    color: #263021;
+}
+
+
+/* ==========================================================
+   PAGE HEADER
+   ========================================================== */
+
+.education-admin-student-create-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.education-admin-student-create-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* ==========================================================
+   BACK BUTTON
+   ========================================================== */
+
+.education-admin-student-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 18px;
+
+    color: #69705f;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.education-admin-student-back i {
+    font-size: 13px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.education-admin-student-back:hover {
+    color: #b88f42;
+}
+
+.education-admin-student-back:hover i {
+    transform: translateX(4px);
+}
+
+
+/* ==========================================================
+   HEADER LABEL
+   ========================================================== */
+
+.education-admin-page-header-label {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 7px;
+
+    color: #b88f42;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* ==========================================================
+   TITLE
+   ========================================================== */
+
+.education-admin-student-create-heading h2 {
+    margin: 0;
+
+    color: #263021;
+
+    font-size: 30px;
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+
+/* ==========================================================
+   DESCRIPTION
+   ========================================================== */
+
+.education-admin-student-create-heading p {
+    margin: 9px 0 0;
+
+    color: #777d70;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================================
+   ALERTS
+   ========================================================== */
+
+.education-admin-alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+
+    width: 100%;
+
+    margin-bottom: 24px;
+    padding: 16px 18px;
+
+    border-radius: 14px;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    box-sizing: border-box;
+}
+
+.education-admin-alert i {
+    flex-shrink: 0;
+
+    margin-top: 3px;
+
+    font-size: 17px;
+}
+
+
+/* SUCCESS */
+
+.education-admin-alert-success {
+    background: rgba(84, 137, 93, 0.09);
+
+    border: 1px solid rgba(84, 137, 93, 0.22);
+
+    color: #4f7958;
+}
+
+
+/* ERROR */
+
+.education-admin-alert-error {
+    background: rgba(194, 75, 75, 0.08);
+
+    border: 1px solid rgba(194, 75, 75, 0.20);
+
+    color: #b34e4e;
+}
+
+.education-admin-alert strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: inherit;
+
+    font-weight: 800;
+}
+
+.education-admin-alert ul {
+    margin: 0;
+    padding-right: 18px;
+}
+
+.education-admin-alert li {
+    margin-bottom: 3px;
+    color: inherit;
+}
+
+
+/* ==========================================================
+   FORM
+   ========================================================== */
+
+.education-admin-student-create-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+
+/* ==========================================================
+   FORM CARD
+   ========================================================== */
+
+.education-admin-student-form-card {
+    width: 100%;
+
+    padding: 26px;
+
+    border: 1px solid #e8e3d8;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fbfaf6
+        );
+
+    box-shadow:
+        0 12px 35px rgba(52, 58, 43, 0.07);
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   CARD HEADER
+   ========================================================== */
+
+.education-admin-student-form-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 20px;
+
+    margin-bottom: 24px;
+
+    border-bottom: 1px solid #ece8df;
+}
+
+.education-admin-student-form-card-header > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* EYEBROW */
+
+.education-admin-student-form-card-header span {
+    margin-bottom: 5px;
+
+    color: #b88f42;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* CARD TITLE */
+
+.education-admin-student-form-card-header h3 {
+    margin: 0;
+
+    color: #30372a;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+/* ==========================================================
+   CARD ICON
+   ========================================================== */
+
+.education-admin-student-form-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    border-radius: 13px;
+
+    background: rgba(200, 169, 107, 0.13);
+
+    color: #b88f42;
+
+    font-size: 18px;
+}
+
+
+/* EDUCATION */
+
+.education-admin-student-form-card-icon.education {
+    background: rgba(91, 126, 91, 0.11);
+
+    color: #638364;
+}
+
+
+/* STATUS */
+
+.education-admin-student-form-card-icon.status {
+    background: rgba(91, 126, 91, 0.11);
+
+    color: #638364;
+}
+
+
+/* ==========================================================
+   FORM GRID
+   ========================================================== */
+
+.education-admin-student-form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* ==========================================================
+   FORM FIELD
+   ========================================================== */
+
+.education-admin-student-form-field {
+    min-width: 0;
+}
+
+.education-admin-student-form-field.full {
+    grid-column: 1 / -1;
+}
+
+
+/* ==========================================================
+   LABEL
+   ========================================================== */
+
+.education-admin-student-form-field label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #4d5545;
+
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.education-admin-student-form-field label span {
+    color: #d96d6d;
+
+    margin-right: 3px;
+}
+
+
+/* ==========================================================
+   INPUT WRAPPER
+   ========================================================== */
+
+.education-admin-student-input-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* INPUT ICON */
+
+.education-admin-student-input-wrapper > i {
+    position: absolute;
+
+    top: 50%;
+    right: 16px;
+
+    transform: translateY(-50%);
+
+    color: #899080;
+
+    font-size: 14px;
+
+    pointer-events: none;
+
+    transition:
+        color 0.25s ease;
+}
+
+
+/* INPUT */
+
+.education-admin-student-input-wrapper input {
+    width: 100%;
+
+    min-height: 52px;
+
+    padding:
+        0 45px 0 16px;
+
+    border:
+        1px solid #ddd9cf;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background:
+        #faf9f5;
+
+    color: #30372a;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* PLACEHOLDER */
+
+.education-admin-student-input-wrapper input::placeholder {
+    color: #a2a69d;
+}
+
+
+/* HOVER */
+
+.education-admin-student-input-wrapper input:hover {
+    border-color:
+        rgba(184, 143, 66, 0.38);
+
+    background:
+        #ffffff;
+}
+
+
+/* FOCUS */
+
+.education-admin-student-input-wrapper input:focus {
+    border-color:
+        rgba(184, 143, 66, 0.72);
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(184, 143, 66, 0.10);
+}
+
+
+/* ICON FOCUS */
+
+.education-admin-student-input-wrapper:focus-within > i {
+    color: #b88f42;
+}
+
+
+/* ==========================================================
+   SELECT
+   ========================================================== */
+
+.education-admin-student-input-wrapper select {
+    width: 100%;
+
+    min-height: 52px;
+
+    padding:
+        0 45px 0 16px;
+
+    border:
+        1px solid #ddd9cf;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background:
+        #faf9f5;
+
+    color: #30372a;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    appearance: none;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.education-admin-student-input-wrapper select:hover {
+    border-color:
+        rgba(184, 143, 66, 0.38);
+
+    background: #ffffff;
+}
+
+.education-admin-student-input-wrapper select:focus {
+    border-color:
+        rgba(184, 143, 66, 0.72);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(184, 143, 66, 0.10);
+}
+
+.education-admin-student-input-wrapper select option {
+    background: #ffffff;
+    color: #30372a;
+}
+
+
+/* ==========================================================
+   TEXTAREA
+   ========================================================== */
+
+.education-admin-student-textarea-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+.education-admin-student-textarea-wrapper > i {
+    position: absolute;
+
+    top: 18px;
+    right: 16px;
+
+    color: #899080;
+
+    font-size: 14px;
+
+    pointer-events: none;
+
+    transition:
+        color 0.25s ease;
+}
+
+.education-admin-student-textarea-wrapper textarea {
+    display: block;
+
+    width: 100%;
+
+    min-height: 145px;
+
+    padding:
+        15px 45px 15px 16px;
+
+    border:
+        1px solid #ddd9cf;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    resize: vertical;
+
+    background:
+        #faf9f5;
+
+    color: #30372a;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.education-admin-student-textarea-wrapper textarea::placeholder {
+    color: #a2a69d;
+}
+
+.education-admin-student-textarea-wrapper textarea:focus {
+    border-color:
+        rgba(184, 143, 66, 0.72);
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(184, 143, 66, 0.10);
+}
+
+.education-admin-student-textarea-wrapper:focus-within > i {
+    color: #b88f42;
+}
+
+
+/* ==========================================================
+   ERRORS
+   ========================================================== */
+
+.education-admin-student-form-error {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #c85f5f;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   STATUS TOGGLE
+   ========================================================== */
+
+.education-admin-student-status-option {
+    padding: 5px 0;
+}
+
+.education-admin-student-status-toggle {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    width: 100%;
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+.education-admin-student-status-toggle input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* TOGGLE */
+
+.education-admin-student-toggle-slider {
+    position: relative;
+
+    width: 54px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    border-radius: 999px;
+
+    background:
+        #d5d7d0;
+
+    border:
+        1px solid #c9ccc3;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* KNOB */
+
+.education-admin-student-toggle-slider::after {
+    content: "";
+
+    position: absolute;
+
+    top: 3px;
+    right: 3px;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 2px 6px rgba(52, 58, 43, 0.18);
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+/* CHECKED */
+
+.education-admin-student-status-toggle
+input:checked
++ .education-admin-student-toggle-slider {
+    background:
+        linear-gradient(
+            135deg,
+            #66845f,
+            #536d4e
+        );
+
+    border-color:
+        rgba(83, 109, 78, 0.45);
+
+    box-shadow:
+        0 0 0 3px rgba(95, 126, 88, 0.09);
+}
+
+
+/* CHECKED KNOB */
+
+.education-admin-student-status-toggle
+input:checked
++ .education-admin-student-toggle-slider::after {
+    transform:
+        translateX(-24px);
+}
+
+
+/* FOCUS */
+
+.education-admin-student-status-toggle
+input:focus-visible
++ .education-admin-student-toggle-slider {
+    box-shadow:
+        0 0 0 3px rgba(95, 126, 88, 0.18);
+}
+
+
+/* ==========================================================
+   TOGGLE CONTENT
+   ========================================================== */
+
+.education-admin-student-status-toggle-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.education-admin-student-status-toggle-content strong {
+    color: #343b2e;
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+.education-admin-student-status-toggle-content small {
+    color: #858b7e;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   FOOTER ACTIONS
+   ========================================================== */
+
+.education-admin-student-create-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: 12px;
+
+    padding:
+        22px 0 5px;
+}
+
+
+/* COMMON BUTTON */
+
+.education-admin-student-create-cancel,
+.education-admin-student-create-submit {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 48px;
+
+    padding:
+        0 22px;
+
+    border-radius: 12px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* CANCEL */
+
+.education-admin-student-create-cancel {
+    border:
+        1px solid #dedbd2;
+
+    background:
+        #f8f7f3;
+
+    color:
+        #69705f;
+}
+
+.education-admin-student-create-cancel:hover {
+    border-color:
+        #cbc6ba;
+
+    background:
+        #ffffff;
+
+    color:
+        #30372a;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* SUBMIT */
+
+.education-admin-student-create-submit {
+    border:
+        1px solid rgba(184, 143, 66, 0.48);
+
+    background:
+        linear-gradient(
+            135deg,
+            #d4ae61,
+            #b88e42
+        );
+
+    color:
+        #ffffff;
+
+    box-shadow:
+        0 10px 25px rgba(184, 143, 66, 0.16);
+}
+
+.education-admin-student-create-submit:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 14px 30px rgba(184, 143, 66, 0.24);
+
+    background:
+        linear-gradient(
+            135deg,
+            #dcb66c,
+            #c1994c
+        );
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+    .education-admin-student-create-header {
+        align-items: flex-start;
+    }
+
+    .education-admin-student-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-admin-student-form-field.full {
+        grid-column: auto;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .education-admin-student-create-header {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 18px;
+
+        margin-bottom: 22px;
+    }
+
+    .education-admin-student-create-heading h2 {
+        font-size: 25px;
+    }
+
+    .education-admin-student-create-heading p {
+        font-size: 13px;
+    }
+
+    .education-admin-student-form-card {
+        padding:
+            20px 17px;
+
+        border-radius: 16px;
+    }
+
+    .education-admin-student-form-card-header {
+        margin-bottom: 20px;
+
+        padding-bottom: 17px;
+    }
+
+    .education-admin-student-form-card-header h3 {
+        font-size: 16px;
+    }
+
+    .education-admin-student-form-grid {
+        gap: 18px;
+    }
+
+    .education-admin-student-create-footer {
+        flex-direction: column-reverse;
+
+        align-items: stretch;
+    }
+
+    .education-admin-student-create-cancel,
+    .education-admin-student-create-submit {
+        width: 100%;
+    }
+
+    .education-admin-student-status-toggle {
+        align-items: flex-start;
+    }
+}
+
+
+@media (max-width: 420px) {
+
+    .education-admin-student-create-heading h2 {
+        font-size: 22px;
+    }
+
+    .education-admin-student-form-card {
+        padding:
+            17px 14px;
+    }
+
+    .education-admin-student-form-card-header {
+        gap: 12px;
+    }
+
+    .education-admin-student-form-card-icon {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 11px;
+
+        font-size: 16px;
+    }
+
+    .education-admin-student-form-card-header h3 {
+        font-size: 15px;
+    }
+
+    .education-admin-student-form-field label {
+        font-size: 12px;
+    }
+
+    .education-admin-student-input-wrapper input,
+    .education-admin-student-input-wrapper select {
+        min-height: 48px;
+
+        font-size: 13px;
+    }
+
+    .education-admin-student-textarea-wrapper textarea {
+        font-size: 13px;
+    }
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .education-admin-student-back,
+    .education-admin-student-back i,
+    .education-admin-student-input-wrapper input,
+    .education-admin-student-input-wrapper select,
+    .education-admin-student-textarea-wrapper textarea,
+    .education-admin-student-toggle-slider,
+    .education-admin-student-toggle-slider::after,
+    .education-admin-student-create-cancel,
+    .education-admin-student-create-submit {
+        transition: none;
+    }
+}
+
+
+
+/* ==========================================================
+   EDUCATION ADMIN
+   STUDENT EDIT PAGE
+   LIGHT THEME
+   ========================================================== */
+
+.education-admin-student-edit-page {
+    width: 100%;
+    direction: rtl;
+    color: #263021;
+}
+
+
+/* ==========================================================
+   PAGE HEADER
+   ========================================================== */
+
+.education-admin-student-edit-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+}
+
+.education-admin-student-edit-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* ==========================================================
+   BACK BUTTON
+   ========================================================== */
+
+.education-admin-student-back {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+
+    color: #69705f;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.education-admin-student-back i {
+    font-size: 13px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.education-admin-student-back:hover {
+    color: #b88f42;
+}
+
+.education-admin-student-back:hover i {
+    transform: translateX(4px);
+}
+
+
+/* ==========================================================
+   HEADER LABEL
+   ========================================================== */
+
+.education-admin-page-header-label {
+    display: inline-flex;
+
+    margin-bottom: 7px;
+
+    color: #b88f42;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* ==========================================================
+   TITLE
+   ========================================================== */
+
+.education-admin-student-edit-heading h2 {
+    margin: 0;
+
+    color: #263021;
+
+    font-size: 30px;
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+
+/* ==========================================================
+   DESCRIPTION
+   ========================================================== */
+
+.education-admin-student-edit-heading p {
+    margin: 9px 0 0;
+
+    color: #777d70;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================================
+   STUDENT ID
+   ========================================================== */
+
+.education-admin-student-edit-id {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 105px;
+
+    padding: 14px 20px;
+
+    border:
+        1px solid rgba(184, 143, 66, 0.22);
+
+    border-radius: 15px;
+
+    background:
+        rgba(184, 143, 66, 0.07);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.education-admin-student-edit-id span {
+    margin-bottom: 4px;
+
+    color: #858b7e;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.education-admin-student-edit-id strong {
+    color: #b88f42;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+/* ==========================================================
+   ALERTS
+   ========================================================== */
+
+.education-admin-alert {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 13px;
+
+    width: 100%;
+
+    margin-bottom: 24px;
+    padding: 16px 18px;
+
+    border-radius: 14px;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    box-sizing: border-box;
+}
+
+.education-admin-alert > i {
+    flex-shrink: 0;
+
+    margin-top: 3px;
+
+    font-size: 17px;
+}
+
+
+/* SUCCESS */
+
+.education-admin-alert-success {
+    background:
+        rgba(84, 137, 93, 0.09);
+
+    border:
+        1px solid rgba(84, 137, 93, 0.22);
+
+    color:
+        #4f7958;
+}
+
+
+/* ERROR */
+
+.education-admin-alert-error {
+    background:
+        rgba(194, 75, 75, 0.08);
+
+    border:
+        1px solid rgba(194, 75, 75, 0.20);
+
+    color:
+        #b34e4e;
+}
+
+
+/* STRONG */
+
+.education-admin-alert strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: inherit;
+
+    font-weight: 800;
+}
+
+
+/* LIST */
+
+.education-admin-alert ul {
+    margin: 0;
+
+    padding-right: 18px;
+}
+
+.education-admin-alert li {
+    margin-bottom: 3px;
+
+    color: inherit;
+}
+
+
+/* ==========================================================
+   FORM
+   ========================================================== */
+
+.education-admin-student-edit-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+
+/* ==========================================================
+   FORM CARD
+   ========================================================== */
+
+.education-admin-student-form-card {
+    width: 100%;
+
+    padding: 26px;
+
+    border:
+        1px solid #e8e3d8;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #fbfaf6
+        );
+
+    box-shadow:
+        0 12px 35px rgba(52, 58, 43, 0.07);
+
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   CARD HEADER
+   ========================================================== */
+
+.education-admin-student-form-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 20px;
+
+    margin-bottom: 24px;
+
+    border-bottom:
+        1px solid #ece8df;
+}
+
+.education-admin-student-form-card-header > div:first-child {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+/* EYEBROW */
+
+.education-admin-student-form-card-header span {
+    margin-bottom: 5px;
+
+    color: #b88f42;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* TITLE */
+
+.education-admin-student-form-card-header h3 {
+    margin: 0;
+
+    color: #30372a;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+/* ==========================================================
+   CARD ICON
+   ========================================================== */
+
+.education-admin-student-form-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    border-radius: 13px;
+
+    background:
+        rgba(200, 169, 107, 0.13);
+
+    color:
+        #b88f42;
+
+    font-size: 18px;
+}
+
+
+/* EDUCATION */
+
+.education-admin-student-form-card-icon.education {
+    background:
+        rgba(91, 126, 91, 0.11);
+
+    color:
+        #638364;
+}
+
+
+/* STATUS */
+
+.education-admin-student-form-card-icon.status {
+    background:
+        rgba(91, 126, 91, 0.11);
+
+    color:
+        #638364;
+}
+
+
+/* ==========================================================
+   FORM GRID
+   ========================================================== */
+
+.education-admin-student-form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* ==========================================================
+   FORM FIELD
+   ========================================================== */
+
+.education-admin-student-form-field {
+    min-width: 0;
+}
+
+.education-admin-student-form-field.full {
+    grid-column: 1 / -1;
+}
+
+
+/* ==========================================================
+   LABEL
+   ========================================================== */
+
+.education-admin-student-form-field label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #4d5545;
+
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.education-admin-student-form-field label span {
+    color: #d96d6d;
+
+    margin-right: 3px;
+}
+
+
+/* ==========================================================
+   INPUT WRAPPER
+   ========================================================== */
+
+.education-admin-student-input-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* ICON */
+
+.education-admin-student-input-wrapper > i {
+    position: absolute;
+
+    top: 50%;
+    right: 16px;
+
+    transform: translateY(-50%);
+
+    color: #899080;
+
+    font-size: 14px;
+
+    pointer-events: none;
+
+    transition:
+        color 0.25s ease;
+}
+
+
+/* INPUT */
+
+.education-admin-student-input-wrapper input {
+    width: 100%;
+
+    min-height: 52px;
+
+    padding:
+        0 45px 0 16px;
+
+    border:
+        1px solid #ddd9cf;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background:
+        #faf9f5;
+
+    color:
+        #30372a;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* PLACEHOLDER */
+
+.education-admin-student-input-wrapper input::placeholder {
+    color: #a2a69d;
+}
+
+
+/* HOVER */
+
+.education-admin-student-input-wrapper input:hover {
+    border-color:
+        rgba(184, 143, 66, 0.38);
+
+    background:
+        #ffffff;
+}
+
+
+/* FOCUS */
+
+.education-admin-student-input-wrapper input:focus {
+    border-color:
+        rgba(184, 143, 66, 0.72);
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(184, 143, 66, 0.10);
+}
+
+
+/* ICON FOCUS */
+
+.education-admin-student-input-wrapper:focus-within > i {
+    color: #b88f42;
+}
+
+
+/* ==========================================================
+   SELECT
+   ========================================================== */
+
+.education-admin-student-input-wrapper select {
+    width: 100%;
+
+    min-height: 52px;
+
+    padding:
+        0 45px 0 16px;
+
+    border:
+        1px solid #ddd9cf;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background:
+        #faf9f5;
+
+    color:
+        #30372a;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    appearance: none;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.education-admin-student-input-wrapper select:hover {
+    border-color:
+        rgba(184, 143, 66, 0.38);
+
+    background:
+        #ffffff;
+}
+
+.education-admin-student-input-wrapper select:focus {
+    border-color:
+        rgba(184, 143, 66, 0.72);
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(184, 143, 66, 0.10);
+}
+
+.education-admin-student-input-wrapper select option {
+    background:
+        #ffffff;
+
+    color:
+        #30372a;
+}
+
+
+/* ==========================================================
+   TEXTAREA
+   ========================================================== */
+
+.education-admin-student-textarea-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+.education-admin-student-textarea-wrapper > i {
+    position: absolute;
+
+    top: 18px;
+    right: 16px;
+
+    color: #899080;
+
+    font-size: 14px;
+
+    pointer-events: none;
+
+    transition:
+        color 0.25s ease;
+}
+
+.education-admin-student-textarea-wrapper textarea {
+    display: block;
+
+    width: 100%;
+
+    min-height: 145px;
+
+    padding:
+        15px 45px 15px 16px;
+
+    border:
+        1px solid #ddd9cf;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    resize: vertical;
+
+    background:
+        #faf9f5;
+
+    color:
+        #30372a;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.education-admin-student-textarea-wrapper textarea::placeholder {
+    color: #a2a69d;
+}
+
+.education-admin-student-textarea-wrapper textarea:focus {
+    border-color:
+        rgba(184, 143, 66, 0.72);
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(184, 143, 66, 0.10);
+}
+
+.education-admin-student-textarea-wrapper:focus-within > i {
+    color: #b88f42;
+}
+
+
+/* ==========================================================
+   ERRORS
+   ========================================================== */
+
+.education-admin-student-form-error {
+    display: block;
+
+    margin-top: 7px;
+
+    color:
+        #c85f5f;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   STATUS TOGGLE
+   ========================================================== */
+
+.education-admin-student-status-option {
+    padding: 5px 0;
+}
+
+.education-admin-student-status-toggle {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    width: 100%;
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+.education-admin-student-status-toggle input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* SLIDER */
+
+.education-admin-student-toggle-slider {
+    position: relative;
+
+    width: 54px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    border-radius: 999px;
+
+    background:
+        #d5d7d0;
+
+    border:
+        1px solid #c9ccc3;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* KNOB */
+
+.education-admin-student-toggle-slider::after {
+    content: "";
+
+    position: absolute;
+
+    top: 3px;
+    right: 3px;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 2px 6px rgba(52, 58, 43, 0.18);
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+/* CHECKED */
+
+.education-admin-student-status-toggle
+input:checked
++ .education-admin-student-toggle-slider {
+    background:
+        linear-gradient(
+            135deg,
+            #66845f,
+            #536d4e
+        );
+
+    border-color:
+        rgba(83, 109, 78, 0.45);
+
+    box-shadow:
+        0 0 0 3px rgba(95, 126, 88, 0.09);
+}
+
+
+/* CHECKED KNOB */
+
+.education-admin-student-status-toggle
+input:checked
++ .education-admin-student-toggle-slider::after {
+    transform:
+        translateX(-24px);
+}
+
+
+/* FOCUS */
+
+.education-admin-student-status-toggle
+input:focus-visible
++ .education-admin-student-toggle-slider {
+    box-shadow:
+        0 0 0 3px rgba(95, 126, 88, 0.18);
+}
+
+
+/* ==========================================================
+   TOGGLE CONTENT
+   ========================================================== */
+
+.education-admin-student-status-toggle-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.education-admin-student-status-toggle-content strong {
+    color:
+        #343b2e;
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+.education-admin-student-status-toggle-content small {
+    color:
+        #858b7e;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   FOOTER ACTIONS
+   ========================================================== */
+
+.education-admin-student-edit-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    gap: 12px;
+
+    padding:
+        4px 0 10px;
+}
+
+
+/* COMMON BUTTON */
+
+.education-admin-student-edit-cancel,
+.education-admin-student-edit-submit {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 48px;
+
+    padding:
+        0 23px;
+
+    border-radius: 12px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        color 0.25s ease;
+}
+
+
+/* CANCEL */
+
+.education-admin-student-edit-cancel {
+    border:
+        1px solid #dedbd2;
+
+    background:
+        #f8f7f3;
+
+    color:
+        #69705f;
+}
+
+.education-admin-student-edit-cancel:hover {
+    border-color:
+        #cbc6ba;
+
+    background:
+        #ffffff;
+
+    color:
+        #30372a;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* SUBMIT */
+
+.education-admin-student-edit-submit {
+    border:
+        1px solid rgba(184, 143, 66, 0.48);
+
+    background:
+        linear-gradient(
+            135deg,
+            #d4ae61,
+            #b88e42
+        );
+
+    color:
+        #ffffff;
+
+    box-shadow:
+        0 10px 25px rgba(184, 143, 66, 0.16);
+}
+
+.education-admin-student-edit-submit:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 14px 30px rgba(184, 143, 66, 0.24);
+
+    background:
+        linear-gradient(
+            135deg,
+            #dcb66c,
+            #c1994c
+        );
+}
+
+
+/* ==========================================================
+   DISABLED
+   ========================================================== */
+
+.education-admin-student-edit-submit:disabled,
+.education-admin-student-edit-cancel:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+    .education-admin-student-edit-header {
+        align-items: flex-start;
+    }
+
+    .education-admin-student-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-admin-student-form-field.full {
+        grid-column: auto;
+    }
+}
+
+
+/* ==========================================================
+   TABLET / MOBILE
+   ========================================================== */
+
+@media (max-width: 650px) {
+
+    .education-admin-student-edit-header {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 18px;
+
+        margin-bottom: 22px;
+    }
+
+    .education-admin-student-edit-heading h2 {
+        font-size: 25px;
+    }
+
+    .education-admin-student-edit-heading p {
+        font-size: 13px;
+    }
+
+    .education-admin-student-edit-id {
+        align-self: flex-start;
+    }
+
+    .education-admin-student-form-card {
+        padding:
+            20px 17px;
+
+        border-radius: 16px;
+    }
+
+    .education-admin-student-form-card-header {
+        margin-bottom: 20px;
+
+        padding-bottom: 17px;
+    }
+
+    .education-admin-student-form-card-header h3 {
+        font-size: 16px;
+    }
+
+    .education-admin-student-form-grid {
+        gap: 18px;
+    }
+
+    .education-admin-student-edit-footer {
+        flex-direction: column-reverse;
+
+        align-items: stretch;
+    }
+
+    .education-admin-student-edit-cancel,
+    .education-admin-student-edit-submit {
+        width: 100%;
+    }
+
+    .education-admin-student-status-toggle {
+        align-items: flex-start;
+    }
+}
+
+
+/* ==========================================================
+   VERY SMALL SCREENS
+   ========================================================== */
+
+@media (max-width: 420px) {
+
+    .education-admin-student-edit-heading h2 {
+        font-size: 22px;
+    }
+
+    .education-admin-student-form-card {
+        padding:
+            17px 14px;
+    }
+
+    .education-admin-student-form-card-header {
+        gap: 12px;
+    }
+
+    .education-admin-student-form-card-icon {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 11px;
+
+        font-size: 16px;
+    }
+
+    .education-admin-student-form-card-header h3 {
+        font-size: 15px;
+    }
+
+    .education-admin-student-form-field label {
+        font-size: 12px;
+    }
+
+    .education-admin-student-input-wrapper input,
+    .education-admin-student-input-wrapper select {
+        min-height: 48px;
+
+        font-size: 13px;
+    }
+
+    .education-admin-student-textarea-wrapper textarea {
+        font-size: 13px;
+    }
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .education-admin-student-back,
+    .education-admin-student-back i,
+    .education-admin-student-input-wrapper input,
+    .education-admin-student-input-wrapper select,
+    .education-admin-student-textarea-wrapper textarea,
+    .education-admin-student-toggle-slider,
+    .education-admin-student-toggle-slider::after,
+    .education-admin-student-edit-cancel,
+    .education-admin-student-edit-submit {
+        transition: none;
+    }
+}

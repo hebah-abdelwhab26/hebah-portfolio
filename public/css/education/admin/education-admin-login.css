@@ -1,0 +1,816 @@
+/* ==========================================================
+   EDUCATION ADMIN LOGIN
+========================================================== */
+
+:root {
+
+    --education-primary: #c9a86a;
+    --education-primary-light: #e4c98d;
+
+    --education-dark: #071c19;
+    --education-dark-soft: #0c2824;
+
+    --education-card: rgba(11, 39, 35, 0.92);
+
+    --education-border: rgba(201, 168, 106, 0.22);
+
+    --education-text: #ffffff;
+    --education-muted: #aebfbb;
+
+    --education-danger: #ef8b8b;
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    min-height: 100%;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family: 'Cairo', sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #041412,
+            #09231f,
+            #071c19
+        );
+
+    color: var(--education-text);
+
+}
+
+
+button,
+input {
+
+    font-family: inherit;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+/* ==========================================================
+   BACKGROUND
+========================================================== */
+
+.education-admin-login-page {
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    position: relative;
+
+}
+
+
+.education-admin-login-background {
+
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+}
+
+
+.education-admin-glow {
+
+    position: absolute;
+
+    width: 420px;
+
+    height: 420px;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    opacity: .15;
+
+}
+
+
+.glow-one {
+
+    top: -160px;
+
+    right: -100px;
+
+    background: var(--education-primary);
+
+}
+
+
+.glow-two {
+
+    bottom: -180px;
+
+    left: -100px;
+
+    background: #4c8c7c;
+
+}
+
+
+.education-admin-pattern {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .045;
+
+    background-image:
+
+        linear-gradient(
+            30deg,
+            rgba(255,255,255,.3) 12%,
+            transparent 12.5%,
+            transparent 87%,
+            rgba(255,255,255,.3) 87.5%,
+            rgba(255,255,255,.3)
+        );
+
+    background-size: 55px 95px;
+
+}
+
+
+/* ==========================================================
+   WRAPPER
+========================================================== */
+
+.education-admin-login-wrapper {
+
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 20px;
+
+}
+
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.education-admin-login-card {
+
+    width: 100%;
+
+    max-width: 470px;
+
+    padding: 42px;
+
+    border: 1px solid var(--education-border);
+
+    border-radius: 28px;
+
+    background: var(--education-card);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.45),
+        inset 0 1px 0 rgba(255,255,255,.05);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+}
+
+
+/* ==========================================================
+   BRAND
+========================================================== */
+
+.education-admin-login-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.education-admin-login-logo {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    color: var(--education-primary);
+
+    border: 1px solid var(--education-border);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(201,168,106,.18),
+            rgba(201,168,106,.04)
+        );
+
+    font-size: 25px;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.2);
+
+}
+
+
+.education-admin-login-brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+}
+
+
+.education-admin-brand-name {
+
+    font-family: 'Amiri', serif;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    color: var(--education-primary-light);
+
+}
+
+
+.education-admin-brand-subtitle {
+
+    color: var(--education-muted);
+
+    font-size: 11px;
+
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.education-admin-login-header {
+
+    text-align: center;
+
+    margin-bottom: 28px;
+
+}
+
+
+.education-admin-login-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 13px;
+
+    border-radius: 999px;
+
+    border: 1px solid var(--education-border);
+
+    background: rgba(201,168,106,.08);
+
+    color: var(--education-primary-light);
+
+    font-size: 11px;
+
+    margin-bottom: 16px;
+
+}
+
+
+.education-admin-login-header h1 {
+
+    margin: 0 0 8px;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+}
+
+
+.education-admin-login-header p {
+
+    margin: 0;
+
+    color: var(--education-muted);
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+}
+
+
+/* ==========================================================
+   ERRORS
+========================================================== */
+
+.education-admin-login-errors {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 13px 15px;
+
+    margin-bottom: 22px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(239,139,139,.2);
+
+    background: rgba(239,139,139,.08);
+
+    color: var(--education-danger);
+
+}
+
+
+.education-admin-error-icon {
+
+    margin-top: 2px;
+
+}
+
+
+.education-admin-error-content p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================================
+   FORM
+========================================================== */
+
+.education-admin-login-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 21px;
+
+}
+
+
+.education-admin-form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.education-admin-form-group label {
+
+    font-size: 12px;
+
+    color: #dce5e2;
+
+    font-weight: 600;
+
+}
+
+
+.education-admin-input-wrapper {
+
+    position: relative;
+
+}
+
+
+.education-admin-input-wrapper > i:first-child {
+
+    position: absolute;
+
+    right: 16px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--education-primary);
+
+    font-size: 14px;
+
+    pointer-events: none;
+
+}
+
+
+.education-admin-input-wrapper input {
+
+    width: 100%;
+
+    height: 53px;
+
+    padding: 0 46px 0 46px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(255,255,255,.09);
+
+    outline: none;
+
+    background: rgba(255,255,255,.045);
+
+    color: #fff;
+
+    font-size: 13px;
+
+    transition: .25s ease;
+
+}
+
+
+.education-admin-input-wrapper input::placeholder {
+
+    color: #718580;
+
+}
+
+
+.education-admin-input-wrapper input:focus {
+
+    border-color: rgba(201,168,106,.55);
+
+    background: rgba(255,255,255,.065);
+
+    box-shadow:
+        0 0 0 4px rgba(201,168,106,.07);
+
+}
+
+
+.education-admin-password-toggle {
+
+    position: absolute;
+
+    left: 14px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #849792;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+
+}
+
+
+.education-admin-password-toggle:hover {
+
+    color: var(--education-primary-light);
+
+}
+
+
+/* ==========================================================
+   OPTIONS
+========================================================== */
+
+.education-admin-login-options {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+}
+
+
+.education-admin-remember {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: var(--education-muted);
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+}
+
+
+.education-admin-remember input {
+
+    display: none;
+
+}
+
+
+.education-admin-custom-checkbox {
+
+    width: 18px;
+
+    height: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,.16);
+
+    border-radius: 5px;
+
+    background: rgba(255,255,255,.04);
+
+    transition: .2s ease;
+
+}
+
+
+.education-admin-custom-checkbox i {
+
+    opacity: 0;
+
+    font-size: 10px;
+
+    color: #071c19;
+
+}
+
+
+.education-admin-remember input:checked
++ .education-admin-custom-checkbox {
+
+    background: var(--education-primary);
+
+    border-color: var(--education-primary);
+
+}
+
+
+.education-admin-remember input:checked
++ .education-admin-custom-checkbox i {
+
+    opacity: 1;
+
+}
+
+
+/* ==========================================================
+   SUBMIT
+========================================================== */
+
+.education-admin-login-submit {
+
+    width: 100%;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    border: 0;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--education-primary-light),
+            var(--education-primary)
+        );
+
+    color: #10201c;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 30px rgba(201,168,106,.16);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.education-admin-login-submit:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 20px 38px rgba(201,168,106,.25);
+
+}
+
+
+.education-admin-login-submit i {
+
+    font-size: 13px;
+
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.education-admin-login-footer {
+
+    margin-top: 25px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(255,255,255,.07);
+
+    text-align: center;
+
+}
+
+
+.education-admin-login-footer a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--education-muted);
+
+    font-size: 11px;
+
+    transition: .2s ease;
+
+}
+
+
+.education-admin-login-footer a:hover {
+
+    color: var(--education-primary-light);
+
+}
+
+
+/* ==========================================================
+   COPYRIGHT
+========================================================== */
+
+.education-admin-login-copyright {
+
+    margin: 20px 0 0;
+
+    color: #60736e;
+
+    font-size: 10px;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 600px) {
+
+    .education-admin-login-wrapper {
+
+        padding: 25px 15px;
+
+    }
+
+
+    .education-admin-login-card {
+
+        padding: 30px 22px;
+
+        border-radius: 23px;
+
+    }
+
+
+    .education-admin-login-brand {
+
+        margin-bottom: 28px;
+
+    }
+
+
+    .education-admin-login-header h1 {
+
+        font-size: 25px;
+
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .education-admin-login-card {
+
+        padding: 26px 18px;
+
+    }
+
+}

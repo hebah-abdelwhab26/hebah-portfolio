@@ -1,0 +1,423 @@
+/*==================================================
+                LEARNING SECTION
+==================================================*/
+
+.academy-learning{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:var(--surface-base);
+
+}
+
+.academy-learning::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+
+            circle at top left,
+
+            rgba(212,175,55,.05),
+
+            transparent 40%
+
+        ),
+
+        radial-gradient(
+
+            circle at bottom right,
+
+            rgba(31,111,92,.05),
+
+            transparent 45%
+
+        );
+
+    pointer-events:none;
+
+}
+
+.academy-learning .container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*==================================================
+                HEADER
+==================================================*/
+
+.academy-learning__header{
+
+    max-width:760px;
+
+    margin:0 auto 90px;
+
+    text-align:center;
+
+}
+
+.academy-learning__header .badge{
+
+    margin-bottom:24px;
+
+}
+
+.academy-learning__header h2{
+
+    margin-bottom:24px;
+
+}
+
+.academy-learning__header h2 span{
+
+    color:var(--primary);
+
+}
+
+.academy-learning__header p{
+
+    color:var(--body-color);
+
+    line-height:2;
+
+}
+
+/*==================================================
+                TIMELINE
+==================================================*/
+
+.learning-timeline{
+
+    position:relative;
+
+    display:grid;
+
+    gap:35px;
+
+}
+
+.learning-timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    bottom:0;
+
+    right:40px;
+
+    width:2px;
+
+    background:linear-gradient(
+
+        to bottom,
+
+        var(--primary),
+
+        rgba(212,175,55,.15)
+
+    );
+
+}
+/*==================================================
+                TIMELINE ITEM
+==================================================*/
+
+.learning-step{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:90px 1fr;
+
+    gap:30px;
+
+    align-items:flex-start;
+
+}
+
+.learning-step:not(:last-child){
+
+    margin-bottom:10px;
+
+}
+
+/*==================================================
+                STEP NUMBER
+==================================================*/
+
+.learning-step__number{
+
+    position:relative;
+
+    z-index:2;
+
+    width:80px;
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-light)
+    );
+
+    color:#111;
+
+    font-size:1.4rem;
+
+    font-weight:800;
+
+    box-shadow:var(--shadow-gold);
+
+}
+
+/*==================================================
+                STEP CARD
+==================================================*/
+
+.learning-step__card{
+
+    position:relative;
+
+    padding:32px;
+
+    border-radius:var(--radius-xl);
+
+    background:var(--card-bg);
+
+    border:1px solid var(--card-border);
+
+    backdrop-filter:blur(var(--glass-card-blur));
+
+    -webkit-backdrop-filter:blur(var(--glass-card-blur));
+
+    box-shadow:var(--card-shadow);
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+
+}
+
+.learning-step__card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--card-border-hover);
+
+    box-shadow:var(--card-shadow-hover);
+
+}
+
+.learning-step__icon{
+
+    margin-bottom:22px;
+
+}
+
+.learning-step__icon .icon-box{
+
+    width:70px;
+
+    height:70px;
+
+    font-size:1.5rem;
+
+}
+
+.learning-step__card h3{
+
+    margin-bottom:16px;
+
+    color:var(--heading-color);
+
+    font-size:1.35rem;
+
+}
+
+.learning-step__card p{
+
+    color:var(--muted-color);
+
+    line-height:1.9;
+
+}
+/*==================================================
+                STEP FEATURES
+==================================================*/
+
+.learning-step__features{
+
+    display:grid;
+
+    gap:14px;
+
+    margin-top:28px;
+
+}
+
+.learning-feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    color:var(--body-color);
+
+    font-size:.96rem;
+
+    line-height:1.8;
+
+}
+
+.learning-feature i{
+
+    color:var(--primary);
+
+    font-size:.95rem;
+
+    flex-shrink:0;
+
+}
+
+/*==================================================
+                STEP HOVER
+==================================================*/
+
+.learning-step:hover .learning-step__number{
+
+    transform:scale(1.08);
+
+    box-shadow:
+
+        0 0 40px rgba(212,175,55,.35);
+
+}
+
+.learning-step__number{
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+.learning-step:hover .icon-box{
+
+    transform:rotate(-8deg);
+
+}
+
+.learning-step .icon-box{
+
+    transition:transform .4s ease;
+
+}
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+
+    .learning-timeline::before{
+
+        right:35px;
+
+    }
+
+    .learning-step{
+
+        grid-template-columns:70px 1fr;
+
+        gap:24px;
+
+    }
+
+    .learning-step__number{
+
+        width:65px;
+
+        height:65px;
+
+        font-size:1.15rem;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .learning-timeline::before{
+
+        display:none;
+
+    }
+
+    .learning-step{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .learning-step__number{
+
+        margin:auto;
+
+    }
+
+    .learning-step__icon{
+
+        display:flex;
+
+        justify-content:center;
+
+    }
+
+    .learning-step__features{
+
+        text-align:right;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .learning-step__card{
+
+        padding:24px;
+
+    }
+
+}

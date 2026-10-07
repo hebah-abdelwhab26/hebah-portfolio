@@ -1,0 +1,1412 @@
+/*==================================================*
+* UI / UX SECTION
+*==================================================*/
+
+.uiux-section{
+
+    position:relative;
+
+    padding:50px 0;
+
+    overflow:hidden;
+
+}
+
+.uiux-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+            circle at top right,
+            rgba(37,99,235,.10),
+            transparent 42%
+        ),
+
+        radial-gradient(
+            circle at bottom left,
+            rgba(212,160,23,.08),
+            transparent 45%
+        );
+
+    pointer-events:none;
+
+}
+
+
+/*==================================================*
+* CONTAINER
+*==================================================*/
+
+.uiux-section .container{
+
+    width:min(1320px,92%);
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/*==================================================*
+* HEADER
+*==================================================*/
+
+.uiux-header{
+
+    text-align:center;
+
+    max-width:760px;
+
+    margin:0 auto 90px;
+
+}
+
+.uiux-header .section-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 24px;
+
+    margin-bottom:28px;
+
+    border-radius:50px;
+
+    background:rgba(37,99,235,.10);
+
+    border:1px solid rgba(37,99,235,.25);
+
+    color:#7DB7FF;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.uiux-header h2{
+
+    font-size:56px;
+
+    font-weight:900;
+
+    color:#fff;
+
+    line-height:1.15;
+
+    margin-bottom:24px;
+
+}
+
+.uiux-header h2 span{
+
+    display:block;
+
+    margin-top:8px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        #2563EB,
+
+        #60A5FA,
+
+        #D4A017
+
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.uiux-header p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#CBD5E1;
+
+}
+
+
+/*==================================================*
+* CATEGORY TITLE
+*==================================================*/
+
+.design-category{
+
+    margin-bottom:40px;
+
+}
+
+.design-category h3{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    font-size:28px;
+
+    font-weight:800;
+
+    color:#fff;
+
+}
+
+.design-category h3 i{
+
+    color:#60A5FA;
+
+    font-size:28px;
+
+}
+
+
+/*==================================================*
+* WEB DESIGN GRID
+*==================================================*/
+
+.design-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+    margin-bottom:90px;
+
+}
+
+
+/*==================================================*
+* DESIGN CARD
+*==================================================*/
+
+.design-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:
+
+        transform .4s ease,
+
+        box-shadow .4s ease,
+
+        border-color .4s ease;
+
+}
+
+.design-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:rgba(37,99,235,.35);
+
+    box-shadow:
+
+        0 25px 55px rgba(0,0,0,.30),
+
+        0 0 35px rgba(37,99,235,.18);
+
+}
+
+
+/*==================================================*
+* IMAGE
+*==================================================*/
+
+.design-image{
+
+    position:relative;
+
+    width:100%;
+
+    height:340px;
+
+    overflow:hidden;
+
+    background:#111827;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.design-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+    transition:.5s;
+
+    display:block;
+
+}
+
+.design-card:hover .design-image img{
+
+    transform:scale(1.08);
+
+}
+
+
+/*==================================================*
+* IMAGE OVERLAY
+*==================================================*/
+
+.design-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(8,17,31,.72);
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.design-card:hover .design-overlay{
+
+    opacity:1;
+
+}
+
+.preview-btn{
+
+    width:68px;
+
+    height:68px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:24px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    transition:.35s;
+
+}
+
+.preview-btn:hover{
+
+    background:#2563EB;
+
+    transform:scale(1.08);
+
+}
+
+
+/*==================================================*
+* CARD CONTENT
+*==================================================*/
+
+.design-content{
+
+    border-radius:25px;
+
+    padding:26px;
+
+    background-color:#161c28c2;
+
+}
+
+.design-content h4{
+
+    font-size:24px;
+
+    font-weight:800;
+
+    color:#fff;
+
+    margin-bottom:14px;
+
+    transition:.3s;
+
+}
+
+.design-card:hover h4{
+
+    color:#60A5FA;
+
+}
+
+.design-content p{
+
+    color:#CBD5E1;
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    margin-bottom:22px;
+
+}
+
+
+/*==================================================*
+* TAGS
+*==================================================*/
+
+.design-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    padding-bottom:15px;
+
+}
+
+.design-tags span{
+
+    padding:8px 15px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#E2E8F0;
+
+    font-size:13px;
+
+    transition:.3s;
+
+}
+
+.design-tags span:hover{
+
+    background:#2563EB;
+
+    border-color:#2563EB;
+
+    transform:translateY(-3px);
+
+}
+
+
+/*==================================================*
+* MOBILE GRID
+*==================================================*/
+
+.mobile-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(
+        auto-fit,
+        minmax(280px,1fr)
+    );
+
+    gap:35px;
+
+    justify-items:center;
+
+    margin-top:30px;
+
+}
+
+
+/*==================================================*
+* PHONE CARD
+*==================================================*/
+
+.phone-card{
+
+    width:300px;
+
+    transition:
+
+        opacity .35s,
+
+        transform .45s,
+
+        scale .35s;
+
+}
+
+.phone-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+/*==================================================*
+* PHONE FRAME
+*==================================================*/
+
+.phone-frame{
+
+    position:relative;
+
+    width:280px;
+
+    height:560px;
+
+    margin:auto;
+
+    padding:14px;
+
+    border-radius:42px;
+
+    background:#0E1726;
+
+    border:2px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 25px 60px rgba(0,0,0,.45),
+
+        inset 0 0 0 2px rgba(255,255,255,.04);
+
+}
+
+
+/*==================================================*
+* PHONE NOTCH
+*==================================================*/
+
+.phone-notch{
+
+    position:absolute;
+
+    top:14px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:120px;
+
+    height:24px;
+
+    border-radius:0 0 18px 18px;
+
+    background:#05070C;
+
+    z-index:10;
+
+}
+
+
+/*==================================================*
+* PHONE SCREEN
+*==================================================*/
+
+.phone-screen{
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    background:#fff;
+
+}
+
+.phone-screen img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .7s ease;
+
+}
+
+.phone-card:hover .phone-screen img{
+
+    transform:scale(1.05);
+
+}
+
+
+/*==================================================*
+* MOBILE OVERLAY
+*==================================================*/
+
+.phone-screen .design-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(8,17,31,.72);
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.phone-card:hover .design-overlay{
+
+    opacity:1;
+
+}
+
+
+/*==================================================*
+* PHONE CONTENT
+*==================================================*/
+
+.phone-card .design-content{
+
+    padding:24px 10px 0;
+
+    text-align:center;
+
+}
+
+.phone-card h4{
+
+    color:#fff;
+
+    font-size:23px;
+
+    font-weight:800;
+
+    margin-bottom:14px;
+
+    transition:.3s;
+
+}
+
+.phone-card:hover h4{
+
+    color:#60A5FA;
+
+}
+
+.phone-card p{
+
+    color:#CBD5E1;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+    margin-bottom:20px;
+
+}
+
+.phone-card .design-tags{
+
+    justify-content:center;
+
+}
+
+
+/*==================================================*
+* PROFESSIONAL LIGHTBOX
+*==================================================*/
+
+.uiux-lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(4,8,18,.95);
+
+    backdrop-filter:blur(20px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s ease;
+
+    z-index:9999;
+
+}
+
+.uiux-lightbox.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.lightbox-wrapper{
+
+    width:min(1200px,92%);
+
+    text-align:center;
+
+}
+
+.lightbox-image{
+
+    width:100%;
+
+    max-height:75vh;
+
+    object-fit:contain;
+
+    border-radius:20px;
+
+    box-shadow:
+
+        0 25px 80px rgba(0,0,0,.45);
+
+    transition:
+
+        opacity .35s,
+
+        transform .35s;
+
+}
+
+
+/*==================================================*
+* INFO
+*==================================================*/
+
+.lightbox-info{
+
+    margin-top:30px;
+
+}
+
+.lightbox-info h3{
+
+    font-size:32px;
+
+    color:#fff;
+
+    font-weight:800;
+
+    margin-bottom:12px;
+
+}
+
+.lightbox-meta{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+    color:#CBD5E1;
+
+    font-size:16px;
+
+}
+
+.lightbox-meta .separator{
+
+    color:#2563EB;
+
+    font-weight:bold;
+
+}
+
+
+/*==================================================*
+* CLOSE BUTTON
+*==================================================*/
+
+.lightbox-close{
+
+    position:absolute;
+
+    top:35px;
+
+    right:35px;
+
+    width:58px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:24px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    transition:.3s;
+
+}
+
+.lightbox-close:hover{
+
+    background:#2563EB;
+
+    transform:rotate(90deg);
+
+}
+
+
+/*==================================================*
+* ARROWS
+*==================================================*/
+
+.lightbox-arrow{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:62px;
+
+    height:62px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:24px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    transition:.3s;
+
+}
+
+.lightbox-prev{
+
+    left:35px;
+
+}
+
+.lightbox-next{
+
+    right:35px;
+
+}
+
+.lightbox-arrow:hover{
+
+    background:#2563EB;
+
+    transform:translateY(-50%) scale(1.08);
+
+}
+
+
+/*==================================================*
+* FILTERS
+*==================================================*/
+
+.uiux-filters{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:16px;
+
+    margin:0 auto 70px;
+
+}
+
+.filter-btn{
+
+    padding:13px 28px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#E2E8F0;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    transition:.35s;
+
+    backdrop-filter:blur(20px);
+
+}
+
+.filter-btn:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#2563EB;
+
+    color:#fff;
+
+}
+
+.filter-btn.active{
+
+    color:#fff;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #2563EB,
+
+        #3B82F6
+
+    );
+
+    border-color:#2563EB;
+
+    box-shadow:
+
+        0 12px 30px rgba(37,99,235,.35);
+
+}
+
+
+/*==================================================*
+* FILTER ANIMATION
+*==================================================*/
+
+.design-card,
+.phone-card{
+
+    transition:
+
+        opacity .35s,
+
+        transform .35s,
+
+        scale .35s;
+
+}
+
+.design-card.hide,
+.phone-card.hide{
+
+    opacity:0;
+
+    transform:scale(.9);
+
+    pointer-events:none;
+
+    position:absolute;
+
+}
+
+.design-card.show,
+.phone-card.show{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+
+/*==================================================*
+* FIGMA LINK
+*==================================================*/
+
+.figma-link,
+.figma-icon{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    background:#1e1e1e;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+.figma-link i,
+.figma-icon i{
+
+    font-size:18px;
+
+    color:#f24e1e;
+
+}
+
+.figma-link:hover,
+.figma-icon:hover{
+
+    transform:translateY(-3px);
+
+    background:#f24e1e;
+
+    color:white;
+
+}
+
+.figma-link:hover i,
+.figma-icon:hover i{
+
+    color:white;
+
+}
+
+
+/*==================================================*
+* RESPONSIVE - TABLET
+*==================================================*/
+
+@media(max-width:992px){
+
+    .design-grid{
+
+        grid-template-columns:1fr;
+
+        justify-items:center;
+
+    }
+
+    .uiux-header h2{
+
+        font-size:44px;
+
+    }
+
+}
+
+
+/*==================================================*
+* RESPONSIVE - MOBILE
+*==================================================*/
+
+@media(max-width:768px){
+
+    .uiux-section{
+
+        padding:90px 0;
+
+    }
+
+
+    .uiux-header{
+
+        margin-bottom:60px;
+
+    }
+
+
+    .uiux-header h2{
+
+        font-size:36px;
+
+    }
+
+
+    .uiux-header p{
+
+        font-size:16px;
+
+    }
+
+
+    /*----------------------------------------------
+      CATEGORY
+    ----------------------------------------------*/
+
+    .design-category{
+
+        text-align:center;
+
+    }
+
+    .design-category h3{
+
+        justify-content:center;
+
+    }
+
+
+    /*----------------------------------------------
+      WEB DESIGN CARDS
+    ----------------------------------------------*/
+
+    .design-card{
+
+        width:100%;
+
+        max-width:420px;
+
+    }
+
+
+    /*----------------------------------------------
+      MOBILE GRID
+    ----------------------------------------------*/
+
+    .mobile-grid{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+        width:100%;
+
+        justify-items:center;
+
+    }
+
+
+    /*----------------------------------------------
+      PHONE CARD
+    ----------------------------------------------*/
+
+    .phone-card{
+
+        width:100%;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:flex-start;
+
+    }
+
+
+    /*----------------------------------------------
+      PHONE FRAME
+    ----------------------------------------------*/
+
+    .phone-frame{
+
+        width:260px;
+
+        height:520px;
+
+        flex-shrink:0;
+
+        margin:0 auto;
+
+    }
+
+
+    /*----------------------------------------------
+      CONTENT UNDER PHONE
+    ----------------------------------------------*/
+
+    .phone-card .design-content{
+
+        width:100%;
+
+        max-width:360px;
+
+        box-sizing:border-box;
+
+        padding:24px 15px 0;
+
+        text-align:center;
+
+    }
+
+
+    .phone-card h4{
+
+        font-size:23px;
+
+        line-height:1.5;
+
+        margin-bottom:14px;
+
+    }
+
+
+    .phone-card p{
+
+        font-size:15px;
+
+        line-height:1.8;
+
+        margin-bottom:20px;
+
+    }
+
+
+    .phone-card .design-tags{
+
+        justify-content:center;
+
+    }
+
+
+    /*----------------------------------------------
+      LIGHTBOX
+    ----------------------------------------------*/
+
+    .lightbox-info h3{
+
+        font-size:24px;
+
+    }
+
+    .lightbox-meta{
+
+        font-size:14px;
+
+    }
+
+}
+
+
+/*==================================================*
+* RESPONSIVE - SMALL MOBILE
+*==================================================*/
+
+@media(max-width:576px){
+
+    .uiux-header h2{
+
+        font-size:30px;
+
+    }
+
+
+    .design-card{
+
+        max-width:100%;
+
+    }
+
+
+    /*----------------------------------------------
+      PHONE CARD
+    ----------------------------------------------*/
+
+    .phone-card{
+
+        width:100%;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+
+    /*----------------------------------------------
+      PHONE FRAME
+    ----------------------------------------------*/
+
+    .phone-frame{
+
+        width:230px;
+
+        height:470px;
+
+    }
+
+
+    /*----------------------------------------------
+      PHONE CONTENT
+    ----------------------------------------------*/
+
+    .phone-card .design-content{
+
+        width:100%;
+
+        max-width:340px;
+
+        box-sizing:border-box;
+
+        padding:22px 12px 0;
+
+        text-align:center;
+
+    }
+
+
+    .phone-card h4{
+
+        font-size:20px;
+
+        line-height:1.45;
+
+        margin-bottom:14px;
+
+    }
+
+
+    .phone-card p{
+
+        font-size:14px;
+
+        line-height:1.8;
+
+        margin-bottom:20px;
+
+    }
+
+
+    .phone-card .design-tags{
+
+        justify-content:center;
+
+    }
+
+
+    /*----------------------------------------------
+      LIGHTBOX
+    ----------------------------------------------*/
+
+    .lightbox-arrow{
+
+        width:48px;
+
+        height:48px;
+
+        font-size:18px;
+
+    }
+
+    .lightbox-prev{
+
+        left:12px;
+
+    }
+
+    .lightbox-next{
+
+        right:12px;
+
+    }
+
+    .lightbox-close{
+
+        width:48px;
+
+        height:48px;
+
+        top:15px;
+
+        right:15px;
+
+    }
+
+}

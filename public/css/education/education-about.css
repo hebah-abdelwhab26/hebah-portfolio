@@ -1,0 +1,1329 @@
+/* =========================================================
+   EDUCATION ABOUT
+========================================================= */
+
+.education-about {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 120px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8f5ec 0%,
+            #f3efe4 100%
+        );
+
+    overflow: hidden;
+
+    direction: rtl;
+
+}
+
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.education-about-container {
+
+    width: min(
+        1180px,
+        calc(100% - 48px)
+    );
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(420px, 0.9fr)
+        minmax(480px, 1.1fr);
+
+    align-items: center;
+
+    gap: 90px;
+
+}
+
+
+
+/* =========================================================
+   VISUAL
+========================================================= */
+
+.education-about-visual {
+
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+
+/* =========================================================
+   DECORATIONS
+========================================================= */
+
+.about-visual-decoration {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+}
+
+
+
+.about-decoration-one {
+
+    width: 360px;
+
+    height: 360px;
+
+    background:
+        rgba(31, 72, 57, 0.08);
+
+    top: 60px;
+
+    left: 40px;
+
+}
+
+
+
+.about-decoration-two {
+
+    width: 180px;
+
+    height: 180px;
+
+    border: 1px solid rgba(
+        177,
+        137,
+        70,
+        0.35
+    );
+
+    bottom: 40px;
+
+    right: 20px;
+
+}
+
+
+
+/* =========================================================
+   MAIN BOOK CARD
+========================================================= */
+
+.about-book-card {
+
+    position: relative;
+
+    width: 430px;
+
+    height: 440px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+
+/* =========================================================
+   BOOK GLOW
+========================================================= */
+
+.about-book-glow {
+
+    position: absolute;
+
+    width: 310px;
+
+    height: 310px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(
+            177,
+            137,
+            70,
+            0.13
+        );
+
+    filter: blur(30px);
+
+}
+
+
+
+/* =========================================================
+   BOOK
+========================================================= */
+
+.about-book {
+
+    position: relative;
+
+    width: 235px;
+
+    height: 315px;
+
+    transform:
+        rotate(-7deg);
+
+    filter:
+        drop-shadow(
+            0 25px 30px
+            rgba(20, 32, 26, 0.25)
+        );
+
+    z-index: 2;
+
+}
+
+
+
+/* =========================================================
+   BOOK COVER
+========================================================= */
+
+.about-book-cover {
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius:
+        6px 14px 14px 6px;
+
+    padding: 35px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: #f7f1df;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(
+                255,
+                255,
+                255,
+                0.08
+            ),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            145deg,
+            #1d4a39,
+            #123528
+        );
+
+    border:
+
+        2px solid
+        rgba(
+            196,
+            160,
+            94,
+            0.8
+        );
+
+    box-shadow:
+
+        inset 0 0 0 5px
+        rgba(
+            196,
+            160,
+            94,
+            0.08
+        );
+
+}
+
+
+
+/* =========================================================
+   BOOK BADGE
+========================================================= */
+
+.about-book-badge {
+
+    font-family:
+        "Cairo",
+        sans-serif;
+
+    font-size: 14px;
+
+    color:
+        #d7b76b;
+
+    margin-bottom: 18px;
+
+}
+
+
+
+/* =========================================================
+   BOOK TITLE
+========================================================= */
+
+.about-book-title {
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size: 38px;
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+/* =========================================================
+   BOOK ORNAMENT
+========================================================= */
+
+.about-book-ornament {
+
+    width: 70px;
+
+    height: 70px;
+
+    border:
+
+        1px solid
+        rgba(
+            215,
+            183,
+            107,
+            0.7
+        );
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size: 42px;
+
+    color:
+        #d7b76b;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+/* =========================================================
+   BOOK SUBTITLE
+========================================================= */
+
+.about-book-subtitle {
+
+    font-family:
+        "Cairo",
+        sans-serif;
+
+    font-size: 12px;
+
+    color:
+        rgba(
+            247,
+            241,
+            223,
+            0.8
+        );
+
+}
+
+
+
+/* =========================================================
+   BOOK PAGES
+========================================================= */
+
+.about-book-pages {
+
+    position: absolute;
+
+    top: 7px;
+
+    right: -10px;
+
+    width: 18px;
+
+    height: calc(100% - 14px);
+
+    border-radius: 0 8px 8px 0;
+
+    background:
+
+        repeating-linear-gradient(
+            to bottom,
+            #eee6d1 0,
+            #eee6d1 2px,
+            #d5ccb8 3px,
+            #eee6d1 4px
+        );
+
+    z-index: -1;
+
+}
+
+
+
+/* =========================================================
+   FLOATING CARDS
+========================================================= */
+
+.about-floating-card {
+
+    position: absolute;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 17px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.9
+        );
+
+    backdrop-filter:
+        blur(12px);
+
+    border:
+
+        1px solid
+        rgba(
+            31,
+            72,
+            57,
+            0.1
+        );
+
+    border-radius: 14px;
+
+    box-shadow:
+
+        0 15px 35px
+        rgba(
+            30,
+            50,
+            40,
+            0.12
+        );
+
+    z-index: 5;
+
+    animation:
+        aboutFloat 5s
+        ease-in-out
+        infinite;
+
+}
+
+
+
+/* =========================================================
+   FLOATING ICON
+========================================================= */
+
+.about-floating-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color:
+        #b18a45;
+
+    background:
+        rgba(
+            177,
+            138,
+            69,
+            0.12
+        );
+
+}
+
+
+
+/* =========================================================
+   FLOATING TEXT
+========================================================= */
+
+.about-floating-card strong {
+
+    display: block;
+
+    font-family:
+        "Cairo",
+        sans-serif;
+
+    font-size: 13px;
+
+    color:
+        #1c352b;
+
+}
+
+
+
+.about-floating-card span {
+
+    display: block;
+
+    margin-top: 2px;
+
+    font-family:
+        "Cairo",
+        sans-serif;
+
+    font-size: 10px;
+
+    color:
+        #7b827c;
+
+}
+
+
+
+/* =========================================================
+   QURAN CARD
+========================================================= */
+
+.about-quran-card {
+
+    top: 50px;
+
+    right: 5px;
+
+}
+
+
+
+/* =========================================================
+   ARABIC CARD
+========================================================= */
+
+.about-arabic-card {
+
+    bottom: 60px;
+
+    left: 0;
+
+    animation-delay:
+        1.2s;
+
+}
+
+
+
+/* =========================================================
+   FLOAT ANIMATION
+========================================================= */
+
+@keyframes aboutFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-9px);
+
+    }
+
+}
+
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.education-about-content {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.education-section-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+    color:
+        #b18a45;
+
+    font-family:
+        "Cairo",
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+
+.education-section-label-line {
+
+    width: 42px;
+
+    height: 2px;
+
+    background:
+        #b18a45;
+
+}
+
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.education-about-title {
+
+    max-width: 650px;
+
+    margin: 0 0 25px;
+
+    font-family:
+        "Amiri",
+        serif;
+
+    font-size: clamp(
+        42px,
+        5vw,
+        62px
+    );
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    color:
+        #17372b;
+
+}
+
+
+
+.education-about-title span {
+
+    position: relative;
+
+    color:
+        #b18a45;
+
+}
+
+
+
+.education-about-title span::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: -4px;
+
+    width: 100%;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(
+            177,
+            138,
+            69,
+            0.15
+        );
+
+}
+
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.education-about-description {
+
+    max-width: 650px;
+
+}
+
+
+
+.education-about-description p {
+
+    margin: 0 0 14px;
+
+    font-family:
+        "Cairo",
+        sans-serif;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    color:
+        #68736c;
+
+}
+
+
+
+/* =========================================================
+   MINI CARDS
+========================================================= */
+
+.education-about-cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+}
+
+
+
+.education-about-mini-card {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    border:
+
+        1px solid
+        rgba(
+            31,
+            72,
+            57,
+            0.09
+        );
+
+    border-radius: 16px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.6
+        );
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+
+
+.education-about-mini-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(
+            177,
+            138,
+            69,
+            0.25
+        );
+
+    box-shadow:
+
+        0 15px 30px
+        rgba(
+            31,
+            72,
+            57,
+            0.08
+        );
+
+}
+
+
+
+/* =========================================================
+   MINI ICON
+========================================================= */
+
+.education-about-mini-icon {
+
+    width: 46px;
+
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    color:
+        #b18a45;
+
+    background:
+        rgba(
+            177,
+            138,
+            69,
+            0.11
+        );
+
+}
+
+
+
+.education-about-mini-content h3 {
+
+    margin: 0 0 4px;
+
+    font-family:
+        "Cairo",
+        sans-serif;
+
+    font-size: 15px;
+
+    color:
+        #1c392e;
+
+}
+
+
+
+.education-about-mini-content p {
+
+    margin: 0;
+
+    font-family:
+        "Cairo",
+        sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+    color:
+        #7a827c;
+
+}
+
+
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.education-about-values {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 22px;
+
+    margin-top: 25px;
+
+}
+
+
+
+.education-about-value {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-family:
+        "Cairo",
+        sans-serif;
+
+    font-size: 11px;
+
+    color:
+        #647069;
+
+}
+
+
+
+.education-about-value i {
+
+    color:
+        #b18a45;
+
+    font-size: 13px;
+
+}
+
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.education-about-actions {
+
+    margin-top: 30px;
+
+}
+
+
+
+.education-about-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 23px;
+
+    border-radius: 10px;
+
+    color:
+        #fff;
+
+    background:
+        #1d4a39;
+
+    text-decoration: none;
+
+    font-family:
+        "Cairo",
+        sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    box-shadow:
+
+        0 10px 25px
+        rgba(
+            29,
+            74,
+            57,
+            0.18
+        );
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+
+.education-about-button i {
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+
+.education-about-button:hover {
+
+    color: #fff;
+
+    background:
+        #153a2c;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+
+        0 15px 30px
+        rgba(
+            29,
+            74,
+            57,
+            0.24
+        );
+
+}
+
+
+
+.education-about-button:hover i {
+
+    transform:
+        translateX(-5px);
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .education-about-container {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .education-about-visual {
+
+        min-height: 460px;
+
+        order: 2;
+
+    }
+
+
+    .education-about-content {
+
+        order: 1;
+
+        text-align: center;
+
+    }
+
+
+    .education-section-label {
+
+        justify-content: center;
+
+    }
+
+
+    .education-about-description {
+
+        margin:
+            0 auto;
+
+    }
+
+
+    .education-about-values {
+
+        justify-content: center;
+
+    }
+
+
+    .education-about-actions {
+
+        text-align: center;
+
+    }
+
+}
+
+
+
+@media (max-width: 650px) {
+
+    .education-about {
+
+        padding:
+            85px 0;
+
+    }
+
+
+    .education-about-container {
+
+        width:
+            min(
+                100% - 30px,
+                560px
+            );
+
+    }
+
+
+    .education-about-title {
+
+        font-size:
+            42px;
+
+    }
+
+
+    .education-about-description p {
+
+        font-size:
+            13px;
+
+    }
+
+
+    .education-about-cards {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .education-about-visual {
+
+        min-height:
+            390px;
+
+    }
+
+
+    .about-book-card {
+
+        width:
+            330px;
+
+        height:
+            350px;
+
+    }
+
+
+    .about-book {
+
+        width:
+            175px;
+
+        height:
+            245px;
+
+    }
+
+
+    .about-book-title {
+
+        font-size:
+            28px;
+
+    }
+
+
+    .about-book-ornament {
+
+        width:
+            52px;
+
+        height:
+            52px;
+
+        font-size:
+            30px;
+
+    }
+
+
+    .about-quran-card {
+
+        top:
+            20px;
+
+        right:
+            -5px;
+
+    }
+
+
+    .about-arabic-card {
+
+        bottom:
+            25px;
+
+        left:
+            -5px;
+
+    }
+
+
+    .about-floating-card {
+
+        padding:
+            10px 12px;
+
+    }
+
+
+    .about-floating-card strong {
+
+        font-size:
+            11px;
+
+    }
+
+
+    .about-floating-card span {
+
+        font-size:
+            9px;
+
+    }
+
+
+    .about-floating-icon {
+
+        width:
+            36px;
+
+        height:
+            36px;
+
+    }
+
+}
+
+
+
+@media (max-width: 420px) {
+
+    .education-about-title {
+
+        font-size:
+            36px;
+
+    }
+
+
+    .education-about-visual {
+
+        min-height:
+            350px;
+
+    }
+
+
+    .about-book-card {
+
+        transform:
+            scale(0.9);
+
+    }
+
+
+    .about-floating-card {
+
+        transform:
+            scale(0.9);
+
+    }
+
+}

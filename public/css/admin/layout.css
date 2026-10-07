@@ -1,0 +1,504 @@
+.admin-layout{
+
+    display:flex;
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:var(--bg);
+
+    overflow:hidden;
+
+}
+
+.admin-page{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-left:var(--sidebar-width);
+
+    width:calc(100% - var(--sidebar-width));
+
+    min-width:0;
+
+    min-height:100vh;
+
+}
+.admin-content{
+
+    flex:1;
+
+    margin-top:var(--navbar-height);
+
+    padding:32px;
+
+    width:100%;
+
+    min-width:0;
+
+    overflow-x:auto;
+
+    overflow-y:visible;
+
+}
+
+/*==================================================
+                PAGE CONTAINER
+==================================================*/
+
+.fade-up{
+
+    animation:fadeUp .6s ease both;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================================
+                PAGE HEADER
+==================================================*/
+
+.dashboard-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+    gap:25px;
+
+}
+
+.dashboard-header-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.dashboard-breadcrumb{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--primary);
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.dashboard-header-left h1{
+
+    font-size:38px;
+
+    font-weight:800;
+
+    color:var(--text);
+
+    margin:0;
+
+}
+
+.dashboard-header-left p{
+
+    color:var(--text-muted);
+
+    margin:0;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+
+.dashboard-header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.dashboard-date{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:14px 20px;
+
+    border-radius:14px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    color:var(--text-light);
+
+    font-size:14px;
+
+}
+
+/*==================================================
+                GRID HELPERS
+==================================================*/
+
+.row{
+
+    --bs-gutter-x:24px;
+
+    --bs-gutter-y:24px;
+
+}
+
+/*==================================================
+                ADMIN CARD
+==================================================*/
+
+.admin-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-lg);
+
+    padding:28px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.admin-card:hover{
+
+    border-color:var(--border-hover);
+
+    background:var(--card-hover);
+
+    transform:translateY(-4px);
+
+}
+
+.admin-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,255,255,.02),
+
+            transparent
+
+        );
+
+    pointer-events:none;
+
+}
+
+/*==================================================
+                CARD TITLE
+==================================================*/
+
+.card-title{
+
+    color:var(--text);
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+.card-title + small{
+
+    color:var(--text-muted);
+
+}
+
+/*==================================================
+                EMPTY STATE
+==================================================*/
+
+.empty-state{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:60px 25px;
+
+}
+
+.empty-state i{
+
+    font-size:55px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.empty-state h4{
+
+    color:var(--text);
+
+    margin-bottom:10px;
+
+}
+
+.empty-state p{
+
+    color:var(--text-muted);
+
+    max-width:320px;
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+
+    .admin-page{
+
+        margin-left:0;
+
+    }
+
+    .admin-content{
+
+        padding:25px;
+
+    }
+
+    .dashboard-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .admin-content{
+
+        padding:18px;
+
+    }
+
+    .dashboard-header-left h1{
+
+        font-size:30px;
+
+    }
+
+}
+/*==================================================
+                GLOBAL PAGE WIDTH
+==================================================*/
+
+.page-wrapper{
+
+    width:100%;
+
+    max-width:1600px;
+
+    margin:auto;
+
+}
+
+/*==================================================
+                TABLE FIX
+==================================================*/
+
+.table-responsive{
+
+    width:100%;
+
+    overflow-x:auto;
+
+    border-radius:20px;
+
+}
+
+.table-responsive::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+.table-responsive::-webkit-scrollbar-thumb{
+
+    background:#3B82F6;
+
+    border-radius:20px;
+
+}
+
+/*==================================================
+                PAGE GRID
+==================================================*/
+
+.content-grid{
+
+    display:grid;
+
+    grid-template-columns:minmax(0,1fr);
+
+    gap:30px;
+
+}
+
+/*==================================================
+                CARD
+==================================================*/
+
+.admin-card{
+
+    width:100%;
+
+    min-width:0;
+
+}
+
+/*==================================================
+                LARGE SCREENS
+==================================================*/
+
+@media(min-width:1400px){
+
+    .page-wrapper{
+
+        max-width:1700px;
+
+    }
+
+}
+
+
+
+/*==================================================
+        COMMENTS TABLE TEXT
+==================================================*/
+ .comment-table-text{
+
+    max-width: 420px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+/*==================================================
+        COMMENTS TABLE
+==================================================*/
+
+ .projects-table td{
+
+    vertical-align: middle;
+
+}
+
+/*==================================================
+        COMMENT COLUMN
+==================================================*/
+
+ .projects-table td:nth-child(2){
+
+    max-width: 420px;
+
+}
+
+
+/*==================================================
+        RESPONSIVE
+==================================================*/
+
+ @media (max-width: 1200px){
+
+    .comment-table-text{
+
+        max-width: 300px;
+
+    }
+
+}
+
+
+@media (max-width: 768px){
+
+    .comment-table-text{
+
+        max-width: 220px;
+
+    }
+
+} 
+

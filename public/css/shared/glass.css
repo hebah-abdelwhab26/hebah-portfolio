@@ -1,0 +1,243 @@
+/*==================================================
+                GLASS DESIGN SYSTEM
+==================================================*/
+
+/*==================================
+            BASE GLASS CARD
+==================================*/
+
+.glass{
+
+    position:relative;
+
+    background:var(--glass);
+
+    border:1px solid var(--glass-border);
+
+    backdrop-filter:blur(var(--blur-md));
+
+    -webkit-backdrop-filter:blur(var(--blur-md));
+
+    border-radius:var(--radius-lg);
+
+    box-shadow:var(--shadow-md);
+
+    overflow:hidden;
+
+    transition:all var(--transition);
+
+}
+
+/*==================================
+            PREMIUM GLASS
+==================================*/
+
+.glass-premium{
+
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.12),
+        rgba(255,255,255,.05)
+    );
+
+    border:1px solid rgba(255,255,255,.18);
+
+    backdrop-filter:blur(var(--blur-lg));
+
+    -webkit-backdrop-filter:blur(var(--blur-lg));
+
+}
+
+/*==================================
+            DARK GLASS
+==================================*/
+
+.glass-dark{
+
+    background:rgba(7,11,22,.55);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+/*==================================
+            GOLD GLASS
+==================================*/
+
+.glass-gold{
+
+    border-color:rgba(212,175,55,.35);
+
+    box-shadow:
+
+        var(--shadow-md),
+
+        var(--shadow-gold);
+
+}
+
+/*==================================
+            HOVER
+==================================*/
+
+.glass:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+        var(--shadow-lg),
+
+        var(--shadow-gold);
+
+}
+
+/*==================================
+            SHINE EFFECT
+==================================*/
+
+.glass::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent 0%,
+
+        rgba(255,255,255,.08) 45%,
+
+        rgba(255,255,255,.18) 50%,
+
+        rgba(255,255,255,.08) 55%,
+
+        transparent 100%
+
+    );
+
+    transform:translateX(-120%);
+
+    transition:1.2s;
+
+}
+
+.glass:hover::before{
+
+    transform:translateX(120%);
+
+}
+
+/*==================================
+            TOP LIGHT
+==================================*/
+
+.glass::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-60px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:180px;
+
+    height:180px;
+
+    background:
+
+    radial-gradient(
+
+        rgba(255,255,255,.18),
+
+        transparent 70%
+
+    );
+
+    pointer-events:none;
+
+}
+
+/*==================================
+            BORDER GLOW
+==================================*/
+
+.glass-border{
+
+    position:relative;
+
+}
+
+.glass-border::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-1px;
+
+    border-radius:inherit;
+
+    padding:1px;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(212,175,55,.6),
+
+        transparent,
+
+        rgba(76,201,240,.35)
+
+    );
+
+    -webkit-mask:
+
+        linear-gradient(#fff 0 0) content-box,
+
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+            mask-composite:exclude;
+
+    pointer-events:none;
+
+}
+
+/*==================================
+            FLOATING CARD
+==================================*/
+
+.glass-float{
+
+    animation:glassFloat 6s ease-in-out infinite;
+
+}
+
+/*==================================
+            GLOW
+==================================*/
+
+.glass-glow{
+
+    box-shadow:
+
+    0 0 40px rgba(212,175,55,.15),
+
+    0 0 90px rgba(31,111,92,.12);
+
+}

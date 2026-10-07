@@ -1,0 +1,3511 @@
+/* =========================================================
+   HEBah EDUCATION ADMIN
+   QUIZZES PAGE
+   Cream / Gold / Green
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+.education-admin-quizzes-page {
+
+    --quiz-cream: #f8f4ea;
+    --quiz-cream-light: #fffdf8;
+    --quiz-cream-dark: #eee7d7;
+
+    --quiz-gold: #c8a45d;
+    --quiz-gold-light: #e3c985;
+    --quiz-gold-dark: #a8843e;
+
+    --quiz-green: #315c4b;
+    --quiz-green-light: #477766;
+    --quiz-green-dark: #244638;
+
+    --quiz-text: #24332d;
+    --quiz-text-light: #68746e;
+    --quiz-muted: #929b96;
+
+    --quiz-border: #e6dfd1;
+
+    --quiz-white: #ffffff;
+
+    --quiz-success: #3f7a5c;
+    --quiz-danger: #b85c5c;
+
+    direction: rtl;
+
+    width: 100%;
+
+    padding: 8px 0 50px;
+
+    color: var(--quiz-text);
+
+    box-sizing: border-box;
+}
+
+
+.education-admin-quizzes-page *,
+.education-admin-quizzes-page *::before,
+.education-admin-quizzes-page *::after {
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.education-admin-quizzes-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+
+    padding: 5px 2px 28px;
+
+    border-bottom: 1px solid var(--quiz-border);
+}
+
+
+.education-admin-quizzes-heading {
+
+    min-width: 0;
+}
+
+
+.education-admin-quizzes-page
+.education-admin-page-header-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 12px;
+
+    color: var(--quiz-gold-dark);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: .04em;
+}
+
+
+.education-admin-quizzes-page
+.education-admin-page-header-label i {
+
+    font-size: 13px;
+}
+
+
+.education-admin-quizzes-title-row {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+.education-admin-quizzes-title-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    flex: 0 0 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--quiz-green),
+            var(--quiz-green-light)
+        );
+
+    color: #fff;
+
+    font-size: 23px;
+
+    box-shadow:
+        0 10px 24px rgba(49, 92, 75, .18);
+}
+
+
+.education-admin-quizzes-title-row h2 {
+
+    margin: 0 0 5px;
+
+    color: var(--quiz-green-dark);
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    line-height: 1.2;
+}
+
+
+.education-admin-quizzes-subtitle {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--quiz-text-light);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.education-admin-quizzes-subtitle i {
+
+    color: var(--quiz-gold-dark);
+
+    font-size: 12px;
+}
+
+
+.education-admin-quizzes-heading > p {
+
+    margin: 14px 0 0;
+
+    color: var(--quiz-text-light);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   HEADER BUTTON
+========================================================= */
+
+.education-admin-quizzes-header-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+
+.education-admin-quizzes-primary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 46px;
+
+    padding: 0 20px;
+
+    border: 1px solid transparent;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--quiz-green),
+            var(--quiz-green-light)
+        );
+
+    color: #fff !important;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 9px 22px rgba(49, 92, 75, .18);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+
+.education-admin-quizzes-primary-button:hover {
+
+    transform: translateY(-2px);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--quiz-green-dark),
+            var(--quiz-green)
+        );
+
+    box-shadow:
+        0 13px 28px rgba(49, 92, 75, .25);
+}
+
+
+.education-admin-quizzes-primary-button i {
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.education-admin-quizzes-alert {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 15px 18px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(63, 122, 92, .18);
+
+    border-radius: 14px;
+
+    background: rgba(63, 122, 92, .07);
+}
+
+
+.education-admin-quizzes-alert-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    flex: 0 0 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: rgba(63, 122, 92, .12);
+
+    color: var(--quiz-success);
+
+    font-size: 17px;
+}
+
+
+.education-admin-quizzes-alert strong {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--quiz-green-dark);
+
+    font-size: 13px;
+}
+
+
+.education-admin-quizzes-alert p {
+
+    margin: 0;
+
+    color: var(--quiz-text-light);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.education-admin-quizzes-overview {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 16px;
+
+    margin-bottom: 25px;
+}
+
+
+.education-admin-quizzes-overview-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 145px;
+
+    padding: 20px;
+
+    border: 1px solid var(--quiz-border);
+
+    border-radius: 17px;
+
+    background: var(--quiz-white);
+
+    box-shadow:
+        0 5px 18px rgba(45, 56, 50, .05);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.education-admin-quizzes-overview-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: -30px;
+
+    bottom: -45px;
+
+    width: 105px;
+
+    height: 105px;
+
+    border-radius: 50%;
+
+    background: rgba(200, 164, 93, .07);
+
+    pointer-events: none;
+}
+
+
+.education-admin-quizzes-overview-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(45, 56, 50, .09);
+}
+
+
+.education-admin-quizzes-overview-top {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+
+.education-admin-quizzes-overview-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(49, 92, 75, .09);
+
+    color: var(--quiz-green);
+
+    font-size: 16px;
+}
+
+
+.education-admin-quizzes-overview-card.green
+.education-admin-quizzes-overview-icon {
+
+    background: rgba(63, 122, 92, .10);
+
+    color: var(--quiz-success);
+}
+
+
+.education-admin-quizzes-overview-card.gold
+.education-admin-quizzes-overview-icon {
+
+    background: rgba(200, 164, 93, .13);
+
+    color: var(--quiz-gold-dark);
+}
+
+
+.education-admin-quizzes-overview-label {
+
+    color: var(--quiz-text-light);
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.education-admin-quizzes-overview-number {
+
+    display: block;
+
+    margin-top: 16px;
+
+    color: var(--quiz-green-dark);
+
+    font-size: 27px;
+
+    font-weight: 900;
+
+    line-height: 1;
+}
+
+
+.education-admin-quizzes-overview-description {
+
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--quiz-muted);
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FILTER CARD
+========================================================= */
+
+.education-admin-quizzes-filter-card {
+
+    margin-bottom: 30px;
+
+    border: 1px solid var(--quiz-border);
+
+    border-radius: 18px;
+
+    background: var(--quiz-white);
+
+    box-shadow:
+        0 5px 20px rgba(45, 56, 50, .05);
+}
+
+
+.education-admin-quizzes-filter-header {
+
+    padding: 18px 20px;
+
+    border-bottom: 1px solid var(--quiz-border);
+}
+
+
+.education-admin-quizzes-filter-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.education-admin-quizzes-filter-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: rgba(200, 164, 93, .12);
+
+    color: var(--quiz-gold-dark);
+
+    font-size: 15px;
+}
+
+
+.education-admin-quizzes-filter-title strong {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--quiz-green-dark);
+
+    font-size: 13px;
+}
+
+
+.education-admin-quizzes-filter-title span {
+
+    display: block;
+
+    color: var(--quiz-muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   FILTER FORM
+========================================================= */
+
+.education-admin-quizzes-filter-form {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(240px, 1.6fr)
+        minmax(180px, 1fr)
+        minmax(160px, .8fr)
+        auto
+        auto;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 18px 20px;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.education-admin-quizzes-search {
+
+    position: relative;
+
+    min-width: 0;
+}
+
+
+.education-admin-quizzes-search i {
+
+    position: absolute;
+
+    top: 50%;
+
+    right: 15px;
+
+    transform: translateY(-50%);
+
+    color: var(--quiz-muted);
+
+    font-size: 13px;
+
+    pointer-events: none;
+}
+
+
+.education-admin-quizzes-search input {
+
+    width: 100%;
+
+    height: 45px;
+
+    padding: 0 42px 0 14px;
+
+    border: 1px solid var(--quiz-border);
+
+    border-radius: 11px;
+
+    outline: none;
+
+    background: var(--quiz-cream-light);
+
+    color: var(--quiz-text);
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+
+.education-admin-quizzes-search input::placeholder {
+
+    color: #a4aaa5;
+}
+
+
+.education-admin-quizzes-search input:focus {
+
+    border-color: var(--quiz-gold);
+
+    background: #fff;
+
+    box-shadow:
+        0 0 0 3px rgba(200, 164, 93, .10);
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.education-admin-quizzes-filter-select-wrapper {
+
+    position: relative;
+}
+
+
+.education-admin-quizzes-filter-select-wrapper > i {
+
+    position: absolute;
+
+    top: 50%;
+
+    right: 14px;
+
+    transform: translateY(-50%);
+
+    z-index: 2;
+
+    color: var(--quiz-gold-dark);
+
+    font-size: 12px;
+
+    pointer-events: none;
+}
+
+
+.education-admin-quizzes-filter-select-wrapper::after {
+
+    content: "\f078";
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 13px;
+
+    transform: translateY(-50%);
+
+    color: var(--quiz-muted);
+
+    font-family: "Font Awesome 6 Free";
+
+    font-weight: 900;
+
+    font-size: 9px;
+
+    pointer-events: none;
+}
+
+
+.education-admin-quizzes-filter-select-wrapper select {
+
+    appearance: none;
+
+    width: 100%;
+
+    height: 45px;
+
+    padding:
+        0 38px 0 34px;
+
+    border: 1px solid var(--quiz-border);
+
+    border-radius: 11px;
+
+    outline: none;
+
+    background: var(--quiz-cream-light);
+
+    color: var(--quiz-text);
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+
+.education-admin-quizzes-filter-select-wrapper select:focus {
+
+    border-color: var(--quiz-gold);
+
+    background: #fff;
+
+    box-shadow:
+        0 0 0 3px rgba(200, 164, 93, .10);
+}
+
+
+/* =========================================================
+   FILTER BUTTONS
+========================================================= */
+
+.education-admin-quizzes-filter-button {
+
+    height: 45px;
+
+    padding: 0 17px;
+
+    border: 0;
+
+    border-radius: 11px;
+
+    background: var(--quiz-green);
+
+    color: #fff;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+.education-admin-quizzes-filter-button:hover {
+
+    background: var(--quiz-green-dark);
+
+    transform: translateY(-1px);
+}
+
+
+.education-admin-quizzes-reset-button {
+
+    height: 45px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--quiz-border);
+
+    border-radius: 11px;
+
+    background: var(--quiz-cream-light);
+
+    color: var(--quiz-text-light) !important;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    white-space: nowrap;
+
+    transition:
+        border-color .2s ease,
+        color .2s ease,
+        background .2s ease;
+}
+
+
+.education-admin-quizzes-reset-button:hover {
+
+    border-color: var(--quiz-gold);
+
+    color: var(--quiz-gold-dark) !important;
+
+    background: #fff;
+}
+
+
+/* =========================================================
+   RESULTS HEADER
+========================================================= */
+
+.education-admin-quizzes-results-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 15px;
+
+    padding: 0 3px;
+}
+
+
+.education-admin-quizzes-results-header > div:first-child span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--quiz-gold-dark);
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+
+.education-admin-quizzes-results-header h3 {
+
+    margin: 0;
+
+    color: var(--quiz-green-dark);
+
+    font-size: 19px;
+
+    font-weight: 900;
+}
+
+
+.education-admin-quizzes-results-count {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 8px 12px;
+
+    border: 1px solid var(--quiz-border);
+
+    border-radius: 10px;
+
+    background: var(--quiz-white);
+
+    color: var(--quiz-text-light);
+
+    font-size: 11px;
+}
+
+
+.education-admin-quizzes-results-count i {
+
+    color: var(--quiz-gold-dark);
+}
+
+
+.education-admin-quizzes-results-count strong {
+
+    color: var(--quiz-green);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   QUIZZES LIST
+========================================================= */
+
+.education-admin-quizzes-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+
+/* =========================================================
+   QUIZ CARD
+========================================================= */
+
+.education-admin-quiz-card {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 22px;
+
+    padding: 18px 20px;
+
+    border: 1px solid var(--quiz-border);
+
+    border-radius: 17px;
+
+    background: var(--quiz-white);
+
+    box-shadow:
+        0 4px 16px rgba(45, 56, 50, .04);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+}
+
+
+.education-admin-quiz-card:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #dcd1ba;
+
+    box-shadow:
+        0 11px 28px rgba(45, 56, 50, .08);
+}
+
+
+/* =========================================================
+   CARD MAIN
+========================================================= */
+
+.education-admin-quiz-card-main {
+
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+}
+
+
+.education-admin-quiz-card-icon {
+
+    width: 51px;
+
+    height: 51px;
+
+    flex: 0 0 51px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(49, 92, 75, .12),
+            rgba(200, 164, 93, .12)
+        );
+
+    color: var(--quiz-green);
+
+    font-size: 19px;
+}
+
+
+.education-admin-quiz-card-content {
+
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.education-admin-quiz-card-top {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 7px;
+}
+
+
+.education-admin-quiz-card-top h3 {
+
+    margin: 0;
+
+    color: var(--quiz-green-dark);
+
+    font-size: 15px;
+
+    font-weight: 900;
+
+    line-height: 1.5;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.education-admin-quiz-status {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 4px 8px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+.education-admin-quiz-status i {
+
+    font-size: 5px;
+}
+
+
+.education-admin-quiz-status.active {
+
+    background: rgba(63, 122, 92, .09);
+
+    color: var(--quiz-success);
+}
+
+
+.education-admin-quiz-status.inactive {
+
+    background: rgba(184, 92, 92, .09);
+
+    color: var(--quiz-danger);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.education-admin-quiz-description {
+
+    max-width: 780px;
+
+    margin: 0 0 11px;
+
+    color: var(--quiz-text-light);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+
+.education-admin-quiz-description.muted {
+
+    color: var(--quiz-muted);
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.education-admin-quiz-meta {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+
+.education-admin-quiz-meta span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 5px 8px;
+
+    border: 1px solid #eee9df;
+
+    border-radius: 7px;
+
+    background: var(--quiz-cream-light);
+
+    color: var(--quiz-text-light);
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+.education-admin-quiz-meta i {
+
+    color: var(--quiz-gold-dark);
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   CARD SIDE
+========================================================= */
+
+.education-admin-quiz-card-side {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    flex-shrink: 0;
+}
+
+
+.education-admin-quiz-questions-count {
+
+    min-width: 68px;
+
+    padding: 9px 11px;
+
+    border-right: 1px solid var(--quiz-border);
+
+    text-align: center;
+}
+
+
+.education-admin-quiz-questions-count strong {
+
+    display: block;
+
+    color: var(--quiz-green);
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    line-height: 1.1;
+}
+
+
+.education-admin-quiz-questions-count span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--quiz-muted);
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.education-admin-quiz-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.education-admin-quiz-actions form {
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+.education-admin-quiz-action {
+
+    width: 34px;
+
+    height: 34px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid var(--quiz-border);
+
+    border-radius: 9px;
+
+    background: #fff;
+
+    color: var(--quiz-text-light);
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    transition:
+        transform .18s ease,
+        border-color .18s ease,
+        background .18s ease,
+        color .18s ease;
+}
+
+
+.education-admin-quiz-action:hover {
+
+    transform: translateY(-2px);
+}
+
+
+/* VIEW */
+
+.education-admin-quiz-action.view:hover {
+
+    border-color: rgba(49, 92, 75, .35);
+
+    background: rgba(49, 92, 75, .07);
+
+    color: var(--quiz-green);
+}
+
+
+/* QUESTIONS */
+
+.education-admin-quiz-action.questions:hover {
+
+    border-color: rgba(200, 164, 93, .40);
+
+    background: rgba(200, 164, 93, .10);
+
+    color: var(--quiz-gold-dark);
+}
+
+
+/* EDIT */
+
+.education-admin-quiz-action.edit:hover {
+
+    border-color: rgba(63, 122, 92, .35);
+
+    background: rgba(63, 122, 92, .07);
+
+    color: var(--quiz-success);
+}
+
+
+/* DELETE */
+
+.education-admin-quiz-action.delete:hover {
+
+    border-color: rgba(184, 92, 92, .35);
+
+    background: rgba(184, 92, 92, .07);
+
+    color: var(--quiz-danger);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.education-admin-quizzes-empty {
+
+    min-height: 350px;
+
+    padding: 50px 25px;
+
+    border: 1px dashed #dcd4c5;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffdf9,
+            #faf7ef
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.education-admin-quizzes-empty-icon {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 22px;
+
+    background: rgba(200, 164, 93, .11);
+
+    color: var(--quiz-gold-dark);
+
+    font-size: 28px;
+}
+
+
+.education-admin-quizzes-empty h3 {
+
+    margin: 0 0 8px;
+
+    color: var(--quiz-green-dark);
+
+    font-size: 18px;
+
+    font-weight: 900;
+}
+
+
+.education-admin-quizzes-empty p {
+
+    max-width: 420px;
+
+    margin: 0 0 20px;
+
+    color: var(--quiz-text-light);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+.education-admin-quizzes-pagination {
+
+    display: flex;
+
+    justify-content: center;
+
+    padding-top: 25px;
+}
+
+
+.education-admin-quizzes-pagination nav {
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.education-admin-quizzes-pagination nav > div:first-child {
+
+    display: none;
+}
+
+
+.education-admin-quizzes-pagination nav > div:last-child {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.education-admin-quizzes-pagination a,
+.education-admin-quizzes-pagination span {
+
+    min-width: 34px;
+
+    height: 34px;
+
+    padding: 0 9px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid var(--quiz-border);
+
+    border-radius: 8px;
+
+    background: #fff;
+
+    color: var(--quiz-text-light);
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.education-admin-quizzes-pagination a:hover {
+
+    border-color: var(--quiz-gold);
+
+    color: var(--quiz-gold-dark);
+
+    background: var(--quiz-cream-light);
+}
+
+
+.education-admin-quizzes-pagination span[aria-current="page"] {
+
+    border-color: var(--quiz-green);
+
+    background: var(--quiz-green);
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .education-admin-quizzes-overview {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+
+    .education-admin-quizzes-filter-form {
+
+        grid-template-columns:
+            1fr
+            1fr
+            1fr;
+
+    }
+
+
+    .education-admin-quizzes-filter-button,
+    .education-admin-quizzes-reset-button {
+
+        width: 100%;
+
+    }
+
+}
+
+
+@media (max-width: 1000px) {
+
+    .education-admin-quiz-card {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .education-admin-quiz-card-side {
+
+        width: 100%;
+
+        padding-top: 14px;
+
+        border-top: 1px solid var(--quiz-border);
+
+        justify-content: space-between;
+
+    }
+
+
+    .education-admin-quiz-questions-count {
+
+        border-right: 0;
+
+        text-align: right;
+
+        padding: 0;
+
+        display: flex;
+
+        align-items: baseline;
+
+        gap: 7px;
+
+    }
+
+
+    .education-admin-quiz-questions-count strong {
+
+        font-size: 18px;
+
+    }
+
+
+    .education-admin-quiz-questions-count span {
+
+        margin: 0;
+
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .education-admin-quizzes-page {
+
+        padding-bottom: 35px;
+
+    }
+
+
+    .education-admin-quizzes-header {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 20px;
+
+    }
+
+
+    .education-admin-quizzes-header-actions {
+
+        width: 100%;
+
+    }
+
+
+    .education-admin-quizzes-primary-button {
+
+        width: 100%;
+
+    }
+
+
+    .education-admin-quizzes-title-icon {
+
+        width: 50px;
+
+        height: 50px;
+
+        flex-basis: 50px;
+
+        border-radius: 14px;
+
+        font-size: 20px;
+
+    }
+
+
+    .education-admin-quizzes-title-row h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    .education-admin-quizzes-overview {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+
+    }
+
+
+    .education-admin-quizzes-overview-card {
+
+        min-height: 130px;
+
+        padding: 16px;
+
+    }
+
+
+    .education-admin-quizzes-overview-number {
+
+        font-size: 23px;
+
+    }
+
+
+    .education-admin-quizzes-filter-form {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .education-admin-quizzes-results-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .education-admin-quiz-card-main {
+
+        width: 100%;
+
+    }
+
+
+    .education-admin-quiz-card-top {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 6px;
+
+    }
+
+
+    .education-admin-quiz-card-top h3 {
+
+        white-space: normal;
+
+    }
+
+
+    .education-admin-quiz-meta {
+
+        gap: 5px;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .education-admin-quizzes-overview {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .education-admin-quizzes-title-row {
+
+        align-items: flex-start;
+
+    }
+
+
+    .education-admin-quizzes-title-row h2 {
+
+        font-size: 22px;
+
+    }
+
+
+    .education-admin-quizzes-heading > p {
+
+        font-size: 12px;
+
+    }
+
+
+    .education-admin-quiz-card {
+
+        padding: 15px;
+
+        border-radius: 14px;
+
+    }
+
+
+    .education-admin-quiz-card-main {
+
+        gap: 10px;
+
+    }
+
+
+    .education-admin-quiz-card-icon {
+
+        width: 43px;
+
+        height: 43px;
+
+        flex-basis: 43px;
+
+        border-radius: 11px;
+
+        font-size: 16px;
+
+    }
+
+
+    .education-admin-quiz-meta span {
+
+        width: 100%;
+
+        justify-content: flex-start;
+
+    }
+
+
+    .education-admin-quiz-card-side {
+
+        align-items: center;
+
+    }
+
+
+    .education-admin-quiz-actions {
+
+        gap: 4px;
+
+    }
+
+
+    .education-admin-quiz-action {
+
+        width: 31px;
+
+        height: 31px;
+
+    }
+
+}
+
+
+/* ============================================================
+   HEBah EDUCATION ADMIN
+   QUIZ SHOW PAGE
+   Cream / Green / Gold
+============================================================ */
+
+
+/* ============================================================
+   ROOT
+============================================================ */
+
+:root {
+
+    --quiz-cream: #f8f3e8;
+    --quiz-cream-light: #fffdf8;
+    --quiz-white: #ffffff;
+
+    --quiz-green: #204d40;
+    --quiz-green-dark: #173b31;
+    --quiz-green-soft: #e7f0eb;
+
+    --quiz-gold: #c9a24d;
+    --quiz-gold-dark: #a98235;
+    --quiz-gold-soft: #f7eed9;
+
+    --quiz-text: #26352f;
+    --quiz-muted: #7b847f;
+
+    --quiz-border: #e7dfcf;
+
+    --quiz-success: #2f7d5b;
+    --quiz-success-soft: #e8f5ee;
+
+    --quiz-danger: #b94a48;
+    --quiz-danger-soft: #faeaea;
+
+    --quiz-shadow:
+        0 12px 35px rgba(32, 77, 64, 0.07);
+
+    --quiz-radius: 18px;
+}
+
+
+/* ============================================================
+   PAGE
+============================================================ */
+
+.education-admin-content-page {
+
+    width: 100%;
+    min-height: 100%;
+
+    padding-bottom: 40px;
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.education-admin-content-header {
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 28px;
+}
+
+
+.education-admin-content-heading {
+
+    min-width: 0;
+}
+
+
+.education-admin-page-header-label {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 12px;
+
+    color: var(--quiz-gold-dark);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.education-admin-page-header-label i {
+
+    font-size: 14px;
+}
+
+
+.education-admin-content-title-row {
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.education-admin-content-title-icon {
+
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--quiz-green),
+            var(--quiz-green-dark)
+        );
+
+    color: #fff;
+
+    box-shadow:
+        0 10px 25px rgba(32, 77, 64, 0.15);
+}
+
+
+.education-admin-content-title-icon i {
+
+    font-size: 24px;
+}
+
+
+.education-admin-content-title-row h2 {
+
+    margin: 0;
+
+    color: var(--quiz-green-dark);
+
+    font-size: 27px;
+    font-weight: 800;
+
+    line-height: 1.3;
+}
+
+
+.education-admin-content-lesson-name {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: 5px;
+
+    color: var(--quiz-muted);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.education-admin-content-lesson-name i {
+
+    color: var(--quiz-gold-dark);
+}
+
+
+.education-admin-content-heading > p {
+
+    margin: 12px 0 0;
+
+    color: var(--quiz-muted);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* ============================================================
+   HEADER ACTIONS
+============================================================ */
+
+.education-admin-content-header-actions {
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+
+.education-admin-content-cancel-button,
+.education-admin-content-submit-button {
+
+    min-height: 44px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 0 17px;
+
+    border-radius: 11px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+
+.education-admin-content-cancel-button {
+
+    background: var(--quiz-cream-light);
+
+    border: 1px solid var(--quiz-border);
+
+    color: var(--quiz-green) !important;
+}
+
+
+.education-admin-content-cancel-button i {
+
+    color: var(--quiz-green) !important;
+}
+
+
+.education-admin-content-cancel-button:hover {
+
+    background: var(--quiz-green-soft);
+
+    transform: translateY(-2px);
+}
+
+
+.education-admin-content-submit-button {
+
+    background: var(--quiz-green);
+
+    color: #fff !important;
+
+    border: 1px solid var(--quiz-green);
+
+    box-shadow:
+        0 8px 20px rgba(32, 77, 64, .13);
+}
+
+
+.education-admin-content-submit-button:hover {
+
+    background: var(--quiz-green-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(32, 77, 64, .18);
+}
+
+
+/* ============================================================
+   SUCCESS ALERT
+============================================================ */
+
+.education-admin-content-alert {
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 13px;
+
+    padding: 15px 18px;
+
+    margin-bottom: 24px;
+
+    border-radius: 14px;
+
+    border: 1px solid var(--quiz-border);
+
+    background: var(--quiz-cream-light);
+}
+
+
+.education-admin-content-alert.success {
+
+    border-color: #cfe6d9;
+
+    background: var(--quiz-success-soft);
+}
+
+
+.education-admin-content-alert-icon {
+
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: #d8eee1;
+
+    color: var(--quiz-success);
+}
+
+
+.education-admin-content-alert strong {
+
+    display: block;
+
+    color: var(--quiz-green-dark);
+
+    font-size: 13px;
+}
+
+
+.education-admin-content-alert p {
+
+    margin: 3px 0 0;
+
+    color: var(--quiz-muted);
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   MAIN GRID
+============================================================ */
+
+.education-admin-content-form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        330px;
+
+    gap: 24px;
+
+    align-items: start;
+}
+
+
+.education-admin-content-form-main {
+
+    min-width: 0;
+}
+
+
+.education-admin-content-form-sidebar {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    min-width: 0;
+}
+
+
+/* ============================================================
+   CARDS
+============================================================ */
+
+.education-admin-content-form-card {
+
+    overflow: hidden;
+
+    margin-bottom: 22px;
+
+    background: var(--quiz-white);
+
+    border: 1px solid var(--quiz-border);
+
+    border-radius: var(--quiz-radius);
+
+    box-shadow: var(--quiz-shadow);
+}
+
+
+.education-admin-content-form-sidebar
+.education-admin-content-form-card {
+
+    margin-bottom: 0;
+}
+
+
+.education-admin-content-form-card-header {
+
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 20px;
+
+    border-bottom: 1px solid var(--quiz-border);
+
+    background:
+        linear-gradient(
+            180deg,
+            #fffefa,
+            #fffdf9
+        );
+}
+
+
+.education-admin-content-form-card-icon {
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: var(--quiz-green-soft);
+
+    color: var(--quiz-green);
+
+    font-size: 17px;
+}
+
+
+.education-admin-content-form-card-icon.gold {
+
+    background: var(--quiz-gold-soft);
+
+    color: var(--quiz-gold-dark);
+}
+
+
+.education-admin-content-form-card-icon.green {
+
+    background: var(--quiz-success-soft);
+
+    color: var(--quiz-success);
+}
+
+
+.education-admin-content-form-card-header span {
+
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: var(--quiz-muted);
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+.education-admin-content-form-card-header h3 {
+
+    margin: 0;
+
+    color: var(--quiz-green-dark);
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+.education-admin-content-form-body {
+
+    padding: 22px;
+}
+
+
+/* ============================================================
+   FIELD
+============================================================ */
+
+.education-admin-content-field {
+
+    margin-bottom: 22px;
+}
+
+
+.education-admin-content-field:last-child {
+
+    margin-bottom: 0;
+}
+
+
+.education-admin-content-field > label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--quiz-green-dark);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* ============================================================
+   DISPLAY BOX
+============================================================ */
+
+.education-admin-content-display-box {
+
+    min-height: 52px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 13px 15px;
+
+    border: 1px solid var(--quiz-border);
+
+    border-radius: 12px;
+
+    background: var(--quiz-cream-light);
+
+    color: var(--quiz-text);
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.education-admin-content-display-box i {
+
+    color: var(--quiz-gold-dark);
+
+    font-size: 15px;
+}
+
+
+/* ============================================================
+   DESCRIPTION
+============================================================ */
+
+.education-admin-content-description-box {
+
+    padding: 17px;
+
+    border-radius: 13px;
+
+    border: 1px solid var(--quiz-border);
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf8,
+            #faf6eb
+        );
+
+    color: #59645e;
+
+    font-size: 13px;
+
+    line-height: 2;
+}
+
+
+.education-admin-content-empty-value {
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    background: #f8f8f6;
+
+    border: 1px dashed #ddd8cd;
+
+    color: var(--quiz-muted);
+
+    font-size: 12px;
+}
+
+
+.education-admin-content-empty-value i {
+
+    color: var(--quiz-gold);
+}
+
+
+/* ============================================================
+   SMALL ACTION
+============================================================ */
+
+.education-admin-content-small-action {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    min-height: 36px;
+
+    padding: 0 12px;
+
+    border-radius: 9px;
+
+    background: var(--quiz-green);
+
+    color: #fff !important;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: .2s ease;
+}
+
+
+.education-admin-content-small-action:hover {
+
+    background: var(--quiz-green-dark);
+
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   QUESTION LIST
+============================================================ */
+
+.education-admin-question-list {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.education-admin-question-item {
+
+    display: grid;
+
+    grid-template-columns:
+        42px
+        minmax(0, 1fr)
+        auto;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 15px;
+
+    border: 1px solid var(--quiz-border);
+
+    border-radius: 14px;
+
+    background: var(--quiz-cream-light);
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.education-admin-question-item:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #d8c79f;
+
+    box-shadow:
+        0 8px 22px rgba(32, 77, 64, .06);
+}
+
+
+/* ============================================================
+   QUESTION NUMBER
+============================================================ */
+
+.education-admin-question-number {
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--quiz-gold),
+            var(--quiz-gold-dark)
+        );
+
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    box-shadow:
+        0 5px 12px rgba(201, 162, 77, .18);
+}
+
+
+/* ============================================================
+   QUESTION CONTENT
+============================================================ */
+
+.education-admin-question-content {
+
+    min-width: 0;
+}
+
+
+.education-admin-question-top {
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+}
+
+
+.education-admin-question-top strong {
+
+    flex: 1;
+
+    color: var(--quiz-green-dark);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    line-height: 1.8;
+}
+
+
+.education-admin-question-meta {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 8px;
+}
+
+
+.education-admin-question-meta span {
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 5px;
+
+    color: var(--quiz-muted);
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+.education-admin-question-meta i {
+
+    color: var(--quiz-gold-dark);
+}
+
+
+/* ============================================================
+   STATUS BADGES
+============================================================ */
+
+.education-admin-status-badge {
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 5px;
+
+    flex-shrink: 0;
+
+    padding: 5px 8px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+    font-weight: 800;
+}
+
+
+.education-admin-status-badge.active {
+
+    background: var(--quiz-success-soft);
+
+    color: var(--quiz-success);
+}
+
+
+.education-admin-status-badge.inactive {
+
+    background: var(--quiz-danger-soft);
+
+    color: var(--quiz-danger);
+}
+
+
+/* ============================================================
+   QUESTION ACTIONS
+============================================================ */
+
+.education-admin-question-actions {
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.education-admin-table-action {
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--quiz-border);
+
+    border-radius: 9px;
+
+    background: #fff;
+
+    color: var(--quiz-muted);
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+
+.education-admin-table-action:hover {
+
+    transform: translateY(-2px);
+}
+
+
+.education-admin-table-action.view:hover {
+
+    background: var(--quiz-green-soft);
+
+    border-color: #cbded5;
+
+    color: var(--quiz-green);
+}
+
+
+.education-admin-table-action.edit:hover {
+
+    background: var(--quiz-gold-soft);
+
+    border-color: #ead9ad;
+
+    color: var(--quiz-gold-dark);
+}
+
+
+/* ============================================================
+   EMPTY QUESTIONS
+============================================================ */
+
+.education-admin-content-table-empty {
+
+    padding: 35px 20px;
+
+    text-align: center;
+}
+
+
+.education-admin-content-table-empty > div {
+
+    max-width: 430px;
+
+    margin: auto;
+
+    padding: 30px;
+
+    border: 1px dashed #dcd5c7;
+
+    border-radius: 16px;
+
+    background: #fcfaf5;
+}
+
+
+.education-admin-content-table-empty i {
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 13px;
+
+    border-radius: 15px;
+
+    background: var(--quiz-gold-soft);
+
+    color: var(--quiz-gold-dark);
+
+    font-size: 21px;
+}
+
+
+.education-admin-content-table-empty strong {
+
+    display: block;
+
+    color: var(--quiz-green-dark);
+
+    font-size: 15px;
+}
+
+
+.education-admin-content-table-empty span {
+
+    display: block;
+
+    margin: 7px 0 17px;
+
+    color: var(--quiz-muted);
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   EXPLANATIONS
+============================================================ */
+
+.education-admin-explanation-list {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.education-admin-explanation-item {
+
+    display: grid;
+
+    grid-template-columns: 38px minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding: 15px;
+
+    border-radius: 13px;
+
+    border: 1px solid var(--quiz-border);
+
+    background: #fffdf8;
+}
+
+
+.education-admin-explanation-number {
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: var(--quiz-green-soft);
+
+    color: var(--quiz-green);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+.education-admin-explanation-item strong {
+
+    display: block;
+
+    color: var(--quiz-green-dark);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+.education-admin-explanation-item p {
+
+    margin: 6px 0 0;
+
+    color: var(--quiz-muted);
+
+    font-size: 11px;
+
+    line-height: 1.9;
+}
+
+
+/* ============================================================
+   QUIZ SUMMARY
+============================================================ */
+
+.education-admin-quiz-summary {
+
+    padding: 22px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffdf8,
+            #f8f3e8
+        );
+}
+
+
+.education-admin-quiz-summary-icon {
+
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 13px;
+
+    border-radius: 18px;
+
+    background: var(--quiz-green);
+
+    color: #fff;
+
+    font-size: 24px;
+
+    box-shadow:
+        0 10px 22px rgba(32, 77, 64, .15);
+}
+
+
+.education-admin-quiz-summary > strong {
+
+    display: block;
+
+    color: var(--quiz-green-dark);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+.education-admin-quiz-summary > span {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-top: 7px;
+
+    color: var(--quiz-muted);
+
+    font-size: 11px;
+}
+
+
+.education-admin-quiz-summary > span i {
+
+    color: var(--quiz-gold-dark);
+}
+
+
+/* ============================================================
+   QUIZ INFO
+============================================================ */
+
+.education-admin-quiz-info-list {
+
+    padding: 5px 20px;
+}
+
+
+.education-admin-quiz-info-item {
+
+    min-height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    border-bottom: 1px solid #eee9df;
+}
+
+
+.education-admin-quiz-info-item:last-child {
+
+    border-bottom: 0;
+}
+
+
+.education-admin-quiz-info-item > div {
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--quiz-muted);
+
+    font-size: 11px;
+}
+
+
+.education-admin-quiz-info-item > div i {
+
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: var(--quiz-cream);
+
+    color: var(--quiz-gold-dark);
+
+    font-size: 11px;
+}
+
+
+.education-admin-quiz-info-item strong {
+
+    color: var(--quiz-green-dark);
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   STATUS BOX
+============================================================ */
+
+.education-admin-content-status-box {
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    border-radius: 13px;
+
+    border: 1px solid var(--quiz-border);
+}
+
+
+.education-admin-content-status-box.active {
+
+    background: var(--quiz-success-soft);
+
+    border-color: #cde3d6;
+
+    color: var(--quiz-success);
+}
+
+
+.education-admin-content-status-box.inactive {
+
+    background: var(--quiz-danger-soft);
+
+    border-color: #edd0d0;
+
+    color: var(--quiz-danger);
+}
+
+
+.education-admin-content-status-box > i {
+
+    margin-top: 2px;
+
+    font-size: 18px;
+}
+
+
+.education-admin-content-status-box strong {
+
+    display: block;
+
+    font-size: 12px;
+}
+
+
+.education-admin-content-status-box small {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--quiz-muted);
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+
+/* ============================================================
+   QUICK ACTIONS
+============================================================ */
+
+.education-admin-quick-actions {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.education-admin-quick-action {
+
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 12px;
+
+    border-radius: 10px;
+
+    border: 1px solid var(--quiz-border);
+
+    background: #fffdf8;
+
+    color: var(--quiz-green);
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: .2s ease;
+}
+
+
+.education-admin-quick-action > span {
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.education-admin-quick-action > span i {
+
+    color: var(--quiz-gold-dark);
+}
+
+
+.education-admin-quick-action > i {
+
+    color: #a6aaa6;
+
+    font-size: 10px;
+}
+
+
+.education-admin-quick-action:hover {
+
+    background: var(--quiz-green);
+
+    border-color: var(--quiz-green);
+
+    color: #fff;
+
+    transform: translateX(-3px);
+}
+
+
+.education-admin-quick-action:hover > span i,
+.education-admin-quick-action:hover > i {
+
+    color: var(--quiz-gold-soft);
+}
+
+
+/* ============================================================
+   NOTE
+============================================================ */
+
+.education-admin-content-note {
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 11px;
+
+    padding: 15px;
+
+    border-radius: 14px;
+
+    border: 1px solid #eadbb9;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf0,
+            #f9f2df
+        );
+}
+
+
+.education-admin-content-note-icon {
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: var(--quiz-gold-soft);
+
+    color: var(--quiz-gold-dark);
+}
+
+
+.education-admin-content-note strong {
+
+    display: block;
+
+    color: var(--quiz-green-dark);
+
+    font-size: 11px;
+}
+
+
+.education-admin-content-note p {
+
+    margin: 4px 0 0;
+
+    color: #7d7668;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 1100px) {
+
+    .education-admin-content-form-grid {
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            290px;
+
+        gap: 18px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .education-admin-content-header {
+
+        flex-direction: column;
+    }
+
+
+    .education-admin-content-header-actions {
+
+        width: 100%;
+    }
+
+
+    .education-admin-content-header-actions
+    a {
+
+        flex: 1;
+    }
+
+
+    .education-admin-content-form-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .education-admin-content-form-sidebar {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        align-items: start;
+    }
+
+
+    .education-admin-content-note {
+
+        grid-column: 1 / -1;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .education-admin-content-title-row {
+
+        align-items: flex-start;
+    }
+
+
+    .education-admin-content-title-icon {
+
+        width: 48px;
+        height: 48px;
+
+        border-radius: 13px;
+    }
+
+
+    .education-admin-content-title-icon i {
+
+        font-size: 19px;
+    }
+
+
+    .education-admin-content-title-row h2 {
+
+        font-size: 21px;
+    }
+
+
+    .education-admin-content-header-actions {
+
+        flex-direction: column;
+    }
+
+
+    .education-admin-content-header-actions
+    a {
+
+        width: 100%;
+    }
+
+
+    .education-admin-content-form-sidebar {
+
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .education-admin-content-form-body {
+
+        padding: 15px;
+    }
+
+
+    .education-admin-content-form-card-header {
+
+        padding: 13px 15px;
+    }
+
+
+    .education-admin-question-item {
+
+        grid-template-columns:
+            38px
+            minmax(0, 1fr);
+
+        align-items: start;
+    }
+
+
+    .education-admin-question-number {
+
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .education-admin-question-actions {
+
+        grid-column: 2;
+
+        justify-content: flex-start;
+
+        margin-top: 4px;
+    }
+
+
+    .education-admin-question-top {
+
+        flex-direction: column;
+    }
+
+
+    .education-admin-status-badge {
+
+        align-self: flex-start;
+    }
+
+
+    .education-admin-question-meta {
+
+        gap: 8px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .education-admin-content-title-row h2 {
+
+        font-size: 19px;
+    }
+
+
+    .education-admin-content-heading > p {
+
+        font-size: 12px;
+    }
+
+
+    .education-admin-question-item {
+
+        padding: 12px;
+    }
+
+
+    .education-admin-question-top strong {
+
+        font-size: 12px;
+    }
+
+
+    .education-admin-quiz-info-list {
+
+        padding: 5px 15px;
+    }
+
+
+    .education-admin-quiz-summary {
+
+        padding: 18px;
+    }
+}

@@ -1,0 +1,1674 @@
+/*==================================================
+                ABOUT SECTION
+==================================================*/
+
+
+.about-section{
+
+    width:100%;
+
+   /*  min-height:100vh; */
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    padding:30px 20px;
+
+    overflow:hidden;
+
+}
+
+
+
+/*==================================================
+                ABOUT HEADER
+==================================================*/
+
+
+.about-header{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+
+
+.about-label{
+
+    display:inline-block;
+
+    color:#38bdf8;
+
+    font-size:14px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.about-header h2{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:white;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.about-header p{
+
+    max-width:600px;
+
+    margin:auto;
+
+    color:#cbd5e1;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/*==================================================
+                ABOUT BOOK
+==================================================*/
+
+
+.about-book{
+
+    position:relative;
+
+    width:380px;
+
+    height:540px;
+
+    transform-style:preserve-3d;
+
+    margin:0 auto;
+
+}
+
+
+
+/*==================================================
+                BOOK SHADOW
+==================================================*/
+
+
+.about-book-shadow{
+
+    position:absolute;
+
+    width:420px;
+
+    height:50px;
+
+    background:rgba(0,0,0,.55);
+
+    filter:blur(25px);
+
+    border-radius:50%;
+
+    bottom:-55px;
+
+    left:-20px;
+
+    z-index:-1;
+
+}
+
+
+
+
+
+/*==================================================
+                ABOUT PAGE
+==================================================*/
+
+
+.about-page{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+
+    transform-origin:left;
+
+
+    transform-style:preserve-3d;
+
+
+    cursor:grab;
+
+
+    transition:transform 1s ease;
+
+}
+
+
+
+
+.about-page.dragging{
+
+    transition:none;
+
+    cursor:grabbing;
+
+}
+
+
+
+
+
+/*==================================================
+            FRONT & BACK PAGE
+==================================================*/
+
+
+.about-front,
+
+.about-back{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+
+    border-radius:18px;
+
+
+    overflow:hidden;
+
+
+    backface-visibility:hidden;
+
+
+    box-shadow:
+
+        0 20px 50px rgba(0,0,0,.45),
+
+        inset 0 0 20px rgba(255,255,255,.05);
+
+}
+
+
+
+
+/* FRONT PAGE */
+
+
+.about-front{
+
+    background:
+
+    linear-gradient(
+
+        145deg,
+
+        #111827,
+
+        #1e293b
+
+    );
+
+
+    color:rgb(248, 248, 248);
+
+}
+
+
+
+
+
+/* BACK PAGE */
+
+
+.about-back{
+
+
+    background:
+
+    linear-gradient(
+
+        145deg,
+
+        #f8fafc,
+
+        #a6c7f6
+
+    );
+
+
+    transform:rotateY(180deg);
+
+
+    color:#0f172a;
+
+
+}
+
+
+
+
+
+/*==================================================
+                PAGE STACK
+==================================================*/
+
+
+.about-page:nth-child(2){
+
+    z-index:5;
+
+}
+
+
+.about-page:nth-child(3){
+
+    z-index:4;
+
+}
+
+
+.about-page:nth-child(4){
+
+    z-index:3;
+
+}
+
+
+.about-page:nth-child(5){
+
+    z-index:2;
+
+}
+
+
+
+
+
+/*==================================================
+                PAGE EDGE
+==================================================*/
+
+
+.about-page::after{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    right:-8px;
+
+
+    top:0;
+
+
+    width:14px;
+
+
+    height:100%;
+
+
+    background:
+
+
+    linear-gradient(
+
+        to right,
+
+        rgba(255,255,255,.1),
+
+        rgba(0,0,0,.2)
+
+    );
+
+
+    transform:
+
+
+        rotateY(90deg)
+
+        translateZ(7px);
+
+
+}
+/*==================================================
+                ABOUT CONTENT
+==================================================*/
+
+
+.about-content{
+
+    width:100%;
+
+    height:100%;
+
+    padding:40px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+
+
+
+
+/*==================================================
+                GLASS EFFECT
+==================================================*/
+
+
+.about-glass{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        rgba(255,255,255,.05),
+
+        transparent
+
+    );
+
+
+    pointer-events:none;
+
+}
+
+
+
+
+
+/*==================================================
+                PROFILE IMAGE
+==================================================*/
+
+
+.about-profile{
+
+
+    width:130px;
+
+
+    height:130px;
+
+
+    border-radius:50%;
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #38bdf8,
+
+        #8b5cf6
+
+    );
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    overflow:hidden;
+
+
+    margin-bottom:28px;
+
+
+    box-shadow:
+
+
+        0 0 45px rgba(99,102,241,.6);
+
+
+    animation:
+
+
+        aboutPulse 3s infinite;
+
+
+}
+
+
+
+
+
+.about-profile img{
+
+
+    width:100%;
+
+
+    height:100%;
+
+
+    object-fit:cover;
+
+
+    border-radius:50%;
+
+
+}
+
+
+
+
+
+
+
+/*==================================================
+                PROFILE ANIMATION
+==================================================*/
+
+
+@keyframes aboutPulse{
+
+
+    50%{
+
+
+        transform:scale(1.05);
+
+
+        box-shadow:
+
+
+        0 0 65px rgba(99,102,241,.9);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/*==================================================
+                MAIN TEXT
+==================================================*/
+
+
+.about-title{
+
+
+    font-size:42px;
+
+
+    font-weight:700;
+
+
+    margin-bottom:12px;
+
+
+    letter-spacing:2px;
+
+
+    color:#ffffff;
+
+
+}
+
+
+
+
+
+.about-role{
+
+
+    color:#38bdf8;
+
+
+    font-size:18px;
+
+
+    margin-bottom:28px;
+
+
+}
+
+
+
+
+
+
+
+.about-desc{
+
+
+    line-height:1.8;
+
+
+    color:#0c0c0c;
+
+
+    font-size:15px;
+
+
+    max-width:280px;
+
+
+}
+
+
+
+
+
+
+
+/*==================================================
+                PAGE TITLES
+==================================================*/
+
+
+.about-front h2{
+
+
+    font-size:34px;
+
+
+    margin-bottom:22px;
+
+
+    color:#ffffff;
+
+
+}
+
+
+
+
+
+.about-back h2{
+
+
+    font-size:34px;
+
+
+    margin-bottom:22px;
+
+
+    color:#5298e2;
+
+
+}
+/*==================================================
+                SKILLS
+==================================================*/
+
+
+.about-skills{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:14px;
+
+    margin-top:15px;
+
+}
+
+
+
+
+
+.about-skill{
+
+
+    padding:12px 20px;
+
+
+    border-radius:40px;
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #0f172a,
+
+        #1e293b
+
+    );
+
+
+    color:white;
+
+
+    font-size:14px;
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.08);
+
+
+    transition:.4s;
+
+
+}
+
+
+
+
+
+.about-skill:hover{
+
+
+    transform:
+
+
+    translateY(-5px);
+
+
+    box-shadow:
+
+
+    0 10px 20px rgba(0,0,0,.25);
+
+
+}
+
+
+
+
+
+
+
+
+/*==================================================
+                PROJECTS
+==================================================*/
+
+
+.about-projects{
+
+
+    width:100%;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:18px;
+
+
+}
+
+
+
+
+
+.about-project-card{
+
+
+    padding:20px;
+
+
+    border-radius:16px;
+
+
+    background:
+
+
+    rgb(243,240,240);
+
+
+    transition:.4s;
+
+
+    box-shadow:
+
+
+    0 10px 20px rgba(0,0,0,.08);
+
+
+    color:#020617;
+
+
+}
+
+
+
+
+
+.about-project-card:hover{
+
+
+    transform:
+
+
+    translateY(-8px)
+
+    scale(1.03);
+
+
+}
+
+
+
+
+
+
+
+
+/*==================================================
+                ABOUT BUTTON
+==================================================*/
+
+
+.about-btn{
+
+
+    margin-top:28px;
+
+
+    padding:
+
+
+        15px 32px;
+
+
+    border:none;
+
+
+    border-radius:50px;
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #38bdf8,
+
+        #8b5cf6
+
+    );
+
+
+    color:white;
+
+
+    font-weight:600;
+
+
+    font-size:15px;
+
+
+    cursor:pointer;
+
+
+    transition:.4s;
+
+
+    box-shadow:
+
+
+    0 10px 30px rgba(99,102,241,.4);
+
+
+}
+
+
+
+
+
+.about-btn:hover{
+
+
+    transform:
+
+
+    translateY(-5px);
+
+
+    box-shadow:
+
+
+    0 15px 40px rgba(99,102,241,.7);
+
+
+}
+
+
+
+
+
+
+
+
+/*==================================================
+                ABOUT PARTICLES
+==================================================*/
+
+
+.about-particle{
+
+
+    position:absolute;
+
+
+    width:10px;
+
+
+    height:10px;
+
+
+    border-radius:50%;
+
+
+    background:#38bdf8;
+
+
+    box-shadow:
+
+
+    0 0 20px #38bdf8;
+
+
+    animation:
+
+
+    aboutParticle 8s linear infinite;
+
+
+}
+
+
+
+
+
+.about-particle:nth-child(1){
+
+
+    top:10%;
+
+
+    left:8%;
+
+
+}
+
+
+
+
+
+.about-particle:nth-child(2){
+
+
+    top:75%;
+
+
+    left:85%;
+
+
+    animation-duration:10s;
+
+
+}
+
+
+
+
+
+.about-particle:nth-child(3){
+
+
+    top:40%;
+
+
+    left:92%;
+
+
+    animation-duration:7s;
+
+
+}
+
+
+
+
+
+@keyframes aboutParticle{
+
+
+    50%{
+
+
+        transform:
+
+
+        translateY(-40px)
+
+        scale(1.5);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/*==================================================
+                FINAL PAGE
+==================================================*/
+
+
+.about-final{
+
+
+    background:
+
+
+    linear-gradient(
+
+        145deg,
+
+        #020617,
+
+        #111827
+
+    );
+
+
+    color:white;
+
+
+}
+/*==================================================
+                ABOUT RESPONSIVE
+==================================================*/
+
+
+/*=========================
+        LAPTOP
+=========================*/
+
+
+@media(max-width:1200px){
+
+
+    .about-book{
+
+
+        width:360px;
+
+
+        height:520px;
+
+
+    }
+
+
+
+    .about-content{
+
+
+        padding:35px;
+
+
+    }
+
+
+
+    .about-title{
+
+
+        font-size:38px;
+
+
+    }
+
+
+
+    .about-profile{
+
+
+        width:120px;
+
+
+        height:120px;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+/*=========================
+        TABLET
+=========================*/
+
+
+@media(max-width:992px){
+
+
+    .about-section{
+
+
+        padding:80px 20px;
+
+
+    }
+
+
+
+
+    .about-header{
+
+
+        margin-bottom:45px;
+
+
+    }
+
+
+
+
+
+    .about-header h2{
+
+
+        font-size:36px;
+
+
+    }
+
+
+
+
+
+
+    .about-header p{
+
+
+        font-size:16px;
+
+
+    }
+
+
+
+
+
+
+    .about-book{
+
+
+        width:330px;
+
+
+        height:480px;
+
+
+    }
+
+
+
+
+
+
+    .about-content{
+
+
+        padding:30px;
+
+
+    }
+
+
+
+
+
+
+    .about-title{
+
+
+        font-size:34px;
+
+
+    }
+
+
+
+
+
+
+    .about-role{
+
+
+        font-size:16px;
+
+
+    }
+
+
+
+
+
+
+    .about-desc{
+
+
+        font-size:14px;
+
+
+    }
+
+
+
+
+
+
+    .about-profile{
+
+
+        width:110px;
+
+
+        height:110px;
+
+
+    }
+
+
+
+
+
+
+    .about-front h2,
+
+    .about-back h2{
+
+
+        font-size:30px;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/*=========================
+        MOBILE
+=========================*/
+
+
+@media(max-width:768px){
+
+
+
+    .about-section{
+
+
+        padding:70px 15px;
+
+
+    }
+
+
+
+
+
+    .about-header{
+
+
+        margin-bottom:35px;
+
+
+    }
+
+
+
+
+
+
+    .about-label{
+
+
+        font-size:12px;
+
+
+        letter-spacing:3px;
+
+
+    }
+
+
+
+
+
+
+    .about-header h2{
+
+
+        font-size:30px;
+
+
+    }
+
+
+
+
+
+
+    .about-header p{
+
+
+        font-size:14px;
+
+
+        padding:0 20px;
+
+
+    }
+
+
+
+
+
+
+    .about-book{
+
+
+        width:300px;
+
+
+        height:450px;
+
+
+    }
+
+
+
+
+
+
+    .about-book-shadow{
+
+
+        width:330px;
+
+
+        left:-15px;
+
+
+    }
+
+
+
+
+
+
+    .about-content{
+
+
+        padding:25px;
+
+
+    }
+
+
+
+
+
+
+    .about-title{
+
+
+        font-size:30px;
+
+
+        letter-spacing:1px;
+
+
+    }
+
+
+
+
+
+
+    .about-role{
+
+
+        font-size:15px;
+
+
+        margin-bottom:20px;
+
+
+    }
+
+
+
+
+
+
+    .about-desc{
+
+
+        font-size:13px;
+
+
+    }
+
+
+
+
+
+
+    .about-profile{
+
+
+        width:100px;
+
+
+        height:100px;
+
+
+        margin-bottom:22px;
+
+
+    }
+
+
+
+
+
+
+    .about-front h2,
+
+    .about-back h2{
+
+
+        font-size:26px;
+
+
+    }
+
+
+
+
+
+
+    .about-skill{
+
+
+        padding:10px 16px;
+
+
+        font-size:13px;
+
+
+    }
+
+
+
+
+
+
+    .about-btn{
+
+
+        padding:12px 25px;
+
+
+        font-size:14px;
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/*=========================
+        SMALL MOBILE
+=========================*/
+
+
+@media(max-width:480px){
+
+
+
+    .about-header h2{
+
+
+        font-size:26px;
+
+
+    }
+
+
+
+
+
+
+    .about-header p{
+
+
+        font-size:13px;
+
+
+    }
+
+
+
+
+
+
+    .about-book{
+
+
+        width:270px;
+
+
+        height:410px;
+
+
+    }
+
+
+
+
+
+
+    .about-content{
+
+
+        padding:20px;
+
+
+    }
+
+
+
+
+
+
+    .about-title{
+
+
+        font-size:26px;
+
+
+    }
+
+
+
+
+
+
+    .about-profile{
+
+
+        width:85px;
+
+
+        height:85px;
+
+
+    }
+
+
+
+
+
+
+    .about-desc{
+
+
+        font-size:12px;
+
+
+        line-height:1.7;
+
+
+    }
+
+.about-end{
+    color: whitesmoke;
+}
+
+
+
+
+    .about-front h2,
+
+    .about-back h2{
+
+
+        font-size:22px;
+
+
+    }
+
+
+
+
+
+
+    .about-project-card{
+
+
+        padding:15px;
+
+
+        font-size:13px;
+
+
+    }
+
+
+
+}

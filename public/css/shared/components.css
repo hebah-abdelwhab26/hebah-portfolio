@@ -1,0 +1,336 @@
+/*==================================================
+                HEBAH DESIGN SYSTEM
+                COMPONENTS
+==================================================*/
+
+/*==================================================
+                GLASS CARD
+==================================================*/
+
+.glass-card{
+
+    position:relative;
+
+    background:var(--card-bg);
+
+    border:1px solid var(--card-border);
+
+    border-radius:var(--radius-xl);
+
+    backdrop-filter:blur(var(--glass-card-blur));
+
+    -webkit-backdrop-filter:blur(var(--glass-card-blur));
+
+    box-shadow:var(--card-shadow);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+
+    overflow:hidden;
+
+}
+
+.glass-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--card-border-hover);
+
+    box-shadow:var(--card-shadow-hover);
+
+}
+
+.glass-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.05),
+            transparent 60%
+        );
+
+    opacity:0;
+
+    transition:opacity var(--transition);
+
+    pointer-events:none;
+
+}
+
+.glass-card:hover::before{
+
+    opacity:1;
+
+}
+
+/*==================================================
+                GLASS PANEL
+==================================================*/
+
+.glass-panel{
+
+    background:var(--surface-raised);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-2xl);
+
+    box-shadow:var(--shadow-lg);
+
+    overflow:hidden;
+
+}
+
+/*==================================================
+                ICON BOX
+==================================================*/
+
+.icon-box{
+
+    width:72px;
+
+    height:72px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:var(--radius-lg);
+
+    background:var(--icon-bg);
+
+    border:1px solid var(--icon-border);
+
+    color:var(--icon-color);
+
+    font-size:1.7rem;
+
+    flex-shrink:0;
+
+    transition:all var(--transition);
+
+}
+
+.glass-card:hover .icon-box{
+
+    transform:rotate(-6deg) scale(1.08);
+
+}
+/*==================================================
+                BADGES
+==================================================*/
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 22px;
+
+    border-radius:var(--radius-round);
+
+    background:var(--badge-bg);
+
+    border:1px solid var(--badge-border);
+
+    color:var(--badge-color);
+
+    font-size:var(--font-size-sm);
+
+    font-weight:700;
+
+    letter-spacing:.3px;
+
+}
+
+.badge i{
+
+    font-size:1rem;
+
+}
+
+/*==================================================
+                SECTION HEADER
+==================================================*/
+
+.section-header{
+
+    max-width:760px;
+
+    margin:0 auto 80px;
+
+    text-align:center;
+
+}
+
+.section-header--left{
+
+    margin:0;
+
+    text-align:right;
+
+}
+
+.section-header .badge{
+
+    margin-bottom:20px;
+
+}
+
+.section-title{
+
+    color:var(--heading-color);
+
+    font-family:var(--font-heading);
+
+    font-size:clamp(2rem,5vw,3.5rem);
+
+    line-height:1.25;
+
+    margin-bottom:24px;
+
+}
+
+.section-title span{
+
+    color:var(--primary);
+
+}
+
+.section-description{
+
+    color:var(--body-color);
+
+    font-size:1.08rem;
+
+    line-height:2;
+
+    max-width:680px;
+
+    margin-inline:auto;
+
+}
+
+.section-header--left .section-description{
+
+    margin-inline:0;
+
+}
+
+/*==================================================
+                FEATURE CARD
+==================================================*/
+
+.feature-card{
+
+    position:relative;
+
+    padding:32px;
+
+    border-radius:var(--radius-xl);
+
+    background:var(--card-bg);
+
+    border:1px solid var(--card-border);
+
+    box-shadow:var(--card-shadow);
+
+    backdrop-filter:blur(var(--glass-card-blur));
+
+    transition:var(--transition);
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--card-border-hover);
+
+    box-shadow:var(--card-shadow-hover);
+
+}
+
+.feature-card h3{
+
+    color:var(--heading-color);
+
+    margin:22px 0 14px;
+
+    font-size:1.35rem;
+
+}
+
+.feature-card p{
+
+    color:var(--body-color);
+
+    line-height:1.9;
+
+}
+
+/*==================================================
+                STAT CARD
+==================================================*/
+
+.stat-card{
+
+    text-align:center;
+
+    padding:30px;
+
+    border-radius:var(--radius-xl);
+
+    background:var(--card-bg);
+
+    border:1px solid var(--card-border);
+
+    backdrop-filter:blur(var(--glass-card-blur));
+
+    transition:var(--transition);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--primary);
+
+}
+
+.stat-number{
+
+    display:block;
+
+    color:var(--primary);
+
+    font-size:2.5rem;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+
+}
+
+.stat-label{
+
+    color:var(--body-color);
+
+    font-size:1rem;
+
+}

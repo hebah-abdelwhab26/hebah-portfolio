@@ -1,0 +1,490 @@
+/*==================================================
+                HERO ANIMATION
+==================================================*/
+
+.hero{
+
+    animation:heroFade 1.2s ease forwards;
+
+}
+
+@keyframes heroFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================================
+                CARDS ENTRANCE
+==================================================*/
+
+.tech-card{
+
+    opacity:0;
+
+    animation:cardLeft .9s ease forwards;
+
+    animation-delay:.5s;
+
+}
+
+.education-card{
+
+    opacity:0;
+
+    animation:cardRight .9s ease forwards;
+
+    animation-delay:.8s;
+
+}
+
+@keyframes cardLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateX(-70px)
+            translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateX(0)
+            translateY(0);
+
+    }
+
+}
+
+@keyframes cardRight{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateX(70px)
+            translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateX(0)
+            translateY(0);
+
+    }
+
+}
+
+/*==================================================
+                FLOATING ICONS
+==================================================*/
+
+@keyframes floatIcon{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+/*==================================================
+                MOON
+==================================================*/
+
+@keyframes moonFloat{
+
+    0%,100%{
+
+        transform:
+            translateX(-50%)
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateX(-50%)
+            translateY(-12px);
+
+    }
+
+}
+
+/*==================================================
+                TWINKLE
+==================================================*/
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.4;
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.35);
+
+    }
+
+}
+
+/*==================================================
+                CODE LINES
+==================================================*/
+
+@keyframes codeGlow{
+
+    0%,100%{
+
+        opacity:.45;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+}
+
+/*==================================================
+                CARD GLOW
+==================================================*/
+
+@keyframes glowPulse{
+
+    0%,100%{
+
+        transform:scale(1);
+
+        opacity:.35;
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+        opacity:.6;
+
+    }
+
+}
+
+.card-glow{
+
+    animation:glowPulse 7s ease-in-out infinite;
+
+}
+
+/*==================================================
+                BUTTON
+==================================================*/
+
+.portal-btn{
+
+    animation:buttonPulse 4s infinite;
+
+}
+
+@keyframes buttonPulse{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.04);
+
+    }
+
+}
+
+/*==================================================
+                SCROLL
+==================================================*/
+
+.scroll-down{
+
+    animation:scrollBounce 2s infinite;
+
+}
+
+@keyframes scrollBounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(12px);
+
+    }
+
+}
+
+/*==================================================
+                GRID
+==================================================*/
+
+.tech-grid{
+
+    animation:gridMove 25s linear infinite;
+
+}
+
+@keyframes gridMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(45px);
+
+    }
+
+}
+
+/*==================================================
+                LIGHT RAYS
+==================================================*/
+
+.light-rays{
+
+    animation:raysMove 35s linear infinite;
+
+}
+
+@keyframes raysMove{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(240px);
+
+    }
+
+}
+
+/*==================================================
+                BLUE GLOW
+==================================================*/
+
+.blue-glow{
+
+    animation:blueGlowMove 14s ease-in-out infinite;
+
+}
+
+@keyframes blueGlowMove{
+
+    0%,100%{
+
+        transform:translate(0,0);
+
+    }
+
+    50%{
+
+        transform:translate(120px,70px);
+
+    }
+
+}
+
+/*==================================================
+                GOLD GLOW
+==================================================*/
+
+.gold-glow{
+
+    animation:goldGlowMove 18s ease-in-out infinite;
+
+}
+
+@keyframes goldGlowMove{
+
+    0%,100%{
+
+        transform:translate(0,0);
+
+    }
+
+    50%{
+
+        transform:translate(-120px,-60px);
+
+    }
+
+}
+
+/*==================================================
+                PARTICLES
+==================================================*/
+
+.particles::before{
+
+    animation:particlesUp 28s linear infinite;
+
+}
+
+.particles::after{
+
+    animation:particlesDown 34s linear infinite;
+
+}
+
+@keyframes particlesUp{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-120px);
+
+    }
+
+}
+
+@keyframes particlesDown{
+
+    from{
+
+        transform:translateY(-120px);
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+    }
+
+}
+@keyframes nodePulse{
+
+    0%,100%{
+
+        transform:scale(1);
+
+        opacity:.6;
+
+    }
+
+    50%{
+
+        transform:scale(1.6);
+
+        opacity:1;
+
+    }
+
+}
+@keyframes gridFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+.tech-grid{
+
+    animation:gridFloat 12s ease-in-out infinite;
+
+}
+/*==================================================
+            SCROLL REVEAL
+==================================================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}

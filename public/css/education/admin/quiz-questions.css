@@ -1,0 +1,1269 @@
+
+/* =========================================================
+   EDUCATION ADMIN
+   QUIZ QUESTIONS
+   LIGHT CREAM / GOLD / GREEN DESIGN
+   ========================================================= */
+
+.education-admin-content-page {
+    direction: rtl;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 34px;
+    color: #26382d;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.education-admin-content-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.education-admin-content-heading {
+    flex: 1;
+}
+
+.education-admin-page-header-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 12px;
+
+    color: #a47b2c;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.education-admin-page-header-label i {
+    font-size: 14px;
+}
+
+.education-admin-content-title-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.education-admin-content-title-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 16px;
+
+    color: #a47b2c;
+
+    background: linear-gradient(
+        145deg,
+        #fff8e8,
+        #f8edcf
+    );
+
+    border: 1px solid #e6d2a2;
+
+    box-shadow:
+        0 8px 22px rgba(126, 96, 35, 0.10);
+
+    font-size: 23px;
+}
+
+.education-admin-content-title-row h2 {
+    margin: 0;
+
+    color: #20382b;
+
+    font-size: 29px;
+    font-weight: 800;
+
+    line-height: 1.3;
+}
+
+.education-admin-content-lesson-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: 7px;
+
+    color: #718074;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.education-admin-content-lesson-name i {
+    color: #b28a3d;
+}
+
+.education-admin-content-heading > p {
+    margin: 14px 0 0;
+
+    color: #78857b;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   HEADER BUTTONS
+========================================================= */
+
+.education-admin-content-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.education-admin-content-primary-button,
+.education-admin-content-back-button {
+    min-height: 45px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 0 18px;
+
+    border-radius: 11px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+.education-admin-content-primary-button {
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #b08a42,
+        #94702f
+    );
+
+    box-shadow:
+        0 8px 20px rgba(148, 112, 47, .18);
+}
+
+.education-admin-content-primary-button:hover {
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(148, 112, 47, .25);
+}
+
+.education-admin-content-back-button {
+    color: #31523e;
+
+    background: #ffffff;
+
+    border: 1px solid #dce3dd;
+}
+
+.education-admin-content-back-button:hover {
+    color: #31523e;
+
+    background: #f7f9f6;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.education-admin-content-alert {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 24px;
+    padding: 15px 18px;
+
+    border-radius: 13px;
+}
+
+.education-admin-content-alert-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    font-size: 18px;
+}
+
+.education-admin-content-alert.success {
+    background: #f0f8f1;
+    border: 1px solid #cce3d0;
+}
+
+.education-admin-content-alert.success
+.education-admin-content-alert-icon {
+    color: #4d8b59;
+    background: #e1f1e3;
+}
+
+.education-admin-content-alert.error {
+    background: #fff6f1;
+    border: 1px solid #efd5c7;
+}
+
+.education-admin-content-alert.error
+.education-admin-content-alert-icon {
+    color: #b36c4e;
+    background: #fbe8df;
+}
+
+.education-admin-content-alert strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #294333;
+
+    font-size: 13px;
+}
+
+.education-admin-content-alert p {
+    margin: 0;
+
+    color: #718076;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   QUIZ OVERVIEW
+========================================================= */
+
+.education-admin-quiz-overview-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 16px;
+
+    margin-bottom: 27px;
+}
+
+.education-admin-quiz-overview-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    min-height: 108px;
+
+    padding: 20px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e6e1;
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 8px 25px rgba(49, 76, 58, .07);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.education-admin-quiz-overview-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(49, 76, 58, .11);
+}
+
+.education-admin-quiz-overview-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    left: -45px;
+    bottom: -50px;
+
+    border-radius: 50%;
+
+    background: #f7f0df;
+}
+
+.education-admin-quiz-overview-card.green::after {
+    background: #edf6ee;
+}
+
+.education-admin-quiz-overview-icon {
+    width: 49px;
+    height: 49px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    color: #a47b2c;
+
+    background: #fbf5e6;
+
+    font-size: 18px;
+}
+
+.education-admin-quiz-overview-card.gold
+.education-admin-quiz-overview-icon {
+    color: #a47b2c;
+    background: #fbf5e6;
+}
+
+.education-admin-quiz-overview-card.green
+.education-admin-quiz-overview-icon {
+    color: #4d8757;
+    background: #edf6ee;
+}
+
+.education-admin-quiz-overview-card span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #7b877e;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.education-admin-quiz-overview-card strong {
+    color: #253f30;
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.education-admin-quiz-overview-card strong small {
+    color: #7d887f;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   MAIN QUESTIONS CARD
+========================================================= */
+
+.education-admin-content-table-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe5df;
+
+    border-radius: 19px;
+
+    box-shadow:
+        0 10px 35px rgba(43, 67, 51, .08);
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.education-admin-content-table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 25px;
+
+    background: #fcfdfb;
+
+    border-bottom: 1px solid #e6ebe6;
+}
+
+.education-admin-content-table-header span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #a17a32;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.education-admin-content-table-header h3 {
+    margin: 0;
+
+    color: #253e30;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.education-admin-content-table-header-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 8px 12px;
+
+    color: #8c682a;
+
+    background: #faf4e6;
+
+    border: 1px solid #ecdfc1;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   QUESTION ITEM
+========================================================= */
+
+.education-admin-questions-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.education-admin-question-item {
+    display: grid;
+
+    grid-template-columns:
+        52px
+        minmax(0, 1fr)
+        auto;
+
+    gap: 18px;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #edf0ed;
+
+    transition:
+        background .2s ease;
+}
+
+.education-admin-question-item:last-child {
+    border-bottom: 0;
+}
+
+.education-admin-question-item:hover {
+    background: #fdfefc;
+}
+
+
+/* =========================================================
+   QUESTION NUMBER
+========================================================= */
+
+.education-admin-question-number {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 1px;
+
+    color: #9b752f;
+
+    background: #fbf5e7;
+
+    border: 1px solid #eadbb9;
+
+    border-radius: 13px;
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   QUESTION TOP
+========================================================= */
+
+.education-admin-question-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 18px;
+}
+
+.education-admin-question-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #a27b36;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.education-admin-question-top h3 {
+    margin: 0;
+
+    color: #263e30;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   STATUS BADGE
+========================================================= */
+
+.education-admin-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    flex-shrink: 0;
+
+    padding: 6px 10px;
+
+    border-radius: 8px;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.education-admin-status-badge.active {
+    color: #4d8656;
+
+    background: #edf7ef;
+
+    border: 1px solid #cce2d0;
+}
+
+.education-admin-status-badge.inactive {
+    color: #a8614c;
+
+    background: #fff3ee;
+
+    border: 1px solid #efd3c8;
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.education-admin-question-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 13px;
+}
+
+.education-admin-question-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 6px 9px;
+
+    color: #68766d;
+
+    background: #f7f9f7;
+
+    border: 1px solid #e5eae5;
+
+    border-radius: 8px;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.education-admin-question-meta i {
+    color: #ad8337;
+}
+
+
+/* =========================================================
+   OPTIONS
+========================================================= */
+
+.education-admin-question-options {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+
+    margin-top: 17px;
+}
+
+.education-admin-question-option {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 10px 12px;
+
+    background: #fafbfa;
+
+    border: 1px solid #e5e9e5;
+
+    border-radius: 10px;
+}
+
+.education-admin-question-option.correct {
+    background: #f0f8f1;
+
+    border-color: #c9dfcd;
+}
+
+.education-admin-question-option.inactive {
+    opacity: .55;
+}
+
+.education-admin-question-option-icon {
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    color: #9aa39c;
+
+    background: #eef1ee;
+
+    font-size: 8px;
+}
+
+.education-admin-question-option.correct
+.education-admin-question-option-icon {
+    color: #ffffff;
+
+    background: #5b9563;
+}
+
+.education-admin-question-option-text {
+    min-width: 0;
+
+    overflow: hidden;
+
+    color: #43564a;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.education-admin-question-option-status {
+    margin-right: auto;
+
+    flex-shrink: 0;
+
+    color: #ae6752;
+
+    font-size: 9px;
+}
+
+.education-admin-question-more-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 40px;
+
+    color: #9b752f;
+
+    background: #fbf6e9;
+
+    border: 1px dashed #dfcc9f;
+
+    border-radius: 10px;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   OPTIONS SUMMARY
+========================================================= */
+
+.education-admin-question-options-summary {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 10px;
+}
+
+.education-admin-question-options-summary span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    color: #7d887f;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.education-admin-question-options-summary i {
+    color: #ad8337;
+}
+
+
+/* =========================================================
+   NO OPTIONS
+========================================================= */
+
+.education-admin-question-no-options {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 16px;
+    padding: 14px;
+
+    background: #fff9f2;
+
+    border: 1px solid #eedfca;
+
+    border-radius: 12px;
+}
+
+.education-admin-question-no-options-icon {
+    width: 39px;
+    height: 39px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #b47b3e;
+
+    background: #f9ecd9;
+
+    border-radius: 10px;
+}
+
+.education-admin-question-no-options strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #5c4835;
+
+    font-size: 11px;
+}
+
+.education-admin-question-no-options span {
+    display: block;
+
+    color: #8c8175;
+
+    font-size: 10px;
+}
+
+.education-admin-question-add-option-button {
+    margin-right: auto;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    flex-shrink: 0;
+
+    padding: 8px 12px;
+
+    color: #ffffff;
+
+    background: #4f7e59;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+.education-admin-question-add-option-button:hover {
+    color: #ffffff;
+
+    background: #416b49;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   TEXT ANSWER
+========================================================= */
+
+.education-admin-question-text-answer {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-top: 16px;
+    padding: 12px 14px;
+
+    color: #68766d;
+
+    background: #f7f9f7;
+
+    border: 1px solid #e4e9e4;
+
+    border-radius: 11px;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.education-admin-question-text-answer i {
+    color: #a77d31;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   EXPLANATION
+========================================================= */
+
+.education-admin-question-explanation {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+
+    margin-top: 12px;
+    padding: 10px 12px;
+
+    color: #6d786f;
+
+    background: #fffaf0;
+
+    border-right: 3px solid #d2b16b;
+
+    border-radius: 8px;
+
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+.education-admin-question-explanation i {
+    flex-shrink: 0;
+
+    margin-top: 2px;
+
+    color: #b08435;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.education-admin-question-actions {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 6px;
+
+    padding-top: 2px;
+}
+
+.education-admin-question-actions form {
+    margin: 0;
+}
+
+.education-admin-table-action {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #f7f9f7;
+
+    border: 1px solid #e1e7e1;
+
+    color: #758078;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        color .2s ease,
+        background .2s ease,
+        border-color .2s ease;
+}
+
+.education-admin-table-action:hover {
+    transform: translateY(-2px);
+}
+
+.education-admin-table-action.view:hover {
+    color: #9c762f;
+    background: #fbf5e7;
+    border-color: #e4d5af;
+}
+
+.education-admin-table-action.questions:hover {
+    color: #4f8659;
+    background: #eef7ef;
+    border-color: #cde1d0;
+}
+
+.education-admin-table-action.add:hover {
+    color: #9c762f;
+    background: #fbf5e7;
+    border-color: #e4d5af;
+}
+
+.education-admin-table-action.edit:hover {
+    color: #567a86;
+    background: #eff5f7;
+    border-color: #cfdee3;
+}
+
+.education-admin-table-action.delete:hover {
+    color: #b2614d;
+    background: #fff2ee;
+    border-color: #efd2c9;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.education-admin-content-empty {
+    min-height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 25px;
+
+    text-align: center;
+}
+
+.education-admin-content-empty-icon {
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    color: #a77d32;
+
+    background: #fbf5e7;
+
+    border: 1px solid #eadbb9;
+
+    border-radius: 19px;
+
+    font-size: 26px;
+}
+
+.education-admin-content-empty h3 {
+    margin: 0 0 8px;
+
+    color: #294332;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.education-admin-content-empty p {
+    margin: 0 0 20px;
+
+    color: #7c887f;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   PAGINATION
+========================================================= */
+
+.education-admin-content-pagination {
+    display: flex;
+    justify-content: center;
+
+    padding: 20px 24px;
+
+    background: #fcfdfb;
+
+    border-top: 1px solid #e7ebe7;
+}
+
+.education-admin-content-pagination a,
+.education-admin-content-pagination span {
+    min-width: 35px;
+    height: 35px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 3px;
+    padding: 0 8px;
+
+    color: #6f7c73;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe5df;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+}
+
+.education-admin-content-pagination a:hover {
+    color: #9b752f;
+
+    background: #fbf5e7;
+
+    border-color: #e4d5b1;
+}
+
+.education-admin-content-pagination span[aria-current="page"] {
+    color: #ffffff;
+
+    background: #a77d32;
+
+    border-color: #a77d32;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .education-admin-quiz-overview-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .education-admin-content-page {
+        padding: 25px 18px;
+    }
+
+    .education-admin-content-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .education-admin-question-item {
+        grid-template-columns:
+            46px
+            minmax(0, 1fr);
+    }
+
+    .education-admin-question-actions {
+        grid-column: 2;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .education-admin-content-page {
+        padding: 18px 12px;
+    }
+
+    .education-admin-content-title-row h2 {
+        font-size: 22px;
+    }
+
+    .education-admin-content-title-icon {
+        width: 49px;
+        height: 49px;
+        border-radius: 13px;
+        font-size: 19px;
+    }
+
+    .education-admin-quiz-overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-admin-content-header-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .education-admin-content-primary-button,
+    .education-admin-content-back-button {
+        width: 100%;
+    }
+
+    .education-admin-content-table-header {
+        padding: 18px;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+    .education-admin-question-item {
+        grid-template-columns:
+            42px
+            minmax(0, 1fr);
+
+        gap: 12px;
+
+        padding: 18px;
+    }
+
+    .education-admin-question-number {
+        width: 40px;
+        height: 40px;
+    }
+
+    .education-admin-question-top {
+        flex-direction: column;
+    }
+
+    .education-admin-question-options {
+        grid-template-columns: 1fr;
+    }
+
+    .education-admin-question-actions {
+        grid-column: 1 / -1;
+
+        padding-top: 10px;
+
+        border-top: 1px solid #edf0ed;
+    }
+
+    .education-admin-question-no-options {
+        flex-wrap: wrap;
+    }
+
+    .education-admin-question-add-option-button {
+        margin-right: 0;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .education-admin-content-title-row h2 {
+        font-size: 20px;
+    }
+
+    .education-admin-question-top h3 {
+        font-size: 14px;
+    }
+
+    .education-admin-question-meta span {
+        font-size: 9px;
+    }
+
+    .education-admin-table-action {
+        width: 33px;
+        height: 33px;
+    }
+
+}
+

@@ -1,0 +1,225 @@
+/*==================================================
+                BUTTON DESIGN SYSTEM
+==================================================*/
+
+/*==================================
+            BUTTON WRAPPER
+==================================*/
+
+.btn-group{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/*==================================
+            BASE BUTTON
+==================================*/
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    min-width:180px;
+
+    height:58px;
+
+    padding:0 30px;
+
+    border-radius:var(--radius-full);
+
+    font-family:var(--font-arabic);
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:all var(--transition);
+
+    position:relative;
+
+    overflow:hidden;
+
+    z-index:1;
+
+}
+
+/*==================================
+            PRIMARY BUTTON
+==================================*/
+
+.btn-primary{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+
+    color:var(--bg);
+
+    box-shadow:var(--shadow-gold);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    filter:brightness(1.08);
+
+}
+
+/*==================================
+            SECONDARY BUTTON
+==================================*/
+
+.btn-secondary{
+
+    background:transparent;
+
+    color:var(--white);
+
+    border:1px solid var(--glass-border);
+
+    backdrop-filter:blur(var(--blur-sm));
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--glass);
+
+    border-color:var(--primary);
+
+}
+
+/*==================================
+            OUTLINE BUTTON
+==================================*/
+
+.btn-outline{
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+    background:transparent;
+
+}
+
+.btn-outline:hover{
+
+    background:var(--primary);
+
+    color:var(--bg);
+
+}
+
+/*==================================
+            ICON
+==================================*/
+
+.btn i{
+
+    transition:.3s;
+
+}
+
+.btn:hover i{
+
+    transform:translateX(-4px);
+
+}
+
+/*==================================
+            SHINE EFFECT
+==================================*/
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.4),
+
+        transparent
+
+    );
+
+    transform:translateX(-120%);
+
+    transition:1s;
+
+    z-index:-1;
+
+}
+
+.btn:hover::before{
+
+    transform:translateX(120%);
+
+}
+
+/*==================================
+            SMALL BUTTON
+==================================*/
+
+.btn-sm{
+
+    min-width:140px;
+
+    height:46px;
+
+    font-size:.9rem;
+
+}
+
+/*==================================
+            LARGE BUTTON
+==================================*/
+
+.btn-lg{
+
+    min-width:220px;
+
+    height:66px;
+
+    font-size:1.05rem;
+
+}
+
+/*==================================
+            FULL WIDTH
+==================================*/
+
+.btn-block{
+
+    width:100%;
+
+}

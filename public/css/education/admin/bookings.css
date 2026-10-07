@@ -1,0 +1,2458 @@
+/* ==========================================================
+   EDUCATION ADMIN — BOOKINGS
+   HEBAH EDUCATION DESIGN SYSTEM
+   Cream + Deep Green + Gold
+   ========================================================== */
+
+.education-admin-bookings-page {
+    width: 100%;
+    direction: rtl;
+
+    --booking-primary: #1f4d3b;
+    --booking-primary-dark: #173d2f;
+    --booking-primary-light: #eaf2ed;
+
+    --booking-gold: #b88a44;
+    --booking-gold-light: #d5ad67;
+    --booking-gold-soft: #f7efe2;
+
+    --booking-bg: #f7f4ee;
+    --booking-card: #ffffff;
+    --booking-card-soft: #fcfbf8;
+
+    --booking-heading: #1d2d26;
+    --booking-text: #35433d;
+    --booking-muted: #78827d;
+    --booking-light-text: #9aa29d;
+
+    --booking-border: #e7e2d9;
+    --booking-border-soft: #eeeae2;
+
+    --booking-success: #2f8a5b;
+    --booking-success-soft: #eaf6ef;
+
+    --booking-warning: #b17b28;
+    --booking-warning-soft: #fbf3e4;
+
+    --booking-danger: #bd5757;
+    --booking-danger-soft: #fbeeee;
+
+    --booking-info: #4b7da5;
+    --booking-info-soft: #edf4f9;
+
+    font-family:
+        "Cairo",
+        "Tajawal",
+        "Noto Sans Arabic",
+        Arial,
+        sans-serif;
+}
+
+
+/* ==========================================================
+   PAGE HEADER
+   ========================================================== */
+
+.education-admin-page-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.education-admin-page-header-label {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 7px;
+
+    color: var(--booking-gold);
+
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.education-admin-page-header h2 {
+    margin: 0;
+
+    color: var(--booking-heading);
+
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.35;
+    letter-spacing: -0.3px;
+}
+
+.education-admin-page-header p {
+    margin: 8px 0 0;
+
+    color: var(--booking-muted);
+
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.9;
+}
+
+
+/* ==========================================================
+   ALERTS
+   ========================================================== */
+
+.education-admin-alert {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 18px;
+    margin-bottom: 22px;
+
+    border: 1px solid transparent;
+    border-radius: 14px;
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+.education-admin-alert i {
+    flex-shrink: 0;
+
+    font-size: 17px;
+}
+
+.education-admin-alert-success {
+    color: #287548;
+
+    background: var(--booking-success-soft);
+
+    border-color: #d3eadc;
+}
+
+.education-admin-alert-error {
+    color: #a54444;
+
+    background: var(--booking-danger-soft);
+
+    border-color: #efd4d4;
+}
+
+
+/* ==========================================================
+   STATISTICS
+   ========================================================== */
+
+.education-admin-booking-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 16px;
+
+    margin-bottom: 24px;
+}
+
+.education-admin-booking-stat-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    min-height: 112px;
+
+    padding: 20px;
+
+    overflow: hidden;
+
+    background: var(--booking-card);
+
+    border: 1px solid var(--booking-border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 18px rgba(43, 54, 47, 0.045);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.education-admin-booking-stat-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #ddd5c7;
+
+    box-shadow:
+        0 10px 25px rgba(43, 54, 47, 0.07);
+}
+
+.education-admin-booking-stat-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: -28px;
+    bottom: -38px;
+
+    width: 105px;
+    height: 105px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(184, 138, 68, 0.055);
+
+    pointer-events: none;
+}
+
+.education-admin-booking-stat-icon {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 14px;
+
+    color: var(--booking-gold);
+
+    background: var(--booking-gold-soft);
+
+    border: 1px solid rgba(184, 138, 68, 0.12);
+
+    font-size: 18px;
+}
+
+.education-admin-booking-stat-card > div:last-child {
+    position: relative;
+    z-index: 1;
+
+    min-width: 0;
+}
+
+.education-admin-booking-stat-card span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--booking-muted);
+
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.education-admin-booking-stat-card strong {
+    display: block;
+
+    color: var(--booking-heading);
+
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+
+/* ==========================================================
+   STAT — PENDING
+   ========================================================== */
+
+.education-admin-booking-stat-card.pending
+.education-admin-booking-stat-icon {
+    color: var(--booking-warning);
+
+    background: var(--booking-warning-soft);
+
+    border-color: #f0dfbe;
+}
+
+
+/* ==========================================================
+   STAT — CONFIRMED
+   ========================================================== */
+
+.education-admin-booking-stat-card.confirmed
+.education-admin-booking-stat-icon {
+    color: var(--booking-success);
+
+    background: var(--booking-success-soft);
+
+    border-color: #d6ebde;
+}
+
+
+/* ==========================================================
+   STAT — COMPLETED
+   ========================================================== */
+
+.education-admin-booking-stat-card.completed
+.education-admin-booking-stat-icon {
+    color: var(--booking-info);
+
+    background: var(--booking-info-soft);
+
+    border-color: #dce9f1;
+}
+
+
+/* ==========================================================
+   STAT — CANCELLED
+   ========================================================== */
+
+.education-admin-booking-stat-card.cancelled
+.education-admin-booking-stat-icon {
+    color: var(--booking-danger);
+
+    background: var(--booking-danger-soft);
+
+    border-color: #efd7d7;
+}
+
+
+/* ==========================================================
+   FILTERS
+   ========================================================== */
+
+.education-admin-bookings-filters {
+    margin-bottom: 24px;
+
+    padding: 20px;
+
+    background: var(--booking-card);
+
+    border: 1px solid var(--booking-border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 18px rgba(43, 54, 47, 0.035);
+}
+
+.education-admin-bookings-filter-form {
+    display: grid;
+
+    grid-template-columns:
+        minmax(220px, 1.7fr)
+        minmax(160px, 1fr)
+        minmax(160px, 1fr)
+        minmax(150px, 1fr)
+        auto;
+
+    align-items: end;
+
+    gap: 14px;
+}
+
+.education-admin-filter-group {
+    min-width: 0;
+}
+
+.education-admin-filter-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--booking-text);
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.education-admin-filter-input {
+    position: relative;
+}
+
+.education-admin-filter-input > i {
+    position: absolute;
+
+    top: 50%;
+    right: 14px;
+
+    z-index: 2;
+
+    color: #9b9f99;
+
+    font-size: 13px;
+
+    pointer-events: none;
+
+    transform: translateY(-50%);
+}
+
+.education-admin-filter-input input,
+.education-admin-filter-input select {
+    width: 100%;
+    height: 46px;
+
+    padding:
+        0 40px 0 13px;
+
+    color: var(--booking-heading);
+
+    background: var(--booking-card-soft);
+
+    border: 1px solid var(--booking-border);
+
+    border-radius: 11px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.education-admin-filter-input select {
+    cursor: pointer;
+}
+
+.education-admin-filter-input input:hover,
+.education-admin-filter-input select:hover {
+    border-color: #d7d0c4;
+}
+
+.education-admin-filter-input input:focus,
+.education-admin-filter-input select:focus {
+    background: #ffffff;
+
+    border-color:
+        rgba(31, 77, 59, 0.45);
+
+    box-shadow:
+        0 0 0 3px rgba(31, 77, 59, 0.07);
+}
+
+.education-admin-filter-input input::placeholder {
+    color: #a2a7a2;
+}
+
+
+/* ==========================================================
+   FILTER ACTIONS
+   ========================================================== */
+
+.education-admin-filter-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.education-admin-filter-submit,
+.education-admin-filter-reset {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    height: 46px;
+
+    padding: 0 17px;
+
+    border-radius: 11px;
+
+    font-family: inherit;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* ==========================================================
+   SEARCH BUTTON
+   ========================================================== */
+
+.education-admin-filter-submit {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--booking-primary),
+            var(--booking-primary-dark)
+        );
+
+    border: 1px solid var(--booking-primary);
+
+    box-shadow:
+        0 5px 12px rgba(31, 77, 59, 0.13);
+}
+
+.education-admin-filter-submit:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #285d48,
+            #1b4636
+        );
+
+    border-color: #285d48;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 15px rgba(31, 77, 59, 0.18);
+}
+
+
+/* ==========================================================
+   RESET BUTTON
+   ========================================================== */
+
+.education-admin-filter-reset {
+    color: var(--booking-text);
+
+    background: #ffffff;
+
+    border: 1px solid var(--booking-border);
+}
+
+.education-admin-filter-reset:hover {
+    color: var(--booking-primary);
+
+    background: var(--booking-primary-light);
+
+    border-color:
+        rgba(31, 77, 59, 0.18);
+}
+
+
+/* ==========================================================
+   BOOKINGS CARD
+   ========================================================== */
+
+.education-admin-bookings-card {
+    overflow: hidden;
+
+    background: var(--booking-card);
+
+    border: 1px solid var(--booking-border);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 6px 22px rgba(43, 54, 47, 0.045);
+}
+
+
+/* ==========================================================
+   BOOKINGS CARD HEADER
+   ========================================================== */
+
+.education-admin-bookings-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 21px 23px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #fdfcf9 100%
+        );
+
+    border-bottom:
+        1px solid var(--booking-border-soft);
+}
+
+.education-admin-bookings-card-header span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--booking-muted);
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.education-admin-bookings-card-header h3 {
+    margin: 0;
+
+    color: var(--booking-heading);
+
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.education-admin-bookings-count {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 8px 12px;
+
+    color: var(--booking-primary);
+
+    background:
+        var(--booking-primary-light);
+
+    border:
+        1px solid rgba(31, 77, 59, 0.12);
+
+    border-radius: 10px;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.education-admin-bookings-count span {
+    margin: 0;
+
+    color: var(--booking-muted);
+
+    font-size: 10px;
+}
+
+
+/* ==========================================================
+   TABLE WRAPPER
+   ========================================================== */
+
+.education-admin-bookings-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color:
+        #cfc8bc
+        transparent;
+}
+
+
+/* ==========================================================
+   TABLE
+   ========================================================== */
+
+.education-admin-bookings-table {
+    width: 100%;
+
+    min-width: 1120px;
+
+    border-collapse: collapse;
+}
+
+.education-admin-bookings-table thead {
+    background:
+        #faf8f3;
+}
+
+.education-admin-bookings-table th {
+    padding: 14px 16px;
+
+    color: #6d766f;
+
+    background:
+        #faf8f3;
+
+    border-bottom:
+        1px solid var(--booking-border);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    text-align: right;
+
+    white-space: nowrap;
+}
+
+.education-admin-bookings-table td {
+    padding: 16px;
+
+    color: var(--booking-text);
+
+    border-bottom:
+        1px solid var(--booking-border-soft);
+
+    vertical-align: middle;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.education-admin-bookings-table tbody tr {
+    background: #ffffff;
+
+    transition:
+        background 0.2s ease;
+}
+
+.education-admin-bookings-table tbody tr:hover {
+    background:
+        #fcfaf5;
+}
+
+.education-admin-bookings-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+
+/* ==========================================================
+   STUDENT
+   ========================================================== */
+
+.education-admin-booking-student {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 190px;
+}
+
+.education-admin-booking-student-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 38px;
+    height: 38px;
+
+    color: var(--booking-primary);
+
+    background:
+        var(--booking-primary-light);
+
+    border:
+        1px solid rgba(31, 77, 59, 0.12);
+
+    border-radius: 11px;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.education-admin-booking-student > div:last-child {
+    min-width: 0;
+}
+
+.education-admin-booking-student strong {
+    display: block;
+
+    max-width: 180px;
+
+    margin-bottom: 4px;
+
+    overflow: hidden;
+
+    color: var(--booking-heading);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.education-admin-booking-student span {
+    display: block;
+
+    max-width: 180px;
+
+    overflow: hidden;
+
+    color: var(--booking-muted);
+
+    font-size: 10px;
+    font-weight: 500;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* ==========================================================
+   LESSON
+   ========================================================== */
+
+.education-admin-booking-lesson {
+    min-width: 145px;
+}
+
+.education-admin-booking-lesson strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--booking-heading);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.education-admin-booking-lesson span {
+    display: inline-flex;
+
+    padding: 3px 7px;
+
+    color: #7c857f;
+
+    background:
+        #f3f1ec;
+
+    border:
+        1px solid #e8e4db;
+
+    border-radius: 6px;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+/* ==========================================================
+   DATE / TIME
+   ========================================================== */
+
+.education-admin-booking-date {
+    color: var(--booking-text);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.education-admin-booking-time {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 4px;
+
+    color: var(--booking-heading);
+
+    direction: ltr;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.education-admin-booking-time small {
+    color: var(--booking-muted);
+
+    font-size: 10px;
+    font-weight: 500;
+}
+
+
+/* ==========================================================
+   PRICE
+   ========================================================== */
+
+.education-admin-booking-price {
+    color: var(--booking-gold);
+
+    direction: ltr;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================================
+   STATUS BASE
+   ========================================================== */
+
+.education-admin-status,
+.education-admin-payment {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    min-width: 85px;
+
+    padding: 6px 9px;
+
+    border: 1px solid transparent;
+
+    border-radius: 8px;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================================
+   BOOKING STATUS — PENDING
+   ========================================================== */
+
+.education-admin-status.pending {
+    color: #9a681d;
+
+    background:
+        var(--booking-warning-soft);
+
+    border-color:
+        #eddbb9;
+}
+
+
+/* ==========================================================
+   BOOKING STATUS — CONFIRMED
+   ========================================================== */
+
+.education-admin-status.confirmed {
+    color: #287548;
+
+    background:
+        var(--booking-success-soft);
+
+    border-color:
+        #d2e9da;
+}
+
+
+/* ==========================================================
+   BOOKING STATUS — COMPLETED
+   ========================================================== */
+
+.education-admin-status.completed {
+    color: #416f92;
+
+    background:
+        var(--booking-info-soft);
+
+    border-color:
+        #d6e6f0;
+}
+
+
+/* ==========================================================
+   BOOKING STATUS — CANCELLED
+   ========================================================== */
+
+.education-admin-status.cancelled {
+    color: #a44747;
+
+    background:
+        var(--booking-danger-soft);
+
+    border-color:
+        #efd4d4;
+}
+
+
+/* ==========================================================
+   BOOKING STATUS — NO SHOW
+   ========================================================== */
+
+.education-admin-status.no-show {
+    color: #6f5b8f;
+
+    background:
+        #f2eef7;
+
+    border-color:
+        #e2d9ed;
+}
+
+
+/* ==========================================================
+   PAYMENT — PAID
+   ========================================================== */
+
+.education-admin-payment.paid {
+    color: #287548;
+
+    background:
+        var(--booking-success-soft);
+
+    border-color:
+        #d2e9da;
+}
+
+
+/* ==========================================================
+   PAYMENT — PENDING
+   ========================================================== */
+
+.education-admin-payment.pending {
+    color: #9a681d;
+
+    background:
+        var(--booking-warning-soft);
+
+    border-color:
+        #eddbb9;
+}
+
+
+/* ==========================================================
+   PAYMENT — FAILED
+   ========================================================== */
+
+.education-admin-payment.failed {
+    color: #a44747;
+
+    background:
+        var(--booking-danger-soft);
+
+    border-color:
+        #efd4d4;
+}
+
+
+/* ==========================================================
+   PAYMENT — REFUNDED
+   ========================================================== */
+
+.education-admin-payment.refunded {
+    color: #496a82;
+
+    background:
+        #edf3f7;
+
+    border-color:
+        #d8e3eb;
+}
+
+
+/* ==========================================================
+   PAYMENT — UNPAID
+   ========================================================== */
+
+.education-admin-payment.unpaid {
+    color: #737b76;
+
+    background:
+        #f3f2ee;
+
+    border-color:
+        #e4e1d9;
+}
+
+
+/* ==========================================================
+   ACTIONS
+   ========================================================== */
+
+.education-admin-booking-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+}
+
+.education-admin-booking-actions form {
+    margin: 0;
+}
+
+.education-admin-booking-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    padding: 0;
+
+    border:
+        1px solid var(--booking-border);
+
+    border-radius: 9px;
+
+    font-size: 11px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.education-admin-booking-action:hover {
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================================
+   DETAILS
+   ========================================================== */
+
+.education-admin-booking-action.details {
+    color: var(--booking-primary);
+
+    background:
+        var(--booking-primary-light);
+
+    border-color:
+        rgba(31, 77, 59, 0.12);
+}
+
+.education-admin-booking-action.details:hover {
+    color: #ffffff;
+
+    background:
+        var(--booking-primary);
+
+    border-color:
+        var(--booking-primary);
+}
+
+
+/* ==========================================================
+   CONFIRM
+   ========================================================== */
+
+.education-admin-booking-action.confirm {
+    color: var(--booking-success);
+
+    background:
+        var(--booking-success-soft);
+
+    border-color:
+        #d4eadc;
+}
+
+.education-admin-booking-action.confirm:hover {
+    color: #ffffff;
+
+    background:
+        var(--booking-success);
+
+    border-color:
+        var(--booking-success);
+}
+
+
+/* ==========================================================
+   CANCEL
+   ========================================================== */
+
+.education-admin-booking-action.cancel {
+    color: var(--booking-danger);
+
+    background:
+        var(--booking-danger-soft);
+
+    border-color:
+        #efd6d6;
+}
+
+.education-admin-booking-action.cancel:hover {
+    color: #ffffff;
+
+    background:
+        var(--booking-danger);
+
+    border-color:
+        var(--booking-danger);
+}
+
+
+/* ==========================================================
+   EMPTY STATE
+   ========================================================== */
+
+.education-admin-bookings-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 330px;
+
+    padding: 40px 25px;
+
+    text-align: center;
+}
+
+.education-admin-bookings-empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 68px;
+    height: 68px;
+
+    margin-bottom: 17px;
+
+    color: var(--booking-primary);
+
+    background:
+        var(--booking-primary-light);
+
+    border:
+        1px solid rgba(31, 77, 59, 0.12);
+
+    border-radius: 20px;
+
+    font-size: 24px;
+}
+
+.education-admin-bookings-empty h3 {
+    margin: 0 0 8px;
+
+    color: var(--booking-heading);
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.education-admin-bookings-empty p {
+    max-width: 420px;
+
+    margin: 0;
+
+    color: var(--booking-muted);
+
+    font-size: 12px;
+    font-weight: 500;
+
+    line-height: 1.9;
+}
+
+.education-admin-bookings-empty a {
+    margin-top: 18px;
+
+    color: var(--booking-primary);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.education-admin-bookings-empty a:hover {
+    color: var(--booking-gold);
+}
+
+
+/* ==========================================================
+   PAGINATION
+   ========================================================== */
+
+.education-admin-bookings-pagination {
+    display: flex;
+    justify-content: center;
+
+    padding: 20px 23px;
+
+    background:
+        #fdfcf9;
+
+    border-top:
+        1px solid var(--booking-border-soft);
+}
+
+.education-admin-bookings-pagination nav {
+    direction: ltr;
+}
+
+.education-admin-bookings-pagination svg {
+    width: 15px;
+    height: 15px;
+}
+
+.education-admin-bookings-pagination a,
+.education-admin-bookings-pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 34px;
+    height: 34px;
+
+    margin: 0 2px;
+
+    padding: 0 9px;
+
+    color: #78817b;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid var(--booking-border);
+
+    border-radius: 8px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.education-admin-bookings-pagination a:hover {
+    color: var(--booking-primary);
+
+    background:
+        var(--booking-primary-light);
+
+    border-color:
+        rgba(31, 77, 59, 0.18);
+}
+
+.education-admin-bookings-pagination
+span[aria-current="page"] {
+    color: #ffffff;
+
+    background:
+        var(--booking-primary);
+
+    border-color:
+        var(--booking-primary);
+
+    font-weight: 800;
+}
+
+
+/* ==========================================================
+   RESPONSIVE — 1250px
+   ========================================================== */
+
+@media (max-width: 1250px) {
+
+    .education-admin-booking-stats {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+    .education-admin-bookings-filter-form {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .education-admin-filter-search {
+        grid-column: span 2;
+    }
+
+    .education-admin-filter-actions {
+        grid-column: span 2;
+    }
+}
+
+
+/* ==========================================================
+   RESPONSIVE — 850px
+   ========================================================== */
+
+@media (max-width: 850px) {
+
+    .education-admin-page-header h2 {
+        font-size: 25px;
+    }
+
+    .education-admin-booking-stats {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .education-admin-bookings-filters {
+        padding: 16px;
+    }
+
+    .education-admin-bookings-card-header {
+        padding: 19px;
+    }
+}
+
+
+/* ==========================================================
+   RESPONSIVE — 600px
+   ========================================================== */
+
+@media (max-width: 600px) {
+
+    .education-admin-page-header {
+        margin-bottom: 21px;
+    }
+
+    .education-admin-page-header h2 {
+        font-size: 22px;
+    }
+
+    .education-admin-page-header p {
+        font-size: 12px;
+    }
+
+    .education-admin-booking-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .education-admin-booking-stat-card {
+        min-height: 95px;
+    }
+
+    .education-admin-bookings-filters {
+        padding: 14px;
+    }
+
+    .education-admin-bookings-filter-form {
+        grid-template-columns: 1fr;
+    }
+
+    .education-admin-filter-search,
+    .education-admin-filter-actions {
+        grid-column: auto;
+    }
+
+    .education-admin-filter-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .education-admin-filter-submit,
+    .education-admin-filter-reset {
+        width: 100%;
+    }
+
+    .education-admin-bookings-card {
+        border-radius: 16px;
+    }
+
+    .education-admin-bookings-card-header {
+        align-items: flex-start;
+
+        padding: 17px;
+
+        flex-direction: column;
+    }
+
+    .education-admin-bookings-table td,
+    .education-admin-bookings-table th {
+        padding: 13px;
+    }
+}
+
+/* ==========================================================
+   EDUCATION ADMIN
+   BOOKING SHOW PAGE
+========================================================== */
+
+.education-admin-booking-show-page {
+    width: 100%;
+    color: #182033;
+}
+
+
+/* ==========================================================
+   PAGE HEADER
+========================================================== */
+
+.education-admin-page-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 28px;
+}
+
+.education-admin-page-header-label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #b28a43;
+}
+
+.education-admin-page-header h2 {
+    margin: 0;
+    font-family: "Amiri", serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #172033;
+    line-height: 1.4;
+}
+
+.education-admin-page-header p {
+    margin: 7px 0 0;
+    color: #7b8496;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================================
+   BACK BUTTON
+========================================================== */
+
+.education-admin-booking-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 44px;
+    padding: 0 18px;
+
+    border: 1px solid #e4e7ed;
+    border-radius: 12px;
+
+    color: #5f6879;
+    background: #ffffff;
+
+    text-decoration: none;
+
+    box-shadow: 0 5px 18px rgba(25, 35, 55, .05);
+
+    transition:
+        color .25s ease,
+        border-color .25s ease,
+        background .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.education-admin-booking-back:hover {
+    color: #a77d38;
+    border-color: rgba(178, 138, 67, .35);
+    background: #fffdf8;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 8px 22px rgba(25, 35, 55, .08);
+}
+
+
+/* ==========================================================
+   ALERTS
+========================================================== */
+
+.education-admin-alert {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 17px;
+    margin-bottom: 22px;
+
+    border-radius: 13px;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.education-admin-alert-success {
+    color: #237548;
+    border: 1px solid rgba(76, 175, 120, .22);
+    background: rgba(76, 175, 120, .08);
+}
+
+.education-admin-alert-error {
+    color: #a63d3d;
+    border: 1px solid rgba(220, 80, 80, .22);
+    background: rgba(220, 80, 80, .07);
+}
+
+
+/* ==========================================================
+   MAIN GRID
+========================================================== */
+
+.education-admin-booking-show-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        340px;
+
+    gap: 22px;
+
+    align-items: start;
+}
+
+.education-admin-booking-show-main,
+.education-admin-booking-show-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.education-admin-booking-show-card {
+    padding: 24px;
+
+    border: 1px solid #e5e8ee;
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 30px rgba(24, 32, 51, .065);
+}
+
+.education-admin-booking-show-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+.education-admin-booking-show-card-header span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #9aa2b1;
+
+    font-size: 12px;
+}
+
+.education-admin-booking-show-card-header h3 {
+    margin: 0;
+
+    color: #1b2437;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.education-admin-booking-section-icon {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 12px;
+
+    color: #b28a43;
+
+    background: rgba(178, 138, 67, .10);
+}
+
+
+/* ==========================================================
+   BOOKING STATUS
+========================================================== */
+
+.education-admin-booking-id {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 55px;
+    height: 34px;
+
+    padding: 0 10px;
+
+    border-radius: 9px;
+
+    color: #737d8e;
+
+    background: #f4f6f9;
+
+    font-size: 12px;
+
+    direction: ltr;
+}
+
+.education-admin-booking-status-row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+}
+
+.education-admin-booking-status-box {
+    min-height: 90px;
+
+    padding: 15px;
+
+    border: 1px solid #edf0f4;
+    border-radius: 13px;
+
+    background: #f9fafc;
+}
+
+.education-admin-booking-status-box > span:first-child {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #8d96a6;
+
+    font-size: 12px;
+}
+
+.education-admin-booking-status-box strong {
+    color: #263044;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================================
+   STATUS BADGES
+========================================================== */
+
+.education-admin-status,
+.education-admin-payment {
+    display: inline-flex !important;
+
+    align-items: center;
+
+    gap: 7px;
+
+    width: fit-content;
+
+    padding: 7px 10px;
+
+    border-radius: 8px;
+
+    font-size: 12px !important;
+    font-weight: 700;
+}
+
+.education-admin-status.pending,
+.education-admin-payment.pending {
+    color: #9b741d;
+
+    background: rgba(233, 200, 122, .16);
+}
+
+.education-admin-status.confirmed {
+    color: #237548;
+
+    background: rgba(80, 190, 120, .12);
+}
+
+.education-admin-status.completed,
+.education-admin-payment.paid {
+    color: #19777c;
+
+    background: rgba(70, 190, 200, .12);
+}
+
+.education-admin-status.cancelled,
+.education-admin-payment.failed {
+    color: #ad4141;
+
+    background: rgba(220, 80, 80, .11);
+}
+
+.education-admin-status.no-show {
+    color: #8d3da1;
+
+    background: rgba(180, 80, 210, .11);
+}
+
+.education-admin-payment.unpaid {
+    color: #6e7788;
+
+    background: #eef1f5;
+}
+
+.education-admin-payment.refunded {
+    color: #5362a5;
+
+    background: rgba(110, 120, 230, .11);
+}
+
+
+/* ==========================================================
+   STUDENT
+========================================================== */
+
+.education-admin-booking-student-large {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+.education-admin-booking-student-large-avatar {
+    width: 58px;
+    height: 58px;
+
+    flex: 0 0 58px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 16px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            145deg,
+            #c9a86a,
+            #a87d36
+        );
+
+    font-size: 21px;
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 18px rgba(178, 138, 67, .18);
+}
+
+.education-admin-booking-student-large-info {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.education-admin-booking-student-large-info strong {
+    color: #202a3d;
+
+    font-size: 16px;
+}
+
+.education-admin-booking-student-large-info span {
+    color: #8a93a3;
+
+    font-size: 13px;
+
+    direction: ltr;
+
+    text-align: right;
+}
+
+.education-admin-booking-student-large-actions {
+    margin-right: auto;
+}
+
+.education-admin-booking-student-large-actions a {
+    width: 39px;
+    height: 39px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid #e5e8ee;
+    border-radius: 10px;
+
+    color: #778092;
+
+    background: #f8f9fb;
+
+    text-decoration: none;
+
+    transition: .25s ease;
+}
+
+.education-admin-booking-student-large-actions a:hover {
+    color: #a77d38;
+
+    border-color: rgba(178, 138, 67, .3);
+
+    background: rgba(178, 138, 67, .07);
+}
+
+
+/* ==========================================================
+   LESSON
+========================================================== */
+
+.education-admin-booking-lesson-large {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+}
+
+.education-admin-booking-lesson-large-icon {
+    width: 54px;
+    height: 54px;
+
+    flex: 0 0 54px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 15px;
+
+    color: #b28a43;
+
+    background: rgba(178, 138, 67, .10);
+
+    font-size: 20px;
+}
+
+.education-admin-booking-lesson-large-content {
+    min-width: 0;
+}
+
+.education-admin-booking-lesson-large-content strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #202a3d;
+
+    font-size: 18px;
+}
+
+.education-admin-booking-lesson-large-content > span {
+    display: inline-block;
+
+    margin-bottom: 9px;
+
+    padding: 5px 9px;
+
+    border-radius: 7px;
+
+    color: #a07834;
+
+    background: rgba(178, 138, 67, .09);
+
+    font-size: 11px;
+}
+
+.education-admin-booking-lesson-large-content p {
+    margin: 0;
+
+    color: #737d8e;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+/* ==========================================================
+   DATE / TIME
+========================================================== */
+
+.education-admin-booking-datetime-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
+}
+
+.education-admin-booking-info-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 16px;
+
+    border: 1px solid #edf0f4;
+    border-radius: 13px;
+
+    background: #f9fafc;
+}
+
+.education-admin-booking-info-icon {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 11px;
+
+    color: #b28a43;
+
+    background: rgba(178, 138, 67, .10);
+}
+
+.education-admin-booking-info-item > div:last-child {
+    min-width: 0;
+}
+
+.education-admin-booking-info-item span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #8f98a8;
+
+    font-size: 11px;
+}
+
+.education-admin-booking-info-item strong {
+    color: #273146;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================================
+   NOTES
+========================================================== */
+
+.education-admin-booking-note {
+    position: relative;
+
+    padding: 19px 20px;
+
+    border: 1px solid #edf0f4;
+
+    border-right:
+        3px solid #c9a86a;
+
+    border-radius: 13px;
+
+    background: #fafbfc;
+}
+
+.education-admin-booking-note > i {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #b28a43;
+
+    opacity: .8;
+}
+
+.education-admin-booking-note p {
+    margin: 0;
+
+    color: #687286;
+
+    line-height: 1.9;
+
+    font-size: 13px;
+}
+
+.education-admin-booking-admin-note {
+    padding: 17px;
+
+    border: 1px solid #edf0f4;
+
+    border-radius: 12px;
+
+    color: #687286;
+
+    background: #f8f9fb;
+
+    line-height: 1.9;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================================
+   PRICE
+========================================================== */
+
+.education-admin-booking-price-large {
+    display: flex;
+
+    align-items: baseline;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 10px 0 4px;
+}
+
+.education-admin-booking-price-large strong {
+    color: #1d273a;
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+    direction: ltr;
+}
+
+.education-admin-booking-price-large span {
+    color: #b28a43;
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+
+/* ==========================================================
+   PAYMENT
+========================================================== */
+
+.education-admin-booking-payment-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.education-admin-booking-payment-list > div {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-bottom: 12px;
+
+    border-bottom:
+        1px solid #edf0f4;
+}
+
+.education-admin-booking-payment-list > div:last-child {
+    padding-bottom: 0;
+
+    border-bottom: 0;
+}
+
+.education-admin-booking-payment-list span {
+    color: #8a93a3;
+
+    font-size: 12px;
+}
+
+.education-admin-booking-payment-list strong {
+    color: #3b4558;
+
+    font-size: 12px;
+
+    text-align: left;
+}
+
+
+/* ==========================================================
+   ACTIONS
+========================================================== */
+
+.education-admin-booking-review-actions {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.education-admin-booking-review-actions form {
+    width: 100%;
+
+    margin: 0;
+}
+
+.education-admin-booking-review-button {
+    width: 100%;
+
+    min-height: 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 0 15px;
+
+    border: 0;
+
+    border-radius: 11px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: .25s ease;
+}
+
+.education-admin-booking-review-button.confirm {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5cb982,
+            #409965
+        );
+
+    box-shadow:
+        0 7px 18px rgba(64, 153, 101, .15);
+}
+
+.education-admin-booking-review-button.confirm:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #6dca91,
+            #4ca875
+        );
+
+    transform: translateY(-1px);
+}
+
+.education-admin-booking-review-button.cancel {
+    color: #b44444;
+
+    border:
+        1px solid rgba(220, 80, 80, .18);
+
+    background:
+        rgba(220, 80, 80, .06);
+}
+
+.education-admin-booking-review-button.cancel:hover {
+    color: #a53535;
+
+    background:
+        rgba(220, 80, 80, .10);
+
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================================
+   SIDEBAR BACK
+========================================================== */
+
+.education-admin-booking-sidebar-back {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 46px;
+
+    padding: 0 15px;
+
+    border:
+        1px solid #e4e7ed;
+
+    border-radius: 12px;
+
+    color: #687286;
+
+    background: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    box-shadow:
+        0 5px 18px rgba(25, 35, 55, .04);
+
+    transition: .25s ease;
+}
+
+.education-admin-booking-sidebar-back:hover {
+    color: #a77d38;
+
+    border-color:
+        rgba(178, 138, 67, .3);
+
+    background:
+        #fffdf8;
+}
+
+
+/* ==========================================================
+   SMALL DETAILS
+========================================================== */
+
+.education-admin-booking-show-card a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.education-admin-booking-show-card strong,
+.education-admin-booking-show-card h3,
+.education-admin-booking-show-card p,
+.education-admin-booking-show-card span {
+    text-shadow: none;
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    .education-admin-booking-show-grid {
+        grid-template-columns:
+            minmax(0, 1fr)
+            300px;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .education-admin-booking-show-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-admin-booking-show-sidebar {
+        display: grid;
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        align-items: start;
+    }
+
+    .education-admin-booking-sidebar-back {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .education-admin-page-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .education-admin-page-header h2 {
+        font-size: 28px;
+    }
+
+    .education-admin-booking-status-row {
+        grid-template-columns: 1fr;
+    }
+
+    .education-admin-booking-datetime-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-admin-booking-show-sidebar {
+        display: flex;
+    }
+
+    .education-admin-booking-show-card {
+        padding: 19px;
+
+        border-radius: 15px;
+    }
+
+    .education-admin-booking-student-large {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+    .education-admin-booking-student-large-actions {
+        width: 100%;
+
+        margin-right: 0;
+    }
+
+    .education-admin-booking-student-large-actions a {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .education-admin-page-header h2 {
+        font-size: 25px;
+    }
+
+    .education-admin-page-header p {
+        font-size: 13px;
+    }
+
+    .education-admin-booking-back {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .education-admin-booking-lesson-large {
+        flex-direction: column;
+    }
+
+    .education-admin-booking-price-large strong {
+        font-size: 29px;
+    }
+
+}

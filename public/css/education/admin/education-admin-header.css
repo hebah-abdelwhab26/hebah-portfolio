@@ -1,0 +1,985 @@
+/* =========================================================
+   EDUCATION ADMIN HEADER
+========================================================= */
+
+.education-admin-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 900;
+
+    height: 82px;
+
+    padding:
+        0 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+
+    border-bottom:
+        1px solid
+        var(--education-admin-border);
+
+}
+
+
+/* =========================================================
+   LEFT
+========================================================= */
+
+.education-admin-header-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    min-width: 0;
+
+}
+
+
+.education-admin-menu-toggle {
+
+    display: none;
+
+    width: 42px;
+
+    height: 42px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        var(--education-admin-border);
+
+    border-radius: 11px;
+
+    background:
+        #ffffff;
+
+    color:
+        var(--education-admin-text);
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.education-admin-header-title {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.education-admin-header-label {
+
+    color:
+        var(--education-admin-primary-dark);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+}
+
+
+.education-admin-header-title h1 {
+
+    margin: 2px 0 0;
+
+    color:
+        var(--education-admin-text);
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   RIGHT
+========================================================= */
+
+.education-admin-header-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+/* =========================================================
+   WEBSITE BUTTON
+========================================================= */
+
+.education-admin-header-website {
+
+    min-height: 40px;
+
+    padding:
+        0 13px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border:
+        1px solid
+        var(--education-admin-border);
+
+    border-radius: 10px;
+
+    background:
+        #ffffff;
+
+    color:
+        var(--education-admin-text-soft);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+
+}
+
+
+.education-admin-header-website:hover {
+
+    color:
+        var(--education-admin-primary-dark);
+
+    border-color:
+        rgba(
+            184,
+            150,
+            85,
+            0.35
+        );
+
+    background:
+        var(--education-admin-primary-soft);
+
+}
+
+
+/* =========================================================
+   NOTIFICATIONS
+========================================================= */
+
+.education-admin-header-notifications {
+
+    position: relative;
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        var(--education-admin-border);
+
+    border-radius: 10px;
+
+    background:
+        #ffffff;
+
+    color:
+        var(--education-admin-text-soft);
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+
+}
+
+
+.education-admin-header-notifications:hover {
+
+    color:
+        var(--education-admin-primary-dark);
+
+    border-color:
+        rgba(
+            184,
+            150,
+            85,
+            0.35
+        );
+
+    background:
+        var(--education-admin-primary-soft);
+
+}
+
+
+.education-admin-notification-dot {
+
+    position: absolute;
+
+    top: 8px;
+
+    left: 8px;
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background:
+        var(--education-admin-danger);
+
+    border:
+        1px solid #ffffff;
+
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.education-admin-header-divider {
+
+    width: 1px;
+
+    height: 32px;
+
+    margin:
+        0 5px;
+
+    background:
+        var(--education-admin-border);
+
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.education-admin-header-profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        5px 8px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease;
+
+}
+
+
+.education-admin-header-profile:hover {
+
+    background:
+        #f8f8f8;
+
+}
+
+
+/* =========================================================
+   AVATAR
+========================================================= */
+
+.education-admin-header-avatar {
+
+    position: relative;
+
+    width: 39px;
+
+    height: 39px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #c7a45d,
+            #94713a
+        );
+
+    color:
+        #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.education-admin-header-avatar > i {
+
+    position: absolute;
+
+    right: -1px;
+
+    bottom: 1px;
+
+    color:
+        #4baa78;
+
+    font-size: 8px;
+
+    border:
+        2px solid #ffffff;
+
+    border-radius: 50%;
+
+}
+
+
+/* =========================================================
+   PROFILE INFO
+========================================================= */
+
+.education-admin-header-profile-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 85px;
+
+}
+
+
+.education-admin-header-profile-info strong {
+
+    color:
+        var(--education-admin-text);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+.education-admin-header-profile-info span {
+
+    margin-top: 1px;
+
+    color:
+        var(--education-admin-text-soft);
+
+    font-size: 8px;
+
+}
+
+
+.education-admin-profile-arrow {
+
+    color:
+        #9ca3af;
+
+    font-size: 8px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .education-admin-menu-toggle {
+
+        display: flex;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .education-admin-header {
+
+        height: 70px;
+
+        padding:
+            0 17px;
+
+    }
+
+
+    .education-admin-header-title h1 {
+
+        font-size: 16px;
+
+    }
+
+
+    .education-admin-header-label {
+
+        display: none;
+
+    }
+
+
+    .education-admin-header-website span {
+
+        display: none;
+
+    }
+
+
+    .education-admin-header-website {
+
+        width: 40px;
+
+        padding: 0;
+
+    }
+
+
+    .education-admin-header-profile-info,
+    .education-admin-profile-arrow {
+
+        display: none;
+
+    }
+
+
+    .education-admin-header-right {
+
+        gap: 6px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   EDUCATION ADMIN PROFILE DROPDOWN
+========================================================= */
+
+.education-admin-header-profile-wrapper {
+    position: relative;
+}
+
+
+.education-admin-header-profile {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 6px 8px;
+    border-radius: 14px;
+
+    color: inherit;
+    font-family: inherit;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+.education-admin-header-profile:hover {
+    background: rgba(184, 148, 70, 0.09);
+}
+
+
+.education-admin-header-profile:focus-visible {
+    outline: 2px solid rgba(184, 148, 70, 0.45);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   PROFILE ARROW
+========================================================= */
+
+.education-admin-profile-arrow {
+    font-size: 12px;
+    color: #777866;
+    transition: transform .25s ease;
+}
+
+
+.education-admin-header-profile-wrapper.is-open
+.education-admin-profile-arrow {
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.education-admin-profile-dropdown {
+
+    position: absolute;
+
+    top: calc(100% + 12px);
+
+    right: 0;
+
+    width: 330px;
+
+    background: #fffdf8;
+
+    border: 1px solid rgba(48, 49, 39, 0.10);
+
+    border-radius: 20px;
+
+    padding: 10px;
+
+    box-shadow:
+        0 20px 60px rgba(48, 49, 39, 0.16),
+        0 5px 18px rgba(48, 49, 39, 0.08);
+
+    z-index: 99999;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(-8px)
+        scale(.98);
+
+    transform-origin: top right;
+
+    pointer-events: none;
+
+    transition:
+        opacity .2s ease,
+        visibility .2s ease,
+        transform .2s ease;
+}
+
+
+/* =========================================================
+   OPEN
+========================================================= */
+
+.education-admin-header-profile-wrapper.is-open
+.education-admin-profile-dropdown {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   DROPDOWN HEADER
+========================================================= */
+
+.education-admin-profile-dropdown-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(184, 148, 70, 0.10),
+            rgba(89, 96, 68, 0.06)
+        );
+
+    border-radius: 15px;
+}
+
+
+.education-admin-profile-dropdown-avatar {
+
+    width: 52px;
+
+    height: 52px;
+
+    flex: 0 0 52px;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #596044;
+
+    color: #fff;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+.education-admin-profile-dropdown-avatar img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.education-admin-profile-dropdown-user {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.education-admin-profile-dropdown-user strong {
+
+    color: #303127;
+
+    font-size: 15px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.education-admin-profile-dropdown-user span {
+
+    color: #777866;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.education-admin-profile-dropdown-user small {
+
+    color: #a0833d;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.education-admin-profile-dropdown-divider {
+
+    height: 1px;
+
+    background: rgba(48, 49, 39, 0.08);
+
+    margin: 8px 4px;
+}
+
+
+/* =========================================================
+   ITEMS
+========================================================= */
+
+.education-admin-profile-dropdown-item {
+
+    width: 100%;
+
+    min-height: 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 10px 11px;
+
+    border: 0;
+
+    border-radius: 13px;
+
+    background: transparent;
+
+    text-decoration: none;
+
+    color: #303127;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    text-align: right;
+
+    box-sizing: border-box;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+.education-admin-profile-dropdown-item:hover {
+
+    background: rgba(184, 148, 70, 0.09);
+
+    transform: translateX(-2px);
+}
+
+
+/* =========================================================
+   ITEM ICON
+========================================================= */
+
+.education-admin-profile-dropdown-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    flex: 0 0 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(89, 96, 68, 0.08);
+
+    color: #596044;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   ITEM TEXT
+========================================================= */
+
+.education-admin-profile-dropdown-text {
+
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.education-admin-profile-dropdown-text strong {
+
+    font-size: 14px;
+
+    color: #303127;
+}
+
+
+.education-admin-profile-dropdown-text small {
+
+    font-size: 11px;
+
+    color: #858678;
+}
+
+
+/* =========================================================
+   ITEM ARROW
+========================================================= */
+
+.education-admin-profile-dropdown-arrow {
+
+    color: #aaa99b;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.education-admin-profile-dropdown-badge {
+
+    min-width: 24px;
+
+    height: 24px;
+
+    padding: 0 7px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #b89446;
+
+    color: #fff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.education-admin-profile-logout-form {
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+.education-admin-profile-logout {
+
+    color: #9b4444;
+
+    margin: 0;
+}
+
+
+.education-admin-profile-logout
+.education-admin-profile-dropdown-icon {
+
+    background: rgba(155, 68, 68, 0.08);
+
+    color: #9b4444;
+}
+
+
+.education-admin-profile-logout:hover {
+
+    background: rgba(155, 68, 68, 0.08);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .education-admin-profile-dropdown {
+
+        position: fixed;
+
+        top: 75px;
+
+        right: 12px;
+
+        left: 12px;
+
+        width: auto;
+
+        max-width: none;
+
+        transform-origin: top center;
+    }
+
+}

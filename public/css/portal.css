@@ -1,0 +1,780 @@
+/*======================================
+    ROOT
+======================================*/
+
+:root{
+
+    --primary:#2563EB;
+
+    --secondary:#D4A017;
+
+    --dark:#08111F;
+
+    --white:#ffffff;
+
+    --text:#F8FAFC;
+
+    --glass:rgba(255,255,255,.08);
+
+}
+
+
+/*======================================
+    RESET
+======================================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    font-family:'Cairo',sans-serif;
+
+    background:#08111F;
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+
+/*======================================
+    MAIN WRAPPER
+======================================*/
+
+.portal-wrapper{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+}
+
+
+/*======================================
+    PORTAL HOME
+======================================*/
+
+.portal-home{
+
+    position:relative;
+
+    z-index:5;
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:60px 40px;
+
+}
+
+
+/*======================================
+    HERO
+======================================*/
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+
+/*======================================
+    HERO IMAGE / BANNER
+======================================*/
+
+.logo-wrapper{
+
+    width:100%;
+
+    max-width:1500px;
+
+    height:auto;
+
+    margin:0 auto 35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+}
+
+
+/*
+    الصورة تظهر بعرض الصفحة تقريبًا
+    مع الحفاظ على أبعادها الأصلية
+*/
+
+.logo-wrapper img{
+
+    display:block;
+
+    width:100%;
+
+    max-width:1500px;
+
+    height:auto;
+
+    max-height:420px;
+
+    object-fit:contain;
+
+    border-radius:20px;
+
+    transition:
+
+        transform .45s ease,
+
+        box-shadow .45s ease;
+
+}
+
+
+/*======================================
+    IMAGE HOVER
+======================================*/
+
+.logo-wrapper img:hover{
+
+    transform:scale(1.015);
+
+    box-shadow:
+
+        0 5px 15px rgba(255,255,255,.20),
+
+        0 10px 35px rgba(37,99,235,.20);
+
+}
+
+
+/*======================================
+    HERO TITLE
+======================================*/
+
+.hero h1{
+
+    font-size:30px;
+
+    font-weight:900;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #D4A017
+        );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+
+.hero h2{
+
+    margin-top:18px;
+
+    font-size:24px;
+
+    font-weight:400;
+
+    color:#CBD5E1;
+
+}
+
+
+.hero-divider{
+
+    width:260px;
+
+    margin:35px auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+
+.hero-divider span{
+
+    flex:1;
+
+    height:1px;
+
+    background:
+
+        rgba(255,255,255,.25);
+
+}
+
+
+.hero-divider i{
+
+    color:#D4A017;
+
+}
+
+
+.hero h3{
+
+    font-size:34px;
+
+    font-weight:800;
+
+}
+
+
+/*======================================
+    PORTAL CARDS
+======================================*/
+
+.portal-cards{
+
+    width:100%;
+
+    max-width:1350px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:45px;
+
+}
+
+
+/*======================================
+    CENTER SELECTOR
+======================================*/
+
+.selector-center{
+
+    width:70px;
+
+    height:70px;
+
+    flex:0 0 70px;
+
+    border-radius:50%;
+
+    background:
+
+        rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    color:white;
+
+    transition:
+
+        transform .3s ease,
+
+        box-shadow .3s ease;
+
+}
+
+
+.selector-center:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+
+        0 0 10px rgba(180,200,214,.8),
+
+        0 0 20px rgba(187,209,225,.6),
+
+        0 0 40px rgba(165,183,196,.4);
+
+}
+
+
+/*======================================
+    PORTAL CARD
+======================================*/
+
+.portal-card{
+
+    position:relative;
+
+    flex:1;
+
+    min-height:520px;
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    background:
+
+        rgba(255,255,255,.06);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    transform-style:preserve-3d;
+
+    transform-origin:center center;
+
+    transition:
+
+        transform .45s ease,
+
+        box-shadow .45s ease;
+
+    will-change:transform;
+
+}
+
+
+.portal-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+/*======================================
+    CARDS 3D PERSPECTIVE
+======================================*/
+
+.portal-cards{
+
+    perspective:1800px;
+
+}
+
+
+.tech-card{
+
+    transform:
+
+        perspective(1800px)
+
+        rotateY(10deg)
+
+        rotateX(2deg);
+
+}
+
+
+.education-card{
+
+    transform:
+
+        perspective(1800px)
+
+        rotateY(-10deg)
+
+        rotateX(2deg);
+
+}
+
+
+/*======================================
+    TECH CARD HOVER
+======================================*/
+
+.tech-card:hover{
+
+    box-shadow:
+
+        0 0 10px rgba(130,197,245,.8),
+
+        0 0 20px rgba(0,150,255,.6),
+
+        0 0 40px rgba(0,150,255,.4);
+
+    transform:
+
+        perspective(1800px)
+
+        rotateY(4deg)
+
+        rotateX(1deg)
+
+        translateY(-12px)
+
+        scale(1.03);
+
+}
+
+
+/*======================================
+    EDUCATION CARD HOVER
+======================================*/
+
+.education-card:hover{
+
+    box-shadow:
+
+        0 0 10px rgba(228,248,137,.8),
+
+        0 0 20px rgba(232,232,91,.6),
+
+        0 0 40px rgba(226,248,28,.4);
+
+    transform:
+
+        perspective(1800px)
+
+        rotateY(-4deg)
+
+        rotateX(1deg)
+
+        translateY(-12px)
+
+        scale(1.03);
+
+}
+
+
+/*======================================
+    SCROLL
+======================================*/
+
+.scroll-down{
+
+    margin-top:30px;
+
+    font-size:36px;
+
+    color:#D4A017;
+
+}
+
+
+/*======================================
+    RESPONSIVE
+======================================*/
+
+@media (max-width:1200px){
+
+    .portal-home{
+
+        padding:50px 30px;
+
+    }
+
+
+    .logo-wrapper{
+
+        max-width:1100px;
+
+    }
+
+
+    .logo-wrapper img{
+
+        max-height:350px;
+
+    }
+
+
+    .portal-cards{
+
+        gap:30px;
+
+    }
+
+}
+
+
+/*======================================
+    TABLET
+======================================*/
+
+@media (max-width:900px){
+
+    .portal-home{
+
+        padding:45px 25px;
+
+    }
+
+
+    .hero{
+
+        margin-bottom:55px;
+
+    }
+
+
+    .logo-wrapper{
+
+        max-width:100%;
+
+        margin-bottom:30px;
+
+    }
+
+
+    .logo-wrapper img{
+
+        width:100%;
+
+        max-height:300px;
+
+        border-radius:16px;
+
+    }
+
+
+    .portal-cards{
+
+        flex-direction:column;
+
+        gap:30px;
+
+    }
+
+
+    .portal-card{
+
+        width:100%;
+
+        min-height:480px;
+
+        flex:none;
+
+    }
+
+
+    .selector-center{
+
+        width:60px;
+
+        height:60px;
+
+        flex-basis:60px;
+
+        transform:rotate(90deg);
+
+    }
+
+
+    .tech-card{
+
+        transform:
+
+            perspective(1800px)
+
+            rotateY(0)
+
+            rotateX(2deg);
+
+    }
+
+
+    .education-card{
+
+        transform:
+
+            perspective(1800px)
+
+            rotateY(0)
+
+            rotateX(2deg);
+
+    }
+
+
+    .tech-card:hover{
+
+        transform:
+
+            perspective(1800px)
+
+            rotateY(0)
+
+            rotateX(1deg)
+
+            translateY(-10px)
+
+            scale(1.02);
+
+    }
+
+
+    .education-card:hover{
+
+        transform:
+
+            perspective(1800px)
+
+            rotateY(0)
+
+            rotateX(1deg)
+
+            translateY(-10px)
+
+            scale(1.02);
+
+    }
+
+}
+
+
+/*======================================
+    MOBILE
+======================================*/
+
+@media (max-width:600px){
+
+    .portal-home{
+
+        padding:35px 15px;
+
+    }
+
+
+    .hero{
+
+        margin-bottom:45px;
+
+    }
+
+
+    .logo-wrapper{
+
+        width:100%;
+
+        margin-bottom:25px;
+
+    }
+
+
+    .logo-wrapper img{
+
+        width:100%;
+
+        max-height:220px;
+
+        border-radius:14px;
+
+    }
+
+
+    .hero h1{
+
+        font-size:24px;
+
+    }
+
+
+    .hero h2{
+
+        font-size:18px;
+
+        margin-top:12px;
+
+    }
+
+
+    .hero-divider{
+
+        width:200px;
+
+        margin:25px auto;
+
+    }
+
+
+    .hero h3{
+
+        font-size:27px;
+
+    }
+
+
+    .portal-card{
+
+        min-height:430px;
+
+        border-radius:25px;
+
+    }
+
+
+    .selector-center{
+
+        width:55px;
+
+        height:55px;
+
+        flex-basis:55px;
+
+        font-size:18px;
+
+    }
+
+
+    .scroll-down{
+
+        font-size:30px;
+
+    }
+
+}

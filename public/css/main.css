@@ -1,0 +1,155 @@
+
+
+/*==================================================
+                SCROLL PROGRESS
+==================================================*/
+
+#progressBar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:0%;
+
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        #2563EB,
+        #60A5FA
+    );
+
+    z-index:99998;
+
+    transition:width .15s linear;
+
+    box-shadow:
+        0 0 12px rgba(37,99,235,.45);
+
+}
+
+/*==================================================
+                BACK TO TOP
+==================================================*/
+
+.back-to-top{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(37,99,235,.95);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(20px);
+
+    transition:all .35s ease;
+
+    z-index:9990;
+
+    box-shadow:
+        0 15px 35px rgba(37,99,235,.35);
+
+}
+
+.back-to-top i{
+
+    font-size:18px;
+
+}
+
+.back-to-top.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+.back-to-top:hover{
+
+    transform:translateY(-5px);
+
+    background:#1D4ED8;
+
+}
+/*==================================================
+                REVEAL ANIMATIONS
+==================================================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+    will-change:opacity,transform;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media (max-width:768px){
+
+
+    #progressBar{
+
+        height:3px;
+
+    }
+
+    .back-to-top{
+
+        width:46px;
+
+        height:46px;
+
+        right:20px;
+
+        bottom:20px;
+
+    }
+
+}

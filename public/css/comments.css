@@ -1,0 +1,494 @@
+/*==================================================*
+* COMMENTS PAGE
+*==================================================*/
+
+.comments-page {
+    position: relative;
+    padding: 40px 0 120px;
+    z-index: 2;
+}
+
+.comments-page .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/*==================================================*
+* PAGE HERO
+*==================================================*/
+
+.page-hero {
+    position: relative;
+    padding: 170px 0 80px;
+    text-align: center;
+    z-index: 2;
+}
+
+.page-hero-content {
+    max-width: 780px;
+    margin: auto;
+}
+
+.page-hero h1 {
+    color: #fff;
+    font-size: clamp(42px, 5vw, 64px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.page-hero h1 span {
+    color: var(--primary-color);
+}
+
+.page-hero p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: #cfd8e3;
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+
+/*==================================================*
+* SECTION HEADING
+*==================================================*/
+
+.section-heading {
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    color: #fff;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 18px 0;
+}
+
+.section-heading h2 span {
+    color: var(--primary-color);
+}
+
+.section-heading p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: #cfd8e3;
+    line-height: 1.9;
+}
+
+
+/*==================================================*
+* GLASS CARD
+*==================================================*/
+
+.glass-card {
+    position: relative;
+
+    border-radius: 28px;
+
+    background: rgba(17, 25, 40, .45);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, .30);
+
+    overflow: hidden;
+}
+
+.glass-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, .07),
+            transparent 45%
+        );
+
+    pointer-events: none;
+}
+
+
+/*==================================================*
+* COMMENT FORM
+*==================================================*/
+
+.comment-section {
+    margin-bottom: 120px;
+
+    background-color: rgb(26 33 43);
+
+    border-radius: 25px;
+}
+
+.comment-form-card {
+    padding: 55px;
+}
+
+.comment-form-card .section-heading {
+    max-width: 720px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.optional-label {
+    color: rgba(255, 255, 255, .45);
+
+    font-size: 13px;
+
+    font-weight: 400;
+}
+
+
+/*==================================================*
+* FORM
+*==================================================*/
+
+.form-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #fff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: .3px;
+}
+
+.form-control,
+.form-select {
+    width: 100%;
+
+    min-height: 58px;
+
+    padding: 15px 20px;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(255, 255, 255, .10);
+
+    background: rgba(255, 255, 255, .045);
+
+    color: #fff;
+
+    font-size: 15px;
+
+    transition:
+        border-color .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+
+    outline: none;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, .38);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+
+    box-shadow:
+        0 0 0 4px rgba(0, 174, 255, .12);
+
+    background: rgba(255, 255, 255, .07);
+
+    color: #fff;
+}
+
+textarea.form-control {
+    min-height: 170px;
+
+    resize: vertical;
+}
+
+.form-select option {
+    color: #222;
+}
+
+
+/*==================================================*
+* COMMENT NOTICE
+*==================================================*/
+
+.comment-notice {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    padding: 18px 20px;
+
+    border-radius: 18px;
+
+    background: rgba(0, 120, 255, .08);
+
+    border: 1px solid rgba(0, 174, 255, .14);
+}
+
+.comment-notice-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(0, 174, 255, .12);
+
+    color: var(--primary-color);
+}
+
+.comment-notice strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #fff;
+
+    font-size: 14px;
+}
+
+.comment-notice p {
+    margin: 0;
+
+    color: #aeb9c8;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/*==================================================*
+* BUTTON
+*==================================================*/
+
+.comment-submit {
+    min-width: 230px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 16px 32px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-color),
+            #00d4ff
+        );
+
+    color: #fff;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.comment-submit:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 174, 255, .30);
+}
+
+
+/*==================================================*
+* TESTIMONIALS SECTION
+*
+* IMPORTANT:
+* The testimonial cards themselves are controlled
+* exclusively by testimonials.css.
+*
+* Do NOT add .testimonial-card styles here.
+*==================================================*/
+
+.testimonials-section {
+    padding-top: 20px;
+}
+
+.testimonials-section .section-heading {
+    margin-bottom: 50px;
+}
+
+
+/*==================================================*
+* ALERTS
+*==================================================*/
+
+.alert {
+    padding: 20px;
+
+    border-radius: 18px;
+
+    color: #fff;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+}
+
+.alert-success {
+    background: rgba(0, 180, 120, .15);
+}
+
+.alert-danger {
+    background: rgba(255, 70, 70, .15);
+}
+
+.alert-info {
+    background: rgba(0, 120, 255, .10);
+}
+
+.alert ul {
+    margin: 10px 0 0;
+
+    padding-left: 18px;
+}
+
+.alert i {
+    margin-right: 6px;
+}
+
+
+/*==================================================*
+* RESPONSIVE
+*==================================================*/
+
+@media (max-width: 1200px) {
+
+    .comments-page .container {
+        max-width: 1100px;
+    }
+
+    .comment-form-card {
+        padding: 45px;
+    }
+
+}
+
+
+@media (max-width: 992px) {
+
+    .page-hero {
+        padding: 150px 0 70px;
+    }
+
+    .comment-section {
+        margin-bottom: 90px;
+    }
+
+    .comment-form-card {
+        padding: 40px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .comments-page {
+        padding: 30px 0 80px;
+    }
+
+    .comments-page .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .page-hero {
+        padding: 130px 0 60px;
+    }
+
+    .page-hero h1 {
+        font-size: 42px;
+    }
+
+    .page-hero p {
+        font-size: 15px;
+    }
+
+    .comment-form-card {
+        padding: 30px 25px;
+    }
+
+    .comment-section {
+        margin-bottom: 70px;
+    }
+
+    .testimonials-section .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .comment-submit {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .page-hero {
+        padding: 110px 0 50px;
+    }
+
+    .page-hero h1 {
+        font-size: 34px;
+    }
+
+    .page-hero p {
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+    .comment-form-card {
+        padding: 25px 20px;
+
+        border-radius: 24px;
+    }
+
+    .comment-notice {
+        padding: 15px;
+
+        gap: 12px;
+    }
+
+}

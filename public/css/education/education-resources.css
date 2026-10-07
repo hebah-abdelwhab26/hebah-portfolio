@@ -1,0 +1,667 @@
+
+/*==================================================
+    EDUCATION RESOURCES
+==================================================*/
+
+.education-resources {
+    position: relative;
+    padding: 110px 0;
+    overflow: hidden;
+}
+
+
+.education-resources-container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+
+/*==================================================
+    HEADER
+==================================================*/
+
+.education-resources-header {
+    max-width: 680px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+
+.education-resources-header .education-section-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 18px;
+
+    border: 1px solid rgba(190, 157, 91, .35);
+    border-radius: 50px;
+
+    color: #b99a5b;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.education-resources-header h2 {
+    margin: 18px 0 14px;
+
+    color: #303229;
+
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+
+.education-resources-header h2 span {
+    color: #b28d4c;
+}
+
+
+.education-resources-header p {
+    margin: 0;
+
+    color: #777970;
+
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+
+/*==================================================
+    SLIDER
+==================================================*/
+
+.education-resources-slider {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.education-resources-track {
+    width: 100%;
+
+    display: flex;
+
+    gap: 20px;
+
+    /*
+     * السماح بالتمرير الأفقي
+     */
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+
+    scroll-snap-type: x mandatory;
+
+    /*
+     * دعم السحب باللمس
+     */
+    -webkit-overflow-scrolling: touch;
+
+    touch-action: pan-x;
+
+    padding: 8px 4px 18px;
+
+    /*
+     * إخفاء Scrollbar على الشاشات الكبيرة
+     * مع بقاء إمكانية التمرير بالأسهم
+     */
+    scrollbar-width: none;
+}
+
+
+/*==================================================
+    DESKTOP SCROLLBAR
+==================================================*/
+
+.education-resources-track::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/*==================================================
+    CARD
+==================================================*/
+
+.education-resource-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+
+    min-height: 200px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 28px;
+
+    background: rgba(255, 255, 255, .82);
+
+    border: 1px solid rgba(45, 47, 39, .08);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 12px 35px rgba(40, 42, 35, .07);
+
+    scroll-snap-align: start;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
+    /*
+     * منع البطاقة من الانكماش
+     */
+    min-width: 0;
+}
+
+
+.education-resource-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(178, 141, 76, .35);
+
+    box-shadow:
+        0 22px 45px rgba(40, 42, 35, .12);
+}
+
+
+.education-resource-card.featured {
+    background:
+        linear-gradient(
+            145deg,
+            #303229,
+            #3a3b31
+        );
+
+    border-color: transparent;
+
+    box-shadow:
+        0 18px 45px rgba(40, 42, 35, .18);
+}
+
+
+
+/*==================================================
+    ICON
+==================================================*/
+
+.education-resource-icon {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 17px;
+
+    background: rgba(178, 141, 76, .13);
+
+    color: #ad8848;
+
+    font-size: 22px;
+
+    flex-shrink: 0;
+}
+
+
+.education-resource-card.featured .education-resource-icon {
+    background: rgba(255, 255, 255, .09);
+
+    color: #d6b56e;
+}
+
+
+
+/*==================================================
+    CONTENT
+==================================================*/
+
+.education-resource-content {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    min-width: 0;
+}
+
+
+.education-resource-category {
+    margin-bottom: 8px;
+
+    color: #a3834b;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.education-resource-card h3 {
+    margin: 0 0 12px;
+
+    color: #303229;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    overflow-wrap: break-word;
+}
+
+
+.education-resource-card p {
+    margin: 0 0 22px;
+
+    color: #777970;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    overflow-wrap: break-word;
+}
+
+
+.education-resource-card.featured h3 {
+    color: #fff;
+}
+
+
+.education-resource-card.featured p {
+    color: rgba(255, 255, 255, .65);
+}
+
+
+.education-resource-card.featured .education-resource-category {
+    color: #d2af69;
+}
+
+
+
+/*==================================================
+    LINK
+==================================================*/
+
+.education-resource-link {
+    margin-top: auto;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    width: fit-content;
+
+    color: #9d783d;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        gap .25s ease,
+        color .25s ease;
+}
+
+
+.education-resource-link:hover {
+    gap: 14px;
+
+    color: #c29c5a;
+}
+
+
+.education-resource-card.featured .education-resource-link {
+    color: #d4b16c;
+}
+
+
+
+/*==================================================
+    ARROWS
+==================================================*/
+
+.education-resource-arrow {
+    flex: 0 0 46px;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(45, 47, 39, .12);
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    color: #303229;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(40, 42, 35, .08);
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        color .25s ease;
+
+    flex-shrink: 0;
+}
+
+
+.education-resource-arrow:hover {
+    transform: translateY(-2px);
+
+    background: #303229;
+
+    color: #d4b16c;
+}
+
+
+
+/*==================================================
+    FOOTER
+==================================================*/
+
+.education-resources-footer {
+    margin-top: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.education-resources-footer span {
+    color: #85867e;
+
+    font-size: 13px;
+}
+
+
+.education-resources-footer a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #303229;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    text-decoration: none;
+}
+
+
+.education-resources-footer a:hover {
+    color: #a47e42;
+}
+
+
+
+/*==================================================
+    TABLET
+==================================================*/
+
+@media (max-width: 1000px) {
+
+    .education-resource-card {
+        flex: 0 0 calc((100% - 20px) / 2);
+    }
+
+}
+
+
+
+/*==================================================
+    MOBILE
+==================================================*/
+
+@media (max-width: 650px) {
+
+    .education-resources {
+        padding: 80px 0;
+
+        /*
+         * السماح بالمحتوى خارج حدود القسم
+         */
+        overflow: visible;
+    }
+
+
+    .education-resources-container {
+        width: calc(100% - 28px);
+
+        max-width: 520px;
+    }
+
+
+    .education-resources-header {
+        margin-bottom: 35px;
+    }
+
+
+    .education-resources-header p {
+        font-size: 14px;
+    }
+
+
+    /*==================================================
+        MOBILE SLIDER
+    ==================================================*/
+
+    .education-resources-slider {
+        display: block;
+
+        width: 100%;
+    }
+
+
+    /*
+     * إخفاء الأسهم على الهاتف
+     */
+    .education-resource-arrow {
+        display: none;
+    }
+
+
+    /*
+     * السماح بالسحب الأفقي
+     */
+
+    .education-resources-track {
+
+        width: 100%;
+
+        display: flex;
+
+        gap: 16px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scroll-behavior: smooth;
+
+        scroll-snap-type: x mandatory;
+
+        -webkit-overflow-scrolling: touch;
+
+        touch-action: pan-x;
+
+        padding: 8px 4px 20px;
+
+        overscroll-behavior-x: contain;
+
+        /*
+         * إظهار Scrollbar في الهاتف
+         */
+        scrollbar-width: thin;
+    }
+
+
+    /*
+     * Chrome / Edge / Safari
+     */
+
+    .education-resources-track::-webkit-scrollbar {
+        display: block;
+
+        height: 5px;
+    }
+
+
+    .education-resources-track::-webkit-scrollbar-track {
+        background: rgba(45, 47, 39, .06);
+
+        border-radius: 20px;
+    }
+
+
+    .education-resources-track::-webkit-scrollbar-thumb {
+        background: rgba(178, 141, 76, .55);
+
+        border-radius: 20px;
+    }
+
+
+    .education-resources-track::-webkit-scrollbar-thumb:hover {
+        background: rgba(178, 141, 76, .8);
+    }
+
+
+
+    /*==================================================
+        MOBILE CARD
+    ==================================================*/
+
+    .education-resource-card {
+
+        /*
+         * ترك جزء من البطاقة التالية ظاهرًا
+         */
+        flex: 0 0 calc(100% - 34px);
+
+        width: calc(100% - 34px);
+
+        min-width: calc(100% - 34px);
+
+        max-width: calc(100% - 34px);
+
+        min-height: 260px;
+
+        padding: 24px;
+
+        scroll-snap-align: center;
+
+        box-sizing: border-box;
+    }
+
+
+    /*
+     * تعطيل حركة hover على الهاتف
+     */
+
+    .education-resource-card:hover {
+        transform: none;
+    }
+
+
+    .education-resource-card.featured {
+        transform: none;
+    }
+
+
+    /*
+     * منع المحتوى من توسيع البطاقة
+     */
+
+    .education-resource-content {
+        width: 100%;
+
+        min-width: 0;
+
+        max-width: 100%;
+    }
+
+
+    .education-resource-card h3,
+    .education-resource-card p {
+        max-width: 100%;
+    }
+
+
+
+    /*==================================================
+        FOOTER MOBILE
+    ==================================================*/
+
+    .education-resources-footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+
+/*==================================================
+    VERY SMALL MOBILE
+==================================================*/
+
+@media (max-width: 420px) {
+
+    .education-resources {
+        padding: 65px 0;
+    }
+
+
+    .education-resources-container {
+        width: calc(100% - 20px);
+    }
+
+
+    .education-resources-track {
+        gap: 14px;
+
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+
+    .education-resource-card {
+
+        flex: 0 0 calc(100% - 25px);
+
+        width: calc(100% - 25px);
+
+        min-width: calc(100% - 25px);
+
+        max-width: calc(100% - 25px);
+
+        min-height: 250px;
+
+        padding: 22px;
+    }
+
+}
+

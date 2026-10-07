@@ -1,0 +1,1763 @@
+
+/*==================================================
+                PORTAL CARDS
+==================================================*/
+
+.portal-cards{
+
+    display:flex;
+
+    gap:24px;
+
+    width:100%;
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+}
+
+
+.portal-card{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex:1;
+
+    min-width:0;
+
+    min-height:360px;
+
+    padding:14px;
+
+    overflow:hidden;
+
+    text-decoration:none;
+
+    border-radius:26px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    backdrop-filter:
+        blur(30px);
+
+    -webkit-backdrop-filter:
+        blur(30px);
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    transition:
+        .45s ease;
+
+}
+
+
+.portal-card:hover{
+
+    transform:
+        translateY(-8px)
+        scale(1.015);
+
+}
+
+
+
+/*==================================================
+                CARD TYPES
+==================================================*/
+
+.tech-card{
+
+    isolation:isolate;
+
+}
+
+
+.education-card{
+
+    position:relative;
+
+    isolation:isolate;
+
+}
+
+
+
+/*==================================================
+                CARD CONTENT
+==================================================*/
+
+.card-content{
+
+    position:relative;
+
+    z-index:20;
+
+    width:100%;
+
+    max-width:520px;
+
+    text-align:center;
+
+}
+
+
+.card-content h2{
+
+    font-size:27px;
+
+    line-height:1.25;
+
+    font-weight:800;
+
+    color:#ffffff;
+
+    margin:0 0 9px;
+
+}
+
+
+.card-content p{
+
+    max-width:470px;
+
+    margin:0 auto 18px;
+
+    font-size:15px;
+
+    line-height:1.65;
+
+    color:#CBD5E1;
+
+}
+
+
+
+/*==================================================
+                BADGES
+==================================================*/
+
+.card-badge{
+
+    display:inline-block;
+
+    padding:
+        7px 19px;
+
+    border-radius:
+        50px;
+
+    margin-bottom:
+        15px;
+
+    font-size:
+        11px;
+
+    line-height:
+        1;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1.7px;
+
+    color:#ffffff;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #2563EB,
+            #1D4ED8
+        );
+
+    box-shadow:
+
+        0 10px 24px
+        rgba(37,99,235,.23);
+
+}
+
+
+.gold-badge{
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #D4A017,
+            #B8860B
+        );
+
+    box-shadow:
+
+        0 10px 24px
+        rgba(212,160,23,.28);
+
+}
+
+
+
+/*==================================================
+                BUTTONS
+==================================================*/
+
+.portal-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:
+        10px 24px;
+
+    min-height:40px;
+
+    border-radius:
+        50px;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    color:#ffffff;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #2563EB,
+            #1D4ED8
+        );
+
+    box-shadow:
+
+        0 10px 24px
+        rgba(37,99,235,.23);
+
+    transition:
+        .35s;
+
+}
+
+
+.gold-btn{
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #D4A017,
+            #B8860B
+        );
+
+    box-shadow:
+
+        0 10px 24px
+        rgba(212,160,23,.28);
+
+}
+
+
+.portal-btn:hover{
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+
+/*==================================================
+                CARD GLOW
+==================================================*/
+
+.tech-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-40%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(37,99,235,.30),
+            transparent 70%
+        );
+
+    z-index:-1;
+
+    filter:
+        blur(55px);
+
+}
+
+
+.education-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-40%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(212,160,23,.35),
+            transparent 70%
+        );
+
+    z-index:-1;
+
+    filter:
+        blur(55px);
+
+}
+
+
+
+/*==================================================
+                GLOW BALL
+==================================================*/
+
+.card-glow{
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(37,99,235,.70),
+            transparent 70%
+        );
+
+    top:-85px;
+
+    right:-75px;
+
+    opacity:.35;
+
+    filter:
+        blur(50px);
+
+    transition:
+        .6s;
+
+}
+
+
+.card-glow.gold{
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(212,160,23,.75),
+            transparent 70%
+        );
+
+}
+
+
+.portal-card:hover .card-glow{
+
+    transform:
+        scale(1.12);
+
+    opacity:.60;
+
+}
+
+
+
+/*==================================================
+                CARD BORDER
+==================================================*/
+
+.card-border{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:26px;
+
+    padding:1px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.35),
+            transparent,
+            rgba(37,99,235,.40)
+        );
+
+    -webkit-mask:
+
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    pointer-events:none;
+
+}
+
+
+.education-card .card-border{
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.35),
+            transparent,
+            rgba(212,160,23,.45)
+        );
+
+}
+
+
+
+/*==================================================
+                REFLECTION
+==================================================*/
+
+.card-reflection{
+
+    position:absolute;
+
+    top:-140%;
+
+    left:-55%;
+
+    width:45%;
+
+    height:320%;
+
+    background:
+
+        linear-gradient(
+            rgba(255,255,255,.28),
+            rgba(255,255,255,.05)
+        );
+
+    transform:
+        rotate(25deg);
+
+    transition:
+        1s;
+
+}
+
+
+.portal-card:hover .card-reflection{
+
+    left:140%;
+
+}
+
+
+
+/*==================================================
+        TECHNOLOGY CARD ILLUSTRATION
+==================================================*/
+
+.card-illustration{
+
+    position:relative;
+
+    width:100%;
+
+    height:140px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+/*==================================================
+                DIGITAL MONITOR
+==================================================*/
+
+.monitor{
+
+    position:relative;
+
+    width:195px;
+
+    height:124px;
+
+    margin:auto;
+
+    border-radius:14px;
+
+    background:#0F172A;
+
+    overflow:hidden;
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 16px 38px
+        rgba(0,0,0,.26);
+
+}
+
+
+.monitor::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-14px;
+
+    transform:
+        translateX(-50%);
+
+    width:82px;
+
+    height:9px;
+
+    background:#334155;
+
+    border-radius:10px;
+
+}
+
+
+
+/*==================================================
+                MONITOR HEADER
+==================================================*/
+
+.monitor-header{
+
+    height:27px;
+
+    background:#1E293B;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:
+        0 12px;
+
+}
+
+
+.monitor-header span{
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+}
+
+
+.monitor-header span:nth-child(1){
+
+    background:#EF4444;
+
+}
+
+
+.monitor-header span:nth-child(2){
+
+    background:#FACC15;
+
+}
+
+
+.monitor-header span:nth-child(3){
+
+    background:#22C55E;
+
+}
+
+
+
+/*==================================================
+                MONITOR BODY
+==================================================*/
+
+.monitor-body{
+
+    padding:14px;
+
+}
+
+
+
+/*==================================================
+                CODE LINES
+==================================================*/
+
+.line{
+
+    height:6px;
+
+    border-radius:30px;
+
+    margin-bottom:9px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #2563EB,
+            #60A5FA
+        );
+
+    animation:
+
+        codeGlow 3s ease-in-out infinite;
+
+}
+
+
+.line:nth-child(2){
+
+    animation-delay:.4s;
+
+}
+
+
+.line:nth-child(3){
+
+    animation-delay:.8s;
+
+}
+
+
+.line:nth-child(4){
+
+    animation-delay:1.2s;
+
+}
+
+
+.w90{
+
+    width:90%;
+
+}
+
+
+.w80{
+
+    width:80%;
+
+}
+
+
+.w60{
+
+    width:60%;
+
+}
+
+
+.w50{
+
+    width:50%;
+
+}
+
+
+
+/*==================================================
+                FLOATING ICONS
+==================================================*/
+
+.floating{
+
+    position:absolute;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:16px;
+
+    background:
+
+        rgba(255,255,255,.10);
+
+    backdrop-filter:
+        blur(15px);
+
+    border:
+
+        1px solid rgba(255,255,255,.15);
+
+    font-size:21px;
+
+    box-shadow:
+
+        0 13px 30px
+        rgba(0,0,0,.20);
+
+}
+
+
+
+/* Laravel */
+
+.laravel{
+
+    left:10%;
+
+    top:56%;
+
+    color:#F05340;
+
+    animation:
+
+        floatIcon 6s ease-in-out infinite;
+
+}
+
+
+
+/* Figma */
+
+.figma{
+
+    right:11%;
+
+    top:18%;
+
+    color:#A259FF;
+
+    animation:
+
+        floatIcon 5s ease-in-out infinite;
+
+    animation-delay:
+        1s;
+
+}
+
+
+
+/* Mobile Icon */
+
+.mobile-icon{
+
+    right:13%;
+
+    bottom:7%;
+
+    color:#3B82F6;
+
+    animation:
+
+        floatIcon 7s ease-in-out infinite;
+
+    animation-delay:
+        2s;
+
+}
+
+
+
+/*==================================================
+        TECHNOLOGY GRID BACKGROUND
+==================================================*/
+
+.tech-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.05;
+
+    background-image:
+
+        linear-gradient(
+            rgba(37,99,235,.8) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(37,99,235,.8) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        24px 24px;
+
+}
+
+
+.tech-card:hover::before{
+
+    opacity:.10;
+
+}
+
+
+
+/*==================================================
+            QURAN ACADEMY ILLUSTRATION
+==================================================*/
+
+.education-card{
+
+    position:relative;
+
+    isolation:isolate;
+
+}
+
+
+.education-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.05;
+
+    background-image:
+
+        radial-gradient(
+            circle,
+            #D4A017 2px,
+            transparent 2px
+        );
+
+    background-size:
+        34px 34px;
+
+}
+
+
+
+/*==================================================
+                    MOON
+==================================================*/
+
+.moon{
+
+    position:absolute;
+
+    top:4px;
+
+    left:50%;
+
+    transform:
+        translateX(-50%);
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    box-shadow:
+
+        -11px 0 0 #D4A017;
+
+    animation:
+        moonFloat 7s ease-in-out infinite;
+
+}
+
+
+
+/*==================================================
+                QURAN BOOK
+==================================================*/
+
+.quran-book{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:2px;
+
+    transform:
+        translateX(-50%);
+
+    width:135px;
+
+    height:90px;
+
+}
+
+
+
+/* Quran Pages */
+
+.quran-page{
+
+    position:absolute;
+
+    top:0;
+
+    width:67px;
+
+    height:90px;
+
+    background:#ffffff;
+
+    border-radius:7px;
+
+    box-shadow:
+
+        0 12px 25px
+        rgba(0,0,0,.12);
+
+}
+
+
+.quran-page.left{
+
+    left:0;
+
+    transform:
+
+        perspective(500px)
+        rotateY(18deg)
+        rotate(-5deg);
+
+}
+
+
+.quran-page.right{
+
+    right:0;
+
+    transform:
+
+        perspective(500px)
+        rotateY(-18deg)
+        rotate(5deg);
+
+}
+
+
+.quran-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:9px;
+
+    right:9px;
+
+    top:12px;
+
+    bottom:12px;
+
+    border-radius:5px;
+
+    background:
+
+        repeating-linear-gradient(
+
+            to bottom,
+
+            rgba(212,160,23,.18),
+
+            rgba(212,160,23,.18) 2px,
+
+            transparent 2px,
+
+            transparent 8px
+
+        );
+
+}
+
+
+
+/*==================================================
+                    STARS
+==================================================*/
+
+.star{
+
+    position:absolute;
+
+    color:#FFD54A;
+
+    font-size:16px;
+
+    animation:
+        twinkle 3s infinite;
+
+}
+
+
+.s1{
+
+    left:18%;
+
+    top:32px;
+
+}
+
+
+.s2{
+
+    right:18%;
+
+    top:54px;
+
+    animation-delay:1s;
+
+}
+
+
+.s3{
+
+    right:12%;
+
+    top:105px;
+
+    animation-delay:2s;
+
+}
+
+
+
+/*==================================================
+                GOLD HOVER EFFECTS
+==================================================*/
+
+.education-card:hover .card-glow{
+
+    opacity:.70;
+
+    transform:
+        scale(1.15);
+
+}
+
+
+.education-card:hover .quran-book{
+
+    transform:
+
+        translateX(-50%)
+        translateY(-7px)
+        scale(1.02);
+
+    transition:
+        .45s;
+
+}
+
+
+.education-card:hover .gold-btn{
+
+    box-shadow:
+
+        0 16px 36px
+        rgba(212,160,23,.42);
+
+}
+
+
+
+/*==================================================
+                EDUCATION ANIMATIONS
+==================================================*/
+
+@keyframes moonFloat{
+
+    0%,100%{
+
+        transform:
+            translateX(-50%)
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateX(-50%)
+            translateY(-7px);
+
+    }
+
+}
+
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.4;
+
+        transform:
+            scale(1);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:
+            scale(1.25);
+
+    }
+
+}
+
+
+
+/*==================================================
+                HOVER EFFECTS
+==================================================*/
+
+.tech-card:hover .monitor{
+
+    transform:
+
+        translateY(-5px)
+        scale(1.02);
+
+    transition:
+        .45s;
+
+}
+
+
+.tech-card:hover .floating{
+
+    transform:
+        scale(1.06);
+
+}
+
+
+.tech-card:hover .portal-btn{
+
+    box-shadow:
+
+        0 16px 36px
+        rgba(37,99,235,.38);
+
+}
+
+
+
+/*==================================================
+                ANIMATIONS
+==================================================*/
+
+@keyframes floatIcon{
+
+    0%,100%{
+
+        transform:
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-9px);
+
+    }
+
+}
+
+
+@keyframes codeGlow{
+
+    0%,100%{
+
+        opacity:.65;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+
+/*==========================
+        Laptop
+==========================*/
+
+@media(max-width:1200px){
+
+    .portal-cards{
+
+        max-width:1040px;
+
+        gap:22px;
+
+    }
+
+
+    .portal-card{
+
+        min-height:345px;
+
+        padding:20px;
+
+    }
+
+
+    .card-content h2{
+
+        font-size:25px;
+
+    }
+
+
+    .card-content p{
+
+        font-size:14px;
+
+        margin-bottom:16px;
+
+    }
+
+
+    .card-illustration{
+
+        height:130px;
+
+        margin-bottom:13px;
+
+    }
+
+
+    .monitor{
+
+        width:185px;
+
+        height:118px;
+
+    }
+
+
+    .quran-book{
+
+        width:130px;
+
+        height:67px;
+
+    }
+
+}
+
+
+
+/*==========================
+        Tablet
+==========================*/
+
+@media(max-width:992px){
+
+    .portal-cards{
+
+        flex-direction:column;
+
+        gap:22px;
+
+        max-width:680px;
+
+    }
+
+
+    .selector-center{
+
+        width:56px;
+
+        height:56px;
+
+        font-size:19px;
+
+    }
+
+
+    .portal-card{
+
+        width:100%;
+
+        max-width:680px;
+
+        min-height:350px;
+
+        padding:22px;
+
+        transform:none !important;
+
+    }
+
+
+    .portal-card:hover{
+
+        transform:
+            translateY(-7px) !important;
+
+    }
+
+
+    .card-content h2{
+
+        font-size:25px;
+
+    }
+
+
+    .card-content p{
+
+        font-size:14px;
+
+        line-height:1.7;
+
+        margin-bottom:17px;
+
+    }
+
+
+    .card-illustration{
+
+        height:135px;
+
+        margin-bottom:14px;
+
+    }
+
+
+    .monitor{
+
+        width:180px;
+
+        height:114px;
+
+    }
+
+
+    .floating{
+
+        width:45px;
+
+        height:45px;
+
+        font-size:19px;
+
+    }
+
+
+    .moon{
+
+        width:47px;
+
+        height:47px;
+
+    }
+
+
+    .quran-book{
+
+        width:128px;
+
+        height:85px;
+
+    }
+
+
+    .quran-page{
+
+        width:64px;
+
+        height:85px;
+
+    }
+
+}
+
+
+
+/*==========================
+        Mobile
+==========================*/
+
+@media(max-width:768px){
+
+    .portal-cards{
+
+        gap:18px;
+
+    }
+
+
+    .portal-card{
+
+        min-height:auto;
+
+        padding:20px 18px;
+
+        border-radius:23px;
+
+    }
+
+
+    .card-content h2{
+
+        font-size:22px;
+
+        margin-bottom:8px;
+
+    }
+
+
+    .card-content p{
+
+        font-size:13px;
+
+        line-height:1.65;
+
+        margin-bottom:15px;
+
+    }
+
+
+    .card-badge{
+
+        font-size:10px;
+
+        padding:6px 16px;
+
+        margin-bottom:14px;
+
+    }
+
+
+    .portal-btn{
+
+        min-height:38px;
+
+        padding:9px 20px;
+
+        font-size:12px;
+
+    }
+
+
+    .card-illustration{
+
+        height:125px;
+
+        margin-bottom:13px;
+
+    }
+
+
+    .monitor{
+
+        width:165px;
+
+        height:105px;
+
+    }
+
+
+    .monitor-header{
+
+        height:25px;
+
+    }
+
+
+    .monitor-body{
+
+        padding:12px;
+
+    }
+
+
+    .line{
+
+        height:5px;
+
+        margin-bottom:9px;
+
+    }
+
+
+    .floating{
+
+        width:40px;
+
+        height:40px;
+
+        font-size:17px;
+
+        border-radius:13px;
+
+    }
+
+
+    .moon{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+
+    .quran-book{
+
+        width:115px;
+
+        height:77px;
+
+    }
+
+
+    .quran-page{
+
+        width:57px;
+
+        height:77px;
+
+    }
+
+
+    .star{
+
+        font-size:14px;
+
+    }
+
+}
+
+
+
+/*==========================
+        Small Mobile
+==========================*/
+
+@media(max-width:480px){
+
+    .portal-card{
+
+        padding:18px 15px;
+
+        border-radius:21px;
+
+    }
+
+
+    .card-content h2{
+
+        font-size:20px;
+
+    }
+
+
+    .card-content p{
+
+        font-size:12.5px;
+
+        line-height:1.6;
+
+        margin-bottom:14px;
+
+    }
+
+
+    .card-badge{
+
+        font-size:9px;
+
+        padding:6px 15px;
+
+        margin-bottom:13px;
+
+    }
+
+
+    .portal-btn{
+
+        width:auto;
+
+        min-width:140px;
+
+        padding:9px 18px;
+
+        min-height:38px;
+
+        font-size:12px;
+
+    }
+
+
+    .card-illustration{
+
+        height:115px;
+
+        margin-bottom:11px;
+
+    }
+
+
+    .monitor{
+
+        width:145px;
+
+        height:92px;
+
+    }
+
+
+    .monitor-header{
+
+        height:23px;
+
+        padding:0 10px;
+
+    }
+
+
+    .monitor-header span{
+
+        width:6px;
+
+        height:6px;
+
+    }
+
+
+    .monitor-body{
+
+        padding:10px;
+
+    }
+
+
+    .line{
+
+        height:5px;
+
+        margin-bottom:7px;
+
+    }
+
+
+    .floating{
+
+        width:35px;
+
+        height:35px;
+
+        font-size:15px;
+
+        border-radius:11px;
+
+    }
+
+
+    .moon{
+
+        width:35px;
+
+        height:35px;
+
+    }
+
+
+    .quran-book{
+
+        width:102px;
+
+        height:68px;
+
+    }
+
+
+    .quran-page{
+
+        width:51px;
+
+        height:68px;
+
+    }
+
+
+    .star{
+
+        font-size:12px;
+
+    }
+
+}

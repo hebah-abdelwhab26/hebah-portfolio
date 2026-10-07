@@ -1,0 +1,937 @@
+/*==================================================
+    EDUCATION SERVICES
+==================================================*/
+
+.education-services-section {
+
+    position: relative;
+
+    padding: 90px 0;
+
+    overflow: hidden;
+
+}
+
+
+.education-services-container {
+
+    width: min(1180px, calc(100% - 40px));
+
+    margin: 0 auto;
+
+}
+
+
+/*==================================================
+    HEADER
+==================================================*/
+
+.education-services-header {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    margin-bottom: 45px;
+
+}
+
+
+.education-services-heading {
+
+    flex-shrink: 0;
+
+}
+
+
+.education-services-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 7px 15px;
+
+    margin-bottom: 14px;
+
+    border-radius: 30px;
+
+    background: rgba(156, 124, 64, 0.10);
+
+    color: #96743c;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.education-services-header h2 {
+
+    margin: 0;
+
+    color: #3d3429;
+
+    font-family: "Amiri", serif;
+
+    font-size: clamp(34px, 4vw, 48px);
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+}
+
+
+.education-services-header h2 span {
+
+    color: #a58243;
+
+}
+
+
+.education-services-header > p {
+
+    max-width: 480px;
+
+    margin: 0;
+
+    color: #776e62;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+}
+
+
+/*==================================================
+    CAROUSEL
+==================================================*/
+
+.education-services-carousel {
+
+    direction: ltr;
+
+}
+
+
+.education-services-carousel .owl-stage {
+
+    display: flex;
+
+}
+
+
+.education-services-carousel .owl-item {
+
+    display: flex;
+
+    direction: rtl;
+
+}
+
+
+.education-services-carousel .item {
+
+    width: 100%;
+
+}
+
+
+/*==================================================
+    SERVICE CARD
+==================================================*/
+
+.education-service-card {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 350px;
+
+    padding: 27px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+        rgba(255, 255, 255, 0.76);
+
+    border: 1px solid
+        rgba(124, 99, 60, 0.13);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 14px 40px rgba(61, 49, 33, 0.055);
+
+    overflow: hidden;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
+}
+
+
+.education-service-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    width: 100%;
+
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(160, 127, 67, .5),
+            transparent
+        );
+
+    opacity: 0;
+
+    transition: opacity .35s ease;
+
+}
+
+
+.education-service-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 22px 50px rgba(61, 49, 33, 0.10);
+
+    border-color:
+        rgba(150, 116, 60, 0.25);
+
+}
+
+
+.education-service-card:hover::before {
+
+    opacity: 1;
+
+}
+
+
+/*==================================================
+    FEATURED CARD
+==================================================*/
+
+.education-service-card.featured {
+
+    background:
+        linear-gradient(
+            145deg,
+            #faf5e8,
+            #fffdf8
+        );
+
+    border-color:
+        rgba(164, 128, 65, 0.27);
+
+}
+
+
+.education-service-card.featured::after {
+
+    content: "مميز";
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 18px;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #a07d42;
+
+    color: #fff;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+/*==================================================
+    TOP
+==================================================*/
+
+.education-service-top {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    margin-bottom: 23px;
+
+}
+
+
+.education-service-number {
+
+    color: #c0aa82;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+}
+
+
+/*==================================================
+    ICON
+==================================================*/
+
+.education-service-icon {
+
+    width: 57px;
+
+    height: 57px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background:
+        rgba(159, 125, 63, 0.10);
+
+    color: #98753c;
+
+    font-size: 21px;
+
+    transition:
+        transform .35s ease,
+        background .35s ease;
+
+}
+
+
+.education-service-card:hover
+.education-service-icon {
+
+    transform: translateY(-3px) rotate(-4deg);
+
+    background:
+        rgba(159, 125, 63, 0.16);
+
+}
+
+
+/*==================================================
+    BODY
+==================================================*/
+
+.education-service-body {
+
+    flex: 1;
+
+}
+
+
+.education-service-label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #ad9367;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+.education-service-body h3 {
+
+    margin: 0 0 13px;
+
+    color: #40372c;
+
+    font-family: "Amiri", serif;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+
+}
+
+
+.education-service-body p {
+
+    margin: 0;
+
+    color: #756d62;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 13px;
+
+    line-height: 2;
+
+}
+
+
+/*==================================================
+    LINK
+==================================================*/
+
+.education-service-link {
+
+    width: fit-content;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 20px;
+
+    color: #96733b;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: gap .3s ease;
+
+}
+
+
+.education-service-link:hover {
+
+    gap: 14px;
+
+}
+
+
+.education-service-link i {
+
+    font-size: 11px;
+
+}
+
+
+/*==================================================
+    CONTROLS
+==================================================*/
+
+.education-services-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+}
+
+
+.education-services-arrows {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+.education-services-arrows button {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid
+        rgba(143, 111, 57, .18);
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.75);
+
+    color: #94723d;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+
+}
+
+
+.education-services-arrows button:hover {
+
+    background: #98753d;
+
+    color: #fff;
+
+    transform: translateY(-2px);
+
+}
+
+
+/*==================================================
+    HINT
+==================================================*/
+
+.education-services-hint {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #a79b8a;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 11px;
+
+}
+
+
+.education-services-hint i {
+
+    font-size: 12px;
+
+}
+
+
+/*==================================================
+    HIDE DEFAULT OWL NAV
+==================================================*/
+
+.education-services-carousel .owl-nav {
+
+    display: none;
+
+}
+
+
+/*==================================================
+    DOTS
+==================================================*/
+
+.education-services-carousel .owl-dots {
+
+    margin-top: 24px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 5px;
+
+}
+
+
+.education-services-carousel .owl-dot {
+
+    margin: 0 !important;
+
+}
+
+
+.education-services-carousel .owl-dot span {
+
+    width: 6px !important;
+
+    height: 6px !important;
+
+    margin: 0 !important;
+
+    background: #d7cbb8 !important;
+
+    transition:
+        width .3s ease,
+        background .3s ease;
+
+}
+
+
+.education-services-carousel
+.owl-dot.active span {
+
+    width: 20px !important;
+
+    background: #9a783f !important;
+
+}
+
+
+/*==================================================
+    CTA
+==================================================*/
+
+.education-services-cta {
+
+    margin-top: 42px;
+
+    padding: 18px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    border: 1px solid
+        rgba(147, 112, 54, .13);
+
+    border-radius: 20px;
+
+    background:
+        rgba(250, 246, 237, .70);
+
+}
+
+
+.education-services-cta-symbol {
+
+    width: 46px;
+
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        rgba(158, 125, 64, .10);
+
+    color: #98753e;
+
+}
+
+
+.education-services-cta-text {
+
+    flex: 1;
+
+}
+
+
+.education-services-cta-text span {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #a18e73;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 11px;
+
+}
+
+
+.education-services-cta-text strong {
+
+    color: #4a4034;
+
+    font-family: "Amiri", serif;
+
+    font-size: 18px;
+
+}
+
+
+.education-services-cta-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 11px 17px;
+
+    border-radius: 12px;
+
+    background: #98753d;
+
+    color: #fff;
+
+    font-family: "Cairo", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+
+}
+
+
+.education-services-cta-button:hover {
+
+    background: #80602e;
+
+    transform: translateY(-2px);
+
+}
+
+
+/*==================================================
+    TABLET
+==================================================*/
+
+@media (max-width: 900px) {
+
+    .education-services-section {
+
+        padding: 75px 0;
+
+    }
+
+
+    .education-services-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+
+    .education-services-header > p {
+
+        max-width: 650px;
+
+    }
+
+
+    .education-service-card {
+
+        min-height: 335px;
+
+    }
+
+}
+
+
+/*==================================================
+    MOBILE
+==================================================*/
+
+@media (max-width: 600px) {
+
+    .education-services-section {
+
+        padding: 60px 0;
+
+    }
+
+
+    .education-services-container {
+
+        width: min(
+            100% - 28px,
+            520px
+        );
+
+    }
+
+
+    .education-services-header {
+
+        margin-bottom: 30px;
+
+    }
+
+
+    .education-services-header h2 {
+
+        font-size: 36px;
+
+    }
+
+
+    .education-services-header > p {
+
+        font-size: 13px;
+
+        line-height: 1.9;
+
+    }
+
+
+    .education-service-card {
+
+        min-height: 325px;
+
+        padding: 23px;
+
+        border-radius: 21px;
+
+    }
+
+
+    .education-service-body h3 {
+
+        font-size: 23px;
+
+    }
+
+
+    .education-services-controls {
+
+        margin-top: 20px;
+
+    }
+
+
+    .education-services-hint {
+
+        display: none;
+
+    }
+
+
+    .education-services-cta {
+
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+
+        padding: 18px;
+
+        margin-top: 30px;
+
+    }
+
+
+    .education-services-cta-text {
+
+        min-width: calc(100% - 70px);
+
+    }
+
+
+    .education-services-cta-text strong {
+
+        font-size: 17px;
+
+    }
+
+
+    .education-services-cta-button {
+
+        width: 100%;
+
+        justify-content: center;
+
+        margin-top: 4px;
+
+    }
+
+}
+
+
+/*==================================================
+    SMALL MOBILE
+==================================================*/
+
+@media (max-width: 380px) {
+
+    .education-service-card {
+
+        min-height: 315px;
+
+        padding: 21px;
+
+    }
+
+
+    .education-service-body h3 {
+
+        font-size: 21px;
+
+    }
+
+
+    .education-service-body p {
+
+        font-size: 12px;
+
+    }
+
+}
