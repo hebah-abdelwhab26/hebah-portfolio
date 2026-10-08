@@ -19,7 +19,7 @@ return [
 
     'navbar' => [
 
-        'logo_subtitle' => 'Laravel & React Developer',
+        'logo_subtitle' => 'Web Development & Ui/Ux',
 
         'home' => 'Home',
         'about' => 'About Me',
@@ -157,6 +157,48 @@ return [
     ],
 
 
+    'services' => [
+
+    'badge' => 'SERVICES',
+
+    'title_start' => 'What I Can',
+    'title_highlight' => 'Build',
+
+    'description' => 'I develop modern, scalable, and user-friendly web solutions tailored to your business needs.',
+
+    'learn_more' => 'Learn more',
+
+    'business_websites' => [
+        'title' => 'Business Websites',
+        'description' => 'Professional websites that represent your brand and help your business grow.',
+    ],
+
+    'ecommerce' => [
+        'title' => 'E-commerce',
+        'description' => 'Custom online stores with secure payment solutions and easy management.',
+    ],
+
+    'dashboards' => [
+        'title' => 'Dashboards',
+        'description' => 'Powerful admin dashboards to manage your data and operations efficiently.',
+    ],
+
+    'web_applications' => [
+        'title' => 'Web Applications',
+        'description' => 'Custom web applications that solve real problems and improve productivity.',
+    ],
+
+    'restaurant_systems' => [
+        'title' => 'Restaurant Systems',
+        'description' => 'Complete restaurant solutions for orders, menus, and operational management.',
+    ],
+
+    'custom_solutions' => [
+        'title' => 'Custom Solutions',
+        'description' => 'Tailored digital solutions built specifically for your unique requirements.',
+    ],
+
+],
     /*
     |--------------------------------------------------------------------------
     | Technologies
