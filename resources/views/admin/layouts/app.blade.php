@@ -56,7 +56,7 @@
         rel="stylesheet"
         href="{{ asset('css/admin/admin.css') }}"
     >
-
+<link rel="stylesheet" href="{{ asset('css/pagination.css') }}">
 
     @stack('styles')
 

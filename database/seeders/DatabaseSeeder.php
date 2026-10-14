@@ -73,7 +73,7 @@ class DatabaseSeeder extends Seeder
             |--------------------------------------------------------------------------
             */
 
-            ProjectImageSeeder::class,
+          /*   ProjectImageSeeder::class, */
 
 
             /*

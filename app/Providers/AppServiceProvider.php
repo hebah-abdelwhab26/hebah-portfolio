@@ -7,7 +7,7 @@ use App\Models\ConversationMessage;
 use App\Models\User;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
-
+use Illuminate\Pagination\Paginator;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -23,6 +23,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+
+     Paginator::useBootstrapFive();
+     Paginator::defaultView('vendor.pagination.custom');
+Paginator::defaultSimpleView('vendor.pagination.custom');
         /*
         |--------------------------------------------------------------------------
         | Admin Counters

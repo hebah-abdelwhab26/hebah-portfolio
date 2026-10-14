@@ -9,7 +9,7 @@ $educationDirection = $educationLocale === 'en' ? 'ltr' : 'rtl';
 
 <head>
 
-```
+
 <meta charset="UTF-8">
 
 <meta
@@ -115,7 +115,7 @@ $educationDirection = $educationLocale === 'en' ? 'ltr' : 'rtl';
     rel="stylesheet"
     href="{{ asset('css/education/admin/quiz-questions.css') }}">
 
-
+<link rel="stylesheet" href="{{ asset('css/pagination.css') }}">
 {{-- ==================================================
     PAGE SPECIFIC STYLES
 ================================================== --}}

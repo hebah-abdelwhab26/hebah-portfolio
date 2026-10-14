@@ -295,12 +295,14 @@
         rel="stylesheet"
         href="{{ asset('css/conversations.css') }}"
     >
-    
-    
+
+
     <link
         rel="stylesheet"
         href="{{ asset('css/portal.css') }}"
     >
+
+    <link rel="stylesheet" href="{{ asset('css/pagination.css') }}">
 </head>
 
 
