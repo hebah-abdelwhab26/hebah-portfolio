@@ -358,6 +358,55 @@
             Page Scripts
     ==================================-->
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sidebar = document.querySelector('.sidebar');
+            const toggle = document.getElementById('admin-sidebar-toggle');
+
+            if (!sidebar || !toggle) return;
+
+            sidebar.id = 'admin-sidebar';
+
+            const backdrop = document.createElement('div');
+            backdrop.className = 'sidebar-backdrop';
+            backdrop.setAttribute('aria-hidden', 'true');
+            document.body.appendChild(backdrop);
+
+            function closeSidebar() {
+                sidebar.classList.remove('show');
+                backdrop.classList.remove('show');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+
+            function openSidebar() {
+                sidebar.classList.add('show');
+                backdrop.classList.add('show');
+                toggle.setAttribute('aria-expanded', 'true');
+            }
+
+            toggle.addEventListener('click', function () {
+                if (sidebar.classList.contains('show')) {
+                    closeSidebar();
+                } else {
+                    openSidebar();
+                }
+            });
+
+            backdrop.addEventListener('click', closeSidebar);
+
+            sidebar.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', closeSidebar);
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') closeSidebar();
+            });
+
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 992) closeSidebar();
+            });
+        });
+    </script>
     @stack('scripts')
 
 

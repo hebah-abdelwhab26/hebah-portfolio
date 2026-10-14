@@ -1133,3 +1133,153 @@
         transform-origin: top center;
     }
 }
+
+/* Responsive sidebar toggle */
+.sidebar-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .sidebar-toggle {
+        display: flex;
+    }
+
+    .navbar-left {
+        gap: 12px;
+    }
+}
+/* NAVBAR SMALL SCREEN DROPDOWN FIX */
+.top-navbar,
+.navbar-left,
+.navbar-right {
+    min-width: 0;
+}
+
+.top-navbar {
+    z-index: 1050;
+}
+
+.navbar-right {
+    position: relative;
+}
+
+.admin-notifications {
+    position: relative;
+    z-index: 1060;
+}
+
+.admin-notifications-dropdown,
+.user-dropdown-menu {
+    z-index: 1070;
+    max-width: calc(100vw - 24px);
+}
+
+@media (max-width: 768px) {
+    .navbar-left {
+        flex: 0 0 auto;
+        gap: 8px;
+    }
+
+    .navbar-right {
+        flex: 0 1 auto;
+        gap: 6px;
+    }
+
+    .user-dropdown {
+        padding: 4px;
+        gap: 0;
+    }
+
+    .user-dropdown-toggle {
+        gap: 0;
+        padding: 2px;
+    }
+
+    .user-dropdown-menu {
+        right: 0;
+        width: min(260px, calc(100vw - 24px));
+    }
+
+    .admin-notifications-dropdown {
+        width: min(330px, calc(100vw - 24px));
+    }
+}
+
+@media (max-width: 576px) {
+    .top-navbar {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .navbar-right {
+        gap: 5px;
+    }
+
+    .nav-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .admin-notifications-dropdown {
+        position: fixed;
+        top: calc(var(--navbar-height) + 10px);
+        left: 12px;
+        right: 12px;
+        width: auto;
+        max-width: none;
+        transform-origin: top center;
+    }
+
+    .user-dropdown-menu {
+        right: 0;
+        width: min(260px, calc(100vw - 24px));
+    }
+}
+
+/* MOBILE NAVBAR: KEEP ESSENTIAL ACTIONS ONLY */
+@media (max-width: 768px) {
+    .navbar-right > .nav-icon-secondary,
+    .navbar-right > .user-dropdown {
+        display: none !important;
+    }
+
+    .admin-notifications {
+        position: relative;
+        z-index: 1100;
+    }
+
+    .admin-notifications-dropdown {
+        position: fixed;
+        top: calc(var(--navbar-height) + 10px);
+        left: 12px;
+        right: 12px;
+        width: auto;
+        max-width: none;
+        max-height: calc(100vh - var(--navbar-height) - 24px);
+        overflow-y: auto;
+        transform-origin: top center;
+        z-index: 1200;
+    }
+
+    .top-navbar {
+        position: relative;
+        z-index: 1100;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar-right {
+        gap: 5px;
+    }
+
+    .navbar-left {
+        gap: 6px;
+    }
+
+    .sidebar-toggle,
+    .navbar-right .nav-icon {
+        flex-shrink: 0;
+    }
+}
+

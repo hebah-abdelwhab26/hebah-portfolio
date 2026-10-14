@@ -11,6 +11,16 @@
 
     <div class="navbar-left">
 
+        <button
+            type="button"
+            class="sidebar-toggle"
+            id="admin-sidebar-toggle"
+            aria-label="Toggle sidebar"
+            aria-controls="admin-sidebar"
+            aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
 
         <!--=================================================
             SEARCH
@@ -325,7 +335,7 @@
 
         <a
             href="{{ route('admin.comments.index') }}"
-            class="nav-icon"
+            class="nav-icon nav-icon-secondary"
             title="{{ __('digital_studio_admin.navbar.comments') }}"
             aria-label="{{ __('digital_studio_admin.navbar.comments') }}">
 
@@ -350,7 +360,7 @@
 
         <a
             href="{{ route('admin.conversations.index') }}"
-            class="nav-icon"
+            class="nav-icon nav-icon-secondary"
             title="{{ __('digital_studio_admin.navbar.messages') }}"
             aria-label="{{ __('digital_studio_admin.navbar.messages') }}">
 
@@ -375,7 +385,7 @@
 
         <a
             href="{{ route('admin.users.index') }}"
-            class="nav-icon"
+            class="nav-icon nav-icon-secondary"
             title="{{ __('digital_studio_admin.navbar.users') }}"
             aria-label="{{ __('digital_studio_admin.navbar.users') }}">
 
@@ -1100,3 +1110,5 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 @endpush
+
+

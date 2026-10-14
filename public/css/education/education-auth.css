@@ -1620,3 +1620,160 @@
     }
 
 }
+
+/* =========================================================
+   EDUCATION AUTH - LANGUAGE & GOOGLE LOGIN ENHANCEMENTS
+========================================================= */
+
+/* Language switcher */
+.education-auth-page .education-auth-language {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 9px 15px;
+    border: 1px solid rgba(185, 147, 82, 0.32);
+    border-radius: 12px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.96),
+        rgba(248, 245, 237, 0.92)
+    );
+    color: #59634e;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 4px 14px rgba(52, 55, 46, 0.05);
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.education-auth-page .education-auth-language i {
+    color: #b99352;
+    font-size: 16px;
+    transition: transform 0.25s ease;
+}
+
+.education-auth-page .education-auth-language:hover {
+    color: #34372e;
+    background: #ffffff;
+    border-color: #b99352;
+    box-shadow: 0 7px 20px rgba(185, 147, 82, 0.16);
+    transform: translateY(-2px);
+}
+
+.education-auth-page .education-auth-language:hover i {
+    transform: rotate(12deg);
+}
+
+.education-auth-page .education-auth-language:focus-visible {
+    outline: 3px solid rgba(185, 147, 82, 0.35);
+    outline-offset: 3px;
+}
+
+
+/* Google login button */
+.education-auth-page .education-google-login {
+    position: relative;
+    width: 100%;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    padding: 14px 20px;
+    border: 1px solid #e5e0d5;
+    border-radius: 14px;
+    background: #ffffff;
+    color: #34372e;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow:
+        0 4px 12px rgba(52, 55, 46, 0.04),
+        0 1px 2px rgba(52, 55, 46, 0.03);
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.education-auth-page .education-google-icon {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #f8f5ed;
+    font-size: 21px;
+}
+
+.education-auth-page .education-google-icon i {
+    background: linear-gradient(
+        135deg,
+        #4285F4 0%,
+        #4285F4 28%,
+        #34A853 28%,
+        #34A853 48%,
+        #FBBC05 48%,
+        #FBBC05 68%,
+        #EA4335 68%,
+        #EA4335 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #4285F4;
+}
+
+.education-auth-page .education-google-login:hover {
+    border-color: rgba(185, 147, 82, 0.65);
+    background: #fffdf8;
+    color: #34372e;
+    box-shadow: 0 9px 24px rgba(52, 55, 46, 0.09);
+    transform: translateY(-2px);
+}
+
+.education-auth-page .education-google-login:active {
+    transform: translateY(0);
+}
+
+.education-auth-page .education-google-login:focus-visible {
+    outline: 3px solid rgba(185, 147, 82, 0.3);
+    outline-offset: 3px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .education-auth-page .education-auth-language {
+        min-height: 38px;
+        padding: 8px 11px;
+        gap: 6px;
+        font-size: 11px;
+    }
+
+    .education-auth-page .education-google-login {
+        min-height: 52px;
+        padding: 11px 14px;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .education-auth-page .education-google-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 19px;
+    }
+}
+

@@ -456,3 +456,25 @@
   padding: 15px;
   color: #fff;
 }
+
+/* Mobile and tablet sidebar backdrop */
+.sidebar-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 998;
+    background: rgba(3, 8, 18, .58);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .25s ease, visibility .25s ease;
+}
+
+.sidebar-backdrop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        z-index: 1000;
+    }
+}
